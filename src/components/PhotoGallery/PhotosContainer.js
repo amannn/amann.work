@@ -29,7 +29,7 @@ export default class PhotosContainer extends Component {
       springConstant: 230
     },
     animateIndividualPhotos: true,
-    swipeVelocityThreshold: 750 // px / second
+    swipeVelocityThreshold: 500 // px / second
   };
 
   componentDidMount() {
