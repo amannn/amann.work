@@ -1,0 +1,19 @@
+@import "~styles/measurements";
+
+.root {
+  @include container;
+  margin: 48px;
+  @include breakpoint($bp-medium) {
+    margin: 120px auto;
+  }
+
+  &_fullWidth {
+    margin-left: 0;
+    margin-right: 0;
+
+    @include breakpoint($bp-medium) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

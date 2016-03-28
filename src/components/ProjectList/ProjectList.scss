@@ -1,0 +1,51 @@
+@import "~styles/shadows";
+@import "~styles/utils";
+@import "~styles/fonts";
+@import "~styles/colors";
+@import "~styles/measurements";
+@import "~styles/hover-active-patterns";
+
+.item {
+  margin: 96px 0;
+  text-align: center;
+  background: $white;
+  @include clearfix;
+}
+
+.image {
+  max-width: calc(100% - 96px);
+  max-height: 400px;
+  margin-top: -48px;
+  @include shadow-elevation-4;
+  @include breakpoint($bp-medium) {
+    @include span(1 last);
+    position: relative;
+    top: 24px;
+  };
+}
+
+.text {
+  box-sizing: border-box;
+  text-align: left;
+  padding: 72px 48px 48px;
+  margin-top: -48px;
+
+  @include breakpoint($bp-medium) {
+    @include span(2);
+    padding-top: 48px;
+    margin-top: 0;
+  };
+}
+
+.title {
+  @extend %font-headline;
+}
+
+.description {
+  @extend %font-body;
+  margin-top: 8px;
+}
+
+.button {
+  margin-top: 24px;
+}

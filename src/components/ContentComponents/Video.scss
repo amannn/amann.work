@@ -1,0 +1,24 @@
+@import "config";
+
+.root {
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: $base-margin-bottom;
+}
+
+.cropper {
+  max-width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.text {
+  @include media-caption();
+}
+
+.video {
+  max-width: 100%;
+
+  // Screenflow videos appear to have a weird border. This cuts it off.
+  transform: scale(1.01);
+}

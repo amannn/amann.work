@@ -1,0 +1,38 @@
+@import "~styles/shadows";
+@import "~styles/measurements";
+@import "~styles/utils";
+
+.root {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-top: 96px;
+  margin-bottom: 48px;
+  @include no-tap-highlight;
+  cursor: default;
+
+  &_clickable {
+    cursor: pointer;
+  }
+}
+
+.screen {
+  position: absolute;
+  left: 33.3%;
+  display: inline-block;
+  will-change: transform;
+
+  // Less capable phones render an ugly shadow,
+  // therefore just use a simple border.
+  border: 1px solid $blue-grey-200;
+
+  @include breakpoint($bp-small) {
+    @include shadow-elevation-8(4px, 1px 1px 0px 1px $blue-grey-200);
+    border: none;
+  };
+}
+
+.spacer {
+  display: inline-block;
+  visibility: hidden;
+}

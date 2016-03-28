@@ -1,0 +1,63 @@
+@import "~styles/colors";
+@import "~styles/measurements";
+@import "~styles/hover-active-patterns";
+
+$social-icon-size: 24px;
+
+.root {
+  margin-top: 96px;
+  background-color: $blue-grey-200;
+  padding: 48px;
+  @include breakpoint($bp-medium) {
+    text-align: center;
+    padding: 96px;
+  }
+}
+
+.social {
+  margin-top: 24px;
+  margin-left: -12px;
+  @include breakpoint($bp-medium) {
+    margin-left: 0;
+  }
+}
+
+.socialIcon {
+  @include fast-in-slow-out();
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.socialImg {
+  display: inline-block;
+  width: $social-icon-size;
+  height: $social-icon-size;
+  text-indent: -99999em;
+  background-size: $social-icon-size;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.links {
+  margin-left: -24px;
+  @include breakpoint($bp-medium) {
+    margin-left: 0;
+  }
+}
+
+.link {
+  @include fast-in-slow-out();
+  @extend %font-label-big;
+  display: block;
+  padding: 16px 24px;
+  opacity: .5;
+  color: $grey-900;
+  @include breakpoint($bp-medium) {
+    display: inline-block;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,21 @@
+@import "~styles/colors";
+
+$base-margin-bottom: 32px;
+
+@mixin body-text() {
+  @extend %font-body;
+  color: $color-text;
+
+  @include breakpoint($bp-medium) {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+@mixin media-caption() {
+  @extend %font-caption;
+  color: $grey-500;
+  margin-top: 8px;
+  letter-spacing: normal;
+  text-transform: initial;
+}

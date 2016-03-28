@@ -1,0 +1,15 @@
+@import "~styles/hover-active-patterns";
+
+.root {
+  padding: 12px;
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+  box-sizing: border-box;
+  @include slow-in-slow-out(opacity);
+
+  &_disabled {
+    opacity: 0.25;
+    cursor: default;
+  }
+}

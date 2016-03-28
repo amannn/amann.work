@@ -1,0 +1,39 @@
+// Keep in sync with `state.js`
+$black: black;
+$white: white;
+
+$base-green: hsl(168, 28%, 60%);
+$green-500: $base-green;
+$green-700: darken($base-green, 20%);
+
+$base-blue: hsl(212, 51%, 60%);
+$blue-500: $base-blue;
+$blue-700: darken($base-blue, 20%);
+
+$base-blue-grey: #1d2428;
+$blue-grey-100: lighten($base-blue-grey, 82%);
+$blue-grey-200: lighten($base-blue-grey, 77%);
+$blue-grey-300: lighten($base-blue-grey, 65%);
+$blue-grey-400: lighten($base-blue-grey, 50%);
+$blue-grey-500: lighten($base-blue-grey, 40%);
+$blue-grey-600: lighten($base-blue-grey, 30%);
+$blue-grey-800: lighten($base-blue-grey, 10%);
+$blue-grey-900: $base-blue-grey;
+
+$grey-100: #F1F1F1;
+$grey-200: #E9E9E9;
+$grey-300: #DDDDDD;
+$grey-400: #ABABAB;
+$grey-500: #858585; // Base for lighter text.
+$grey-600: #747474;
+$grey-800: #4A4A4A;
+$grey-900: #212121;
+
+/**
+ * Semantic colors
+ */
+$color-background: $blue-grey-100;
+$color-accent: $green-500;
+$color-text-accent: $green-700;
+$color-text: rgba($black, 0.7);
+$color-text-strong: $black;

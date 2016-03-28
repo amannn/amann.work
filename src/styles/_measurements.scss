@@ -1,0 +1,19 @@
+@import 'lib/susy';
+@import 'lib/breakpoint';
+
+$golden-ratio: 161.8033989%;
+
+// Break points
+// Keep these in sync with `breakpoint.js`
+$bp-small: 480px;
+$bp-medium: 768px; // 720 - 48
+
+// Grid
+$wrapper-width: 720px;
+$susy: (
+  columns: 3,
+  gutters: 48px/208px,
+  container: $wrapper-width,
+  global-box-sizing: border-box,
+  // debug: (image: show)
+);

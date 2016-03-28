@@ -1,0 +1,32 @@
+@import "~styles/colors";
+@import "~styles/utils";
+
+.root {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  @include no-tap-highlight;
+
+  &_inverted {
+    .bar1, .bar2, .bar3 { background: $grey-500}
+  }
+}
+
+.bar2 {
+  transform: translateY(11px);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  $stroke: 2px;
+
+  height: $stroke;
+  width: 24px;
+  background: $white;
+  position: absolute;
+  transform-origin: center;
+  will-change: transform;
+  border-radius: $stroke / 2;
+}

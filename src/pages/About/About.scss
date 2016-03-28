@@ -1,0 +1,51 @@
+@import "~styles/colors";
+@import "~styles/measurements";
+@import "~styles/fonts";
+@import "~styles/shadows";
+@import "~styles/utils";
+
+.shortDescription {
+  @include clearfix;
+}
+
+.shortDescriptionText {
+  @include breakpoint($bp-medium) {
+    @include span(2);
+  };
+}
+
+.portraitContainer {
+  text-align: center;
+
+  @include breakpoint($bp-medium) {
+    @include span(1 last);
+  }
+}
+
+.portrait {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 4px solid $white;
+  @include shadow-elevation-2;
+}
+
+.h1IconContainer {
+  $size: 48px;
+
+  display: none;
+  transform: scale(1.5);
+  top: -$size / 2 + 20px;
+  left: -$size * 2;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $white;
+  border: 1px solid rgba($black, 0.3);
+
+  @include breakpoint(960px) {
+    display: flex;
+  };
+}

@@ -1,0 +1,79 @@
+@import "~styles/utils";
+@import "~styles/fonts";
+@import "~styles/colors";
+@import "~styles/measurements";
+@import "~styles/hover-active-patterns";
+
+/**
+ * Photos
+ */
+.item {
+  @include slow-in-slow-out(background-color);
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-bottom: $golden-ratio - 100%; // Scales the height
+  margin: 48px 0;
+  background-size: cover;
+  background-color: white;
+  background-blend-mode: multiply;
+
+  @include breakpoint($bp-medium) {
+    &:lastChild {
+      margin-bottom: 120px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+  }
+
+  &::after {
+    @include slow-in-slow-out(opacity);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: black;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 0.15;
+  }
+}
+
+.text {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 24px;
+  padding-left: 48px;
+  text-shadow: 0 0 20px rgba(0,0,0,0.3);
+  z-index: 1;
+  @include breakpoint($bp-medium) {
+    padding-bottom: 36px; // 48px - lower part of line height
+  }
+}
+
+.title {
+  @extend %font-headline;
+  color: $white;
+  text-transform: capitalize;
+}
+
+.meta {
+  @extend %font-body;
+  color: $white;
+  opacity: 0.8;
+}
