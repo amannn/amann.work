@@ -2,7 +2,7 @@
  * This is a simple Spring implementation of a damped spring using a symbolic
  * integration of Hooke's law: F = -kx - cv.
  *
- * This is based on the implementation from iamralpht. Have a look at it here:
+ * This is based on the implementation of iamralpht. Have a look at it here:
  * https://github.com/iamralpht/iamralpht.github.io/tree/master/physics
  *
  * The implementation is quite simple, but thus quite performant.

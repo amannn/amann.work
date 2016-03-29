@@ -1,3 +1,11 @@
+/**
+ * These functions can be used to decorate touch and click handlers
+ * to enhance them for touch interactions.
+ *
+ * This is based on the implementation of iamralpht. Have a look at it here:
+ * https://github.com/iamralpht/iamralpht.github.io/tree/master/physics
+ */
+
 let touchInfo = { trackingID: -1, maxDy: 0, maxDx: 0 };
 
 const TouchUtils = {};
@@ -37,16 +45,18 @@ TouchUtils.decorateTouchStart = touchStart => e => {
 
   touchInfo.maxDx = 0;
   touchInfo.maxDy = 0;
-  touchInfo.historyX = [0];
-  touchInfo.historyY = [0];
-  touchInfo.historyTime = [e.timeStamp];
+  touchInfo.history = [{
+    x: 0,
+    y: 0,
+    time: e.timeStamp
+  }];
 
   if (touchStart) touchStart();
 };
 
 TouchUtils.decorateTouchMove = touchMove => e => {
-  if (touchInfo.trackingID === -1) return;
   e.preventDefault();
+  if (touchInfo.trackingID === -1) return;
 
   let delta = getTouchDelta(e);
 
@@ -55,25 +65,24 @@ TouchUtils.decorateTouchMove = touchMove => e => {
   touchInfo.maxDy = Math.max(touchInfo.maxDy, Math.abs(delta.y));
   touchInfo.maxDx = Math.max(touchInfo.maxDx, Math.abs(delta.x));
 
-  // This is all for our crummy velocity computation method. We really
-  // should do least squares or anything at all better than just taking
-  // the difference between two random samples.
-  touchInfo.historyX.push(delta.x);
-  touchInfo.historyY.push(delta.y);
-  touchInfo.historyTime.push(e.timeStamp);
+  // For the computation of the velocity later
+  touchInfo.history.push({
+    x: delta.x,
+    y: delta.y,
+    time: e.timeStamp
+  });
 
-  while (touchInfo.historyTime.length > 10) {
-    touchInfo.historyTime.shift();
-    touchInfo.historyX.shift();
-    touchInfo.historyY.shift();
+  // Don't let the history grow too large
+  while (touchInfo.history.length > 10) {
+    touchInfo.history.shift();
   }
 
   if (touchMove) touchMove(delta);
 };
 
 TouchUtils.decorateTouchEnd = touchEnd => e => {
-  if (touchInfo.trackingID === -1) return;
   e.preventDefault();
+  if (touchInfo.trackingID === -1) return;
 
   let delta = getTouchDelta(e);
 
@@ -81,31 +90,31 @@ TouchUtils.decorateTouchEnd = touchEnd => e => {
 
   touchInfo.trackingID = -1;
 
-  // Compute velocity in the most atrocious way. Walk backwards until we find a sample that's 30ms away from
-  // our initial sample. If the samples are too distant (nothing between 30 and 50ms away then blow it off
-  // and declare zero velocity. Same if there are no samples.
-  let sampleCount = touchInfo.historyTime.length;
-  let velocity = { x: 0, y: 0 };
-  if (sampleCount > 2) {
-    let idx = touchInfo.historyTime.length - 1;
-    let lastTime = touchInfo.historyTime[idx];
-    let lastX = touchInfo.historyX[idx];
-    let lastY = touchInfo.historyY[idx];
+  // This is a very simple implementation of calculating the velocity of
+  // the gesture. The strategy is to start from the last sample in the history
+  // and walk backwards until there's a sample that's at least 30ms and at most
+  // 50ms away from the initial sample. This could be improved by taking more
+  // samples into consideration. If there's no matching sample, the velocity
+  // will be set to zero.
+  let velocity = {x: 0, y: 0};
+  if (touchInfo.history.length > 2) {
+    let numSamples = touchInfo.history.length;
+    let lastSample = touchInfo.history[numSamples - 1];
 
-    while (idx > 0) {
-      idx--;
-      let t = touchInfo.historyTime[idx];
-      let dt = lastTime - t;
+    for (let i = numSamples - 2; i > 0; i--) {
+      let curSample = touchInfo.history[i];
+      let dt = lastSample.time - curSample.time;
+
       if (dt > 30 && dt < 50) {
-        velocity.x = (lastX - touchInfo.historyX[idx]) / (dt / 1000);
-        velocity.y = (lastY - touchInfo.historyY[idx]) / (dt / 1000);
+        velocity.x = (lastSample.x - curSample.x) / (dt / 1000);
+        velocity.y = (lastSample.y - curSample.y) / (dt / 1000);
         break;
       }
     }
   }
-  touchInfo.historyTime = [];
-  touchInfo.historyX = [];
-  touchInfo.historyY = [];
+
+  // Clear history
+  touchInfo.history = [];
 
   if (touchEnd) touchEnd(delta, velocity);
 };

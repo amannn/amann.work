@@ -1,7 +1,11 @@
 {
   "name": "Jan Amann – UI Designer & Frontend Developer",
-  "short_name": "Jan Amann",
-  "icons": [],
+  "short_name": "amann.me",
+  "icons": [{
+    "src": "/logo.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
   "start_url": "/",
   "display": "standalone"
 }

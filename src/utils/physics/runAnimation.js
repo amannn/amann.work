@@ -2,7 +2,7 @@
  * This is the animation loop that can be used to solve spring (and
  * potentially also other) equations over time.
  *
- * This is based on the implementation from iamralpht. Have a look at it here:
+ * This is based on the implementation of iamralpht. Have a look at it here:
  * https://github.com/iamralpht/iamralpht.github.io/tree/master/physics
  */
 
