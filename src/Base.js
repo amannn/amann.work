@@ -34,7 +34,7 @@ export default class Base extends Component {
           <meta name="theme-color" content="#1f3942" />
 
           <link rel="manifest" href="/manifest.json" />
-          <link rel="icon" sizes="192x192" href="/logo.png" />
+          <link rel="icon" sizes="288x288" href="/logo.png" />
           <link rel="apple-touch-icon" href="/logo.png" />
 
           {/* Keep this in sync with `webpack.config.js` */}
