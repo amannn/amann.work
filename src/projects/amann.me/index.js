@@ -1,6 +1,6 @@
 import React from 'react';
 import {ContentComponents, GithubGist} from 'components';
-const {H1, UL, LI, B, P, HR, Code, A} = ContentComponents;
+const {H1, UL, LI, B, P, HR, Video, Code, A} = ContentComponents;
 
 export default {
   name: 'amann.me',
@@ -30,13 +30,27 @@ export default {
       <P>When the browser has already rendered the fetched HTML and CSS code, the rest of the website is downloaded as a single JavaScript bundle. As React keeps the desired HTML structure in a JavaScript representation, this bundle already contains the HTML code for all remaining sites.</P>
       <P>The JavaScript bundle is also surprisingly small. With gzip compression, this only accounts for ~100KB. Therefore, by the time the user clicks the first time, the client side app will have surely been loaded.</P>
       <P>A nice side effect of this approach is that even if you disable JavaScript in the browser, you can still browse between the pages by clicking on links. That's cool, right? It's a website written in JavaScript that works even when the user chooses to turn off JavaScript.</P>
-      <P>But, of course, something like a <A href="/photos/wilhering" target="_blank">photo gallery</A> won't work without JavaScript. But if you'd give every single image its own route, you could still achieve that.</P>
+      <P>But, of course, something like a <A href="/photos/wilhering" target="_blank">photo gallery</A> won't work without JavaScript. But if you'd give every single image its own URL, you could still achieve that.</P>
 
       <H1>Animations</H1>
-      <P>Motion design is something really important to me. With this project I tried to incorporate natural motion – moving elements should closely resemble physical objects from the real world.</P>
-      <P>If you check out a <A href="/photos/old-rhine" target="_blank">photo gallery</A>, you might notice a difference of the movement from traditional CSS animations. All motion is calculated with spring formulas, which come really close to movement in the real world. Try to navigate fast through the pictures and you'll notice the speed of the movement increasing (you can also use the arrow keys) – you'd have to hack CSS animations quite a bit for such a behaviour.</P>
-      <P>On a mobile phone you can also use swipe gestures to navigate through the photos. When you reach the end, you'll notice the motion of the elements telling you that you've reached the end – no need for an error message.</P>
-      <P>The base for the animations are from <A href="https://github.com/iamralpht/iamralpht.github.io/tree/master/physics">Ralph Thomas</A> – a true genius in the field of physics-based UIs.</P>
+      <P>Motion design is something really important to me. With this project I challenged myself to incorporate very natural motion – moving elements should closely resemble physical objects from the real world.</P>
+      <P>If you check out a <A href="/photos/old-rhine" target="_blank">photo gallery</A>, you might notice a difference of the movement from traditional CSS animations. All motion is calculated with spring formulas, which come really close to movement in the real world. Try to navigate fast through the pictures and you'll notice the speed of the movement increasing – you'd have to hack CSS animations quite a bit for such a behaviour.</P>
+      <P>On a mobile phone you can also use swipe gestures to navigate through the photos. Swipes are also cancellable at any point and respond as expected. When you reach the end, you'll notice the motion of the elements telling you that you've reached the end – no need for a textual hint. And all that with smooth 60 FPS :).</P>
+      <Video
+        width="320px"
+        poster={require('./videos/gallery-poster.png')}
+        videos={[{
+          type: 'webm',
+          src: require('./videos/gallery.webm')
+        }, {
+          type: 'ogg',
+          src: require('./videos/gallery.ogv')
+        }, {
+          type: 'mp4',
+          src: require('./videos/gallery.mp4')
+        }]}
+      />
+      <P>The base for the animations is from <A href="https://github.com/iamralpht">Ralph Thomas</A> – a true genius in the field of physics-based UIs.</P>
 
       <H1>Fun with modules</H1>
       <P>What keeps the app together is the module bundler <A href="https://webpack.github.io/">webpack</A>. If you're doing frontend, I can only advise you to have a look at an <A href="https://github.com/petehunt/webpack-howto">introduction</A>. Here's a list of things webpack does with an overseeable configuration:</P>
@@ -48,14 +62,13 @@ export default {
         <LI>Images above that limit will be served as a separate asset so they can be cached. Caching problems are avoided by giving images a unique name on every deploy.</LI>
         <LI>Other static assets like JavaScript, CSS and videos will also get a cache-friendly name.</LI>
       </UL>
-      <P>Webpack can also output a JSON file containing all the names of the generated assets. In an earlier version of this website, I used that to cache all static assets with a <A href="https://github.com/amannn/amann.me/blob/master/src/index.js#L33">service worker</A> in an offline cache, so the whole website also runs offline. However, I removed that feature later, since the website has grown quite a bit in size and you don't want a website that you're visiting for the first time to put 20MB of images and videos in a (semi-)permanent cache. But for an app that somebody uses frequently, this approach would be a great addition to the UX.</P>
+      <P>Webpack can also output a JSON file containing all the names of the generated assets. In an earlier version of this website, I used that to cache all static assets with a <A href="https://github.com/amannn/amann.me/blob/master/src/index.js#L34">service worker</A> in an offline cache, so the whole website also runs offline. However, I removed that feature later, since the website has grown quite a bit in size and you don't want a website that you're visiting for the first time to put 20MB of images and videos in a (semi-)permanent cache. But for an app that somebody uses frequently, this approach would be a great addition to the UX.</P>
       <P>Regarding CSS, I wanted to try a new structural approach. Usually I recommend <A href="http://getbem.com/naming/">BEM</A> for React apps, but the long class names can make your HTML code a bit noisy. That's a point where <A href="https://github.com/css-modules/css-modules">CSS modules</A> really shine.</P>
       <P>With CSS modules you can write code like this:</P>
       <GithubGist gist="amannn/7d111560a14f636eeff1" />
       <P>At first you might get frightened, because it looks like the class names <Code>.root</Code> and <Code>.icon</Code> will be used. Those are names that are guaranteed to cause naming collisions in every website that uses more than a few divs.</P>
       <P>But what's actually happening, is that those class names will be scoped to that CSS file. That CSS file can be loaded through webpack into a JavaScript module, where those names can be accessed. What makes this concept work, is that the actual class names will automatically be generated at build time. Therefore the deployed website will use class names like <Code>.lLSSjheLU1W5Br9UATESw</Code>, which will prevent name clashes.</P>
       <P>It's actually very similar to what you get by using the <A href="http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/">style encapsulation</A> features of shadow DOM, but without sacrificing on browser support.</P>
-      <P>I really like how clean the HTML and CSS code looks :)</P>
 
       <H1>Developer experience</H1>
       <P>I love being efficient when developing.</P>
