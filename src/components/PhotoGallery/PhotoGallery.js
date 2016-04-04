@@ -47,10 +47,12 @@ export default class PhotoGallery extends Component {
 
   onShowPrev = () => {
     if (this.hasPrev()) this.setState({selected: this.state.selected - 1});
+    else this.refs.container.indicateLowerBoundary();
   };
 
   onShowNext = () => {
     if (this.hasNext()) this.setState({selected: this.state.selected + 1});
+    else this.refs.container.indicateUpperBoundary();
   };
 
   onChange = (selected) => {
@@ -76,7 +78,7 @@ export default class PhotoGallery extends Component {
   startHideControlsTimer() {
     this.cancelHideControlsTimer();
     if (!EnvUtils.hasTouch()) {
-      this.hideControlsTimerID = setTimeout(::this.hideControls, 2000);
+      this.hideControlsTimerID = setTimeout(this.hideControls, 2000);
     }
   }
 
@@ -86,14 +88,14 @@ export default class PhotoGallery extends Component {
     }
   }
 
-  hideControls() {
+  hideControls = () => {
     this.setState({hideControls: true});
-  }
+  };
 
-  showControls() {
+  showControls = () => {
     this.setState({hideControls: false});
     this.startHideControlsTimer();
-  }
+  };
 
   close() {
     let {onRequestClose} = this.props;
@@ -127,21 +129,24 @@ export default class PhotoGallery extends Component {
         />
         {!EnvUtils.hasTouch() &&
           <IconButton
-            className={styles.prev}
+            className={cx(styles.prev, {
+              [styles.control_disabled]: !this.hasPrev()
+            })}
             onClick={this.onShowPrev}
             icon="chevron-left"
-            disabled={!this.hasPrev()}
           />
         }
         {!EnvUtils.hasTouch() &&
           <IconButton
-            className={styles.next}
+            className={cx(styles.next, {
+              [styles.control_disabled]: !this.hasNext()
+            })}
             onClick={this.onShowNext}
             icon="chevron-right"
-            disabled={!this.hasNext()}
-            />
+          />
         }
         <PhotosContainer
+          ref="container"
           photos={photos}
           selected={selected}
           onChange={this.onChange}

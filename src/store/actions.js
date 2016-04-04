@@ -1,6 +1,5 @@
 import state from './state';
 
-// None yet
 export default {
 
   pushLocationToHistory(location) {

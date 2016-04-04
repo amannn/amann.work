@@ -18,7 +18,8 @@ export default class PhotosContainer extends Component {
     overshootDamping: PropTypes.number,
     springConfig: PropTypes.object,
     animateIndividualPhotos: PropTypes.bool,
-    swipeVelocityThreshold: PropTypes.number
+    swipeVelocityThreshold: PropTypes.number,
+    indicateBoundaryVelocity: PropTypes.number
   };
 
   static defaultProps = {
@@ -29,7 +30,8 @@ export default class PhotosContainer extends Component {
       springConstant: 230
     },
     animateIndividualPhotos: true,
-    swipeVelocityThreshold: 500 // px / second
+    swipeVelocityThreshold: 500, // px per second
+    indicateBoundaryVelocity: 1000 // px per second
   };
 
   componentDidMount() {
@@ -44,7 +46,7 @@ export default class PhotosContainer extends Component {
     this.setup();
     this.update();
 
-    window.addEventListener('resize', this.onDocumentResize);
+    window.addEventListener('resize', this.onWindowResize);
   }
 
   componentDidUpdate() {
@@ -53,10 +55,11 @@ export default class PhotosContainer extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.onDocumentResize);
+    window.removeEventListener('resize', this.onWindowResize);
   }
 
-  onDocumentResize = () => {
+  onWindowResize = () => {
+    this.setup();
     this.update();
   };
 
@@ -126,6 +129,16 @@ export default class PhotosContainer extends Component {
     this.photoNodes = this.node.querySelectorAll('.' + styles.photo);
   }
 
+  indicateLowerBoundary() {
+    let {indicateBoundaryVelocity} = this.props;
+    this.update(undefined, this.spring.velocity() - indicateBoundaryVelocity);
+  }
+
+  indicateUpperBoundary() {
+    let {indicateBoundaryVelocity} = this.props;
+    this.update(undefined, this.spring.velocity() + indicateBoundaryVelocity);
+  }
+
   /**
    * @param {number} [overrideCurrent] Can be provided to override
    * `this.props.selected`. This will furthermore result in a call to
@@ -145,9 +158,12 @@ export default class PhotosContainer extends Component {
     // If the spring is already animating to the desired offset, don't
     // interrupt the animation. This is important, because otherwise the
     // velocity would be lost.
-    if (this.spring.endValue() === offset) return;
+    let dontInterrupt = this.spring.endValue() === offset && !velocity;
+    if (dontInterrupt) return;
 
     this.spring.setEnd(offset, velocity);
+
+    if (this.animation) this.animation.cancel();
 
     // Start animation loop
     this.animation = runAnimation(

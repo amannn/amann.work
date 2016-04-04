@@ -113,6 +113,10 @@ export default class Spring {
 
   endValue = () => this._endValue;
 
+  velocity() {
+    return this.dx((Date.now() - this._startTime) / 1000.0);
+  }
+
   dx(dt) {
     if (dt === undefined) {
       dt = ((new Date()).getTime() - this._startTime) / 1000.0;

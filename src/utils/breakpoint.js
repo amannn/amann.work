@@ -8,22 +8,21 @@ class Breakpoint {
   // Keep this in sync with `_measurements.scss`.
   small = 480;
   medium = 768;
-  big = 1024;
 
   width = 0;
   height = 0;
 
   constructor() {
     if (EnvUtils.isClient()) {
-      window.addEventListener('resize', ::this.onResize);
+      window.addEventListener('resize', this.onResize);
       this.onResize(); // For initialization.
     }
   }
 
-  onResize() {
+  onResize = () => {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
-  }
+  };
 
   isSmallerThan(bp) {
     if (!this[bp]) throw new Error('Undefined breakpoint: ' + bp);
