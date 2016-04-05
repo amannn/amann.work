@@ -2,7 +2,7 @@
 @import "~styles/fonts";
 @import "~styles/colors";
 @import "~styles/utils";
-@import "~styles/hover-active-patterns";
+@import "~styles/animations";
 
 .root {
   padding: 24px 0 0 48px;
@@ -85,7 +85,7 @@
 }
 
 .menuIcon {
-  @extend %adjust-opacity;
+  @include hover-adjust-opacity;
   position: absolute;
   right: 24px;
 
@@ -111,7 +111,7 @@
 
 .menuItem {
   @extend %font-label-big;
-  @extend %adjust-opacity;
+  @include hover-adjust-opacity;
   color: inherit;
   padding: 12px 24px;
   display: inline-block;

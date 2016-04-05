@@ -3,6 +3,7 @@
 .root {
   @include container;
   margin: 48px;
+
   @include breakpoint($bp-medium) {
     margin: 120px auto;
   }

@@ -1,4 +1,4 @@
-@import "~styles/hover-active-patterns";
+@import "~styles/animations";
 
 .root {
   padding: 12px;
@@ -6,7 +6,7 @@
   width: 48px;
   display: inline-block;
   box-sizing: border-box;
-  @include slow-in-slow-out(opacity);
+  @include hover-slow-in-slow-out(opacity);
 
   &_disabled {
     opacity: 0.25;

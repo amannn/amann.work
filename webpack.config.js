@@ -66,7 +66,7 @@ function generateServiceWorkerCache(stats) {
   );
 }
 
-// Copies all files from static/ to the
+// Copies all files from static/ to the public path
 function copyStaticAssets() {
   glob.sync('static/**/*.*').forEach(file => {
     let lastSlashI = file.lastIndexOf('/');

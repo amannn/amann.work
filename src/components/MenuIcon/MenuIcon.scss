@@ -9,7 +9,11 @@
   @include no-tap-highlight;
 
   &_inverted {
-    .bar1, .bar2, .bar3 { background: $grey-500}
+    & > .bar1,
+    & > .bar2,
+    & > .bar3 {
+      background: $grey-500;
+    }
   }
 }
 

@@ -2,13 +2,13 @@
 @import "~styles/fonts";
 @import "~styles/colors";
 @import "~styles/measurements";
-@import "~styles/hover-active-patterns";
+@import "~styles/animations";
 
 /**
  * Photos
  */
 .item {
-  @include slow-in-slow-out(background-color);
+  @include hover-slow-in-slow-out(background-color);
   display: block;
   position: relative;
   width: 100%;
@@ -35,7 +35,7 @@
   }
 
   &::after {
-    @include slow-in-slow-out(opacity);
+    @include hover-slow-in-slow-out(opacity);
     content: '';
     position: absolute;
     top: 0;
@@ -61,6 +61,7 @@
   padding-left: 48px;
   text-shadow: 0 0 20px rgba(0,0,0,0.3);
   z-index: 1;
+
   @include breakpoint($bp-medium) {
     padding-bottom: 36px; // 48px - lower part of line height
   }

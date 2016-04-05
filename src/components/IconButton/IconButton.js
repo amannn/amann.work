@@ -37,7 +37,9 @@ export default class IconButton extends Component {
    * Either creates a <Link /> or an <a /> tag depending on props.
    */
   render() {
-    let {className, children, icon, target, href, routerLink, disabled, onClick} = this.props;
+    let {
+      className, children, icon, target, href, routerLink, disabled, onClick
+    } = this.props;
 
     let props = {
       href: href || '#',

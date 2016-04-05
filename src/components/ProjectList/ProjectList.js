@@ -14,11 +14,14 @@ export default class ProjectList extends Component {
       <div>
         {projects.map(p =>
           <div key={p.name} className={styles.item}>
-            <img className={styles.image} src={p.mainImageUrl} alt={p.title}></img>
+            <img className={styles.image} src={p.mainImageUrl} alt={p.title} />
             <div className={styles.text}>
               <h2 className={styles.title}>{p.title}</h2>
               <p className={styles.description}>{p.description}</p>
-              <Button routerLink={`/projects/${p.name}`} className={styles.button}>
+              <Button
+                routerLink={`/projects/${p.name}`}
+                className={styles.button}
+              >
                 Read more
               </Button>
             </div>

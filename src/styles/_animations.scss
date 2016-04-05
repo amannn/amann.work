@@ -1,0 +1,27 @@
+@mixin hover-fast-in-slow-out($attr: all) {
+  @include animate-slow($attr);
+
+  &:hover {
+    @include animate-fast($attr);
+  }
+}
+
+@mixin animate-fast($attr: all) {
+  transition: $attr 0.15s ease-out;
+}
+
+@mixin animate-slow($attr: all) {
+  transition: $attr 0.3s ease-out;
+}
+
+@mixin hover-slow-in-slow-out($attr: all) {
+  @include animate-slow($attr);
+}
+
+@mixin hover-adjust-opacity {
+  @include hover-fast-in-slow-out(opacity);
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

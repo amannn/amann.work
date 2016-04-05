@@ -1,14 +1,13 @@
 @import "~styles/fonts";
 @import "~styles/colors";
 @import "~styles/utils";
-@import "~styles/hover-active-patterns";
+@import "~styles/animations";
 @import "config";
 
 .h1 {
   @extend %font-title;
   margin-top: 32px;
   margin-bottom: 16px;
-  // font-weight: $font-weight-light;
   position: relative;
 
   @include breakpoint($bp-medium) {
@@ -169,5 +168,5 @@
 .a {
   color: $color-text-strong;
   border-bottom: 1px solid $color-accent;
-  @extend %adjust-opacity;
+  @include hover-adjust-opacity;
 }

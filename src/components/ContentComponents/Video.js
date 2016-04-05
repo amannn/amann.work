@@ -39,9 +39,11 @@ export default class Video extends Component {
         <div className={styles.cropper}>
           <video ref="video" className={styles.video} {...videoProps}>
             {videos.map(video =>
-              <source key={video.src}
-                      src={video.src}
-                      type={`video/${video.type}`} />
+              <source
+                key={video.src}
+                src={video.src}
+                type={`video/${video.type}`}
+              />
             )}
             <p className={styles.text}>
               Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href={videos[0].src}>download it</a> and watch it with your favourite video player.

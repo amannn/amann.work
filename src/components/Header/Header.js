@@ -64,10 +64,12 @@ export default class Header extends Component {
     switch (feature.type) {
     case 'image':
       return (
-        <img className={cx(styles.img, feature.className)}
-             style={feature.style}
-             src={feature.url}
-             alt={title} />
+        <img
+          className={cx(styles.img, feature.className)}
+          style={feature.style}
+          src={feature.url}
+          alt={title}
+        />
       );
     case 'custom':
       return feature.content;
@@ -86,8 +88,10 @@ export default class Header extends Component {
         (interpolated.y - start) / (end - start),
         max), min);
       return (
-        <li key={item.url} style={{opacity: cur, transform:
-          `translateY(${-8 * (1 - cur)}px)`}}>
+        <li
+          key={item.url}
+          style={{opacity: cur, transform: `translateY(${-8 * (1 - cur)}px)`}}
+        >
           <Link className={styles.menuItem} to={item.url}>{item.name}</Link>
         </li>
       );
@@ -99,7 +103,9 @@ export default class Header extends Component {
 
     let translateY;
     if (breakpoint.isWiderThan('medium')) {
-      translateY = animateText ? animationOffsetText.medium * interpolated.y : 0;
+      translateY = animateText
+        ? animationOffsetText.medium * interpolated.y
+        : 0;
     } else {
       translateY = animationOffsetText.small * interpolated.y;
     }
@@ -155,17 +161,25 @@ export default class Header extends Component {
     });
 
     return (
-        <Motion style={{y: spring(this.state.isMenuOpen ? 1 : 0, springConfig)}}>
+        <Motion
+          style={{y: spring(this.state.isMenuOpen ? 1 : 0, springConfig)}}
+        >
           {interpolated =>
             <header className={headerClassName}>
-              <div className={cx(styles.bg, {[styles.bg_blur]: background && background.blur})}
-                   style={bgStyle}></div>
+              <div
+                className={cx(styles.bg, {
+                  [styles.bg_blur]: background && background.blur
+                })}
+                style={bgStyle}
+              />
               <div className={styles.wrapper}>
                 <Link to="/" className={styles.logo}>
                   Home
                 </Link>
-                <IconButton onClick={this.onMenuButtonClick}
-                            className={styles.menuIcon}>
+                <IconButton
+                  onClick={this.onMenuButtonClick}
+                  className={styles.menuIcon}
+                >
                   <MenuIcon open={interpolated.y} inverted={isInverted} />
                 </IconButton>
 
@@ -175,8 +189,10 @@ export default class Header extends Component {
                       {this.renderMenuItems(interpolated)}
                   </ul>
                 </nav>
-                <hr className={styles.hr}
-                    style={{transform: `translateY(${136 * (interpolated.y )}px)`}} />
+                <hr
+                  className={styles.hr}
+                  style={{transform: `translateY(${136 * (interpolated.y )}px)`}}
+                />
 
                 {this.renderText(interpolated)}
               </div>

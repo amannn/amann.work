@@ -20,15 +20,21 @@ export default class PhotoAlbumList extends Component {
             : album.photos[0];
 
           return (
-            <Link key={album.name}
-                  to={`/photos/${album.name}`}
-                  className={styles.item}
-                  style={{
-                    backgroundImage: `url(${cover})`
-                  }}>
+            <Link
+              key={album.name}
+              to={`/photos/${album.name}`}
+              className={styles.item}
+              style={{
+                backgroundImage: `url(${cover})`
+              }}
+            >
               <div className={styles.text}>
                 <p className={styles.meta}>
-                  {`${DateUtils.months[date.getMonth()]} ${date.getFullYear().toString()}`} · {album.photos.length} Pictures
+                  {
+                    DateUtils.months[date.getMonth()] + ' '
+                    + date.getFullYear().toString() + ' · '
+                    + album.photos.length + ' Pictures'
+                  }
                   </p>
                 <h2 className={styles.title}>{album.title}</h2>
               </div>

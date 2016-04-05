@@ -20,16 +20,20 @@ export default class Button extends Component {
       className, children, routerLink, href, icon, target, iconProps
     } = this.props;
 
-    if (href && routerLink) {
-      throw new Error('It\'s not possible to use `href` and `routerLink` at the same time.');
+    if (process.env.NODE_ENV === 'development' && href && routerLink) {
+      throw new Error(
+        'It\'s not possible to use `href` and `routerLink` at the same time.'
+      );
     }
 
     let element = !!href ? 'a' : Link;
     let content = (
       <span className={styles.wrapper}>
-        {icon && <span className={styles.icon}>
-          <Icon name={icon} {...iconProps} />
-        </span>}
+        {icon && (
+          <span className={styles.icon}>
+            <Icon name={icon} {...iconProps} />
+          </span>
+        )}
         {children}
       </span>
     );
