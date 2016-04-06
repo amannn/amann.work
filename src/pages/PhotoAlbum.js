@@ -10,13 +10,10 @@ export default class PhotoAlbum extends Component {
   };
 
   onRequestClose() {
-    let {state} = this.props;
+    let {state, history} = this.props;
 
-    if (state.routeHistory.length > 1) {
-      this.props.history.goBack();
-    } else {
-      this.props.history.push('/photos');
-    }
+    if (state.routeHistory.length > 1) history.goBack();
+    else history.push('/photos');
   }
 
   render() {
@@ -27,8 +24,10 @@ export default class PhotoAlbum extends Component {
     )[0];
 
     return (
-      <PhotoGallery album={album}
-                    onRequestClose={this.onRequestClose.bind(this)} />
+      <PhotoGallery
+        album={album}
+        onRequestClose={this.onRequestClose.bind(this)}
+      />
     );
   }
 }
