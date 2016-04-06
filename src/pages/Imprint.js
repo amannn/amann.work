@@ -18,19 +18,14 @@ export default class Imprint extends Component {
         <PageContent>
           <P>Jan Amann – Frontend Developer</P>
           <P>
-            Glaserweg 5<br/>
-            6890 Lustenau<br />
-            Austria
+            57 Lee house<br />
+            Custom House Square<br />
+            IFSC Dublin 1<br />
+            Ireland
           </P>
           <P>
             E-Mail: <A href="mailto:jan@amann.me">jan@amann.me</A><br />
-            Tel: <A href="tel:+436503004659">+43 650 / 300 46 59</A>
-          </P>
-          <P>VAT No.: ATU 70057369</P>
-          <P>Member of the Federal Economic Chamber Vorarlberg in the sector of Information and Consulting.</P>
-          <P>
-            <A href="http://www.ris.bka.gv.at/defaultEn.aspx">Trade regulation act</A><br />
-            District commission Dornbirn<br />
+            Tel: <A href="tel:+353892214412">+353 89 22 14 412</A>
           </P>
           <HR />
           <P small>I do not assume any liability for the contents of external links, although I carefully review their contents. The operators of linked pages are exclusively liable for the contents of their pages.</P>
