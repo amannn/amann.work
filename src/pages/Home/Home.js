@@ -4,8 +4,7 @@ import styles from './Home.scss';
 
 export default class Home extends Component {
   static propTypes = {
-    actions: PropTypes.object,
-    state: PropTypes.object,
+    model: PropTypes.object,
     numProjects: PropTypes.number,
     numPhotoAlbums: PropTypes.number
   };
@@ -16,7 +15,7 @@ export default class Home extends Component {
   };
 
   render() {
-    let {menus, projects, photoAlbums} = this.props.state;
+    let {menus, projects, photoAlbums} = this.props.model;
     let {numProjects, numPhotoAlbums} = this.props;
 
     let moreProjectsAvailable = numProjects < projects.length;

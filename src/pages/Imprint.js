@@ -5,11 +5,11 @@ const {P, HR, A} = ContentComponents;
 
 export default class Imprint extends Component {
   static propTypes = {
-    state: PropTypes.object
+    model: PropTypes.object
   };
 
   render() {
-    let {menus} = this.props.state;
+    let {menus} = this.props.model;
 
     return (
       <div>

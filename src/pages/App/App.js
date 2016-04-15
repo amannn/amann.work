@@ -1,12 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 import {DOMUtils, EnvUtils} from 'utils';
 import {Footer} from 'components';
-import state from 'store/state';
-import actions from 'store/actions';
+import model from 'model';
 import './App.scss'; // Exposes only global CSS.
 
 /**
- * This component passes `state` and `actions` down to every child component.
+ * This component passes `model` down to every child component.
  */
 export default class App extends Component {
   static propTypes = {
@@ -22,7 +21,7 @@ export default class App extends Component {
     // of parameters as the second parameter. However, a native `flatMap` would
     // be way cooler – hopefully TC39 will take this on soon.
     let images = Array.prototype.concat.apply([],
-      state.projects
+      model.projects
         .filter(project => project.feature.type === 'image')
         .map(project => [
           project.feature.url,
@@ -41,8 +40,8 @@ export default class App extends Component {
 
     return (
       <div>
-        {React.cloneElement(children, {state, actions})}
-        <Footer menu={state.menus.footer} />
+        {React.cloneElement(children, {model})}
+        <Footer menu={model.menus.footer} />
       </div>
     );
   }

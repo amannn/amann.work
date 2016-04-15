@@ -3,23 +3,22 @@ import {PhotoGallery} from 'components';
 
 export default class PhotoAlbum extends Component {
   static propTypes = {
-    actions: PropTypes.object,
-    state: PropTypes.object,
+    model: PropTypes.object,
     params: PropTypes.object,
     history: PropTypes.object
   };
 
   onRequestClose() {
-    let {state, history} = this.props;
+    let {model, history} = this.props;
 
-    if (state.routeHistory.length > 1) history.goBack();
+    if (model.routeHistory.length > 1) history.goBack();
     else history.push('/photos');
   }
 
   render() {
-    let {state, params} = this.props;
+    let {model, params} = this.props;
 
-    let album = state.photoAlbums.filter(
+    let album = model.photoAlbums.filter(
       cur => cur.name === params.name
     )[0];
 

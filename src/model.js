@@ -2,7 +2,11 @@ import * as importedPhotos from 'photos';
 import * as importedProjects from 'projects';
 
 /**
- * Everything 'data' in the app.
+ * What? A model in a React app?
+ *
+ * As this project is very simple, I found a Flux setup way too overengineered.
+ * Therefore this is just a simple object that can be read from and wrote to.
+ * It doesn't even have a change listener for re-rendering :).
  */
 export default {
   routeHistory: [],

@@ -4,11 +4,11 @@ import {PageContent, ProjectList} from 'components';
 
 export default class Projects extends Component {
   static propTypes = {
-    state: PropTypes.object
+    model: PropTypes.object
   };
 
   render() {
-    let {projects, menus} = this.props.state;
+    let {projects, menus} = this.props.model;
 
     return (
       <div>

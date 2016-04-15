@@ -6,8 +6,8 @@ import useStandardScroll from 'scroll-behavior/lib/useStandardScroll';
 import {Router, RoutingContext, match} from 'react-router';
 import Analytics from 'ga-browser';
 import {EnvUtils} from 'utils';
-import routes from './routes';
-import actions from './store/actions';
+import routes from 'routes';
+import model from 'model';
 import 'babel-polyfill';
 
 /**
@@ -25,7 +25,7 @@ if (EnvUtils.isClient()) {
   let analytics = Analytics();
   analytics('create', 'UA-28289754-1', 'auto');
   history.listen(location => {
-    actions.pushLocationToHistory(location);
+    model.routeHistory.push(location);
     analytics('send', 'pageview', {page: location.pathname});
   });
 

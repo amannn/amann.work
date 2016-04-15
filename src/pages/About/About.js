@@ -5,11 +5,11 @@ import styles from './About.scss';
 
 export default class About extends Component {
   static propTypes = {
-    state: PropTypes.object
+    model: PropTypes.object
   };
 
   render() {
-    let {menus} = this.props.state;
+    let {menus} = this.props.model;
 
     return (
       <div>
@@ -66,7 +66,7 @@ export default class About extends Component {
           <P>All of my recent projects are built with <A href="https://facebook.github.io/react/">React</A>. I'm really pleased with the results as well as how I was able to use it in very different ways.</P>
           <P>Here's a quick list:</P>
           <UL>
-            <LI>A <B>large single page app</B> that talks with a REST backend. It's basically an admin interface with a high “feature to space” ratio (but still looks clean; kudos to the designer). The <A href="https://facebook.github.io/flux/docs/overview.html">Flux</A> architecture worked very well for this app.</LI>
+            <LI>Two <B>large single page apps</B> that talk with a REST backend. One of them is basically an admin interface with a high “feature to space” ratio (but still looks clean; kudos to the designer). The <A href="https://facebook.github.io/flux/docs/overview.html">Flux</A> architecture worked very well for these apps.</LI>
             <LI>Integration with a large Java application. I've built a rendering server that the Java app can talk to in order to get UI widgets. The response contains JavaScript code to initialize the widget on the client, but also some pre-rendered HTML, so there's no downside regarding SEO. Also API data is transferred to the client, so a refetch isn't necessary.</LI>
             <LI>A <B>widget for a WordPress site</B> – also for this project with pre-rendered HTML that is being spit out during the build process, while the client side reinitializes for interactivity.</LI>
             <LI>A <A routerLink="/projects/amann.me">static website</A> – the one you're currently looking at :)</LI>

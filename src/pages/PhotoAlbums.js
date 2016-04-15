@@ -4,11 +4,11 @@ import {PageContent, PhotoAlbumList} from 'components';
 
 export default class PhotoAlbums extends Component {
   static propTypes = {
-    state: PropTypes.object
+    model: PropTypes.object
   };
 
   render() {
-    let {photoAlbums, menus} = this.props.state;
+    let {photoAlbums, menus} = this.props.model;
 
     return (
       <div>

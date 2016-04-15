@@ -3,14 +3,13 @@ import {PageContent, Header} from 'components';
 
 export default class Project extends Component {
   static propTypes = {
-    actions: PropTypes.object,
-    state: PropTypes.object,
+    model: PropTypes.object,
     params: PropTypes.object
   };
 
   render() {
-    let {state, params} = this.props;
-    let {projects, menus} = state;
+    let {model, params} = this.props;
+    let {projects, menus} = model;
 
     let project = projects.filter(
       cur => cur.name === params.name
