@@ -31,7 +31,7 @@ export default class PhotosContainer extends Component {
     },
     animateIndividualPhotos: true,
     swipeVelocityThreshold: 500, // px per second
-    indicateBoundaryVelocity: 1000 // px per second
+    indicateBoundaryVelocity: 2000 // px per second
   };
 
   componentDidMount() {
