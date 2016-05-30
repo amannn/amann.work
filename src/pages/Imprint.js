@@ -23,6 +23,7 @@ export default class Imprint extends Component {
             IFSC Dublin 1<br />
             Ireland
           </P>
+          <P>Income tax no.: 1748110VA</P>
           <P>
             E-Mail: <A href="mailto:jan@amann.me">jan@amann.me</A><br />
             Tel: <A href="tel:+353892214412">+353 89 22 14 412</A>
