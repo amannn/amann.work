@@ -70,9 +70,16 @@ export default class ScreenStack extends Component {
                 left: screenWidth
               };
 
-              return <img key={url} src={url} style={screenStyle} className={styles.screen} />;
+              return (
+                <img
+                  key={url}
+                  src={url}
+                  style={screenStyle}
+                  className={styles.screen}
+                  role="presentation"
+                />
+              );
             })}
-            <img src={screens[0]} className={styles.spacer} style={{width: screenWidth}} />
           </a>
         }
       </Motion>

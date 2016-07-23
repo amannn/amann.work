@@ -15,21 +15,21 @@ export default class MenuIcon extends Component {
   render() {
     let {open, inverted} = this.props;
 
-    let bar1Y = { start: 5, end: 11 };
-    let bar2Y = { start: 17, end: 11 };
+    let bar1Y = {start: 5, end: 11};
+    let bar2Y = {start: 17, end: 11};
 
     let rootClassName = cx(styles.root, {
       [styles.root_inverted]: inverted
     });
 
     let bar1Style = {
-      transform: `translateY(${ (bar1Y.end - bar1Y.start)
-        * open + bar1Y.start }px)` + `rotate(${open * 45}deg)`
+      transform: `translateY(${(bar1Y.end - bar1Y.start)
+        * open + bar1Y.start}px) rotate(${open * 45}deg)`
     };
 
     let bar2Style = {
-      transform: `translateY(${ (bar2Y.end - bar2Y.start)
-        * open + bar2Y.start }px)` + `rotate(-${open * 45}deg)`
+      transform: `translateY(${(bar2Y.end - bar2Y.start)
+        * open + bar2Y.start}px) rotate(-${open * 45}deg)`
     };
 
     return (

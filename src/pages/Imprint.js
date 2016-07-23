@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {Header} from 'components';
-import {ContentComponents, PageContent} from 'components';
+import {ContentComponents, Header, PageContent} from 'components';
 const {P, HR, A} = ContentComponents;
 
 export default class Imprint extends Component {

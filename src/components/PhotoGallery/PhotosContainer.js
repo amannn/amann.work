@@ -1,8 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
-import {breakpoint} from 'utils';
 import {Spring, runAnimation} from 'utils/physics';
-import {TouchUtils} from 'utils';
+import {breakpoint, TouchUtils} from 'utils';
 import styles from './PhotosContainer.scss';
 
 /**

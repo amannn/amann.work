@@ -15,10 +15,24 @@
     "no-param-reassign": 0,
     "default-case": 0,
     "no-nested-ternary": 0,
-    "one-var": 0
+    "one-var": 0,
+    "object-curly-spacing": [2, "never"],
+    "no-underscore-dangle": 0,
+    "prefer-template": 0,
+    "max-len": 0,
+    "global-require": 0,
+    "react/jsx-pascal-case": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-no-bind": 0
   },
   "plugins": [
     "react"
   ],
-  "globals": { }
+  "globals": { },
+  "settings": {
+    "import/resolver": {
+      webpack: "webpack.config.js"
+    }
+  }
 }

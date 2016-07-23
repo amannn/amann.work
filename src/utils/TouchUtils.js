@@ -6,7 +6,7 @@
  * https://github.com/iamralpht/iamralpht.github.io/tree/master/physics
  */
 
-let touchInfo = { trackingID: -1, maxDy: 0, maxDx: 0 };
+let touchInfo = {trackingID: -1, maxDy: 0, maxDx: 0};
 
 const TouchUtils = {};
 

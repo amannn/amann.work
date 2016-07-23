@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {Header} from 'components';
-import {PageContent, PhotoAlbumList} from 'components';
+import {Header, PageContent, PhotoAlbumList} from 'components';
 
 export default class PhotoAlbums extends Component {
   static propTypes = {

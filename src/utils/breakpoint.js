@@ -48,6 +48,6 @@ class Breakpoint {
 
 }
 
-let instance = new Breakpoint();
+const instance = new Breakpoint();
 
 export default instance;

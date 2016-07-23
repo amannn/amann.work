@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
-import {createHistory, createMemoryHistory} from 'history';
-import useStandardScroll from 'scroll-behavior/lib/useStandardScroll';
-import {Router, RoutingContext, match} from 'react-router';
+import {
+  Router, RoutingContext, match, browserHistory, createMemoryHistory
+} from 'react-router';
 import Analytics from 'ga-browser';
 import {EnvUtils} from 'utils';
 import routes from 'routes';
@@ -14,22 +14,17 @@ import 'babel-polyfill';
  * Client render (browser context)
  */
 if (EnvUtils.isClient()) {
-  // `useStandardScroll` attempts to imitate native browser scroll behavior by
-  // recording updates to the window scroll position, then restoring the
-  // previous scroll position upon a POP transition. PUSH and REPLACE
-  // transitions apparently scroll to top (which is desired).
-  const history = useStandardScroll(createHistory)();
   const root = document.getElementById('root');
 
   // Google Analytics and route tracking
   let analytics = Analytics();
   analytics('create', 'UA-28289754-1', 'auto');
-  history.listen(location => {
+  browserHistory.listen(location => {
     model.routeHistory.push(location);
     analytics('send', 'pageview', {page: location.pathname});
   });
 
-  ReactDOM.render(<Router history={history} routes={routes} />, root);
+  ReactDOM.render(<Router history={browserHistory} routes={routes} />, root);
 
   // Don't use service worker. The complete website is too huge by now.
   // require('installServiceWorker');
@@ -41,10 +36,12 @@ if (EnvUtils.isClient()) {
 export default (locals, callback) => {
   const Base = require('./Base').default;
 
-  const history = createMemoryHistory();
-  const location = history.createLocation(locals.path);
-
-  match({routes, location}, (error, redirectLocation, renderProps) => {
+  const options = {
+    routes,
+    location: locals.path,
+    history: createMemoryHistory()
+  };
+  match(options, (error, redirectLocation, renderProps) => {
     let html = ReactDOMServer.renderToString(<RoutingContext {...renderProps} />);
 
     // Currently only one chunk is emitted for the JavaScript and CSS code.

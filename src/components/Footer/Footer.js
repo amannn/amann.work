@@ -41,12 +41,14 @@ export default class Footer extends Component {
         <div className={styles.social}>
           {socialLinks.map(link =>
             <IconButton key={link.url} href={link.url}
-                        target="_blank"
-                        className={styles.socialIcon}>
+              target="_blank"
+              className={styles.socialIcon}
+            >
               <span className={styles.socialImg}
-                    style={{
-                      backgroundImage: `url(${require('./images/' + link.image)})`
-                    }}>
+                style={{
+                  backgroundImage: `url(${require('./images/' + link.image)})`
+                }}
+              >
                 Github
               </span>
             </IconButton>

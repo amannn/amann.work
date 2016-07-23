@@ -29,7 +29,7 @@ export default class Header extends Component {
     mini: PropTypes.bool,
     feature: PropTypes.object,
     animateText: PropTypes.bool, // For > medium viewports, below is always animated.
-    springConfig: PropTypes.array,
+    springConfig: PropTypes.object,
     animationOffsetText: PropTypes.object
   };
 
@@ -44,7 +44,10 @@ export default class Header extends Component {
         'linear-gradient(-90deg, hsla(212, 51%, 26%, 1) 0%, hsla(164, 27%, 19%, 1) 100%)',
       ]
     },
-    springConfig: [150, 17],
+    springConfig: {
+      stiffness: 150,
+      damping: 17
+    },
     animationOffsetText: { // Differs per viewport
       small: 107,
       medium: 24
@@ -62,18 +65,20 @@ export default class Header extends Component {
     if (!feature) return null;
 
     switch (feature.type) {
-    case 'image':
-      return (
-        <img
-          className={cx(styles.img, feature.className)}
-          style={feature.style}
-          src={feature.url}
-          alt={title}
-        />
-      );
-    case 'custom':
-      return feature.content;
+      case 'image':
+        return (
+          <img
+            className={cx(styles.img, feature.className)}
+            style={feature.style}
+            src={feature.url}
+            alt={title}
+          />
+        );
+      case 'custom':
+        return feature.content;
     }
+
+    return null;
   }
 
   renderMenuItems(interpolated) {
@@ -130,25 +135,27 @@ export default class Header extends Component {
 
     // Assign bgStyle
     if (background) {
+      let bg = '';
+
       switch (background.type) {
-      case 'image':
-        let bg = '';
-        let bgs = [`url(${background.url})`];
-        if (background.blends) bgs.push(background.blends);
-        bg = bgs.join(',');
+        case 'image': {
+          let bgs = [`url(${background.url})`];
+          if (background.blends) bgs.push(background.blends);
+          bg = bgs.join(',');
+        }
 
         // background-size needs to be set here so it isn't
         // overridden by the generic background property.
-        bgStyle = {
-          background: bg,
-          backgroundSize: 'cover'
-        };
-        break;
-      case 'color':
-        bgStyle = { backgroundColor: background.color };
-        break;
-      default:
-        throw new Error('Unkown background type.');
+          bgStyle = {
+            background: bg,
+            backgroundSize: 'cover'
+          };
+          break;
+        case 'color':
+          bgStyle = {backgroundColor: background.color};
+          break;
+        default:
+          throw new Error('Unkown background type.');
       }
     }
 
@@ -161,45 +168,45 @@ export default class Header extends Component {
     });
 
     return (
-        <Motion
-          style={{y: spring(this.state.isMenuOpen ? 1 : 0, springConfig)}}
-        >
-          {interpolated =>
-            <header className={headerClassName}>
-              <div
-                className={cx(styles.bg, {
-                  [styles.bg_blur]: background && background.blur
-                })}
-                style={bgStyle}
+      <Motion
+        style={{y: spring(this.state.isMenuOpen ? 1 : 0, springConfig)}}
+      >
+        {interpolated =>
+          <header className={headerClassName}>
+            <div
+              className={cx(styles.bg, {
+                [styles.bg_blur]: background && background.blur
+              })}
+              style={bgStyle}
+            />
+            <div className={styles.wrapper}>
+              <Link to="/" className={styles.logo}>
+                Home
+              </Link>
+              <IconButton
+                onClick={this.onMenuButtonClick}
+                className={styles.menuIcon}
+              >
+                <MenuIcon open={interpolated.y} inverted={isInverted} />
+              </IconButton>
+
+              <nav>
+                <ul className={cx(styles.menu,
+                    {[styles.menu_open]: this.state.isMenuOpen})}>
+                    {this.renderMenuItems(interpolated)}
+                </ul>
+              </nav>
+              <hr
+                className={styles.hr}
+                style={{transform: `translateY(${136 * (interpolated.y)}px)`}}
               />
-              <div className={styles.wrapper}>
-                <Link to="/" className={styles.logo}>
-                  Home
-                </Link>
-                <IconButton
-                  onClick={this.onMenuButtonClick}
-                  className={styles.menuIcon}
-                >
-                  <MenuIcon open={interpolated.y} inverted={isInverted} />
-                </IconButton>
 
-                <nav>
-                  <ul className={cx(styles.menu,
-                      {[styles.menu_open]: this.state.isMenuOpen})}>
-                      {this.renderMenuItems(interpolated)}
-                  </ul>
-                </nav>
-                <hr
-                  className={styles.hr}
-                  style={{transform: `translateY(${136 * (interpolated.y )}px)`}}
-                />
+              {this.renderText(interpolated)}
+            </div>
+          </header>
+        }
 
-                {this.renderText(interpolated)}
-              </div>
-            </header>
-          }
-
-        </Motion>
+      </Motion>
     );
   }
 }

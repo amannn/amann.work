@@ -34,7 +34,7 @@ function cancel(handle) {
  * @return {object} Exposes a `cancel` function.
  */
 export default function runAnimation(physicsModel, onFrame, onFinish) {
-  let handle = { id: 0, cancelled: false };
+  let handle = {id: 0, cancelled: false};
   processFrame(handle, physicsModel, onFrame, onFinish);
-  return { cancel: cancel.bind(null, handle), model: physicsModel };
+  return {cancel: cancel.bind(null, handle), model: physicsModel};
 }

@@ -35,7 +35,7 @@ export default class PhotoAlbumList extends Component {
                     + date.getFullYear().toString() + ' · '
                     + album.photos.length + ' Pictures'
                   }
-                  </p>
+                </p>
                 <h2 className={styles.title}>{album.title}</h2>
               </div>
             </Link>

@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {Header} from 'components';
-import {PageContent, ProjectList} from 'components';
+import {Header, PageContent, ProjectList} from 'components';
 
 export default class Projects extends Component {
   static propTypes = {

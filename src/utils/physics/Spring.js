@@ -89,7 +89,7 @@ export default class Spring {
       return {
         x: t => Math.pow(Math.E, r * t) * (c1 * Math.cos(w * t) + c2 * Math.sin(w * t)),
         dx: t => {
-          let power =  Math.pow(Math.E, r * t);
+          let power = Math.pow(Math.E, r * t);
           let cos = Math.cos(w * t);
           let sin = Math.sin(w * t);
           return power * (c2 * w * cos - c1 * w * sin) + r * power * (c2 * sin + c1 * cos);

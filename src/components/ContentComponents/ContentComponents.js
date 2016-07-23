@@ -48,7 +48,7 @@ export const Img = ({src, children, width, oversized, undersized}) => (
     [styles.imgWrapper_oversized]: oversized,
     [styles.imgWrapper_undersized]: undersized
   })}>
-    <img className={styles.img} src={src} width={width} />
+    <img className={styles.img} role="presentation" src={src} width={width} />
     <p className={styles.imgText}>{children}</p>
   </div>
 );
@@ -62,7 +62,7 @@ Img.propTypes = {
 
 export const A = ({className, href, routerLink, children, target}) =>
   React.createElement(routerLink ? Link : 'a', {
-    href: href,
+    href,
     to: routerLink,
     target: !routerLink && (target === '_blank' || href.startsWith('http'))
       ? '_blank'
