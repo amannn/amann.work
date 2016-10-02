@@ -19,7 +19,7 @@ export default class Base extends Component {
       <html>
         <head>
           <title>
-            Jan Amann – A frontend developer who cares about user experience.
+            Jan Amann – A frontend developer who cares about user experiences.
           </title>
 
           <meta

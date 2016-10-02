@@ -29,7 +29,7 @@ export default class Home extends Component {
         className: styles.portrait
       },
       title: 'Jan Amann',
-      description: 'I’m a frontend developer who cares about user experience.',
+      description: 'I’m a frontend developer who cares about user experiences.',
       animateText: true
     };
 
