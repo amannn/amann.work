@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import {
-  applyRouterMiddleware, Router, RoutingContext, match, browserHistory, createMemoryHistory
+  applyRouterMiddleware,
+  browserHistory,
+  match,
+  Router,
+  RouterContext
 } from 'react-router';
 import {useScroll} from 'react-router-scroll';
 import Analytics from 'ga-browser';
@@ -47,11 +51,10 @@ export default (locals, callback) => {
 
   const options = {
     routes,
-    location: locals.path,
-    history: createMemoryHistory()
+    location: locals.path
   };
   match(options, (error, redirectLocation, renderProps) => {
-    let html = ReactDOMServer.renderToString(<RoutingContext {...renderProps} />);
+    let html = ReactDOMServer.renderToString(<RouterContext {...renderProps} />);
 
     // Currently only one chunk is emitted for the JavaScript and CSS code.
     // This could be swapped out for something more sophisticated
