@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
 import {
-  Router, RoutingContext, match, browserHistory, createMemoryHistory
+  applyRouterMiddleware, Router, RoutingContext, match, browserHistory, createMemoryHistory
 } from 'react-router';
+import {useScroll} from 'react-router-scroll';
 import Analytics from 'ga-browser';
 import {EnvUtils} from 'utils';
 import routes from 'routes';
@@ -24,7 +25,15 @@ if (EnvUtils.isClient()) {
     analytics('send', 'pageview', {page: location.pathname});
   });
 
-  ReactDOM.render(<Router history={browserHistory} routes={routes} />, root);
+  const element = (
+    <Router
+      history={browserHistory}
+      render={applyRouterMiddleware(useScroll())}
+    >
+      {routes}
+    </Router>
+  );
+  ReactDOM.render(element, root);
 
   // Don't use service worker. The complete website is too huge by now.
   // require('installServiceWorker');
