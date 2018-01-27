@@ -17,15 +17,14 @@ export default class Imprint extends Component {
         <PageContent>
           <P>Jan Amann – Frontend Developer</P>
           <P>
-            57 Lee house<br />
-            Custom House Square<br />
-            IFSC Dublin 1<br />
-            Ireland
+            Wiesenrainstraße 15 / Top 3<br />
+            6890 Lustenau<br />
+            Austria
           </P>
-          <P>Income tax no.: 1748110VA</P>
+          <P>Income tax no.: ATU70057369</P>
           <P>
             E-Mail: <A href="mailto:jan@amann.me">jan@amann.me</A><br />
-            Tel: <A href="tel:+353892214412">+353 89 22 14 412</A>
+            Tel: <A href="tel:+4368184390333">+43 681 / 84 39 0 333</A>
           </P>
           <HR />
           <P small>I do not assume any liability for the contents of external links, although I carefully review their contents. The operators of linked pages are exclusively liable for the contents of their pages.</P>
