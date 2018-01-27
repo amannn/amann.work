@@ -10,6 +10,7 @@
   margin-bottom: 48px;
   @include no-tap-highlight;
   cursor: default;
+  transform: translateY(-120px);
 
   &_clickable {
     cursor: pointer;

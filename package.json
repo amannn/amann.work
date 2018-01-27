@@ -67,5 +67,5 @@
     "react-motion": "^0.4.4",
     "react-router": "^2.6.0"
   },
-  "engine": "node 5.0.0"
+  "engine": "node 8.0.0"
 }

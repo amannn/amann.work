@@ -9,12 +9,15 @@ export default class ScreenStack extends Component {
   static propTypes = {
     screens: PropTypes.array.isRequired,
     enableClick: PropTypes.bool,
-    springConfig: PropTypes.array,
+    springConfig: PropTypes.object
   };
 
   static defaultProps = {
     enableClick: false,
-    springConfig: [15, 6]
+    springConfig: {
+      stiffness: 15,
+      damping: 6
+    }
   };
 
   state = {rotate: false};
@@ -35,7 +38,8 @@ export default class ScreenStack extends Component {
     let {rotate} = this.state;
 
     let rootStyle = {
-      marginTop: ((screens.length + 1) * 48) + 'px'
+      paddingTop: ((screens.length + 1) * 48) + 'px',
+      paddingBottom: ((screens.length + 1) * 48) + 'px'
     };
 
     let middle = Math.round(screens.length / 2);
