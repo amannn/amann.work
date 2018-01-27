@@ -63,8 +63,9 @@
   background-size: cover;
   background-blend-mode: multiply;
   z-index: 0;
+
   &_blur {
-    filter: blur(32px);
+    filter: blur(10px);
   }
 }
 

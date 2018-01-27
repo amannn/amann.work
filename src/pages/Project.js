@@ -21,7 +21,8 @@ export default class Project extends Component {
       background: {
         type: 'image',
         url: project.bgImageUrl,
-        blends: project.bgImageBlends
+        blends: project.bgImageBlends,
+        blur: true
       },
       title: project.title,
       description: project.description,
