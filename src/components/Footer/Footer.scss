@@ -54,7 +54,6 @@ $social-icon-size: 24px;
 
 .link {
   @include hover-fast-in-slow-out();
-  @extend %font-label-big;
   display: block;
   padding: 16px 24px;
   opacity: .5;
