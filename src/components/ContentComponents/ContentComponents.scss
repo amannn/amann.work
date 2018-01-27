@@ -112,6 +112,7 @@
   width: calc(100% / 3);
   left: calc(100% / 3);
   margin: 44px 0;
+  overflow: visible;
   @include setHrColor($color);
 
   @include after {
