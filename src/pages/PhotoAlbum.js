@@ -1,18 +1,19 @@
 import React, {Component, PropTypes} from 'react';
+import {withRouter} from 'react-router';
 import {PhotoGallery} from 'components';
 
-export default class PhotoAlbum extends Component {
+class PhotoAlbum extends Component {
   static propTypes = {
-    model: PropTypes.object,
-    params: PropTypes.object,
-    history: PropTypes.object
+    model: PropTypes.object.isRequired,
+    params: PropTypes.object.isRequired,
+    router: PropTypes.object.isRequired
   };
 
   onRequestClose() {
-    let {model, history} = this.props;
+    let {model, router} = this.props;
 
-    if (model.routeHistory.length > 1) history.goBack();
-    else history.push('/photos');
+    if (model.routeHistory.length > 1) router.goBack();
+    else router.push('/photos');
   }
 
   render() {
@@ -30,3 +31,5 @@ export default class PhotoAlbum extends Component {
     );
   }
 }
+
+export default withRouter(PhotoAlbum);
