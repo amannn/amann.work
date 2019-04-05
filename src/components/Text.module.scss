@@ -1,0 +1,55 @@
+@import "~styles/colors";
+
+.root {
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  /**
+   * Variants
+   */
+
+  &_variant-h1 {
+    font-size: 48px;
+    line-height: 60px;
+    color: rgba($black, 0.8);
+  }
+
+  &_variant-h2 {
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba($black, 0.9);
+  }
+
+  &_variant-label {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba($black, 0.9);
+  }
+
+  &_variant-caption {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($black, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &_variant-paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba($black, 0.7);
+    font-weight: 300;
+  }
+
+  /**
+   * Rest
+   */
+
+  &_color-accent {
+    color: $color-accent-dark;
+  }
+
+  &_marginBottom {
+    margin-bottom: 16px;
+  }
+}

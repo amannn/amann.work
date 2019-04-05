@@ -1,8 +1,13 @@
-export {default as App} from './App/App';
-export {default as Home} from './Home/Home';
-export {default as About} from './About/About';
-export {default as PhotoAlbum} from './PhotoAlbum';
-export {default as PhotoAlbums} from './PhotoAlbums';
-export {default as Project} from './Project';
-export {default as Projects} from './Projects';
-export {default as Imprint} from './Imprint';
+import React, {useEffect} from 'react';
+import config from 'config';
+
+// This page should never be rendered directly by the browser.
+// Add a server-side redirect which considers the users language.
+
+export default function Index() {
+  useEffect(() => {
+    document.location.href = '/' + config.defaultLanguage;
+  });
+
+  return <p>Loading …</p>;
+}

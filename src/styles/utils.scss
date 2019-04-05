@@ -1,0 +1,20 @@
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin before {
+  &::before {
+    display: block;
+    content: '';
+    @content;
+  }
+}
+
+@mixin after {
+  &::after {
+    display: block;
+    content: '';
+    @content;
+  }
+}
