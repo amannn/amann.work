@@ -5,10 +5,12 @@ import MenuItem from 'components/MenuItem';
 import Page from 'components/Page';
 import Text from 'components/Text';
 import Wrapper from 'components/Wrapper';
+import Meta from './_Meta';
 
 export default function Imprint({homeLink = '/de'}) {
   return (
     <Page>
+      <Meta />
       <Header
         homeLink={homeLink}
         menu={

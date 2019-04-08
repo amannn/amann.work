@@ -8,6 +8,7 @@ import Project from 'components/Project';
 import SocialIcon from 'components/SocialIcon';
 import Icon from 'components/Icon';
 import Footer from 'components/Footer';
+import Meta from './_Meta';
 
 export default function Index() {
   function onClick() {
@@ -16,6 +17,7 @@ export default function Index() {
 
   return (
     <Page>
+      <Meta />
       <Header
         description="Meine Leidenschaft ist die Entwicklung von webbasierten Produkten die sich wirklich gut anfühlen. Die mit Ästhetik überzeugen und durch & durch performant sind. Dazu setze ich auf moderne Technologien wie React, node.js und GraphQL."
         homeLink="/de"
