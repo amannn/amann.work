@@ -1,0 +1,60 @@
+@import "~styles/media-queries";
+
+.root {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include match-medium {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  };
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include match-medium {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  };
+}
+
+.visualWrapper {
+  text-align: center;
+
+  @include match-medium {
+    width: 50%;
+  };
+}
+
+.visual {
+  position: relative;
+  // Compensate for shadow on images
+  left: -5px;
+  width: calc(100% + 10px);
+
+  @include match-medium {
+    left: auto;
+    width: 100%;
+  };
+
+  @include match-large {
+    position: relative;
+    left: -100px;
+  };
+}
+
+.text {
+  margin-bottom: 60px;
+
+  @include match-medium {
+    margin-bottom: 80px;
+    width: calc(50% - 40px);
+  };
+}
+
+.cta {
+  margin-top: 24px;
+}

@@ -1,20 +1,27 @@
 import React from 'react';
 import cx from 'classnames';
-import Text from './Text';
+import Text from 'components/Text';
 import styles from './MenuItem.module.scss';
 
-export default function MenuItem({children, onClick, pale}) {
+export default function MenuItem({
+  children,
+  color,
+  component = 'button',
+  onClick
+}) {
   function ConfiguredButton({className, ...other}) {
-    const renderClassName = cx(styles.root, className, {
-      [styles.root_pale]: pale
-    });
+    const renderClassName = cx(styles.root, className);
 
-    return (
-      <button className={renderClassName} onClick={onClick} {...other}>
-        {children}
-      </button>
+    return React.createElement(
+      component,
+      {
+        className: renderClassName,
+        onClick,
+        ...other
+      },
+      children
     );
   }
 
-  return <Text component={ConfiguredButton} variant="label" />;
+  return <Text color={color} component={ConfiguredButton} variant="label" />;
 }

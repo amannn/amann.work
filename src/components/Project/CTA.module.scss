@@ -1,0 +1,36 @@
+@import "~styles/colors";
+@import "~styles/utils";
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  padding: 22px; // Total height of 64px with caption inside.
+  background-color: $white;
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  margin-right: 24px;
+
+  &, &::before, &::after {
+    height: 1px;
+    background-color: $color-line;
+  }
+
+  &::before, &::after {
+    position: absolute;
+    right: 0;
+    width: 12px;
+    transform-origin: right;
+  }
+
+  @include before {
+    transform: rotate(45deg);
+  };
+
+  @include after {
+    transform: rotate(-45deg);
+  };
+}

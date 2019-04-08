@@ -3,23 +3,38 @@
 @import "~styles/utils";
 
 .root {
-  background-image: url('./images/portrait.jpg');
-  background-repeat: no-repeat;
-  background-position: 90% bottom;
-  background-size: 500px;
+  overflow: hidden;
 
-  @include match-large {
-    background-position: 80% bottom;
-  };
+  &_showPortrait {
+    padding-bottom: 300px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 300px;
+    background-image: url('./images/portrait.jpg');
+
+    @include match-medium {
+      padding-bottom: 0;
+      background-position: 90% bottom;
+      background-size: 500px;
+    };
+
+    @include match-large {
+      background-position: 80% bottom;
+    };
+  }
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 20px;
+
+  @include match-medium {
+    padding-top: 80px;
+  };
 }
 
-.menuItemsWrapper {
+.menu {
   position: relative;
   flex: 1;
   margin-left: 24px;
@@ -34,13 +49,15 @@
   };
 }
 
-.menuItems {
-}
-
 .text {
-  padding-top: 240px;
-  padding-bottom: 80px;
+  padding-top: 160px;
   max-width: 500px;
+
+  @include match-medium {
+    padding-top: 240px;
+    padding-left: 0;
+    padding-bottom: 80px;
+  };
 }
 
 .title {

@@ -1,10 +1,16 @@
+@import "~styles/media-queries";
+
 .root {
+  display: inline-block;
   border: none;
   background: none;
-  padding: 0;
-  padding: 8px 18px;
+  padding: 8px 0;
 
-  &_pale {
-    opacity: 0.5;
+  & + & {
+    margin-left: 20px;
+
+    @include match-medium {
+      margin-left: 32px;
+    };
   }
 }

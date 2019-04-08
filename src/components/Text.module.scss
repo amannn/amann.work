@@ -1,5 +1,11 @@
 @import "~styles/colors";
 
+@mixin margin-bottom($value) {
+  &.root_marginBottom {
+    padding-bottom: $value;
+  }
+}
+
 .root {
   font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,18 +18,32 @@
     font-size: 48px;
     line-height: 60px;
     color: rgba($black, 0.8);
+
+    @include margin-bottom(24px);
   }
 
   &_variant-h2 {
+    font-size: 32px;
+    line-height: 40px;
+    color: rgba($black, 0.9);
+
+    @include margin-bottom(24px);
+  }
+
+  &_variant-h3 {
     font-size: 20px;
     line-height: 30px;
     color: rgba($black, 0.9);
+
+    @include margin-bottom(16px);
   }
 
   &_variant-label {
     font-size: 16px;
     line-height: 24px;
     color: rgba($black, 0.9);
+
+    @include margin-bottom(16px);
   }
 
   &_variant-caption {
@@ -32,6 +52,8 @@
     color: rgba($black, 0.7);
     text-transform: uppercase;
     letter-spacing: 2px;
+
+    @include margin-bottom(16px);
   }
 
   &_variant-paragraph {
@@ -39,17 +61,31 @@
     line-height: 24px;
     color: rgba($black, 0.7);
     font-weight: 300;
+
+    @include margin-bottom(12px);
   }
 
   /**
    * Rest
    */
 
-  &_color-accent {
+  &_color-accentDark {
     color: $color-accent-dark;
   }
 
-  &_marginBottom {
-    margin-bottom: 16px;
+  &_color-accent {
+    color: $color-accent;
+  }
+
+  &_color-white {
+    color: $white;
+  }
+
+  &_color-pale {
+    color: $color-pale;
+  }
+
+  &_color-paleInverted {
+    color:$color-pale-inverted;
   }
 }
