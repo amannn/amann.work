@@ -128,10 +128,16 @@ export default function Index() {
         }
         social={
           <>
-            <Footer.SocialIcon href="https://github.com/amannn">
+            <Footer.SocialIcon
+              aria-label="Github"
+              href="https://github.com/amannn"
+            >
               <Icon name="github" />
             </Footer.SocialIcon>
-            <Footer.SocialIcon href="https://twitter.com/jamannnnnn">
+            <Footer.SocialIcon
+              aria-label="Twitter"
+              href="https://twitter.com/jamannnnnn"
+            >
               <Icon name="twitter" />
             </Footer.SocialIcon>
           </>

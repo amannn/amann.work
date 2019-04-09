@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 export default function Meta() {
   return (
     <Helmet>
+      <html lang="de" />
       <title>
         Jan Amann – Partner für User Interface Entwicklung und Design
       </title>

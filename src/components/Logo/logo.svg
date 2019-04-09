@@ -8,7 +8,7 @@
         <g id="logo" sketch:type="MSArtboardGroup" stroke="#579B9B" stroke-width="2">
             <g sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)">
                 <circle id="Mask" sketch:type="MSShapeGroup" cx="23" cy="23" r="23"></circle>
-                <path d="M16.25,31.25 L23.4310624,13.25 L30.5,31.2128004" id="Path-15-Copy-3" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+                <path d="M16.25,31.25 L23.4310624,13.25 L30.5,31.2128004" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
             </g>
         </g>
     </g>
