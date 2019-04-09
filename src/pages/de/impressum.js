@@ -2,7 +2,6 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import Header from 'components/Header';
-import MenuItem from 'components/MenuItem';
 import Page from 'components/Page';
 import Text from 'components/Text';
 import Wrapper from 'components/Wrapper';
@@ -15,12 +14,12 @@ export default function Imprint({homeLink = '/de'}) {
       <Header
         homeLink={homeLink}
         menu={
-          <MenuItem
+          <Header.MenuItem
             color="pale"
             component={props => <Link to={homeLink} {...props} />}
           >
             Zurück zur Startseite
-          </MenuItem>
+          </Header.MenuItem>
         }
         showPortrait={false}
         title="Impressum"

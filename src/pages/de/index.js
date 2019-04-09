@@ -2,11 +2,9 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import Header from 'components/Header';
-import MenuItem from 'components/MenuItem';
 import Page from 'components/Page';
 import SectionTitle from 'components/SectionTitle';
 import Project from 'components/Project';
-import SocialIcon from 'components/SocialIcon';
 import Icon from 'components/Icon';
 import Footer from 'components/Footer';
 import Meta from './_Meta';
@@ -20,15 +18,17 @@ export default function Index() {
         homeLink="/de"
         menu={
           <>
-            <MenuItem component={props => <a href="#kontakt" {...props} />}>
+            <Header.MenuItem
+              component={props => <a href="#kontakt" {...props} />}
+            >
               Kontakt
-            </MenuItem>
-            <MenuItem
+            </Header.MenuItem>
+            <Header.MenuItem
               color="pale"
               component={props => <Link to="/en" {...props} />}
             >
               EN
-            </MenuItem>
+            </Header.MenuItem>
           </>
         }
         subtitle="Partner für User Interface Entwicklung und Design"
@@ -120,21 +120,20 @@ export default function Index() {
       </Project>
       <Footer
         menu={
-          <MenuItem
-            color="paleInverted"
+          <Footer.MenuItem
             component={props => <Link to="/de/impressum" {...props} />}
           >
             Impressum
-          </MenuItem>
+          </Footer.MenuItem>
         }
         social={
           <>
-            <SocialIcon href="https://github.com/amannn">
+            <Footer.SocialIcon href="https://github.com/amannn">
               <Icon name="github" />
-            </SocialIcon>
-            <SocialIcon href="https://twitter.com/jamannnnnn">
+            </Footer.SocialIcon>
+            <Footer.SocialIcon href="https://twitter.com/jamannnnnn">
               <Icon name="twitter" />
-            </SocialIcon>
+            </Footer.SocialIcon>
           </>
         }
       >

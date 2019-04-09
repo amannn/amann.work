@@ -1,0 +1,40 @@
+@import "~styles/animations";
+@import "~styles/colors";
+@import "~styles/media-queries";
+@import "~styles/utils";
+
+.root {
+  position: relative;
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 8px 0;
+  @include animate-fast(opacity);
+  outline: none;
+
+  &:hover, &:focus {
+    &::after {
+      @include animate-slow(opacity);
+      opacity: 1;
+    }
+  }
+
+  & + & {
+    margin-left: 20px;
+
+    @include match-medium {
+      margin-left: 32px;
+    };
+  }
+
+  @include after {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    bottom: -1px;
+    height: 4px;
+    background-color: $color-accent;
+    z-index: 1;
+  };
+}

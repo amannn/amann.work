@@ -7,7 +7,12 @@ export default function CTA({className, children, href, target = '_blank'}) {
   return (
     <a className={cx(styles.root, className)} href={href} target={target}>
       <span className={styles.arrow} />
-      <Text color="accentDark" component="span" variant="caption">
+      <Text
+        className={styles.text}
+        color="accentDark"
+        component="span"
+        variant="caption"
+      >
         {children}
       </Text>
     </a>

@@ -1,3 +1,5 @@
+@import "~styles/animations";
+
 $mail-delay: 5s;
 $mail-duration: 5s;
 $phone-delay: $mail-delay + $mail-duration + 0.5s;
@@ -11,6 +13,15 @@ $phone-duration: 2.8s;
   display: inline-flex;
   align-items: center;
   padding: 8px 0;
+}
+
+.itemText {
+  @include animate-fast(transform);
+
+  .item:hover & {
+    @include animate-slow(transform);
+    transform: translateX(5px);
+  }
 }
 
 .icon {

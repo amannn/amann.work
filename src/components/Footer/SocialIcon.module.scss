@@ -1,0 +1,13 @@
+@import "~styles/animations";
+@import "~styles/colors";
+
+.root {
+  display: inline-flex;
+  padding: 8px;
+  color: $white;
+  opacity: 0.5;
+
+  @include hover-fast-in-slow-out {
+    opacity: 1;
+  };
+}

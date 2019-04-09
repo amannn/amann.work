@@ -37,7 +37,7 @@ export default function Contact({
             color="accent"
             name="mail"
           />
-          <Text color="white" component="span">
+          <Text className={styles.itemText} color="white" component="span">
             {email}
           </Text>
         </a>
@@ -49,7 +49,7 @@ export default function Contact({
             color="accent"
             name="phone"
           />
-          <Text color="white" component="span">
+          <Text className={styles.itemText} color="white" component="span">
             {telephone}
           </Text>
         </a>

@@ -1,3 +1,5 @@
+@import "~styles/animations";
+@import "~styles/colors";
 @import "~styles/media-queries";
 
 .root {
@@ -5,6 +7,12 @@
   border: none;
   background: none;
   padding: 8px 0;
+  color: $white;
+  opacity: 0.5;
+
+  @include hover-fast-in-slow-out {
+    opacity: 1;
+  };
 
   & + & {
     margin-left: 20px;

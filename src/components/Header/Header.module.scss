@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 300px;
-    background-image: url('./images/portrait.jpg');
+    background-image: url('./portrait.jpg');
 
     @include match-medium {
       padding-bottom: 0;

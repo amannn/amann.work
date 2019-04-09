@@ -1,0 +1,16 @@
+@mixin animate-fast($attr: all) {
+  transition: $attr 0.15s ease-out;
+}
+
+@mixin animate-slow($attr: all) {
+  transition: $attr 0.3s ease-out;
+}
+
+@mixin hover-fast-in-slow-out($attr: all) {
+  @include animate-slow($attr);
+
+  &:hover, &:focus {
+    @include animate-fast($attr);
+    @content;
+  }
+}
