@@ -1,6 +1,11 @@
 .root {
   width: 100%; // IE11
   max-width: 960px;
-  padding: 0 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin: auto;
+
+  &_marginBottom {
+    padding-bottom: 40px;
+  }
 }

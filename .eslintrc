@@ -1,5 +1,6 @@
 {
   "extends": "molindo/react",
+  "plugins": ["react-hooks"],
   "settings": {
     "react": {
       "pragma": "React",
@@ -20,6 +21,8 @@
     "es6": true
   },
   "rules": {
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2
   }
 }

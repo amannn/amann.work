@@ -1,3 +1,8 @@
+$mail-delay: 5s;
+$mail-duration: 5s;
+$phone-delay: $mail-delay + $mail-duration + 0.5s;
+$phone-duration: 2.8s;
+
 .email {
   margin-top: 24px;
 }
@@ -10,4 +15,87 @@
 
 .icon {
   margin-right: 16px;
+}
+
+.mail_animated {
+  animation: animate-mail $mail-duration ease-in-out;
+  animation-delay: $mail-delay;
+  transform-origin: 50% 90%;
+}
+
+.phone_animated {
+  animation: animate-phone $phone-duration ease-in-out;
+  animation-delay: $phone-delay;
+  animation-iteration-count: 2;
+}
+
+@keyframes animate-mail {
+  $scale: 1.3;
+  $rotation: 5deg;
+
+  0% {
+    transform: none;
+  }
+
+  15% {
+    transform: scale($scale);
+  }
+
+  @for $i from 1 through 8 {
+    #{15 + $i * 2%} {
+      @if $i % 2 == 0 {
+        transform: scale($scale) rotate(-$rotation);
+      } @else {
+        transform: scale($scale) rotate($rotation);
+      }
+    }
+  }
+
+  33% {
+    transform: scale($scale);
+  }
+
+  50% {
+    transform: scale($scale);
+  }
+
+  @for $i from 1 through 8 {
+    #{50 + $i * 2%} {
+      @if $i % 2 == 0 {
+        transform: scale($scale) rotate(-$rotation);
+      } @else {
+        transform: scale($scale) rotate($rotation);
+      }
+    }
+  }
+
+  66% {
+    transform: scale($scale);
+  }
+
+  75% {
+    transform: scale($scale);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes animate-phone {
+  $amount: 3px;
+
+  0%  { transform: none; }
+
+  @for $i from 1 through 24 {
+    #{$i * 2%} {
+      @if $i % 2 == 0 {
+        transform: translateX($amount);
+      } @else {
+        transform: translateX(-$amount);
+      }
+    }
+  }
+
+  50% { transform: none; }
 }

@@ -5,7 +5,7 @@ import styles from './Icon.module.scss';
 
 const icons = {
   mail: (
-    <g transform="translate(0, 3)">
+    <g transform="translate(0, 4)">
       <g fill="currentColor" fillRule="nonzero" transform="scale(0.25) ">
         <path
           d="M3,11.1 L44.8,40 C46.8,41.4 49.4,41.4 51.3,40 L93,11.1 C94.6,10 95.5,8.3 95.5,6.4 C95.5,3.2 92.9,0.7 89.8,0.7 L6.2,0.7 C3,0.7 0.5,3.3 0.5,6.4 L0.5,6.4 C0.5,8.2 1.4,10 3,11.1 Z"

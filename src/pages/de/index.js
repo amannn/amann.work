@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import {Link} from 'gatsby';
 import Header from 'components/Header';
@@ -11,19 +12,17 @@ import Footer from 'components/Footer';
 import Meta from './_Meta';
 
 export default function Index() {
-  function onClick() {
-    console.log('click');
-  }
-
   return (
     <Page>
       <Meta />
       <Header
-        description="Meine Leidenschaft ist die Entwicklung von webbasierten Produkten die sich wirklich gut anfühlen. Die mit Ästhetik überzeugen und durch & durch performant sind. Dazu setze ich auf moderne Technologien wie React, node.js und GraphQL."
+        description="Meine Leidenschaft ist die Entwicklung von webbasierten Produkten die sich wirklich gut anfühlen. Die durch Ästhetik überzeugen und auf Performance setzen. Dazu setze ich auf moderne Technologien wie React, node.js und GraphQL."
         homeLink="/de"
         menu={
           <>
-            <MenuItem onClick={onClick}>Kontakt</MenuItem>
+            <MenuItem component={props => <a href="#kontakt" {...props} />}>
+              Kontakt
+            </MenuItem>
             <MenuItem
               color="pale"
               component={props => <Link to="/en" {...props} />}
@@ -50,7 +49,7 @@ export default function Index() {
         }
       >
         <Project.Paragraph>
-          Küchenfinder unterstützt dich beim Kauf deiner neuen Küche. Wer
+          Küchenfinder unterstützt Sie beim Kauf Ihrer neuen Küche. Wer
           unentschlossen ist, kann sich mittels dieser App Frage für Frage zur
           Traumküche durchklicken.
         </Project.Paragraph>
@@ -73,10 +72,10 @@ export default function Index() {
         visual={<img alt="" src={require('../../images/shoemondo.png')} />}
       >
         <Project.Paragraph>
-          Shoemondo hilft dir dabei dein nächstes Lieblingspaar Schuhe zu finden
-          und empfiehlt dir dabei den günstigsten Anbieter. Im ersten Schritt
-          wurden 12 Partner integriert, wodurch ein Angebot von über 65.000
-          Schuhen ermöglicht wurde.
+          Shoemondo hilft Ihnen dabei Ihr nächstes Lieblingspaar Schuhe zu
+          finden und empfiehlt Ihnen dabei den günstigsten Anbieter. Im ersten
+          Schritt wurden 12 Partner integriert um ein umfangreiches Sortiment an
+          Schuhen zu ermöglichen.
         </Project.Paragraph>
         <Project.Paragraph>
           Meine Leistung war die Gestaltung des User Interface und die
@@ -139,12 +138,14 @@ export default function Index() {
           </>
         }
       >
-        <Footer.Contact
-          email="jan@amann.me"
-          intro="Du planst ein Projekt?"
-          telephone="+43 681 / 84 39 0 333"
-          title="Lass mich von dir hören!"
-        />
+        <div id="kontakt">
+          <Footer.Contact
+            email="jan@amann.me"
+            intro="Sie planen ein Projekt?"
+            telephone="+43 681 / 84 39 0 333"
+            title="Freut mich von Ihnen zu hören!"
+          />
+        </div>
       </Footer>
     </Page>
   );

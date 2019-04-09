@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
 import {Link} from 'gatsby';
 import Header from 'components/Header';
@@ -24,11 +25,11 @@ export default function Imprint({homeLink = '/de'}) {
         showPortrait={false}
         title="Impressum"
       />
-      <Wrapper>
-        <Text marginBottom variant="h3">
-          Jan Amann – Frontend Developer
+      <Wrapper marginBottom>
+        <Text variant="h3">Jan Amann</Text>
+        <Text marginBottom>
+          Partner für User Interface Entwicklung und Design
         </Text>
-
         <Text marginBottom>
           Wiesenrainstraße 15
           <br />
@@ -36,13 +37,12 @@ export default function Imprint({homeLink = '/de'}) {
           <br />
           Austria
         </Text>
-
         <Text marginBottom>UID: ATU70057369</Text>
-
         <Text marginBottom>
           E-Mail: jan@amann.me <br />
           Tel: +43 681 / 84 39 0 333
         </Text>
+        <Text marginBottom>Kein Tracking, keine Datenschutzerklärung ✌️</Text>
       </Wrapper>
     </Page>
   );

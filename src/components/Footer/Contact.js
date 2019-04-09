@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import cx from 'classnames';
+import VisibilitySensor from 'components/VisibilitySensor';
 import Text from 'components/Text';
 import Icon from 'components/Icon';
 import styles from './Contact.module.scss';
@@ -10,10 +11,19 @@ export default function Contact({
   telephone = '+43 681 / 84 39 0 333',
   title
 }) {
+  const [animated, setAnimated] = useState(false);
+
+  function onVisible() {
+    if (!animated) {
+      setAnimated(true);
+    }
+  }
+
   const telephoneNumber = telephone.replace(/[\s/]/g, '');
 
   return (
     <>
+      <VisibilitySensor onVisible={onVisible} />
       <Text color="paleInverted" variant="label">
         {intro}
       </Text>
@@ -22,7 +32,11 @@ export default function Contact({
       </Text>
       <div>
         <a className={cx(styles.email, styles.item)} href={`mailto:${email}`}>
-          <Icon className={styles.icon} color="accent" name="mail" />
+          <Icon
+            className={cx(styles.icon, {[styles.mail_animated]: animated})}
+            color="accent"
+            name="mail"
+          />
           <Text color="white" component="span">
             {email}
           </Text>
@@ -30,7 +44,11 @@ export default function Contact({
       </div>
       <div>
         <a className={styles.item} href={`tel:${telephoneNumber}`}>
-          <Icon className={styles.icon} color="accent" name="phone" />
+          <Icon
+            className={cx(styles.icon, {[styles.phone_animated]: animated})}
+            color="accent"
+            name="phone"
+          />
           <Text color="white" component="span">
             {telephone}
           </Text>
