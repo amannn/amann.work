@@ -41,7 +41,6 @@ $phone-duration: 2.8s;
 }
 
 @keyframes animate-mail {
-  $scale: 1.3;
   $rotation: 5deg;
 
   0% {
@@ -49,46 +48,38 @@ $phone-duration: 2.8s;
   }
 
   15% {
-    transform: scale($scale);
+    transform: none;
   }
 
   @for $i from 1 through 8 {
     #{15 + $i * 2%} {
       @if $i % 2 == 0 {
-        transform: scale($scale) rotate(-$rotation);
+        transform: rotate(-$rotation);
       } @else {
-        transform: scale($scale) rotate($rotation);
+        transform: rotate($rotation);
       }
     }
   }
 
   33% {
-    transform: scale($scale);
+    transform: none;
   }
 
   50% {
-    transform: scale($scale);
+    transform: none;
   }
 
   @for $i from 1 through 8 {
     #{50 + $i * 2%} {
       @if $i % 2 == 0 {
-        transform: scale($scale) rotate(-$rotation);
+        transform: rotate(-$rotation);
       } @else {
-        transform: scale($scale) rotate($rotation);
+        transform: rotate($rotation);
       }
     }
   }
 
   66% {
-    transform: scale($scale);
-  }
-
-  75% {
-    transform: scale($scale);
-  }
-
-  100% {
     transform: none;
   }
 }

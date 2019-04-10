@@ -85,7 +85,7 @@ export default function Index() {
       </Project>
       <Project
         cta={
-          <Project.CTA href="https://research.fh-ooe.at">
+          <Project.CTA href="https://research.fh-ooe.at/de/index">
             Zum Portal
           </Project.CTA>
         }
@@ -107,7 +107,7 @@ export default function Index() {
         <Project.Paragraph>
           Die Fachhochschule Oberösterreich ist die forschungsstärkste FH in
           Österreich. Dieses Portal bietet umfassenden Zugang zu Publikationen,
-          Patenten, Personen und Projekten.
+          Patenten, Forschern und Projekten.
         </Project.Paragraph>
         <Project.Paragraph>
           Dieses Projekt wurde gemeinsam mit{' '}
