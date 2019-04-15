@@ -2,8 +2,14 @@
   position: absolute;
   left: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin skewed-background {
+  @include fullbleed;
+  z-index: -1;
+  transform: skewY(-2deg);
 }
 
 @mixin square($size) {

@@ -1,17 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import labels from './_labels';
 
 export default function Meta() {
   return (
     <Helmet>
       <html lang="de" />
       <title>
-        Jan Amann – Partner für User Interface Entwicklung und Design
+        {labels.title} – {labels.tagline}
       </title>
-      <meta
-        content="Meine Leidenschaft ist die Entwicklung von webbasierten Produkten die Freude bereiten. Die durch Ästhetik überzeugen und mit Performance glänzen. Dazu setze ich auf moderne Technologien wie React, node.js und GraphQL."
-        name="description"
-      />
+      <meta content={labels.description} name="description" />
     </Helmet>
   );
 }

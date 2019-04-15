@@ -8,13 +8,14 @@ import Project from 'components/Project';
 import Icon from 'components/Icon';
 import Footer from 'components/Footer';
 import Meta from './_Meta';
+import labels from './_labels';
 
 export default function Index() {
   return (
     <Page>
       <Meta />
       <Header
-        description="My passion is to create web-based products which are a delight to use. I focus on aesthetics and always put performance first. Modern technologies like React, node.js and GraphQL enable me to do this."
+        description={labels.description}
         homeLink="/en"
         menu={
           <>
@@ -31,8 +32,8 @@ export default function Index() {
             </Header.MenuItem>
           </>
         }
-        subtitle="Partner for User Interface Engineering and Design"
-        title="Jan Amann"
+        subtitle={labels.tagline}
+        title={labels.title}
       />
       <SectionTitle>Selected projects</SectionTitle>
       <Project
@@ -114,7 +115,7 @@ export default function Index() {
             Studio Mitte
           </Project.Anchor>
           . My contribution was the creation of screen designs and the
-          implementation of page layouts & fundamental components.
+          implementation of page layouts prototypes & fundamental components.
         </Project.Paragraph>
       </Project>
       <Footer

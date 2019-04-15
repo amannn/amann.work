@@ -4,6 +4,7 @@
 
 .root {
   overflow: hidden;
+  background: $color-background;
 
   &_showPortrait {
     padding-bottom: 300px;

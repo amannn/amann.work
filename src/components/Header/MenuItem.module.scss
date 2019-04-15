@@ -9,11 +9,10 @@
   border: none;
   background: none;
   padding: 8px 0;
-  @include animate-fast(opacity);
   outline: none;
 
   &:hover, &:focus {
-    &::after {
+    &::before, &::after {
       @include animate-slow(opacity);
       opacity: 1;
     }
@@ -27,14 +26,26 @@
     };
   }
 
-  @include after {
+  &::before, &::after {
+    @include animate-fast(opacity);
     position: absolute;
     opacity: 0;
-    left: 0;
-    width: 100%;
     bottom: -1px;
     height: 4px;
-    background-color: $color-accent;
     z-index: 1;
+  }
+
+  @include before {
+    $amount: -8px;
+
+    left: $amount;
+    right: $amount;
+    background-color: $color-background;
+  }
+
+  @include after {
+    left: 0;
+    width: 100%;
+    background-color: $color-accent;
   };
 }
