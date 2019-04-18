@@ -13,6 +13,7 @@
   // (see https://drafts.csswg.org/cssom-view/#smooth-scrolling).
   html {
     scroll-behavior: smooth;
+    background-color: $color-background;
   }
 
   a {

@@ -6,12 +6,6 @@
   bottom: 0;
 }
 
-@mixin skewed-background {
-  @include fullbleed;
-  z-index: -1;
-  transform: skewY(-2deg);
-}
-
 @mixin square($size) {
   width: $size;
   height: $size;

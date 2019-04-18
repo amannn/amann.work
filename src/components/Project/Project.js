@@ -7,6 +7,7 @@ import styles from './Project.module.scss';
 export default function Project({children, cta, visual, intro, title, style}) {
   return (
     <div className={styles.root}>
+      <div className={styles.background} style={style} />
       <Wrapper className={styles.wrapper}>
         <div className={styles.visualWrapper}>
           {React.cloneElement(visual, {className: styles.visual})}
@@ -24,7 +25,6 @@ export default function Project({children, cta, visual, intro, title, style}) {
           })}
         </div>
       </Wrapper>
-      <div className={styles.background} style={style} />
     </div>
   );
 }

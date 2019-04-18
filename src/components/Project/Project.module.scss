@@ -15,7 +15,8 @@
 }
 
 .background {
-  @include skewed-background;
+  @include fullbleed;
+  transform: skewY(-2deg);
 }
 
 .wrapper {
@@ -38,6 +39,8 @@
 }
 
 .visual, .text {
+  position: relative;
+  
   @include match-medium {
     width: calc(50% - 40px);
   }
