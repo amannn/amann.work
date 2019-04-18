@@ -114,7 +114,7 @@ export default function Index() {
           <Project.Paragraph>
             Shoemondo hilft Ihnen dabei Ihr nächstes Lieblingspaar Schuhe zu
             finden und empfiehlt Ihnen dabei den günstigsten Anbieter. Im ersten
-            Schritt wurden 12 Partner integriert um ein umfangreiches Sortiment
+            Schritt wurden 13 Partner integriert um ein umfangreiches Sortiment
             an Schuhen zu ermöglichen.
           </Project.Paragraph>
           <Project.Paragraph>

@@ -112,7 +112,7 @@ export default function Index() {
         >
           <Project.Paragraph>
             Shoemondo helps you to find your next favourite pair of shoes and
-            recommends the cheapest store to buy them. As a first step, 12
+            recommends the cheapest store to buy them. As a first step, 13
             partner stores where integrated in order to offer an extensive
             product range.
           </Project.Paragraph>
