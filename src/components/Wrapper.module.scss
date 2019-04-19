@@ -1,4 +1,4 @@
-@import "~styles/colors";
+@import '~styles/colors';
 
 .root {
   width: 100%; // IE11
@@ -6,8 +6,4 @@
   padding-left: 24px;
   padding-right: 24px;
   margin: auto;
-
-  &_marginBottom {
-    padding-bottom: 40px;
-  }
 }

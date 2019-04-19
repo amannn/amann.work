@@ -1,28 +1,14 @@
-@import "~styles/colors";
-@import "~styles/media-queries";
-@import "~styles/utils";
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
 
 .root {
-  position: relative;
   padding: 80px 0 20px;
-  // Slightly overlap last item
-  top: -40px;
   background-color: $color-background-dark;
 
   @include match-medium {
     padding-top: 160px;
     padding-bottom: 80px;
-  };
-
-  @include after {
-    position: absolute;
-    height: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    bottom: -40px;
-    background-color: $color-background-dark;
-    z-index: -1;
   }
 }
 

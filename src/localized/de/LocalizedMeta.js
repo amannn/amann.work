@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import labels from './_labels';
+import labels from 'localized/de/labels';
 
 export default function Meta() {
   return (

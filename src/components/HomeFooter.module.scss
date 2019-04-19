@@ -1,0 +1,20 @@
+@import '~styles/colors';
+@import '~styles/utils';
+
+// Needs to overlap the projects a bit.
+
+.root {
+  position: relative;
+  top: -40px;
+
+  @include after {
+    position: absolute;
+    height: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    bottom: -40px;
+    background-color: $color-background-dark;
+    z-index: -1;
+  }
+}

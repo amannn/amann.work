@@ -1,19 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import {Link} from 'gatsby';
-import Footer from 'components/Footer';
+import labels from 'localized/de/labels';
+import LocalizedFooter from 'localized/de/LocalizedFooter';
+import LocalizedMeta from 'localized/de/LocalizedMeta';
 import Header from 'components/Header';
-import Icon from 'components/Icon';
+import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
 import Section from 'components/Section';
-import Meta from './_Meta';
-import labels from './_labels';
 
 export default function Index() {
   return (
     <Page>
-      <Meta />
+      <LocalizedMeta />
       <Header
         description={labels.description}
         homeLink="/de"
@@ -160,40 +160,7 @@ export default function Index() {
           </Project.Paragraph>
         </Project>
       </Section>
-      <Footer
-        menu={
-          <Footer.MenuItem
-            component={props => <Link to="/de/impressum" {...props} />}
-          >
-            Impressum
-          </Footer.MenuItem>
-        }
-        social={
-          <>
-            <Footer.SocialIcon
-              aria-label="Github"
-              href="https://github.com/amannn"
-            >
-              <Icon name="github" />
-            </Footer.SocialIcon>
-            <Footer.SocialIcon
-              aria-label="Twitter"
-              href="https://twitter.com/jamannnnnn"
-            >
-              <Icon name="twitter" />
-            </Footer.SocialIcon>
-          </>
-        }
-      >
-        <div id="kontakt">
-          <Footer.Contact
-            email="jan@amann.me"
-            intro="Sie planen ein Projekt?"
-            telephone="+43 681 / 84 39 0 333"
-            title="Freut mich von Ihnen zu hören!"
-          />
-        </div>
-      </Footer>
+      <LocalizedFooter component={HomeFooter} />
     </Page>
   );
 }

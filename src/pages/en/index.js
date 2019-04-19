@@ -1,19 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import {Link} from 'gatsby';
+import labels from 'localized/en/labels';
+import LocalizedFooter from 'localized/en/LocalizedFooter';
+import LocalizedMeta from 'localized/en/LocalizedMeta';
 import Header from 'components/Header';
+import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
-import Section from 'components/Section';
 import Project from 'components/Project';
-import Icon from 'components/Icon';
-import Footer from 'components/Footer';
-import Meta from './_Meta';
-import labels from './_labels';
+import Section from 'components/Section';
 
 export default function Index() {
   return (
     <Page>
-      <Meta />
+      <LocalizedMeta />
       <Header
         description={labels.description}
         homeLink="/en"
@@ -158,40 +158,7 @@ export default function Index() {
           </Project.Paragraph>
         </Project>
       </Section>
-      <Footer
-        menu={
-          <Footer.MenuItem
-            component={props => <Link to="/en/imprint" {...props} />}
-          >
-            Imprint
-          </Footer.MenuItem>
-        }
-        social={
-          <>
-            <Footer.SocialIcon
-              aria-label="Github"
-              href="https://github.com/amannn"
-            >
-              <Icon name="github" />
-            </Footer.SocialIcon>
-            <Footer.SocialIcon
-              aria-label="Twitter"
-              href="https://twitter.com/jamannnnnn"
-            >
-              <Icon name="twitter" />
-            </Footer.SocialIcon>
-          </>
-        }
-      >
-        <div id="contact">
-          <Footer.Contact
-            email="jan@amann.me"
-            intro="Got a project?"
-            telephone="+43 681 / 84 39 0 333"
-            title="Let's talk!"
-          />
-        </div>
-      </Footer>
+      <LocalizedFooter component={HomeFooter} />
     </Page>
   );
 }
