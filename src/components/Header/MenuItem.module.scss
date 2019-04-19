@@ -1,7 +1,7 @@
-@import "~styles/animations";
-@import "~styles/colors";
-@import "~styles/media-queries";
-@import "~styles/utils";
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
 
 .root {
   position: relative;
@@ -11,22 +11,17 @@
   padding: 8px 0;
   outline: none;
 
-  &:hover, &:focus {
-    &::before, &::after {
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
       @include animate-slow(opacity);
       opacity: 1;
     }
   }
 
-  & + & {
-    margin-left: 20px;
-
-    @include match-medium {
-      margin-left: 32px;
-    };
-  }
-
-  &::before, &::after {
+  &::before,
+  &::after {
     @include animate-fast(opacity);
     position: absolute;
     opacity: 0;
@@ -47,5 +42,5 @@
     left: 0;
     width: 100%;
     background-color: $color-accent;
-  };
+  }
 }

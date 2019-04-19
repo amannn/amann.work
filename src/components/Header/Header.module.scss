@@ -1,6 +1,6 @@
-@import "~styles/colors";
-@import "~styles/media-queries";
-@import "~styles/utils";
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
 
 .root {
   overflow: hidden;
@@ -17,11 +17,11 @@
       padding-bottom: 0;
       background-position: 90% bottom;
       background-size: 500px;
-    };
+    }
 
     @include match-large {
       background-position: 80% bottom;
-    };
+    }
   }
 }
 
@@ -32,7 +32,7 @@
 
   @include match-medium {
     padding-top: 80px;
-  };
+  }
 }
 
 .menu {
@@ -41,13 +41,23 @@
   margin-left: 24px;
   text-align: right;
 
+  > * {
+    &:not(:first-child) {
+      margin-left: 20px;
+
+      @include match-medium {
+        margin-left: 24px;
+      }
+    }
+  }
+
   @include after {
     position: absolute;
     left: 0;
     right: -100%;
     height: 1px;
     background-color: $color-line;
-  };
+  }
 }
 
 .text {
@@ -58,7 +68,7 @@
     padding-top: 240px;
     padding-left: 0;
     padding-bottom: 80px;
-  };
+  }
 }
 
 .title {

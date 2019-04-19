@@ -1,10 +1,8 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
-import {Link} from 'gatsby';
-import labels from 'localized/en/labels';
 import LocalizedFooter from 'localized/en/LocalizedFooter';
 import LocalizedMeta from 'localized/en/LocalizedMeta';
-import Header from 'components/Header';
+import LocalizedHeader from 'localized/en/LocalizedHeader';
+import labels from 'localized/en/labels';
 import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
@@ -14,24 +12,9 @@ export default function Index() {
   return (
     <Page>
       <LocalizedMeta />
-      <Header
+      <LocalizedHeader
         description={labels.description}
-        homeLink="/en"
-        menu={
-          <>
-            <Header.MenuItem
-              component={props => <a href="#contact" {...props} />}
-            >
-              Contact
-            </Header.MenuItem>
-            <Header.MenuItem
-              color="pale"
-              component={props => <Link to="/de" {...props} />}
-            >
-              DE
-            </Header.MenuItem>
-          </>
-        }
+        showPortrait
         subtitle={labels.tagline}
         title={labels.title}
       />

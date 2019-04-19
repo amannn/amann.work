@@ -10,7 +10,7 @@ export default function Header({
   description,
   homeLink,
   menu,
-  showPortrait = true,
+  showPortrait = false,
   subtitle,
   title
 }) {
