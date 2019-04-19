@@ -5,7 +5,7 @@ import LocalizedLayout from 'localized/de/LocalizedLayout';
 
 export default function Imprint() {
   return (
-    <LocalizedLayout>
+    <LocalizedLayout title="Impressum">
       <Text variant="h3">Jan Amann</Text>
       <Text marginBottom>
         Partner für User Interface Entwicklung und Design

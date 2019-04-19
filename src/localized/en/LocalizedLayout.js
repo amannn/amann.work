@@ -6,8 +6,8 @@ import PageWrapper from 'components/PageWrapper';
 import LocalizedMeta from './LocalizedMeta';
 import LocalizedFooter from './LocalizedFooter';
 
-export default function LocalizedLayout({children}) {
-  const homeLink = '/de';
+export default function LocalizedLayout({children, title}) {
+  const homeLink = '/en';
 
   return (
     <Page>
@@ -19,11 +19,11 @@ export default function LocalizedLayout({children}) {
             color="pale"
             component={props => <Link to={homeLink} {...props} />}
           >
-            Zurück zur Startseite
+            Back to home
           </Header.MenuItem>
         }
         showPortrait={false}
-        title="Impressum"
+        title={title}
       />
       <PageWrapper>{children}</PageWrapper>
       <LocalizedFooter />
