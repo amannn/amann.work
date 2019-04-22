@@ -1,0 +1,84 @@
+---
+title: Chords mobile app
+date: 2015-10-18
+excerpt: Your personal assistant to play and sing along to your favourite songs.
+---
+
+import Figure from 'components/Figure';
+import PhoneFrame from 'components/PhoneFrame';
+
+This app is my attempt at delivering a good user experience for an app that helps
+you to play and sing along to your favourite songs.
+
+<Figure>
+  <PhoneFrame>
+    <img src={require('./songs.png')} />
+  </PhoneFrame>
+</Figure>
+
+There's no sophisticated multi-level navigation – just your songs. I expect most
+hobby guitar players to not have a huge amount of songs anyway. A clear
+structure helps you to quickly identify the song you want to play.
+
+If you happen to have a lot of songs, you can still use the search feature. But
+apart from showing you matchings songs from your favourites, this also searches
+for other matching songs through a remote API.
+
+<Figure>
+  <PhoneFrame>
+    <img src={require('./search.png')} />
+  </PhoneFrame>
+</Figure>
+
+When you've decided for a song to play, you get an immersive, fullscreen
+experience. If you've ever been to a chords or tab website, you might notice
+that the positioning of the chords works without the need for a monospace font.
+
+Furthermore, specific chords are always highlighted with the same colour, so if
+you've used the app for a bit, you might intuitively play the right chord just
+by subconciously noticing the respective colour.
+
+<Figure>
+  <PhoneFrame>
+    <img src={require('./detail.png')} />
+  </PhoneFrame>
+</Figure>
+
+From here you can also save the song as a favourite, or transpose the song up or
+down if you prefer to sing in a different pitch.
+
+What enhances the experience is that the colour used for the play button is
+always computed dynamically from the shown image.
+
+<Figure>
+  <img style={{maxWidth: 400}} src={require('./colours.png')} />
+</Figure>
+
+This is achieved through [Color
+Thief](https://lokeshdhakar.com/projects/color-thief/) – a small colour
+extraction library. It's not much effort to implement, but I think it
+really improves the experience.
+
+I'm a big fan of guiding the user with subtle, appropriate animations. I like
+motion that feels natural and guides the user, instead of drawing attention to
+itself.
+
+<Figure>
+  <PhoneFrame>
+    <video autoPlay loop preload="auto" width="100%">
+      <source src={require('./animations.mp4')} type="video/mp4" />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </PhoneFrame>
+</Figure>
+
+Regarding technological aspects, the UI is built with
+[Polymer](https://www.polymer-project.org/), Google's response
+to modern web development. Polymer leverages [Web
+Components](https://www.webcomponents.org/), a new set of
+standards for building apps, that is being worked on by the W3C.
+
+If you're a guitar player who is now convinced about using this app, I sadly
+have to disappoint you. As the legal aspects of chords and lyrics are fairly
+complex and the price for using such data isn't affordable with the earnings of
+a small app, I've put the project on hold and decided not to publish it.

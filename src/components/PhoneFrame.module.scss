@@ -13,7 +13,7 @@ $camera-size: 4px;
   background-color: #2d2e3a;
   border-radius: 48px;
   max-width: 320px;
-  min-height: 624px;
+  min-height: 545px;
   box-shadow: 0 2px 10px rgba($black, 0.5);
 }
 
@@ -56,4 +56,9 @@ $camera-size: 4px;
   display: flex;
   flex: 1;
   align-items: center;
+
+  > * {
+    max-width: 100%;
+    width: 100%;
+  }
 }

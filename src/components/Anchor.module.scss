@@ -5,6 +5,7 @@
 .root {
   border-bottom: 1px solid $color-accent;
   @include hover-fast-in-slow-out;
+  font-weight: 400;
 
   &:hover,
   &:focus {
