@@ -1,4 +1,9 @@
-@import "~styles/colors";
+@import '~styles/colors';
+@import '~styles/media-queries';
+
+$font-stack-sans-serif: 'Ubuntu', sans-serif;
+$font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
+  Courier, monospace;
 
 @mixin margin-bottom($value) {
   &.root_marginBottom {
@@ -7,7 +12,7 @@
 }
 
 .root {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $font-stack-sans-serif;
   -webkit-font-smoothing: antialiased;
 
   /**
@@ -15,9 +20,14 @@
    */
 
   &_variant-h1 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 36px;
+    line-height: 44px;
     color: rgba($black, 0.8);
+
+    @include match-medium {
+      font-size: 48px;
+      line-height: 60px;
+    }
 
     @include margin-bottom(24px);
   }
@@ -56,6 +66,15 @@
     @include margin-bottom(16px);
   }
 
+  &_variant-body {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba($black, 0.7);
+    font-weight: 300;
+
+    @include margin-bottom(20px);
+  }
+
   &_variant-paragraph {
     font-size: 16px;
     line-height: 24px;
@@ -63,6 +82,17 @@
     font-weight: 300;
 
     @include margin-bottom(12px);
+  }
+
+  &_variant-code {
+    padding: 2px 4px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: $white;
+    color: rgba($black, 0.7);
+    font-weight: 300;
+    font-family: $font-stack-monospace;
+    word-break: break-word;
   }
 
   /**
@@ -86,6 +116,6 @@
   }
 
   &_color-paleInverted {
-    color:$color-pale-inverted;
+    color: $color-pale-inverted;
   }
 }

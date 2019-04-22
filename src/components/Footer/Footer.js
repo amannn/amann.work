@@ -9,7 +9,7 @@ export default function Footer({children, className, menu, social}) {
       <Wrapper>
         {children}
         <div className={styles.navigation}>
-          <div>{menu}</div>
+          <div className={styles.menu}>{menu}</div>
           <div>{social}</div>
         </div>
       </Wrapper>

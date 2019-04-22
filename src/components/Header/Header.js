@@ -25,20 +25,22 @@ export default function Header({
           </Link>
           <div className={styles.menu}>{menu}</div>
         </div>
-        <div className={styles.text}>
-          <Text className={styles.title} component="h1" variant="h1">
-            {title}
-          </Text>
-          <Text
-            className={styles.subtitle}
-            color="accentDark"
-            component="h2"
-            variant="h3"
-          >
-            {subtitle}
-          </Text>
-          <Text>{description}</Text>
-        </div>
+        {title && (
+          <div className={styles.text}>
+            <Text className={styles.title} component="h1" variant="h1">
+              {title}
+            </Text>
+            <Text
+              className={styles.subtitle}
+              color="accentDark"
+              component="h2"
+              variant="h3"
+            >
+              {subtitle}
+            </Text>
+            <Text>{description}</Text>
+          </div>
+        )}
       </Wrapper>
     </div>
   );

@@ -1,6 +1,6 @@
-@import "~styles/animations";
-@import "~styles/colors";
-@import "~styles/media-queries";
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/media-queries';
 
 .root {
   display: inline-block;
@@ -12,13 +12,5 @@
 
   @include hover-fast-in-slow-out {
     opacity: 1;
-  };
-
-  & + & {
-    margin-left: 20px;
-
-    @include match-medium {
-      margin-left: 32px;
-    };
   }
 }

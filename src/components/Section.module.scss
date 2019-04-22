@@ -1,6 +1,6 @@
-@import "~styles/colors";
-@import "~styles/media-queries";
-@import "~styles/utils";
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
 
 .root {
   background-color: $white;
@@ -14,7 +14,7 @@
   @include match-medium {
     padding-top: 160px;
     padding-bottom: 160px;
-  };
+  }
 }
 
 .title {
@@ -25,14 +25,11 @@
 
   @include after {
     position: absolute;
-    left: calc(100% - 80px);
-    bottom: 16px;
-    width: 100vw;
+    left: -20px;
+    bottom: 0px;
+    width: 100%;
     height: 1px;
-    background-color: $color-line;
-
-    @include match-medium {
-      left: calc(100% - 40px);
-    };
-  };
+    background-color: $color-accent;
+    transform: rotate(3deg);
+  }
 }

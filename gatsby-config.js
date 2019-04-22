@@ -1,5 +1,14 @@
 module.exports = {
   plugins: [
+    {
+      resolve: 'gatsby-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
+        defaultLayouts: {
+          default: require.resolve('./src/templates/BlogPost.js')
+        }
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-sass',
@@ -19,6 +28,13 @@ module.exports = {
             variants: ['300', '400']
           }
         ]
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/src/pages/blog`
       }
     }
   ]

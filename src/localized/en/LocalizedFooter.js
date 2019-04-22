@@ -7,11 +7,16 @@ export default function LocalizedFooter({component: Component = Footer}) {
   return (
     <Component
       menu={
-        <Footer.MenuItem
-          component={props => <Link to="/en/imprint" {...props} />}
-        >
-          Imprint
-        </Footer.MenuItem>
+        <>
+          <Footer.MenuItem
+            component={props => <Link to="/en/imprint" {...props} />}
+          >
+            Imprint
+          </Footer.MenuItem>
+          <Footer.MenuItem component={props => <Link to="/blog" {...props} />}>
+            Blog
+          </Footer.MenuItem>
+        </>
       }
       social={
         <>

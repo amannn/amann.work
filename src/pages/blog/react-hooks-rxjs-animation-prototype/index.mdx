@@ -1,0 +1,66 @@
+---
+title: Animating with React Hooks and RxJS
+date: 2018-10-29
+excerpt: An experiment to see if these technologies are a good fit for gesture-based animations.
+---
+
+import Figure from 'components/Figure';
+import PhoneFrame from 'components/PhoneFrame';
+
+The introduction of React Hooks got me excited to try them out on an animation
+prototype. Such apps tend to have quite a bit of side effects if you don't use
+an abstraction which takes care of that. Also from my experience building
+fancy animations usually makes code harder to read. That's why I thought it might be
+interesting to see if Hooks are a good fit for this.
+
+The app is based on a [dribble
+shot](https://dribbble.com/shots/2189808-Imitating-UIKit-dynamics-physics) by
+[@tmgrhm](https://twitter.com/tmgrhm). It's a concept which shows relations
+between a person and her friends.
+
+<Figure>
+  <PhoneFrame>
+    <video
+      autoPlay
+      loop
+      preload="auto"
+      width="100%"
+      style={{maxHeight: '70vh'}}
+    >
+      <source src={require('./demo.mp4')} type="video/mp4" />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </PhoneFrame>
+</Figure>
+
+[Try it live](https://amannn.github.io/friends-ui/).
+
+I think [RxJS](https://rxjs-dev.firebaseapp.com/) is interesting for
+gesture-based animations where a single interaction controls a view UI elements.
+It also allows passing values to child components without the necessity of
+re-rendering every animation frame.
+
+In my case I'm reading `scrollTop` on every animation frame, feed that into a
+stream which all animatable elements subscribe to and transform it as necessary.
+Reading `scrollTop` via `requestAnimationFrame` produces better results in
+comparison to an on scroll listener, as the latter can fire too often which will
+cause jank. Therefore every frame starts with a single read operation from the DOM
+followed by a few write operations. That avoids [layout
+thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing)
+and reduces CPU work.
+
+<Figure caption="A bit of JavaScript is necessary, but the animation runs with 60 FPS on mobile (screenshot from a MacBook Pro with 4x CPU slowdown).">
+  <img src={require('./timeline.png')} />
+</Figure>
+
+Credit for using RxJS for animation goes to
+[@DavidKPiano](https://twitter.com/DavidKPiano),
+[@BenLesh](https://twitter.com/BenLesh) and [@appsforartists](https://twitter.com/appsforartists).
+
+Using Hooks felt a bit unusual too me at first, but overall I liked the idea.
+Especially having another tool in the box to create abstractions for shared
+behaviour looks promising to me, leading to [slimmer
+components](https://twitter.com/jamannnnnn/status/1057025220362543116). Also
+`useEffect` is just amazing in comparison to `component{DidMount,DidUpdate,WillUnmount}`.
+
+The code is [available on Github](https://github.com/amannn/friends-ui).

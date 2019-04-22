@@ -1,12 +1,13 @@
-@import "~styles/animations";
-@import "~styles/colors";
-@import "~styles/utils";
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/utils';
 
 .root {
   border-bottom: 1px solid $color-accent;
   @include hover-fast-in-slow-out;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border-bottom-color: $black;
     color: $black;
   }

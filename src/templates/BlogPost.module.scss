@@ -1,0 +1,13 @@
+@import '~styles/media-queries';
+
+.root {
+  margin: 80px 0;
+
+  @include match-medium {
+    margin: 160px 160px 80px;
+  }
+}
+
+.date {
+  margin: 12px 0 40px;
+}
