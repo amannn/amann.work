@@ -6,10 +6,11 @@ import styles from './Text.module.scss';
 export default function Text({
   children,
   className,
-  component = 'p',
   color = 'default',
+  component = 'p',
   marginBottom,
-  variant = 'paragraph'
+  variant = 'paragraph',
+  weight
 }) {
   const renderClassName = cx(
     styles.root,
@@ -17,6 +18,7 @@ export default function Text({
     styles['root_variant-' + variant],
     styles['root_color-' + color],
     {
+      [styles['root_weight-' + weight]]: weight,
       [styles.root_marginBottom]: marginBottom
     }
   );

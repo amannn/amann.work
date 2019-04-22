@@ -7,7 +7,8 @@ $camera-size: 4px;
 
 .root {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
   padding: $padding-vertical 20px;
   background-color: #2d2e3a;
   border-radius: 48px;
@@ -49,4 +50,10 @@ $camera-size: 4px;
   bottom: ($padding-vertical - $size) / 2;
   @include circle($size);
   background-color: $element-color;
+}
+
+.children {
+  display: flex;
+  flex: 1;
+  align-items: center;
 }

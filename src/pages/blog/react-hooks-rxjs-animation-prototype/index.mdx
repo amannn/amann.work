@@ -1,7 +1,7 @@
 ---
 title: Animating with React Hooks and RxJS
 date: 2018-10-29
-excerpt: An experiment to see if these technologies are a good fit for gesture-based animations.
+excerpt: Are these technologies are a good fit for gesture-based animations?
 ---
 
 import Figure from 'components/Figure';
@@ -35,15 +35,15 @@ between a person and her friends.
 
 [Try it live](https://amannn.github.io/friends-ui/).
 
-I think [RxJS](https://rxjs-dev.firebaseapp.com/) is interesting for
-gesture-based animations where a single interaction controls a view UI elements.
-It also allows passing values to child components without the necessity of
-re-rendering every animation frame.
+I initially tried running the animation loop via `setState`, but that turned out
+to be too slow. Therefore I wanted something that bypasses React altogether for
+my animation purposes: [RxJS](https://rxjs-dev.firebaseapp.com/). Observables
+are interesting for gestures where a single touch movement controls multiple effects.
 
 In my case I'm reading `scrollTop` on every animation frame, feed that into a
 stream which all animatable elements subscribe to and transform it as necessary.
 Reading `scrollTop` via `requestAnimationFrame` produces better results in
-comparison to an on scroll listener, as the latter can fire too often which will
+comparison to a scroll listener, as the latter can fire too often which will
 cause jank. Therefore every frame starts with a single read operation from the DOM
 followed by a few write operations. That avoids [layout
 thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing)

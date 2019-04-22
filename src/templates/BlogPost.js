@@ -11,8 +11,9 @@ const components = {
   h1: props => <Text marginBottom variant="h1" {...props} />,
   p: props => <Text marginBottom variant="body" {...props} />,
   a: Project.Anchor,
-  inlineCode: props => (
-    <Text component="span" marginBottom variant="code" {...props} />
+  inlineCode: props => <Text component="span" variant="code" {...props} />,
+  strong: props => (
+    <Text component="span" variant="body" weight="bold" {...props} />
   )
 };
 

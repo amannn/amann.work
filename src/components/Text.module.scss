@@ -96,7 +96,15 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
   }
 
   /**
-   * Rest
+   * Weight
+   */
+
+  &_weight-bold {
+    font-weight: 400;
+  }
+
+  /**
+   * Color
    */
 
   &_color-accentDark {
