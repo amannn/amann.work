@@ -1,8 +1,8 @@
 import React from 'react';
-import LocalizedFooter from 'localized/en/LocalizedFooter';
-import LocalizedMeta from 'localized/en/LocalizedMeta';
-import LocalizedHeader from 'localized/en/LocalizedHeader';
 import labels from 'localized/en/labels';
+import LocalizedFooter from 'localized/en/LocalizedFooter';
+import LocalizedHeader from 'localized/en/LocalizedHeader';
+import LocalizedMeta from 'localized/en/LocalizedMeta';
 import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
@@ -43,8 +43,8 @@ export default function Index() {
               Molindo
             </Project.Anchor>
             . My part was the implementation of the frontend with React. Since
-            this app has quite a bit of client-side state, I used Redux for
-            state management.
+            this app has mostly client-side state, I used Redux for state
+            management.
           </Project.Paragraph>
         </Project>
         <Project
@@ -65,10 +65,10 @@ export default function Index() {
           }
         >
           <Project.Paragraph>
-            More than 120,000 users visit "Küchenfinder" every month in order to
-            learn about kitchen-related topics. Suppliers can sign up to
-            configure criteria, offered services and data which in turn enables
-            the recommendation of potential customers via a{' '}
+            More than 120,000 users visit {'"Küchenfinder"'} every month in
+            order to learn about kitchen-related topics. Suppliers can sign up
+            to configure criteria, offered services and data which in turn
+            enables the recommendation of potential customers via a{' '}
             <Project.Anchor href="https://www.kuechenfinder.com/kuechenplanung/">
               search engine
             </Project.Anchor>
@@ -95,7 +95,7 @@ export default function Index() {
         >
           <Project.Paragraph>
             Shoemondo helps you to find your next favourite pair of shoes and
-            recommends the cheapest store to buy them. As a first step, 13
+            recommends the cheapest store to buy them. As a first step, 12
             partner stores where integrated in order to offer an extensive
             product range.
           </Project.Paragraph>
@@ -137,7 +137,8 @@ export default function Index() {
               Studio Mitte
             </Project.Anchor>
             . My contribution was the creation of screen designs and the
-            implementation of page layouts prototypes & fundamental components.
+            implementation of the page layout prototype & fundamental
+            components.
           </Project.Paragraph>
         </Project>
       </Section>

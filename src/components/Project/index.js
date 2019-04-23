@@ -5,7 +5,6 @@ import CTA from './CTA';
 
 Project.Paragraph = Paragraph;
 Project.CTA = CTA;
-Project.Image = Image;
 Project.Anchor = Anchor;
 
 export default Project;

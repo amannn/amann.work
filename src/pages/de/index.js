@@ -1,8 +1,8 @@
 import React from 'react';
 import labels from 'localized/de/labels';
 import LocalizedFooter from 'localized/de/LocalizedFooter';
-import LocalizedMeta from 'localized/de/LocalizedMeta';
 import LocalizedHeader from 'localized/de/LocalizedHeader';
+import LocalizedMeta from 'localized/de/LocalizedMeta';
 import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
@@ -97,7 +97,7 @@ export default function Index() {
           <Project.Paragraph>
             Shoemondo hilft Ihnen dabei Ihr nächstes Lieblingspaar Schuhe zu
             finden und empfiehlt Ihnen dabei den günstigsten Anbieter. Im ersten
-            Schritt wurden 13 Partner integriert um ein umfangreiches Sortiment
+            Schritt wurden 12 Partner integriert um ein umfangreiches Sortiment
             an Schuhen zu ermöglichen.
           </Project.Paragraph>
           <Project.Paragraph>

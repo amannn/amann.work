@@ -6,32 +6,29 @@ excerpt: Are these technologies are a good fit for gesture-based animations?
 
 import Figure from 'components/Figure';
 import PhoneFrame from 'components/PhoneFrame';
+import ScreenVideo from 'components/ScreenVideo';
 
 The introduction of React Hooks got me excited to try them out on an animation
-prototype. Such apps tend to have quite a bit of side effects if you don't use
-an abstraction which takes care of that. Also from my experience building
-fancy animations usually makes code harder to read. That's why I thought it might be
-interesting to see if Hooks are a good fit for this.
-
-The app is based on a [dribble
+prototype. A [dribble
 shot](https://dribbble.com/shots/2189808-Imitating-UIKit-dynamics-physics) by
-[@tmgrhm](https://twitter.com/tmgrhm). It's a concept which shows relations
-between a person and her friends.
+[@tmgrhm](https://twitter.com/tmgrhm) looked like a good opportunity to me.
 
 <Figure>
   <PhoneFrame>
-    <video autoPlay loop preload="auto" style={{maxHeight: '70vh'}}>
-      <source src={require('./demo.mp4')} type="video/mp4" />
-      Sorry, your browser doesn't support embedded videos.
-    </video>
+    <ScreenVideo source={require('./demo.mp4')} />
   </PhoneFrame>
 </Figure>
 
 [Try it live](https://amannn.github.io/friends-ui/).
 
+Such apps tend to have quite a bit of side effects if you don't use
+an abstraction which takes care of that. Also from my experience, building
+fancy animations usually makes code harder to read. That's why I thought it might be
+interesting to see if Hooks are a good fit for this.
+
 I initially tried running the animation loop via `setState`, but that turned out
 to be too slow. Therefore I wanted something that bypasses React altogether for
-my animation purposes: [RxJS](https://rxjs-dev.firebaseapp.com/). Observables
+my animation purposes: Introducing [RxJS](https://rxjs-dev.firebaseapp.com/). Observables
 are interesting for gestures where a single touch movement controls multiple effects.
 
 In my case I'm reading `scrollTop` on every animation frame, feed that into a
@@ -51,10 +48,10 @@ Credit for using RxJS for animation goes to
 [@DavidKPiano](https://twitter.com/DavidKPiano),
 [@BenLesh](https://twitter.com/BenLesh) and [@appsforartists](https://twitter.com/appsforartists).
 
-Using Hooks felt a bit unusual too me at first, but overall I liked the idea.
-Especially having another tool in the box to create abstractions for shared
-behaviour looks promising to me, leading to [slimmer
+To me, the most promising aspect of Hooks was having another tool in the box to
+create abstractions for shared behaviour. This can lead to [slimmer
 components](https://twitter.com/jamannnnnn/status/1057025220362543116). Also
-`useEffect` is just amazing in comparison to `component{DidMount,DidUpdate,WillUnmount}`.
+`useEffect` is just amazing in comparison to `componentDidMount`, `-DidUpdate`
+and `-WillUnmount`.
 
 The code is [available on Github](https://github.com/amannn/friends-ui).

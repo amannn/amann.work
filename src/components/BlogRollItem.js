@@ -10,7 +10,7 @@ export default function BlogRollItem({className, post}) {
       <Text color="accentDark" component="h2" variant="h2">
         {post.title}
       </Text>
-      <Text className={styles.excerpt}>
+      <Text className={styles.description}>
         {post.excerpt}
         <Text color="pale" component="span">
           {' • '}

@@ -6,6 +6,7 @@ excerpt: Your personal assistant to play and sing along to your favourite songs.
 
 import Figure from 'components/Figure';
 import PhoneFrame from 'components/PhoneFrame';
+import ScreenVideo from 'components/ScreenVideo';
 
 This app is my attempt at delivering a good user experience for an app that helps
 you to play and sing along to your favourite songs.
@@ -65,10 +66,7 @@ itself.
 
 <Figure>
   <PhoneFrame>
-    <video autoPlay loop preload="auto" width="100%">
-      <source src={require('./animations.mp4')} type="video/mp4" />
-      Sorry, your browser doesn't support embedded videos.
-    </video>
+    <ScreenVideo source={require('./animations.mp4')} />
   </PhoneFrame>
 </Figure>
 

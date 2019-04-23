@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import {Link} from 'gatsby';
-import Header from 'components/Header/Header';
+import Header from 'components/Header';
 
 export default function LocalizedHeader(props) {
   return (
