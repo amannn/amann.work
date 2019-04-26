@@ -1,5 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: 'https://amann.me'
+  },
   plugins: [
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-mdx',
       options: {

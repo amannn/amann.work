@@ -77,11 +77,16 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
   }
 
   &_variant-body {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 24px;
     color: rgba($black, 0.7);
     font-weight: 300;
     @include margin-bottom(20px);
+
+    @include match-medium {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &_variant-paragraph {

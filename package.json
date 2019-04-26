@@ -5,10 +5,10 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "test": "eslint src",
-    "dev": "gatsby develop",
-    "serve": "gatsby serve",
+    "build": "rm -rf public && gatsby build && rm public/index.html",
+    "test": "eslint src functions",
+    "dev": "gatsby develop --host 0.0.0.0",
+    "start": "firebase serve --host 0.0.0.0",
     "deploy": "firebase deploy"
   },
   "author": "Jan Amann <jan@amann.me>",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "1.0.6",
+    "accept-language": "3.0.18",
     "classnames": "2.2.6",
     "gatsby": "2.3.5",
     "react": "16.8.6",
@@ -28,6 +29,7 @@
     "react-helmet": "5.2.0"
   },
   "devDependencies": {
+    "@google-cloud/functions-emulator": "1.0.0-beta.6",
     "@mdx-js/mdx": "1.0.10",
     "babel-eslint": "10.0.1",
     "eslint": "5.16.0",
@@ -38,11 +40,15 @@
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "1.6.0",
+    "firebase": "5.10.1",
+    "firebase-functions": "2.3.0",
+    "firebase-tools": "6.7.1",
     "gatsby-mdx": "0.6.2",
     "gatsby-plugin-i18n": "1.0.1",
     "gatsby-plugin-prefetch-google-fonts": "1.4.2",
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-sass": "2.0.11",
+    "gatsby-plugin-sitemap": "2.0.12",
     "gatsby-source-filesystem": "2.0.29",
     "graphql": "0.13.0",
     "node-sass": "4.11.0",

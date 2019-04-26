@@ -5,7 +5,12 @@ import styles from './CTA.module.scss';
 
 export default function CTA({className, children, href, target = '_blank'}) {
   return (
-    <a className={cx(styles.root, className)} href={href} target={target}>
+    <a
+      className={cx(styles.root, className)}
+      href={href}
+      rel="noopener"
+      target={target}
+    >
       <span className={styles.arrow} />
       <Text
         className={styles.text}

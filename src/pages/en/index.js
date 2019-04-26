@@ -7,7 +7,6 @@ import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
 import Section from 'components/Section';
-import PhoneFrame from 'components/PhoneFrame';
 
 export default function Index() {
   return (
