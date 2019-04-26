@@ -81,9 +81,17 @@
 }
 
 .title {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+
+  @include match-large {
+    margin-bottom: 12px;
+  }
 }
 
 .subtitle {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+
+  @include match-large {
+    margin-bottom: 16px;
+  }
 }

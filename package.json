@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf public && gatsby build && rm public/index.html",
+    "build": "rm -rf public .cache && gatsby build && rm public/index.html",
     "test": "eslint src functions",
     "dev": "gatsby develop --host 0.0.0.0",
     "start": "firebase serve --host 0.0.0.0",
