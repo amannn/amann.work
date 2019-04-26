@@ -1,0 +1,97 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+.root {
+  overflow: hidden;
+  background: $color-background;
+
+  &_showPortrait {
+    padding-bottom: 220px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 250px;
+    background-image: url('./portrait.jpg');
+
+    @include match-medium {
+      padding-bottom: 0;
+      background-position: right bottom;
+      background-size: 350px;
+    }
+
+    @include match-large {
+      background-size: 500px;
+      background-position: 83% bottom;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+
+  @include match-medium {
+    padding-top: 80px;
+  }
+}
+
+.menu {
+  position: relative;
+  flex: 1;
+  margin-left: 24px;
+  text-align: right;
+
+  > * {
+    &:not(:first-child) {
+      margin-left: 20px;
+
+      @include match-medium {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  @include after {
+    position: absolute;
+    left: 0;
+    right: -100%;
+    height: 1px;
+    background-color: $color-line;
+  }
+}
+
+.text {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  max-width: 500px;
+
+  @include match-medium {
+    padding-top: 200px;
+    padding-left: 0;
+    padding-bottom: 40px;
+    max-width: 400px;
+  }
+
+  @include match-large {
+    padding-top: 280px;
+    padding-bottom: 80px;
+    max-width: 500px;
+  }
+}
+
+.title {
+  margin-bottom: 8px;
+
+  @include match-large {
+    margin-bottom: 12px;
+  }
+}
+
+.subtitle {
+  margin-bottom: 12px;
+
+  @include match-large {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,19 @@
+@import '~styles/colors';
+
+.root {
+  &_color-black {
+    color: $black;
+  }
+
+  &_color-white {
+    color: $white;
+  }
+
+  &_color-accent {
+    color: $color-accent;
+  }
+
+  &_color-accentLight {
+    color: $color-accent-light;
+  }
+}

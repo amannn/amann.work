@@ -1,0 +1,9 @@
+@import '~styles/colors';
+
+.root {
+  width: 100%; // IE11
+  max-width: 960px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: auto;
+}

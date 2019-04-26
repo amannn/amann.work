@@ -1,38 +1,28 @@
 {
-  "extends": "eslint-config-airbnb",
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
-  },
-  "parser": "babel-eslint",
-  "rules": {
-    "prefer-const": 0,
-    "comma-dangle": 0,
-    "radix": 0,
-    "no-irregular-whitespace": 0,
-    "no-else-return": 0,
-    "new-cap": 0,
-    "no-param-reassign": 0,
-    "default-case": 0,
-    "no-nested-ternary": 0,
-    "one-var": 0,
-    "object-curly-spacing": [2, "never"],
-    "no-underscore-dangle": 0,
-    "prefer-template": 0,
-    "max-len": 0,
-    "global-require": 0,
-    "react/jsx-pascal-case": 0,
-    "react/jsx-first-prop-new-line": 0,
-    "react/prefer-stateless-function": 0,
-    "react/jsx-no-bind": 0
-  },
-  "plugins": [
-    "react"
-  ],
-  "globals": { },
+  "extends": "molindo/react",
+  "plugins": ["react-hooks"],
   "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    },
     "import/resolver": {
-      webpack: "webpack.config.js"
+      "node": {
+        "paths": [
+          "node_modules",
+          "src"
+        ]
+      }
     }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2
   }
 }

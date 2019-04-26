@@ -1,0 +1,46 @@
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+.root {
+  position: relative;
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 8px 0;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      @include animate-slow(opacity);
+      opacity: 1;
+    }
+  }
+
+  &::before,
+  &::after {
+    @include animate-fast(opacity);
+    position: absolute;
+    opacity: 0;
+    bottom: -1px;
+    height: 4px;
+    z-index: 1;
+  }
+
+  @include before {
+    $amount: -8px;
+
+    left: $amount;
+    right: $amount;
+    background-color: $color-background;
+  }
+
+  @include after {
+    left: 0;
+    width: 100%;
+    background-color: $color-accent;
+  }
+}

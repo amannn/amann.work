@@ -1,0 +1,49 @@
+---
+title: Gesture-based photo gallery with physics
+date: 2016-04-23
+excerpt: Exploring the usage of physical spring equations for animations.
+---
+
+import Figure from 'components/Figure';
+import PhoneFrame from 'components/PhoneFrame';
+import ScreenVideo from 'components/ScreenVideo';
+
+When animating elements, I think they should closely resemble phsyical objects
+from the real world. For this prototype I used spring equations in order to get
+a natural acceleration and deceleration feeling.
+
+<Figure>
+  <PhoneFrame screenBackgroundColor="#201423">
+    <ScreenVideo source={require('./demo.mp4')} style={{minHeight: 440}} />
+  </PhoneFrame>
+</Figure>
+
+Try the [live demo](https://amannn.github.io/photo-gallery/).
+
+I think for animations which are based on single clicks or
+taps you can get pretty far with CSS transitions. However as soon as a user
+moves elements via touch gestures you need something much more dynamic. Elements
+should precisely follow touch movements and if a finger is released in the
+middle of a pan gesture, the element should continue that motion while a natural
+friction brings the object to a smooth halt.
+
+There's an animation loop which runs 60 times a second and which incorporates
+velocity into coordinates of the photos using [Hooke's
+law](https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/3c3-AppsOf2ndOrders_Stu.pdf).
+
+[Ralph Thomas](https://github.com/iamralpht) got me really interested in using physical models for animations.
+If you find this interesting, I can't recommend these two articles enough:
+[Creating Animations and Interactions with Physical
+Models](http://iamralpht.github.io/physics/) and [Towards declarative touch interactions
+](http://iamralpht.github.io/constraints/).
+
+The [physics
+utilities](https://github.com/amannn/photo-gallery/tree/master/src/utils/physics)
+for this experiment are based on [the implementation of Ralph
+Thomas](https://github.com/iamralpht/iamralpht.github.io/tree/master/physics).
+
+Check out [the code on Github](https://github.com/amannn/photo-gallery).
+
+**Update:** There's now a small library called
+[wobble](https://github.com/skevy/wobble) which implements spring physics. If
+that's all you need, this is your place to go.

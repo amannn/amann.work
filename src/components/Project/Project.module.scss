@@ -1,0 +1,80 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+.root {
+  margin-top: 40px;
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include match-medium {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
+.background {
+  @include fullbleed;
+  transform: skewY(-2deg);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include match-medium {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.visualWrapper {
+  text-align: center;
+
+  @include match-medium {
+    width: 50%;
+  }
+}
+
+.visual,
+.text {
+  position: relative;
+
+  @include match-medium {
+    width: calc(50% - 40px);
+  }
+
+  @include match-huge {
+    width: 50%;
+  }
+}
+
+.visual {
+  position: relative;
+  // Compensate for shadow on images
+  left: -5px;
+  width: 100%;
+
+  @include match-medium {
+    left: auto;
+  }
+
+  @include match-huge {
+    position: relative;
+    left: -100px;
+  }
+}
+
+.text {
+  margin-bottom: 60px;
+
+  @include match-medium {
+    margin-bottom: 80px;
+  }
+}
+
+.cta {
+  margin-top: 24px;
+}

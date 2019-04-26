@@ -1,0 +1,16 @@
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/media-queries';
+
+.root {
+  display: inline-block;
+  border: none;
+  background: none;
+  padding: 8px 0;
+  color: $white;
+  opacity: 0.5;
+
+  @include hover-fast-in-slow-out {
+    opacity: 1;
+  }
+}

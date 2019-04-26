@@ -1,8 +1,21 @@
-export {default as App} from './App/App';
-export {default as Home} from './Home/Home';
-export {default as About} from './About/About';
-export {default as PhotoAlbum} from './PhotoAlbum';
-export {default as PhotoAlbums} from './PhotoAlbums';
-export {default as Project} from './Project';
-export {default as Projects} from './Projects';
-export {default as Imprint} from './Imprint';
+import React, {useEffect} from 'react';
+import Helmet from 'react-helmet';
+import Text from 'components/Text';
+
+// This page should never be rendered directly by the browser.
+// Add a server-side redirect which considers the users language.
+
+export default function Index() {
+  useEffect(() => {
+    document.location.href = '/en';
+  }, []);
+
+  return (
+    <>
+      <Helmet>
+        <link href="/en" rel="canonical" />
+      </Helmet>
+      <Text>Loading …</Text>
+    </>
+  );
+}

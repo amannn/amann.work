@@ -1,0 +1,114 @@
+@import '~styles/animations';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+$mail-delay: 5s;
+$mail-duration: 5s;
+$phone-delay: $mail-delay + $mail-duration + 0.5s;
+$phone-duration: 2.8s;
+
+.email {
+  margin-top: 24px;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.itemText {
+  @include animate-fast(transform);
+
+  .item:hover & {
+    @include animate-slow(transform);
+    transform: translateX(5px);
+  }
+}
+
+.icon {
+  margin-right: 16px;
+  @include square(16px);
+
+  @include match-large {
+    @include square(20px);
+  }
+}
+
+.mail_animated {
+  animation: animate-mail $mail-duration ease-in-out;
+  animation-delay: $mail-delay;
+  transform-origin: 50% 90%;
+}
+
+.phone_animated {
+  animation: animate-phone $phone-duration ease-in-out;
+  animation-delay: $phone-delay;
+  animation-iteration-count: 2;
+}
+
+@keyframes animate-mail {
+  $rotation: 5deg;
+
+  0% {
+    transform: none;
+  }
+
+  15% {
+    transform: none;
+  }
+
+  @for $i from 1 through 8 {
+    #{15 + $i * 2%} {
+      @if $i % 2 == 0 {
+        transform: rotate(-$rotation);
+      } @else {
+        transform: rotate($rotation);
+      }
+    }
+  }
+
+  33% {
+    transform: none;
+  }
+
+  50% {
+    transform: none;
+  }
+
+  @for $i from 1 through 8 {
+    #{50 + $i * 2%} {
+      @if $i % 2 == 0 {
+        transform: rotate(-$rotation);
+      } @else {
+        transform: rotate($rotation);
+      }
+    }
+  }
+
+  66% {
+    transform: none;
+  }
+}
+
+@keyframes animate-phone {
+  $amount: 3px;
+
+  0% {
+    transform: none;
+  }
+
+  @for $i from 1 through 24 {
+    #{$i * 2%} {
+      @if $i % 2 == 0 {
+        transform: translateX($amount);
+      } @else {
+        transform: translateX(-$amount);
+      }
+    }
+  }
+
+  50% {
+    transform: none;
+  }
+}

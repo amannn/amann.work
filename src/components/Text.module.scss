@@ -1,0 +1,147 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+
+$font-stack-sans-serif: 'Ubuntu', sans-serif;
+$font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
+  Courier, monospace;
+
+@mixin margin-bottom($value) {
+  &.root_marginBottom {
+    padding-bottom: $value;
+  }
+}
+
+.root {
+  font-family: $font-stack-sans-serif;
+  -webkit-font-smoothing: antialiased;
+
+  /**
+   * Variants
+   */
+
+  &_variant-h1 {
+    font-size: 32px;
+    line-height: 40px;
+    color: rgba($black, 0.8);
+    @include margin-bottom(24px);
+
+    @include match-large {
+      font-size: 48px;
+      line-height: 60px;
+    }
+  }
+
+  &_variant-h2 {
+    font-size: 26px;
+    line-height: 30px;
+    color: rgba($black, 0.9);
+    @include margin-bottom(24px);
+
+    @include match-large {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &_variant-h3 {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba($black, 0.9);
+    @include margin-bottom(16px);
+
+    @include match-large {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &_variant-label {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($black, 0.9);
+    @include margin-bottom(16px);
+
+    @include match-large {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &_variant-caption {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($black, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include margin-bottom(16px);
+  }
+
+  &_variant-body {
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba($black, 0.7);
+    font-weight: 300;
+    @include margin-bottom(20px);
+
+    @include match-medium {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &_variant-paragraph {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($black, 0.7);
+    font-weight: 300;
+    @include margin-bottom(12px);
+
+    @include match-large {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &_variant-code {
+    padding: 2px 4px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: $white;
+    color: rgba($black, 0.7);
+    font-weight: 300;
+    font-family: $font-stack-monospace;
+    word-break: break-word;
+  }
+
+  /**
+   * Weight
+   */
+
+  &_weight-bold {
+    font-weight: 400;
+  }
+
+  /**
+   * Color
+   */
+
+  &_color-accentLight {
+    color: $color-accent-light;
+  }
+
+  &_color-accent {
+    color: $color-accent;
+  }
+
+  &_color-white {
+    color: $white;
+  }
+
+  &_color-pale {
+    color: $color-pale;
+  }
+
+  &_color-paleInverted {
+    color: $color-pale-inverted;
+  }
+}

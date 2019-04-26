@@ -1,0 +1,32 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+.root {
+  padding: 80px 0 20px;
+  background-color: $color-background-dark;
+
+  @include match-medium {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+  padding-top: 20px;
+  border-top: 1px solid $color-line-inverted;
+}
+
+.menu > * {
+  &:not(:first-child) {
+    margin-left: 20px;
+
+    @include match-medium {
+      margin-left: 24px;
+    }
+  }
+}
