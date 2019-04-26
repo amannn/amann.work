@@ -7,20 +7,21 @@
   background: $color-background;
 
   &_showPortrait {
-    padding-bottom: 300px;
+    padding-bottom: 220px;
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-size: 300px;
+    background-size: 250px;
     background-image: url('./portrait.jpg');
 
     @include match-medium {
       padding-bottom: 0;
-      background-position: 90% bottom;
-      background-size: 500px;
+      background-position: right bottom;
+      background-size: 350px;
     }
 
     @include match-large {
-      background-position: 80% bottom;
+      background-size: 500px;
+      background-position: 83% bottom;
     }
   }
 }
@@ -62,12 +63,20 @@
 
 .text {
   padding-top: 160px;
+  padding-bottom: 20px;
   max-width: 500px;
 
   @include match-medium {
-    padding-top: 240px;
+    padding-top: 200px;
     padding-left: 0;
+    padding-bottom: 40px;
+    max-width: 400px;
+  }
+
+  @include match-large {
+    padding-top: 240px;
     padding-bottom: 80px;
+    max-width: 500px;
   }
 }
 

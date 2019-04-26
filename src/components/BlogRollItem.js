@@ -7,7 +7,7 @@ import styles from './BlogRollItem.module.scss';
 export default function BlogRollItem({className, post}) {
   return (
     <Link className={cx(styles.root, className)} to={post.href}>
-      <Text color="accentDark" component="h2" variant="h2">
+      <Text color="accent" component="h2" variant="h2">
         {post.title}
       </Text>
       <Text className={styles.description}>

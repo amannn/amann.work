@@ -57,11 +57,13 @@ export default function Index() {
           style={{backgroundColor: '#F8FAFA'}}
           title="Dashboard für Küchenanbieter"
           visual={
-            <img
-              alt=""
-              src={require('../../images/kfi-shops.png')}
-              style={{height: 640, width: 'auto'}}
-            />
+            <div style={{height: 640}}>
+              <img
+                alt=""
+                src={require('../../images/kfi-shops.png')}
+                style={{height: 'auto', maxWidth: '100%', maxHeight: '100%'}}
+              />
+            </div>
           }
         >
           <Project.Paragraph>
@@ -76,11 +78,11 @@ export default function Index() {
             dieser App verwaltet werden.
           </Project.Paragraph>
           <Project.Paragraph>
-            Für diese App entwickelte ich eine Bibliothek von über 100 flexibel
-            wiederverwendbaren Komponenten, welche die Grundlage sämtlicher
-            Screens darstellt. Zudem entwickelte ich eine GraphQL API auf Basis
-            von REST Services, welche die Entwicklungszeit mit Hilfe von Apollo
-            Client verkürzte.
+            Für diese App entwickelte ich eine Bibliothek, die mehr als 100
+            flexibel wiederverwendbare Komponenten umfasst und die Grundlage
+            sämtlicher Screens darstellt. Zudem entwickelte ich eine GraphQL API
+            auf Basis von REST Services, welche die Entwicklungszeit mit Hilfe
+            von Apollo Client verkürzte.
           </Project.Paragraph>
         </Project>
         <Project

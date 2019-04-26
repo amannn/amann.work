@@ -1,6 +1,6 @@
-@import "~styles/colors";
-@import "~styles/media-queries";
-@import "~styles/utils";
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
 
 .root {
   margin-top: 40px;
@@ -11,7 +11,7 @@
   @include match-medium {
     padding-top: 160px;
     padding-bottom: 160px;
-  };
+  }
 }
 
 .background {
@@ -27,7 +27,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  };
+  }
 }
 
 .visualWrapper {
@@ -35,17 +35,18 @@
 
   @include match-medium {
     width: 50%;
-  };
+  }
 }
 
-.visual, .text {
+.visual,
+.text {
   position: relative;
-  
+
   @include match-medium {
     width: calc(50% - 40px);
   }
 
-  @include match-large {
+  @include match-huge {
     width: 50%;
   }
 }
@@ -58,12 +59,12 @@
 
   @include match-medium {
     left: auto;
-  };
+  }
 
-  @include match-large {
+  @include match-huge {
     position: relative;
     left: -100px;
-  };
+  }
 }
 
 .text {
@@ -71,7 +72,7 @@
 
   @include match-medium {
     margin-bottom: 80px;
-  };
+  }
 }
 
 .cta {

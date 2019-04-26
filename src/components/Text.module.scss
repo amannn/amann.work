@@ -20,40 +20,51 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
    */
 
   &_variant-h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 32px;
+    line-height: 40px;
     color: rgba($black, 0.8);
+    @include margin-bottom(24px);
 
-    @include match-medium {
+    @include match-large {
       font-size: 48px;
       line-height: 60px;
     }
-
-    @include margin-bottom(24px);
   }
 
   &_variant-h2 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 26px;
+    line-height: 30px;
     color: rgba($black, 0.9);
-
     @include margin-bottom(24px);
+
+    @include match-large {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &_variant-h3 {
-    font-size: 20px;
-    line-height: 30px;
-    color: rgba($black, 0.9);
-
-    @include margin-bottom(16px);
-  }
-
-  &_variant-label {
     font-size: 16px;
     line-height: 24px;
     color: rgba($black, 0.9);
-
     @include margin-bottom(16px);
+
+    @include match-large {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &_variant-label {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba($black, 0.9);
+    @include margin-bottom(16px);
+
+    @include match-large {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &_variant-caption {
@@ -62,7 +73,6 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
     color: rgba($black, 0.7);
     text-transform: uppercase;
     letter-spacing: 2px;
-
     @include margin-bottom(16px);
   }
 
@@ -71,17 +81,20 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
     line-height: 28px;
     color: rgba($black, 0.7);
     font-weight: 300;
-
     @include margin-bottom(20px);
   }
 
   &_variant-paragraph {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     color: rgba($black, 0.7);
     font-weight: 300;
-
     @include margin-bottom(12px);
+
+    @include match-large {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &_variant-code {
@@ -107,8 +120,8 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
    * Color
    */
 
-  &_color-accentDark {
-    color: $color-accent-dark;
+  &_color-accentLight {
+    color: $color-accent-light;
   }
 
   &_color-accent {

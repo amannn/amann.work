@@ -13,7 +13,7 @@ export default function Project({children, cta, visual, intro, title, style}) {
           {React.cloneElement(visual, {className: styles.visual})}
         </div>
         <div className={styles.text}>
-          <Text color="pale" variant="label">
+          <Text color="accent" variant="label">
             {intro}
           </Text>
           <Text marginBottom variant="h2">

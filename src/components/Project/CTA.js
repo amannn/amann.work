@@ -9,7 +9,7 @@ export default function CTA({className, children, href, target = '_blank'}) {
       <span className={styles.arrow} />
       <Text
         className={styles.text}
-        color="accentDark"
+        color="accent"
         component="span"
         variant="caption"
       >

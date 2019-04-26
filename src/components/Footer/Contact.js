@@ -27,14 +27,14 @@ export default function Contact({
       <Text color="paleInverted" variant="label">
         {intro}
       </Text>
-      <Text color="accent" variant="h2">
+      <Text color="accentLight" variant="h2">
         {title}
       </Text>
       <div>
         <a className={cx(styles.email, styles.item)} href={`mailto:${email}`}>
           <Icon
             className={cx(styles.icon, {[styles.mail_animated]: animated})}
-            color="accent"
+            color="accentLight"
             name="mail"
           />
           <Text className={styles.itemText} color="white" component="span">
@@ -46,7 +46,7 @@ export default function Contact({
         <a className={styles.item} href={`tel:${telephoneNumber}`}>
           <Icon
             className={cx(styles.icon, {[styles.phone_animated]: animated})}
-            color="accent"
+            color="accentLight"
             name="phone"
           />
           <Text className={styles.itemText} color="white" component="span">

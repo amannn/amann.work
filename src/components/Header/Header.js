@@ -32,7 +32,7 @@ export default function Header({
             </Text>
             <Text
               className={styles.subtitle}
-              color="accentDark"
+              color="accent"
               component="h2"
               variant="h3"
             >

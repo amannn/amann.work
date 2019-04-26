@@ -8,7 +8,7 @@
 
 .titleWrapper {
   text-align: center;
-  padding: 80px 24px;
+  padding: 160px 24px 80px;
   overflow: hidden;
 
   @include match-medium {
@@ -20,8 +20,21 @@
 .title {
   display: inline-block;
   position: relative;
-  padding: 32px 100px;
+  padding: 32px;
   background-color: $color-background;
-  border: 8px solid $white;
-  box-shadow: 0 0 0 1px $color-accent;
+
+  @include match-medium {
+    padding: 32px 100px;
+  }
+
+  @include before {
+    $offset: 18px;
+
+    position: absolute;
+    left: -$offset;
+    right: -$offset;
+    bottom: $offset;
+    height: 1px;
+    background-color: $color-accent-light;
+  }
 }

@@ -1,4 +1,4 @@
-@import "~styles/colors";
+@import '~styles/colors';
 
 .root {
   &_color-black {
@@ -11,5 +11,9 @@
 
   &_color-accent {
     color: $color-accent;
+  }
+
+  &_color-accentLight {
+    color: $color-accent-light;
   }
 }

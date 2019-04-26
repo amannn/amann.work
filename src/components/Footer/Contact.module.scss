@@ -1,4 +1,6 @@
-@import "~styles/animations";
+@import '~styles/animations';
+@import '~styles/media-queries';
+@import '~styles/utils';
 
 $mail-delay: 5s;
 $mail-duration: 5s;
@@ -26,6 +28,11 @@ $phone-duration: 2.8s;
 
 .icon {
   margin-right: 16px;
+  @include square(16px);
+
+  @include match-large {
+    @include square(20px);
+  }
 }
 
 .mail_animated {
@@ -87,7 +94,9 @@ $phone-duration: 2.8s;
 @keyframes animate-phone {
   $amount: 3px;
 
-  0%  { transform: none; }
+  0% {
+    transform: none;
+  }
 
   @for $i from 1 through 24 {
     #{$i * 2%} {
@@ -99,5 +108,7 @@ $phone-duration: 2.8s;
     }
   }
 
-  50% { transform: none; }
+  50% {
+    transform: none;
+  }
 }

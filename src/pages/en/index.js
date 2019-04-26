@@ -7,6 +7,7 @@ import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
 import Section from 'components/Section';
+import PhoneFrame from 'components/PhoneFrame';
 
 export default function Index() {
   return (
@@ -57,11 +58,13 @@ export default function Index() {
           style={{backgroundColor: '#F8FAFA'}}
           title="Dashboard for kitchen suppliers"
           visual={
-            <img
-              alt=""
-              src={require('../../images/kfi-shops.png')}
-              style={{height: 640, width: 'auto'}}
-            />
+            <div style={{height: 640}}>
+              <img
+                alt=""
+                src={require('../../images/kfi-shops.png')}
+                style={{height: 'auto', maxWidth: '100%', maxHeight: '100%'}}
+              />
+            </div>
           }
         >
           <Project.Paragraph>
