@@ -4,13 +4,13 @@ import {MDXProvider} from '@mdx-js/react';
 import Helmet from 'react-helmet';
 import Text from 'components/Text';
 import LocalizedLayout from 'localized/en/LocalizedLayout';
-import Project from 'components/Project/Project';
+import Anchor from 'components/Anchor';
 import styles from './BlogPost.module.scss';
 
 const components = {
   h1: props => <Text marginBottom variant="h1" {...props} />,
   p: props => <Text marginBottom variant="body" {...props} />,
-  a: Project.Anchor,
+  a: props => <Anchor {...props} />,
   inlineCode: props => <Text component="span" variant="code" {...props} />,
   strong: props => (
     <Text component="span" variant="body" weight="bold" {...props} />
