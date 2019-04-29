@@ -6,6 +6,7 @@ script:
  - yarn build
 install:
  - yarn install --ignore-engines --pure-lockfile
+ - yarn global add firebase-tools
 deploy:
   provider: firebase
   token:
