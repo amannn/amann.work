@@ -18,7 +18,7 @@ export default function Header({
     <div
       className={cx(styles.root, {[styles.root_showPortrait]: showPortrait})}
     >
-      <Wrapper>
+      <Wrapper className={styles.inner}>
         <div className={styles.navigation}>
           <Link to={homeLink}>
             <Logo />
