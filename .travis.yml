@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "10"
+script:
+ - yarn test
+ - yarn build
+install:
+  - yarn install --ignore-engines
+deploy:
+  provider: script
+  script: firebase deploy --token $FIREBASE_TOKEN
+  on:
+    branch: master
