@@ -5,7 +5,7 @@ script:
  - yarn test
  - yarn build
 install:
- - yarn install --ignore-engines
+ - yarn install --ignore-engines --pure-lockfile
 deploy:
   provider: firebase
   token:
