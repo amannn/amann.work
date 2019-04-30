@@ -7,9 +7,9 @@
   flex-direction: column;
   overflow: hidden;
   background: $color-background;
-  min-height: 80vh;
 
   &_showPortrait {
+    min-height: 80vh;
     padding-bottom: 220px;
     background-repeat: no-repeat;
     background-position: center bottom;
