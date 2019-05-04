@@ -1,8 +1,64 @@
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+$animated-offset: 4px;
+
 .root {
+  position: relative;
   display: block;
-  max-width: 600px;
+  padding: 40px;
+  background-color: $white;
+
+  @include match-medium {
+    padding: 40px;
+  }
+
+  @include match-large {
+    padding: 64px;
+  }
+
+  &:before,
+  .inner {
+    @include animate-slow;
+  }
+
+  @include before {
+    position: absolute;
+    width: $animated-offset;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $color-accent-light;
+    transform-origin: left;
+    transform: scaleX(0);
+    @include animate-slow;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    .inner,
+    &::before {
+      @include animate-fast;
+    }
+
+    .inner {
+      transform: translateX($animated-offset);
+    }
+
+    &::before {
+      transform: none;
+    }
+  }
 }
 
 .description {
-  margin-top: 12px;
+  margin-top: 8px;
+}
+
+.published {
+  margin-top: 24px;
 }

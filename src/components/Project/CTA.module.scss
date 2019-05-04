@@ -1,6 +1,6 @@
-@import "~styles/animations";
-@import "~styles/colors";
-@import "~styles/utils";
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/utils';
 
 .root {
   position: relative;
@@ -15,9 +15,10 @@
     opacity: 0;
     transform: scale(1.1);
     @include animate-slow;
-  };
+  }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     outline: none;
 
     &::before {
@@ -48,12 +49,15 @@
   @include animate-slow(transform);
   transform-origin: left;
 
-  &, &::before, &::after {
+  &,
+  &::before,
+  &::after {
     height: 1px;
     background-color: $color-line;
   }
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     right: 0;
     width: 12px;
@@ -62,9 +66,9 @@
 
   @include before {
     transform: rotate(45deg);
-  };
+  }
 
   @include after {
     transform: rotate(-45deg);
-  };
+  }
 }

@@ -9,5 +9,15 @@
 }
 
 .date {
-  margin: 12px 0 40px;
+  margin: 16px 0 40px;
+}
+
+.readNext {
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 40px;
+
+  @include match-medium {
+    margin-top: 240px;
+  }
 }

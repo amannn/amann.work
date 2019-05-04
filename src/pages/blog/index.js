@@ -4,15 +4,10 @@ import {graphql} from 'gatsby';
 import Helmet from 'react-helmet';
 import LocalizedLayout from 'localized/en/LocalizedLayout';
 import BlogRoll from 'components/BlogRoll';
+import mapPostEdgeToPost from 'utils/mapPostEdgeToPost';
 
 export default function BlogPosts({data}) {
-  const posts = data.posts.edges.map(({node: {id, frontmatter, parent}}) => ({
-    id,
-    title: frontmatter.title,
-    published: frontmatter.date,
-    href: 'blog/' + parent.relativePath.split('/')[0],
-    excerpt: frontmatter.excerpt
-  }));
+  const posts = data.posts.edges.map(mapPostEdgeToPost);
 
   return (
     <LocalizedLayout title="Blog">
@@ -25,7 +20,7 @@ export default function BlogPosts({data}) {
 }
 
 export const query = graphql`
-  query BlogPosts {
+  query Blog {
     posts: allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
       edges {
         node {
@@ -37,7 +32,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "D.M.YYYY")
+            date(formatString: "MMM D, YYYY")
             excerpt
           }
         }

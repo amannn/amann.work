@@ -1,3 +1,4 @@
+@import '~styles/animations';
 @import '~styles/colors';
 @import '~styles/media-queries';
 
@@ -14,6 +15,7 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
 .root {
   font-family: $font-stack-sans-serif;
   -webkit-font-smoothing: antialiased;
+  @include animate-slow(color);
 
   /**
    * Variants
@@ -32,7 +34,7 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
   }
 
   &_variant-h2 {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 30px;
     color: rgba($black, 0.9);
     @include margin-bottom(24px);
@@ -89,8 +91,8 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
     @include margin-bottom(20px);
 
     @include match-medium {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 28px;
     }
   }
 
