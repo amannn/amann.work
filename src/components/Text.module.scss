@@ -68,12 +68,17 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
   }
 
   &_variant-caption {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
     color: rgba($black, 0.7);
     text-transform: uppercase;
     letter-spacing: 2px;
     @include margin-bottom(16px);
+
+    @include match-large {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &_variant-body {
@@ -104,13 +109,18 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
 
   &_variant-code {
     padding: 2px 4px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     background-color: $white;
     color: rgba($black, 0.7);
     font-weight: 300;
     font-family: $font-stack-monospace;
     word-break: break-word;
+
+    @include match-large {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   /**
