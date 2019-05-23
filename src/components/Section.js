@@ -6,7 +6,7 @@ export default function Section({children, title}) {
   return (
     <div className={styles.root}>
       <div className={styles.titleWrapper}>
-        <Text className={styles.title} component="h2" variant="caption">
+        <Text className={styles.title} component="h2" variant="h3">
           {title}
         </Text>
       </div>

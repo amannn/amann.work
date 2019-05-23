@@ -24,7 +24,7 @@ export default function Contact({
   return (
     <>
       <VisibilitySensor onVisible={onVisible} />
-      <Text color="paleInverted" variant="label">
+      <Text color="paleInverted" component="h2" variant="label">
         {intro}
       </Text>
       <Text color="accentLight" variant="h2">
