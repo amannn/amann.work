@@ -14,7 +14,10 @@ const components = {
   h1: props => <Text marginBottom variant="h1" {...props} />,
   p: props => <Text marginBottom variant="body" {...props} />,
   a: props => <Anchor {...props} />,
-  inlineCode: props => <Text component="span" variant="code" {...props} />,
+  inlineCode: props => (
+    <Text component="span" variant="inlineCode" {...props} />
+  ),
+  pre: props => <Text component="pre" variant="code" {...props} />,
   strong: props => (
     <Text component="span" variant="body" weight="bold" {...props} />
   )
@@ -67,7 +70,7 @@ export default function BlogPost({children, location: {pathname}}) {
       </div>
       {suggestedPost && (
         <>
-          <Text className={styles.readNext} variant="caption">
+          <Text className={styles.readNext} component="h2" variant="caption">
             Read next
           </Text>
           <BlogRollItem post={suggestedPost} />

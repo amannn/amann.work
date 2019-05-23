@@ -109,7 +109,7 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
     }
   }
 
-  &_variant-code {
+  &_variant-inlineCode {
     padding: 2px 4px;
     font-size: 14px;
     line-height: 20px;
@@ -125,6 +125,18 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
     }
   }
 
+  &_variant-code {
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: $color-background-dark;
+    color: $white;
+    font-weight: 300;
+    font-family: $font-stack-monospace;
+    word-break: break-word;
+  }
+  
   /**
    * Weight
    */

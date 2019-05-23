@@ -1,0 +1,103 @@
+---
+title: Songwriting assistant prototype
+date: 2016-08-22
+excerpt: I needed an excuse to try out the Animated API of React Native.
+---
+
+import Figure from 'components/Figure';
+import PhoneFrame from 'components/PhoneFrame';
+import ScreenVideo from 'components/ScreenVideo';
+
+When writing music, I sometimes struggle with coming up with good chord
+progressions that lay the foundation for the song. It turns out that popular
+music follows [predictable patterns](https://www.hooktheory.com/trends) which
+can be calculated.
+
+After I recently experimented with [swipe
+gestures on the web](/blog/gesture-based-photo-gallery-physics), I was wondering if there
+would be a perceivable performance difference when you implement something similar with React
+Native.
+
+My idea with this app is that the user can swipe through different moods and gets
+matching chord progressions.
+
+<Figure>
+  <PhoneFrame>
+    <ScreenVideo source={require('./demo.mp4')} />
+  </PhoneFrame>
+</Figure>
+
+The Animated API works really well for this use case: You can create a single
+animated value that subscribes to the horizontal scroll position.
+
+```jsx
+const scrollValue = new Animated.Value(initialIndex);
+```
+
+In the render function, this can be interpolated into corresponding values for every single panel.
+
+```jsx
+Children.map(children, (child, i) => {
+  // Don't render invisible panels
+  const isVisible = Math.abs(index - i) <= 1;
+  if (!isVisible) {
+    return <View style={styles.panelPlaceholder} />;
+  }
+
+  const transitionValue = scrollValue.interpolate({
+    inputRange: [i - 1, i, i + 1],
+    outputRange: [-1, 0, 1]
+  });
+
+  return React.cloneElement(child, {transitionValue, isVisible});
+});
+```
+
+A panel can use this value to create the fading parallax effect.
+
+```jsx
+const {mood, imageParallaxFactor, transitionValue} = props;
+
+const imageOffset = viewWidth * imageParallaxFactor;
+
+const imageOpacity = transitionValue.interpolate({
+  inputRange: [-1, 0, 1],
+  outputRange: [0, 1, 0]
+});
+
+const imageTranslateX = transitionValue.interpolate({
+  inputRange: [-1, 0, 1],
+  outputRange: [-imageOffset, 0, imageOffset]
+});
+
+const style = [
+  styles.backgroundImage,
+  {
+    left: -imageOffset,
+    width: viewWidth + imageOffset * 2,
+    opacity: imageOpacity,
+    transform: [{translateX: imageTranslateX}]
+  }
+];
+
+return <Animated.Image style={style} source={mood.image} />;
+```
+
+This ensures that all animatable elements always operate in sync.
+
+When the user releases the touch, `scrollValue` can be set to an integer,
+resulting in a single panel to be visible. For a natural feel, the current
+velocity of the panel needs to be incorporated via spring dynamics.
+
+```jsx
+// Decide based on the current drag position and
+// velocity which panel should be visible.
+const pageNumber = ...;
+
+Animated.spring(scrollValue, {
+  toValue: pageNumber,
+  velocity: -gestureState.vx,
+  friction: springFriction,
+  tension: springTension
+}).start();
+```

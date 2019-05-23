@@ -6271,20 +6271,10 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-gaxios@^1.0.2, gaxios@^1.2.1, gaxios@^1.5.0:
+gaxios@^1.0.2, gaxios@^1.0.4, gaxios@^1.2.1, gaxios@^1.5.0:
   version "1.8.4"
-  resolved "https://registry.yarnpkg.com/gaxios/-/gaxios-1.8.4.tgz#e08c34fe93c0a9b67a52b7b9e7a64e6435f9a339"
+  resolved "https://registry.npmjs.org/gaxios/-/gaxios-1.8.4.tgz#e08c34fe93c0a9b67a52b7b9e7a64e6435f9a339"
   integrity sha512-BoENMnu1Gav18HcpV9IleMPZ9exM+AvUjrAOV4Mzs/vfz2Lu/ABv451iEXByKiMPn2M140uul1txXCg83sAENw==
-  dependencies:
-    abort-controller "^3.0.0"
-    extend "^3.0.2"
-    https-proxy-agent "^2.2.1"
-    node-fetch "^2.3.0"
-
-gaxios@^1.0.4:
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/gaxios/-/gaxios-1.8.5.tgz#1ae77275c65ef32d1b766caf912c0d4b3a6c67d5"
-  integrity sha512-t9iX8m7O8yEQt8c4ot4CWmRyCk7CUEk6vVw6WMyoWd/Knaw3kfi/Eqx6pqxsde1CFc9Za03pCMShKecgxvkXyw==
   dependencies:
     abort-controller "^3.0.0"
     extend "^3.0.2"
