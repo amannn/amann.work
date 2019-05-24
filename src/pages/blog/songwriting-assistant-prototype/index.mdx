@@ -11,14 +11,14 @@ import ScreenVideo from 'components/ScreenVideo';
 When writing music, I sometimes struggle with coming up with good chord
 progressions that lay the foundation for the song. It turns out that popular
 music follows [predictable patterns](https://www.hooktheory.com/trends) which
-can be calculated.
+can be calculated and therefore potentially automated.
 
 After I recently experimented with [swipe
 gestures on the web](/blog/gesture-based-photo-gallery-physics), I was wondering if there
 would be a perceivable performance difference when you implement something similar with React
 Native.
 
-My idea with this app is that the user can swipe through different moods and gets
+My idea with this app is that the user can swipe through different moods to get
 matching chord progressions.
 
 <Figure>
@@ -53,7 +53,8 @@ Children.map(children, (child, i) => {
 });
 ```
 
-A panel can use this value to create the fading parallax effect.
+A panel can take this value and interpolate it further to animate the opacity
+and position of the background, creating the fading parallax effect.
 
 ```jsx
 const {mood, imageParallaxFactor, transitionValue} = props;

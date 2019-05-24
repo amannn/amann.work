@@ -134,7 +134,9 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
     color: $white;
     font-weight: 300;
     font-family: $font-stack-monospace;
-    word-break: break-word;
+    max-width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   
   /**
