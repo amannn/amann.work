@@ -3,75 +3,63 @@
 @import '~styles/utils';
 
 .root {
-  margin-top: 40px;
-  position: relative;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  overflow: hidden;
+}
+
+.outer {
+  width: 100%; // IE11
+  max-width: 1200px;
+  margin: auto;
 
   @include match-medium {
-    padding-top: 160px;
-    padding-bottom: 160px;
+    display: flex;
+  }
+}
+
+.inner {
+  position: relative;
+  margin: 0 24px;
+  padding: 24px 0 24px 24px;
+
+  @include match-medium {
+    display: flex;
+    padding: 100px 0;
   }
 }
 
 .background {
-  @include fullbleed;
-  transform: skewY(-2deg);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column-reverse;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -100vw;
+  bottom: 0;
 
   @include match-medium {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.visualWrapper {
-  text-align: center;
-
-  @include match-medium {
-    width: 50%;
+    left: 40px;
   }
 }
 
 .visual,
 .text {
   position: relative;
-
-  @include match-medium {
-    width: calc(50% - 40px);
-  }
-
-  @include match-huge {
-    width: 50%;
-  }
 }
 
 .visual {
-  position: relative;
-  // Compensate for shadow on images
-  left: -5px;
-  width: 100%;
+  display: flex;
+  align-items: center;
 
   @include match-medium {
-    left: auto;
-  }
-
-  @include match-huge {
-    position: relative;
-    left: -100px;
+    flex: 1;
   }
 }
 
 .text {
-  margin-bottom: 60px;
+  padding-top: 40px;
 
   @include match-medium {
-    margin-bottom: 80px;
+    padding-bottom: 40px;
+    margin-left: 40px;
+    width: 40%;
   }
 }
 

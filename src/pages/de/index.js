@@ -1,4 +1,5 @@
 import React from 'react';
+import Section from 'components/Section';
 import labels from 'localized/de/labels';
 import LocalizedFooter from 'localized/de/LocalizedFooter';
 import LocalizedHeader from 'localized/de/LocalizedHeader';
@@ -6,7 +7,7 @@ import LocalizedMeta from 'localized/de/LocalizedMeta';
 import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
-import Section from 'components/Section';
+import PhoneFrame from 'components/PhoneFrame';
 
 export default function Index() {
   return (
@@ -18,18 +19,43 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
-      <Section title="Ausgewählte Projekte">
+      <Section
+        title={
+          <Section.Title intro="Smarte Apps nach Maß">
+            Ausgewählte Projekte
+          </Section.Title>
+        }
+      >
         <Project
+          backgroundColor="#F6F6F9"
           cta={
             <Project.CTA href="https://planung.kuechenfinder.com/">
               Zur App
             </Project.CTA>
           }
           intro="Per Dialog zur neuen Küche"
-          style={{backgroundColor: '#F6F6F9'}}
           title="Küchenfinder Planungsapp"
           visual={
-            <img alt="" src={require('../../images/kfi-configurator.png')} />
+            <Project.Visual layout="phones">
+              <PhoneFrame small>
+                <img
+                  alt=""
+                  src={require('../../images/kfi-configurator-1.png')}
+                />
+              </PhoneFrame>
+              <PhoneFrame small>
+                <img
+                  alt=""
+                  src={require('../../images/kfi-configurator-2.png')}
+                />
+              </PhoneFrame>
+              <PhoneFrame small>
+                <img
+                  alt=""
+                  src={require('../../images/kfi-configurator-3.png')}
+                />
+              </PhoneFrame>
+            </Project.Visual>
           }
         >
           <Project.Paragraph>

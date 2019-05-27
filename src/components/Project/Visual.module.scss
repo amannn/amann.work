@@ -1,0 +1,21 @@
+@import '~styles/media-queries';
+
+.root {
+  max-width: 100%;
+
+  &_layout-phones {
+    display: flex;
+
+    > * {
+      max-width: 184px;
+
+      &:not(:first-child) {
+        margin-left: 8px;
+
+        @include match-large {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+
+.root {
+  background-color: $white;
+}
+
+.title {
+  padding: 160px 0 80px;
+
+  @include match-medium {
+    padding-top: 280px;
+    padding-bottom: 160px;
+  }
+}
+
+.children > *:not(:first-child) {
+  margin-top: 80px;
+}

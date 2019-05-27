@@ -28,9 +28,6 @@ export default function Index() {
           intro="Guidance through conversation"
           style={{backgroundColor: '#F6F6F9'}}
           title="Kitchen planning app"
-          visual={
-            <img alt="" src={require('../../images/kfi-configurator.png')} />
-          }
         >
           <Project.Paragraph>
             {'"Küchenfinder"'} is an Austrian service which helps you to
