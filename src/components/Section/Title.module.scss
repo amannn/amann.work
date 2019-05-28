@@ -1,0 +1,17 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+
+.title {
+  padding-bottom: 8px;
+  border-bottom: 2px solid $color-accent;
+  margin-left: 24px;
+
+  @include match-medium {
+    margin-left: 40px;
+    padding-bottom: 12px;
+  }
+
+  @include match-large {
+    margin-left: 0;
+  }
+}

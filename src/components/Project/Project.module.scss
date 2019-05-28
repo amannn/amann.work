@@ -37,6 +37,10 @@
   @include match-medium {
     left: 40px;
   }
+
+  @include match-large {
+    left: 120px;
+  }
 }
 
 .visual,

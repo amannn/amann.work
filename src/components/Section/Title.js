@@ -1,15 +1,11 @@
 import React from 'react';
 import Text from 'components/Text';
+import styles from './Title.module.scss';
 
-export default function Title({children, intro}) {
+export default function Title({children}) {
   return (
-    <>
-      <Text color="accent" variant="label">
-        {intro}
-      </Text>
-      <Text component="h2" variant="h2">
-        {children}
-      </Text>
-    </>
+    <Text component="h2" variant="h2">
+      <span className={styles.title}>{children}</span>
+    </Text>
   );
 }

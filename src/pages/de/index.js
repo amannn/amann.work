@@ -19,13 +19,7 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
-      <Section
-        title={
-          <Section.Title intro="Smarte Apps nach Maß">
-            Ausgewählte Projekte
-          </Section.Title>
-        }
-      >
+      <Section title={<Section.Title>Ausgewählte Projekte</Section.Title>}>
         <Project
           backgroundColor="#F6F6F9"
           cta={
@@ -37,19 +31,19 @@ export default function Index() {
           title="Küchenfinder Planungsapp"
           visual={
             <Project.Visual layout="phones">
-              <PhoneFrame small>
+              <PhoneFrame>
                 <img
                   alt=""
                   src={require('../../images/kfi-configurator-1.png')}
                 />
               </PhoneFrame>
-              <PhoneFrame small>
+              <PhoneFrame>
                 <img
                   alt=""
                   src={require('../../images/kfi-configurator-2.png')}
                 />
               </PhoneFrame>
-              <PhoneFrame small>
+              <PhoneFrame>
                 <img
                   alt=""
                   src={require('../../images/kfi-configurator-3.png')}
