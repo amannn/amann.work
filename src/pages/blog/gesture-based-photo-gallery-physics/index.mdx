@@ -5,7 +5,7 @@ excerpt: Exploring the usage of physical spring equations for animations.
 ---
 
 import Figure from 'components/Figure';
-import PhoneFrame from 'components/PhoneFrame';
+import DeviceFrame from 'components/DeviceFrame';
 import ScreenVideo from 'components/ScreenVideo';
 
 When animating elements, I think they should closely resemble phsyical objects
@@ -13,9 +13,9 @@ from the real world. For this prototype I used spring equations in order to get
 a natural acceleration and deceleration feeling.
 
 <Figure>
-  <PhoneFrame screenBackgroundColor="#201423">
+  <DeviceFrame screenBackgroundColor="#201423">
     <ScreenVideo source={require('./demo.mp4')} style={{minHeight: 440}} />
-  </PhoneFrame>
+  </DeviceFrame>
 </Figure>
 
 Try the [live demo](https://amannn.github.io/photo-gallery/).

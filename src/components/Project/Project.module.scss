@@ -11,7 +11,7 @@
   max-width: 1200px;
   margin: auto;
 
-  @include match-medium {
+  @include match-large {
     display: flex;
   }
 }
@@ -21,7 +21,7 @@
   margin: 0 24px;
   padding: 24px 0 24px 24px;
 
-  @include match-medium {
+  @include match-large {
     display: flex;
     padding: 100px 0;
   }
@@ -34,7 +34,7 @@
   right: -100vw;
   bottom: 0;
 
-  @include match-medium {
+  @include match-large {
     left: 40px;
   }
 
@@ -52,17 +52,18 @@
   display: flex;
   align-items: center;
 
-  @include match-medium {
+  @include match-large {
     flex: 1;
   }
 }
 
 .text {
   padding-top: 40px;
+  max-width: 500px;
 
-  @include match-medium {
+  @include match-large {
     padding-bottom: 40px;
-    margin-left: 40px;
+    margin-left: 60px;
     width: 40%;
   }
 }

@@ -1,28 +1,12 @@
 import React, {useRef} from 'react';
-import styles from './PhoneFrame.module.scss';
 import useLoadedWidth from './useLoadedWidth';
+import useLayoutGetter from './useLayoutGetter';
+import styles from './DeviceFrameMobile.module.scss';
 
-/**
- * Renders media like an image or a video within a phone frame and adjusts the
- * frame proportions based on the media.
- */
-
-export default function PhoneFrame({screenBackgroundColor, children}) {
+export default function DeviceFrameMobile({screenBackgroundColor, children}) {
   const rootRef = useRef();
   const width = useLoadedWidth(rootRef);
-
-  function getLayoutProps(template) {
-    if (!width) return {visibility: 'hidden'};
-
-    const originalWidth = 180;
-    const scale = width / originalWidth;
-
-    const props = {};
-    Object.keys(template).forEach(key => {
-      props[key] = template[key] * scale;
-    });
-    return props;
-  }
+  const getLayoutProps = useLayoutGetter(width, 180);
 
   const paddingVertical = 40;
   const paddingHorizontal = 8;

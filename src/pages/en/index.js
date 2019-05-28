@@ -57,7 +57,7 @@ export default function Index() {
             <div style={{height: 640}}>
               <img
                 alt=""
-                src={require('../../images/kfi-shops.png')}
+                src={require('../../images/kfi-shops-mobile.png')}
                 style={{height: 'auto', maxWidth: '100%', maxHeight: '100%'}}
               />
             </div>

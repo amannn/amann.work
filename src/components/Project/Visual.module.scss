@@ -1,21 +1,35 @@
 @import '~styles/media-queries';
 
 .root {
-  max-width: 100%;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
 
-  &_layout-phones {
-    display: flex;
+.mobiles {
+  display: flex;
 
-    > * {
-      max-width: 184px;
+  > * {
+    max-width: 190px !important;
 
-      &:not(:first-child) {
-        margin-left: 8px;
+    &:not(:first-child) {
+      margin-left: 8px;
 
-        @include match-large {
-          margin-left: 16px;
-        }
+      @include match-large {
+        margin-left: 16px;
       }
     }
   }
+}
+
+.mixedMobiles {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 30%;
+}
+
+.desktops {
+  margin-right: 8%;
+  margin-bottom: 8%;
 }

@@ -7,7 +7,7 @@ import LocalizedMeta from 'localized/de/LocalizedMeta';
 import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
-import PhoneFrame from 'components/PhoneFrame';
+import DeviceFrame from 'components/DeviceFrame';
 
 export default function Index() {
   return (
@@ -30,25 +30,25 @@ export default function Index() {
           intro="Per Dialog zur neuen Küche"
           title="Küchenfinder Planungsapp"
           visual={
-            <Project.Visual layout="phones">
-              <PhoneFrame>
+            <Project.Visual>
+              <DeviceFrame>
                 <img
                   alt=""
                   src={require('../../images/kfi-configurator-1.png')}
                 />
-              </PhoneFrame>
-              <PhoneFrame>
+              </DeviceFrame>
+              <DeviceFrame>
                 <img
                   alt=""
                   src={require('../../images/kfi-configurator-2.png')}
                 />
-              </PhoneFrame>
-              <PhoneFrame>
+              </DeviceFrame>
+              <DeviceFrame>
                 <img
                   alt=""
                   src={require('../../images/kfi-configurator-3.png')}
                 />
-              </PhoneFrame>
+              </DeviceFrame>
             </Project.Visual>
           }
         >
@@ -68,22 +68,29 @@ export default function Index() {
           </Project.Paragraph>
         </Project>
         <Project
+          backgroundColor="#F8FAFA"
           cta={
             <Project.CTA href="https://www.kuechenfinder.com/fuer-kuechenexperten">
               Mehr erfahren
             </Project.CTA>
           }
           intro="Datengetriebene Empfehlungen"
-          style={{backgroundColor: '#F8FAFA'}}
           title="Dashboard für Küchenanbieter"
           visual={
-            <div style={{height: 640}}>
-              <img
-                alt=""
-                src={require('../../images/kfi-shops.png')}
-                style={{height: 'auto', maxWidth: '100%', maxHeight: '100%'}}
-              />
-            </div>
+            <Project.Visual>
+              <DeviceFrame type="mobile">
+                <img
+                  alt=""
+                  src={require('../../images/kfi-shops-mobile.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../images/kfi-shops-desktop.png')}
+                />
+              </DeviceFrame>
+            </Project.Visual>
           }
         >
           <Project.Paragraph>
