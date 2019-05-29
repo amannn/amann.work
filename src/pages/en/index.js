@@ -23,7 +23,7 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
-      <Section title={<Section.Title>Ausgewählte Projekte</Section.Title>}>
+      <Section title={<Section.Title>Selected projects</Section.Title>}>
         <Project
           cta={
             <Project.CTA href="https://planung.kuechenfinder.com/">
