@@ -1,6 +1,21 @@
 @import '~styles/colors';
+@import '~styles/media-queries';
 
 .root {
+  &_padding {
+    padding: 80px 0;
+
+    @include match-medium {
+      padding: 120px 0;
+    }
+  }
+
+  &_background {
+    background-color: $color-background;
+  }
+}
+
+.inner {
   width: 100%; // IE11
   max-width: 960px;
   padding-left: 24px;

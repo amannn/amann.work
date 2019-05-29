@@ -7,8 +7,13 @@ import Page from 'components/Page';
 import Project from 'components/Project';
 import Section from 'components/Section';
 import DeviceFrame from 'components/DeviceFrame';
+import useBlogPosts from 'hooks/useBlogPosts';
+import Wrapper from 'components/Wrapper';
+import BlogRoll from 'components/BlogRoll';
 
 export default function Index() {
+  const posts = useBlogPosts();
+
   return (
     <Page>
       <LocalizedMeta />
@@ -182,6 +187,11 @@ export default function Index() {
             components.
           </Project.Paragraph>
         </Project>
+      </Section>
+      <Section title={<Section.Title>Latest articles</Section.Title>}>
+        <Wrapper background padding>
+          <BlogRoll posts={posts} />
+        </Wrapper>
       </Section>
       <LocalizedFooter />
     </Page>

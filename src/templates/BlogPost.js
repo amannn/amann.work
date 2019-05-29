@@ -1,13 +1,12 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
 import {MDXProvider} from '@mdx-js/react';
 import Helmet from 'react-helmet';
-import mapPostEdgeToPost from 'utils/mapPostEdgeToPost';
 import Text from 'components/Text';
 import LocalizedLayout from 'localized/en/LocalizedLayout';
 import Anchor from 'components/Anchor';
 import BlogRollItem from 'components/BlogRollItem';
+import useBlogPosts from 'hooks/useBlogPosts';
 import styles from './BlogPost.module.scss';
 
 const components = {
@@ -23,31 +22,8 @@ const components = {
   )
 };
 
-const query = graphql`
-  query BlogPost {
-    posts: allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
-      edges {
-        node {
-          parent {
-            ... on File {
-              relativePath
-            }
-          }
-          id
-          frontmatter {
-            title
-            date(formatString: "MMM D, YYYY")
-            excerpt
-          }
-        }
-      }
-    }
-  }
-`;
-
 export default function BlogPost({children, location: {pathname}}) {
-  const data = useStaticQuery(query);
-  const posts = data.posts.edges.map(mapPostEdgeToPost);
+  const posts = useBlogPosts();
   const normalizedPathname = pathname.replace(/\/$/, '');
   const currentPost = posts.find(post => post.href === normalizedPathname);
   const otherPosts = posts.filter(post => post !== currentPost);

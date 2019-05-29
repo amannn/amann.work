@@ -28,7 +28,7 @@ export default function BlogRollItem({className, post}) {
         <Text
           color={isHighlighted ? undefined : 'accent'}
           component="h2"
-          variant="h2"
+          variant="h3"
         >
           {post.title}
         </Text>

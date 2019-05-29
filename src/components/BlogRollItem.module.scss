@@ -11,14 +11,6 @@ $animated-offset: 4px;
   padding: 40px;
   background-color: $white;
 
-  @include match-medium {
-    padding: 40px;
-  }
-
-  @include match-large {
-    padding: 64px;
-  }
-
   &:before,
   .inner {
     @include animate-slow;

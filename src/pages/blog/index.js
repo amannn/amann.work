@@ -1,13 +1,11 @@
-/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react';
-import {graphql} from 'gatsby';
 import Helmet from 'react-helmet';
 import LocalizedLayout from 'localized/en/LocalizedLayout';
 import BlogRoll from 'components/BlogRoll';
-import mapPostEdgeToPost from 'utils/mapPostEdgeToPost';
+import useBlogPosts from 'hooks/useBlogPosts';
 
-export default function BlogPosts({data}) {
-  const posts = data.posts.edges.map(mapPostEdgeToPost);
+export default function BlogPosts() {
+  const posts = useBlogPosts();
 
   return (
     <LocalizedLayout title="Blog">
@@ -18,25 +16,3 @@ export default function BlogPosts({data}) {
     </LocalizedLayout>
   );
 }
-
-export const query = graphql`
-  query Blog {
-    posts: allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
-      edges {
-        node {
-          parent {
-            ... on File {
-              relativePath
-            }
-          }
-          id
-          frontmatter {
-            title
-            date(formatString: "MMM D, YYYY")
-            excerpt
-          }
-        }
-      }
-    }
-  }
-`;
