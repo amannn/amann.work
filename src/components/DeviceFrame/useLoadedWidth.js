@@ -4,6 +4,11 @@ import {useEffect, useState} from 'react';
  * Waits for media content to be loaded and reports the width of the ref afterwards.
  */
 
+// When devices are placed next to each other, it's possible that the resizing
+// of one device affects the size of another one. Therefore all other current
+// instances need to be notified when one device updates its width.
+let listeners = [];
+
 export default function useLoadedWidth(ref) {
   const [width, setWidth] = useState();
 
@@ -15,6 +20,14 @@ export default function useLoadedWidth(ref) {
     function updateWidth() {
       setWidth(ref.current.offsetWidth);
     }
+
+    function notifyOtherListeners() {
+      listeners.forEach(listener => {
+        if (listener !== updateWidth) listener();
+      });
+    }
+
+    listeners.push(updateWidth);
 
     const image = ref.current.querySelector('img');
     if (image) {
@@ -46,12 +59,15 @@ export default function useLoadedWidth(ref) {
       mediaLoadedPromise.then(() => {
         if (isCanceled) return;
         updateWidth();
+        notifyOtherListeners();
       });
     }
 
     window.addEventListener('resize', updateWidth);
 
     return () => {
+      listeners = listeners.filter(listener => listener !== updateWidth);
+
       isCanceled = true;
       window.removeEventListener('resize', updateWidth);
       if (image) image.removeEventListener('load', onLoad);
