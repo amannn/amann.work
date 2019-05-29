@@ -41,6 +41,7 @@ export default function Header({
             <Text>{description}</Text>
           </div>
         )}
+        {showPortrait && <div className={styles.portrait} />}
       </Wrapper>
     </div>
   );

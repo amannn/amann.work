@@ -1,0 +1,47 @@
+@import '~styles/colors';
+
+.root {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 320px;
+  border: 1px solid $color-line;
+  background-color: $white;
+  box-shadow: 0 2px 20px rgba($black, 0.1);
+}
+
+.cameraAndSpeaker {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.camera,
+.speaker {
+  background-color: $grey;
+}
+
+.camera {
+  border-radius: 50%;
+}
+
+.home {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 1px solid $color-line;
+}
+
+.children {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  border: 1px solid $color-line;
+
+  > * {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+@import '~styles/colors';
+
+.root {
+  border: 1px solid $color-line;
+  background-color: $white;
+  box-shadow: 0 2px 20px rgba($black, 0.1);
+  border-radius: 4px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-line;
+}
+
+.toolbarIcon {
+  display: inline-block;
+  border: 1px solid $color-line;
+  border-radius: 50%;
+}
+
+.children > * {
+  display: flex;
+  width: 100%;
+}

@@ -5,16 +5,16 @@ excerpt: Your personal assistant to play and sing along to your favourite songs.
 ---
 
 import Figure from 'components/Figure';
-import PhoneFrame from 'components/PhoneFrame';
+import DeviceFrame from 'components/DeviceFrame';
 import ScreenVideo from 'components/ScreenVideo';
 
 This app is my attempt at delivering a good user experience for an app that helps
 you to play and sing along to your favourite songs.
 
 <Figure>
-  <PhoneFrame>
+  <DeviceFrame>
     <img src={require('./songs.png')} />
-  </PhoneFrame>
+  </DeviceFrame>
 </Figure>
 
 There's no sophisticated multi-level navigation – just your songs. I expect most
@@ -26,9 +26,9 @@ apart from showing you matchings songs from your favourites, this also searches
 for other matching songs through a remote API.
 
 <Figure>
-  <PhoneFrame>
+  <DeviceFrame>
     <img src={require('./search.png')} />
-  </PhoneFrame>
+  </DeviceFrame>
 </Figure>
 
 When you've decided for a song to play, you get an immersive, fullscreen
@@ -40,9 +40,9 @@ you've used the app for a bit, you might intuitively play the right chord just
 by subconciously noticing the respective colour.
 
 <Figure>
-  <PhoneFrame>
+  <DeviceFrame>
     <img src={require('./detail.png')} />
-  </PhoneFrame>
+  </DeviceFrame>
 </Figure>
 
 From here you can also save the song as a favourite, or transpose the song up or
@@ -65,9 +65,9 @@ motion that feels natural and guides the user, instead of drawing attention to
 itself.
 
 <Figure>
-  <PhoneFrame>
+  <DeviceFrame>
     <ScreenVideo source={require('./animations.mp4')} />
-  </PhoneFrame>
+  </DeviceFrame>
 </Figure>
 
 Regarding technological aspects, the UI is built with
