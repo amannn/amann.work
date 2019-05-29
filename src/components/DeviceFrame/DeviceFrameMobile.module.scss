@@ -38,7 +38,7 @@
 .children {
   display: flex;
   flex: 1;
-  align-items: center;
+  align-items: flex-start;
   border: 1px solid $color-line;
 
   > * {

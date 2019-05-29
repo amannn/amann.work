@@ -4,7 +4,6 @@ import labels from 'localized/de/labels';
 import LocalizedFooter from 'localized/de/LocalizedFooter';
 import LocalizedHeader from 'localized/de/LocalizedHeader';
 import LocalizedMeta from 'localized/de/LocalizedMeta';
-import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
 import DeviceFrame from 'components/DeviceFrame';
@@ -21,7 +20,6 @@ export default function Index() {
       />
       <Section title={<Section.Title>Ausgewählte Projekte</Section.Title>}>
         <Project
-          backgroundColor="#F6F6F9"
           cta={
             <Project.CTA href="https://planung.kuechenfinder.com/">
               Zur App
@@ -68,7 +66,6 @@ export default function Index() {
           </Project.Paragraph>
         </Project>
         <Project
-          backgroundColor="#F8FAFA"
           cta={
             <Project.CTA href="https://www.kuechenfinder.com/fuer-kuechenexperten">
               Mehr erfahren
@@ -119,9 +116,20 @@ export default function Index() {
             </Project.CTA>
           }
           intro="Preisvergleich für Schuhliebhaber"
-          style={{backgroundColor: '#FEFBFB'}}
           title="Launch von Shoemondo"
-          visual={<img alt="" src={require('../../images/shoemondo.png')} />}
+          visual={
+            <Project.Visual>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/shoemondo-1.png')} />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/shoemondo-2.png')} />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/shoemondo-3.png')} />
+              </DeviceFrame>
+            </Project.Visual>
+          }
         >
           <Project.Paragraph>
             Shoemondo hilft Ihnen dabei Ihr nächstes Lieblingspaar Schuhe zu
@@ -142,18 +150,22 @@ export default function Index() {
             </Project.CTA>
           }
           intro="Forschungsinhalte sichtbar machen"
-          style={{
-            backgroundImage: `url(${require('../../images/fh-research-bg.jpg')})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center bottom'
-          }}
           title="Wissensportal Relaunch"
           visual={
-            <img
-              alt=""
-              src={require('../../images/fh-research.png')}
-              style={{maxWidth: '400px'}}
-            />
+            <Project.Visual>
+              <DeviceFrame type="mobile">
+                <img
+                  alt=""
+                  src={require('../../images/fh-research-mobile.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../images/fh-research-desktop.png')}
+                />
+              </DeviceFrame>
+            </Project.Visual>
           }
         >
           <Project.Paragraph>
@@ -172,7 +184,7 @@ export default function Index() {
           </Project.Paragraph>
         </Project>
       </Section>
-      <LocalizedFooter component={HomeFooter} />
+      <LocalizedFooter />
     </Page>
   );
 }

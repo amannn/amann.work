@@ -3,19 +3,12 @@ import cx from 'classnames';
 import Text from 'components/Text';
 import styles from './Project.module.scss';
 
-export default function Project({
-  backgroundColor,
-  children,
-  cta,
-  visual,
-  intro,
-  title
-}) {
+export default function Project({children, cta, visual, intro, title}) {
   return (
     <div className={styles.root}>
       <div className={styles.outer}>
         <div className={styles.inner}>
-          <div className={styles.background} style={{backgroundColor}} />
+          <div className={styles.background} />
           <div className={styles.visual}>{visual}</div>
           <div className={styles.text}>
             <Text color="accent" variant="label">

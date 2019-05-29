@@ -10,7 +10,7 @@ export default function DeviceFrameMobile({screenBackgroundColor, children}) {
 
   const paddingVertical = 40;
   const paddingHorizontal = 8;
-  const cameraSize = 4;
+  const cameraSize = 5;
   const homeSize = 24;
 
   return (
@@ -41,7 +41,7 @@ export default function DeviceFrameMobile({screenBackgroundColor, children}) {
         <span
           className={styles.speaker}
           style={getLayoutProps({
-            height: 2,
+            height: 2.5,
             width: 48,
             marginLeft: 8,
             borderRadius: 2

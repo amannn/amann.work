@@ -3,9 +3,9 @@ import {Link} from 'gatsby';
 import Icon from 'components/Icon';
 import Footer from 'components/Footer';
 
-export default function LocalizedFooter({component: Component = Footer}) {
+export default function LocalizedFooter() {
   return (
-    <Component
+    <Footer
       menu={
         <>
           <Footer.MenuItem component={props => <Link to="/blog" {...props} />}>
@@ -43,6 +43,6 @@ export default function LocalizedFooter({component: Component = Footer}) {
           title="Freut mich von Ihnen zu hören!"
         />
       </div>
-    </Component>
+    </Footer>
   );
 }

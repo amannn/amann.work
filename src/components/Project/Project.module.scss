@@ -33,6 +33,7 @@
   left: 0;
   right: -100vw;
   bottom: 0;
+  background-color: $color-background;
 
   @include match-large {
     left: 40px;

@@ -3,6 +3,11 @@
 
 .root {
   background-color: $white;
+  padding-bottom: 80px;
+
+  @include match-medium {
+    padding-bottom: 160px;
+  }
 }
 
 .title {

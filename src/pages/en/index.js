@@ -3,10 +3,10 @@ import labels from 'localized/en/labels';
 import LocalizedFooter from 'localized/en/LocalizedFooter';
 import LocalizedHeader from 'localized/en/LocalizedHeader';
 import LocalizedMeta from 'localized/en/LocalizedMeta';
-import HomeFooter from 'components/HomeFooter';
 import Page from 'components/Page';
 import Project from 'components/Project';
 import Section from 'components/Section';
+import DeviceFrame from 'components/DeviceFrame';
 
 export default function Index() {
   return (
@@ -18,7 +18,7 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
-      <Section title="Selected projects">
+      <Section title={<Section.Title>Ausgewählte Projekte</Section.Title>}>
         <Project
           cta={
             <Project.CTA href="https://planung.kuechenfinder.com/">
@@ -26,8 +26,29 @@ export default function Index() {
             </Project.CTA>
           }
           intro="Guidance through conversation"
-          style={{backgroundColor: '#F6F6F9'}}
           title="Kitchen planning app"
+          visual={
+            <Project.Visual>
+              <DeviceFrame>
+                <img
+                  alt=""
+                  src={require('../../images/kfi-configurator-1.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img
+                  alt=""
+                  src={require('../../images/kfi-configurator-2.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img
+                  alt=""
+                  src={require('../../images/kfi-configurator-3.png')}
+                />
+              </DeviceFrame>
+            </Project.Visual>
+          }
         >
           <Project.Paragraph>
             {'"Küchenfinder"'} is an Austrian service which helps you to
@@ -51,16 +72,22 @@ export default function Index() {
             </Project.CTA>
           }
           intro="Data-driven recommendations"
-          style={{backgroundColor: '#F8FAFA'}}
           title="Dashboard for kitchen suppliers"
           visual={
-            <div style={{height: 640}}>
-              <img
-                alt=""
-                src={require('../../images/kfi-shops-mobile.png')}
-                style={{height: 'auto', maxWidth: '100%', maxHeight: '100%'}}
-              />
-            </div>
+            <Project.Visual>
+              <DeviceFrame type="mobile">
+                <img
+                  alt=""
+                  src={require('../../images/kfi-shops-mobile.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../images/kfi-shops-desktop.png')}
+                />
+              </DeviceFrame>
+            </Project.Visual>
           }
         >
           <Project.Paragraph>
@@ -88,9 +115,20 @@ export default function Index() {
             </Project.CTA>
           }
           intro="Price comparison for shoe lovers"
-          style={{backgroundColor: '#FEFBFB'}}
           title="Launch of Shoemondo"
-          visual={<img alt="" src={require('../../images/shoemondo.png')} />}
+          visual={
+            <Project.Visual>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/shoemondo-1.png')} />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/shoemondo-2.png')} />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/shoemondo-3.png')} />
+              </DeviceFrame>
+            </Project.Visual>
+          }
         >
           <Project.Paragraph>
             Shoemondo helps you to find your next favourite pair of shoes and
@@ -110,18 +148,22 @@ export default function Index() {
             </Project.CTA>
           }
           intro="Make research content visible"
-          style={{
-            backgroundImage: `url(${require('../../images/fh-research-bg.jpg')})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center bottom'
-          }}
           title="Research portal relaunch"
           visual={
-            <img
-              alt=""
-              src={require('../../images/fh-research.png')}
-              style={{maxWidth: '400px'}}
-            />
+            <Project.Visual>
+              <DeviceFrame type="mobile">
+                <img
+                  alt=""
+                  src={require('../../images/fh-research-mobile.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../images/fh-research-desktop.png')}
+                />
+              </DeviceFrame>
+            </Project.Visual>
           }
         >
           <Project.Paragraph>
@@ -141,7 +183,7 @@ export default function Index() {
           </Project.Paragraph>
         </Project>
       </Section>
-      <LocalizedFooter component={HomeFooter} />
+      <LocalizedFooter />
     </Page>
   );
 }
