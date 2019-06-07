@@ -38,7 +38,7 @@ export default function LocalizedFooter() {
       <div id="contact">
         <Footer.Contact
           email="jan@amann.me"
-          intro="Got a project?"
+          intro="Planning a project?"
           telephone="+43 681 / 84 39 0 333"
           title="Let's talk!"
         />
