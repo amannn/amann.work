@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './SocialIcon.module.scss';
+import styles from './FooterSocialIcon.module.scss';
 
-export default function SocialIcon({children, href, ...rest}) {
+export default function FooterSocialIcon({children, href, ...rest}) {
   return (
     <a
       className={styles.root}

@@ -1,42 +1,46 @@
 import React from 'react';
 import {Link} from 'gatsby';
 import Icon from 'components/Icon';
-import Footer from 'components/Footer';
+import Footer, {
+  FooterContact,
+  FooterMenuItem,
+  FooterSocialIcon
+} from 'components/Footer';
 
 export default function LocalizedFooter() {
   return (
     <Footer
       menu={
         <>
-          <Footer.MenuItem component={props => <Link to="/blog" {...props} />}>
+          <FooterMenuItem component={props => <Link to="/blog" {...props} />}>
             Blog
-          </Footer.MenuItem>
-          <Footer.MenuItem
+          </FooterMenuItem>
+          <FooterMenuItem
             component={props => <Link to="/de/impressum" {...props} />}
           >
             Impressum
-          </Footer.MenuItem>
+          </FooterMenuItem>
         </>
       }
       social={
         <>
-          <Footer.SocialIcon
+          <FooterSocialIcon
             aria-label="Github"
             href="https://github.com/amannn"
           >
             <Icon name="github" />
-          </Footer.SocialIcon>
-          <Footer.SocialIcon
+          </FooterSocialIcon>
+          <FooterSocialIcon
             aria-label="Twitter"
             href="https://twitter.com/jamannnnnn"
           >
             <Icon name="twitter" />
-          </Footer.SocialIcon>
+          </FooterSocialIcon>
         </>
       }
     >
       <div id="kontakt">
-        <Footer.Contact
+        <FooterContact
           email="jan@amann.me"
           intro="Sie planen ein Projekt?"
           telephone="+43 681 / 84 39 0 333"

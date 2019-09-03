@@ -1,6 +1,2 @@
-import Header from './Header';
-import MenuItem from './MenuItem';
-
-Header.MenuItem = MenuItem;
-
-export default Header;
+export {default} from './Header';
+export {default as HeaderMenuItem} from './HeaderMenuItem';

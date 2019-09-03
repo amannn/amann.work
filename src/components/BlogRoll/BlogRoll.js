@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogRollItem from 'components/BlogRollItem';
+import BlogRollItem from './BlogRollItem';
 import styles from './BlogRoll.module.scss';
 
 export default function BlogRoll({posts}) {

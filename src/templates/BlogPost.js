@@ -2,10 +2,10 @@
 import React from 'react';
 import {MDXProvider} from '@mdx-js/react';
 import Helmet from 'react-helmet';
-import Text from 'components/Text';
 import LocalizedLayout from 'localized/en/LocalizedLayout';
 import Anchor from 'components/Anchor';
-import BlogRollItem from 'components/BlogRollItem';
+import Text from 'components/Text';
+import {BlogRollItem} from 'components/BlogRoll';
 import useBlogPosts from 'hooks/useBlogPosts';
 import styles from './BlogPost.module.scss';
 

@@ -1,8 +1,8 @@
 import React, {Children} from 'react';
 import cx from 'classnames';
-import styles from './Visual.module.scss';
+import styles from './ProjectVisual.module.scss';
 
-export default function Visual({className, children}) {
+export default function ProjectVisual({className, children}) {
   const childrenArray = Children.toArray(children);
 
   function isChildMobile(child) {

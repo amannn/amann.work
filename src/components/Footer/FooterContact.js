@@ -3,9 +3,9 @@ import cx from 'classnames';
 import VisibilitySensor from 'components/VisibilitySensor';
 import Text from 'components/Text';
 import Icon from 'components/Icon';
-import styles from './Contact.module.scss';
+import styles from './FooterContact.module.scss';
 
-export default function Contact({
+export default function FooterContact({
   email = 'jan@amann.me',
   intro,
   telephone = '+43 681 / 84 39 0 333',

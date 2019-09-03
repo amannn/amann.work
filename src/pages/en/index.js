@@ -4,8 +4,13 @@ import LocalizedFooter from 'localized/en/LocalizedFooter';
 import LocalizedHeader from 'localized/en/LocalizedHeader';
 import LocalizedMeta from 'localized/en/LocalizedMeta';
 import Page from 'components/Page';
-import Project from 'components/Project';
-import Section from 'components/Section';
+import Project, {
+  ProjectAnchor,
+  ProjectButton,
+  ProjectParagraph,
+  ProjectVisual
+} from 'components/Project';
+import Section, {SectionTitle} from 'components/Section';
 import DeviceFrame from 'components/DeviceFrame';
 import useBlogPosts from 'hooks/useBlogPosts';
 import Wrapper from 'components/Wrapper';
@@ -23,17 +28,17 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
-      <Section title={<Section.Title>Selected projects</Section.Title>}>
+      <Section title={<SectionTitle>Selected projects</SectionTitle>}>
         <Project
           cta={
-            <Project.CTA href="https://planung.kuechenfinder.com/">
+            <ProjectButton href="https://planung.kuechenfinder.com/">
               See the app
-            </Project.CTA>
+            </ProjectButton>
           }
           intro="Guidance through conversation"
           title="Kitchen planning app"
           visual={
-            <Project.Visual>
+            <ProjectVisual>
               <DeviceFrame>
                 <img
                   alt=""
@@ -52,34 +57,32 @@ export default function Index() {
                   src={require('../../images/kfi-configurator-3.png')}
                 />
               </DeviceFrame>
-            </Project.Visual>
+            </ProjectVisual>
           }
         >
-          <Project.Paragraph>
+          <ProjectParagraph>
             {'"Küchenfinder"'} is an Austrian service which helps you to
             purchase your new kitchen. The app guides you question by question
             to your dream kitchen.
-          </Project.Paragraph>
-          <Project.Paragraph>
+          </ProjectParagraph>
+          <ProjectParagraph>
             This is a project of{' '}
-            <Project.Anchor href="http://www.molindo.at">
-              Molindo
-            </Project.Anchor>
-            . My part was the implementation of the frontend with React. Since
+            <ProjectAnchor href="http://www.molindo.at">Molindo</ProjectAnchor>.
+            My part was the implementation of the frontend with React. Since
             this app has mostly client-side state, I used Redux for state
             management.
-          </Project.Paragraph>
+          </ProjectParagraph>
         </Project>
         <Project
           cta={
-            <Project.CTA href="https://www.kuechenfinder.com/fuer-kuechenexperten">
+            <ProjectButton href="https://www.kuechenfinder.com/fuer-kuechenexperten">
               Read more (DE)
-            </Project.CTA>
+            </ProjectButton>
           }
           intro="Data-driven recommendations"
           title="Dashboard for kitchen suppliers"
           visual={
-            <Project.Visual>
+            <ProjectVisual>
               <DeviceFrame type="mobile">
                 <img
                   alt=""
@@ -92,37 +95,37 @@ export default function Index() {
                   src={require('../../images/kfi-shops-desktop.png')}
                 />
               </DeviceFrame>
-            </Project.Visual>
+            </ProjectVisual>
           }
         >
-          <Project.Paragraph>
+          <ProjectParagraph>
             More than 120,000 users visit {'"Küchenfinder"'} every month in
             order to learn about kitchen-related topics. Suppliers can sign up
             to configure criteria, offered services and data which in turn
             enables the recommendation of potential customers via a{' '}
-            <Project.Anchor href="https://www.kuechenfinder.com/kuechenplanung/">
+            <ProjectAnchor href="https://www.kuechenfinder.com/kuechenplanung/">
               search engine
-            </Project.Anchor>
+            </ProjectAnchor>
             . Afterwards suppliers can use this app to manage their customer
             requests.
-          </Project.Paragraph>
-          <Project.Paragraph>
+          </ProjectParagraph>
+          <ProjectParagraph>
             I developed a library comprising more than 100 reusable components
             which represent the basis for all screens of this app. Furthermore I
             developed a GraphQL API based on REST services which helped reduce
             the implementation time by using Apollo Client.
-          </Project.Paragraph>
+          </ProjectParagraph>
         </Project>
         <Project
           cta={
-            <Project.CTA href="https://www.shoemondo.com/uk">
+            <ProjectButton href="https://www.shoemondo.com/uk">
               See the website
-            </Project.CTA>
+            </ProjectButton>
           }
           intro="Price comparison for shoe lovers"
           title="Launch of Shoemondo"
           visual={
-            <Project.Visual>
+            <ProjectVisual>
               <DeviceFrame>
                 <img alt="" src={require('../../images/shoemondo-1.png')} />
               </DeviceFrame>
@@ -132,30 +135,30 @@ export default function Index() {
               <DeviceFrame>
                 <img alt="" src={require('../../images/shoemondo-3.png')} />
               </DeviceFrame>
-            </Project.Visual>
+            </ProjectVisual>
           }
         >
-          <Project.Paragraph>
+          <ProjectParagraph>
             Shoemondo helps you to find your next favourite pair of shoes and
             recommends the cheapest store to buy them. As a first step, 12
             partner stores where integrated in order to offer an extensive
             product range.
-          </Project.Paragraph>
-          <Project.Paragraph>
+          </ProjectParagraph>
+          <ProjectParagraph>
             I designed the user interface and implemented it as a server side
             rendered React app which communicates with a GraphQL API.
-          </Project.Paragraph>
+          </ProjectParagraph>
         </Project>
         <Project
           cta={
-            <Project.CTA href="https://research.fh-ooe.at/en/index">
+            <ProjectButton href="https://research.fh-ooe.at/en/index">
               See the web portal
-            </Project.CTA>
+            </ProjectButton>
           }
           intro="Make research content visible"
           title="Research portal relaunch"
           visual={
-            <Project.Visual>
+            <ProjectVisual>
               <DeviceFrame type="mobile">
                 <img
                   alt=""
@@ -168,27 +171,27 @@ export default function Index() {
                   src={require('../../images/fh-research-desktop.png')}
                 />
               </DeviceFrame>
-            </Project.Visual>
+            </ProjectVisual>
           }
         >
-          <Project.Paragraph>
+          <ProjectParagraph>
             The University of Applied Sciences Upper Austria is the most
             research-intensive UAS in Austria. This web portal provides
             comprehensive access to publications, patents, researchers and
             projects.
-          </Project.Paragraph>
-          <Project.Paragraph>
+          </ProjectParagraph>
+          <ProjectParagraph>
             This project was built together with{' '}
-            <Project.Anchor href="https://studiomitte.com">
+            <ProjectAnchor href="https://studiomitte.com">
               Studio Mitte
-            </Project.Anchor>
+            </ProjectAnchor>
             . My contribution was the creation of screen designs and the
             implementation of the page layout prototype & fundamental
             components.
-          </Project.Paragraph>
+          </ProjectParagraph>
         </Project>
       </Section>
-      <Section title={<Section.Title>Latest articles</Section.Title>}>
+      <Section title={<SectionTitle>Latest articles</SectionTitle>}>
         <Wrapper background padding>
           <BlogRoll posts={posts} />
         </Wrapper>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Wrapper from './Wrapper';
+import Wrapper from 'components/Wrapper';
 import styles from './PageWrapper.module.scss';
 
 export default function PageWrapper({children}) {
