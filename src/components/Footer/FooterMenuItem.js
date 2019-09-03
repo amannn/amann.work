@@ -1,9 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
 import Text from 'components/Text';
-import styles from './MenuItem.module.scss';
+import styles from './FooterMenuItem.module.scss';
 
-export default function MenuItem({
+export default function FooterMenuItem({
   children,
   color,
   component = 'button',

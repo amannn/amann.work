@@ -1,6 +1,2 @@
-import Section from './Section';
-import Title from './Title';
-
-Section.Title = Title;
-
-export default Section;
+export {default} from './Section';
+export {default as SectionTitle} from './SectionTitle';

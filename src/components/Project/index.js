@@ -1,12 +1,7 @@
-import Anchor from 'components/Anchor';
-import CTA from './CTA';
-import Paragraph from './Paragraph';
-import Project from './Project';
-import Visual from './Visual';
+export {default} from './Project';
 
-Project.Paragraph = Paragraph;
-Project.CTA = CTA;
-Project.Anchor = Anchor;
-Project.Visual = Visual;
+export {default as ProjectButton} from './ProjectButton';
+export {default as ProjectParagraph} from './ProjectParagraph';
+export {default as ProjectVisual} from './ProjectVisual';
 
-export default Project;
+export {default as ProjectAnchor} from 'components/Anchor';

@@ -1,10 +1,4 @@
-import Footer from './Footer';
-import Contact from './Contact';
-import MenuItem from './MenuItem';
-import SocialIcon from './SocialIcon';
-
-Footer.Contact = Contact;
-Footer.MenuItem = MenuItem;
-Footer.SocialIcon = SocialIcon;
-
-export default Footer;
+export {default} from './Footer';
+export {default as FooterContact} from './FooterContact';
+export {default as FooterMenuItem} from './FooterMenuItem';
+export {default as FooterSocialIcon} from './FooterSocialIcon';

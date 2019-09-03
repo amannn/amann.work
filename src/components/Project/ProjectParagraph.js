@@ -1,7 +1,7 @@
 import React from 'react';
 import Text from 'components/Text';
 
-export default function Paragraph({children}) {
+export default function ProjectParagraph({children}) {
   return (
     <Text component={Text} marginBottom>
       {children}
