@@ -6,7 +6,7 @@ script:
  - yarn build
 install:
   # Different yarn versions can result in a different lockfile
- - yarn install --ignore-engines --pure-lockfile 
+ - yarn install --pure-lockfile 
   # Doesn't work as a project dependency
  - yarn global add firebase-tools 
 deploy:
