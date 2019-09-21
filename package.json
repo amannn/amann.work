@@ -32,6 +32,7 @@
   "devDependencies": {
     "@mdx-js/mdx": "1.0.10",
     "babel-eslint": "10.0.1",
+    "dotenv": "8.1.0",
     "eslint": "5.16.0",
     "eslint-config-molindo": "3.0.0",
     "eslint-plugin-css-modules": "2.11.0",
@@ -52,6 +53,7 @@
     "gatsby-plugin-sitemap": "2.0.12",
     "gatsby-source-filesystem": "2.0.29",
     "graphql": "0.13.0",
+    "node-fetch": "2.6.0",
     "node-sass": "4.11.0",
     "prettier": "1.16.4"
   },

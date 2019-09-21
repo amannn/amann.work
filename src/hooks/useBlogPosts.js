@@ -1,7 +1,7 @@
 import {useStaticQuery, graphql} from 'gatsby';
 
 const query = graphql`
-  query BlogPost {
+  query useBlogPosts {
     posts: allMdx(sort: {order: DESC, fields: [frontmatter___date]}) {
       edges {
         node {

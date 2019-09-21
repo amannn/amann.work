@@ -1,12 +1,15 @@
 $white: white;
 $black: black;
 $grey: rgba($black, 0.1);
+$green: #489292;
+$red: #9e2530;
+$violet: #6544bc;
 
 $color-background: hsl(180, 25%, 97%);
 $color-background-dark: #303236;
 $color-line: rgba($black, 0.15);
 $color-line-inverted: rgba($white, 0.1);
 $color-accent-light: #8bc1bf;
-$color-accent: #489292;
+$color-accent: $green;
 $color-pale: rgba($black, 0.5);
 $color-pale-inverted: rgba($white, 0.5);
