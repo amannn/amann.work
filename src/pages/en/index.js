@@ -6,18 +6,22 @@ import LocalizedMeta from 'localized/en/LocalizedMeta';
 import Page from 'components/Page';
 import Project, {
   ProjectAnchor,
-  ProjectButton,
+  ProjectLink,
   ProjectParagraph,
   ProjectVisual
 } from 'components/Project';
 import Section, {SectionTitle} from 'components/Section';
 import DeviceFrame from 'components/DeviceFrame';
-import useBlogPosts from 'hooks/useBlogPosts';
 import Wrapper from 'components/Wrapper';
 import BlogRoll from 'components/BlogRoll';
+import OpenSourceContributions from 'components/OpenSourceContributions';
+import Button from 'components/Button';
+import useBlogPosts from 'hooks/useBlogPosts';
+import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 
 export default function Index() {
   const posts = useBlogPosts();
+  const contributions = useOpenSourceContributions();
 
   return (
     <Page>
@@ -31,9 +35,9 @@ export default function Index() {
       <Section title={<SectionTitle>Selected projects</SectionTitle>}>
         <Project
           cta={
-            <ProjectButton href="https://planung.kuechenfinder.com/">
+            <ProjectLink href="https://planung.kuechenfinder.com/">
               See the app
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Guidance through conversation"
           title="Kitchen planning app"
@@ -75,9 +79,9 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectButton href="https://www.kuechenfinder.com/fuer-kuechenexperten">
+            <ProjectLink href="https://www.kuechenfinder.com/fuer-kuechenexperten">
               Read more (DE)
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Data-driven recommendations"
           title="Dashboard for kitchen suppliers"
@@ -118,9 +122,9 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectButton href="https://www.shoemondo.com/uk">
+            <ProjectLink href="https://www.shoemondo.com/uk">
               See the website
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Price comparison for shoe lovers"
           title="Launch of Shoemondo"
@@ -151,9 +155,9 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectButton href="https://research.fh-ooe.at/en/index">
+            <ProjectLink href="https://research.fh-ooe.at/en/index">
               See the web portal
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Make research content visible"
           title="Research portal relaunch"
@@ -194,6 +198,14 @@ export default function Index() {
       <Section title={<SectionTitle>Latest articles</SectionTitle>}>
         <Wrapper background padding>
           <BlogRoll posts={posts} />
+        </Wrapper>
+      </Section>
+      <Section title={<SectionTitle>Open Source Contributions</SectionTitle>}>
+        <Wrapper background padding>
+          <OpenSourceContributions
+            contributions={contributions}
+            showMoreButton={<Button>Show more</Button>}
+          />
         </Wrapper>
       </Section>
       <LocalizedFooter />

@@ -18,13 +18,13 @@ export default function OpenSourceContributionsItem({contribution}) {
   return (
     <div className={styles.root}>
       <Text color="accent" component="h2" variant="h3">
-        <Link href={contribution.repository.owner.url} target="_blank">
+        <Link href={contribution.repository.owner.url}>
           {contribution.repository.owner.login}
         </Link>
         <Text color="pale" component="span" variant="h3">
           {' / '}
         </Text>
-        <Link href={contribution.repository.url} target="_blank">
+        <Link href={contribution.repository.url}>
           {contribution.repository.name}
         </Link>
       </Text>
@@ -43,9 +43,7 @@ export default function OpenSourceContributionsItem({contribution}) {
               }
               name="pull-request"
             />
-            <Link href={pullRequest.url} target="_blank">
-              {pullRequest.title}
-            </Link>
+            <Link href={pullRequest.url}>{pullRequest.title}</Link>
           </Text>
         ))}
       </div>
