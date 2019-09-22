@@ -1,22 +1,3 @@
-@import '~styles/media-queries';
-
-.root {
-  > *:not(:first-child) {
-    margin-top: 40px;
-
-    @include match-medium {
-      margin-top: 0;
-    }
-  }
-
-  @include match-medium {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-  }
-}
-
 .showMoreButton {
   margin-top: 40px;
 }

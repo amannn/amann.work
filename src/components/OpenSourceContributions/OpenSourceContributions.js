@@ -1,4 +1,5 @@
 import React, {cloneElement, useState} from 'react';
+import ResponsiveGrid from 'components/ResponsiveGrid';
 import OpenSourceContributionsItem from './OpenSourceContributionsItem';
 import styles from './OpenSourceContributions.module.scss';
 
@@ -17,14 +18,14 @@ export default function OpenSourceContributions({
 
   return (
     <>
-      <div className={styles.root}>
+      <ResponsiveGrid>
         {paginatedNodes.map(contribution => (
           <OpenSourceContributionsItem
             key={contribution.repository.id}
             contribution={contribution}
           />
         ))}
-      </div>
+      </ResponsiveGrid>
       {hasMore &&
         cloneElement(showMoreButton, {
           className: styles.showMoreButton,

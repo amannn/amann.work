@@ -200,7 +200,7 @@ export default function Index() {
           <BlogRoll posts={posts} />
         </Wrapper>
       </Section>
-      <Section title={<SectionTitle>Open Source Contributions</SectionTitle>}>
+      <Section title={<SectionTitle>Open source contributions</SectionTitle>}>
         <Wrapper background padding>
           <OpenSourceContributions
             contributions={contributions}
