@@ -1,0 +1,9 @@
+on: push
+steps:
+  - uses: actions/checkout@v1.0.0
+  - uses: actions/setup-node@v1
+    with:
+      node-version: '10.x'
+  - run: yarn install --pure-lockfile 
+  - run: yarn test
+  - run: yarn build
