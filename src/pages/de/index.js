@@ -7,17 +7,21 @@ import Section, {SectionTitle} from 'components/Section';
 import Page from 'components/Page';
 import Project, {
   ProjectAnchor,
-  ProjectButton,
+  ProjectLink,
   ProjectParagraph,
   ProjectVisual
 } from 'components/Project';
 import DeviceFrame from 'components/DeviceFrame';
-import useBlogPosts from 'hooks/useBlogPosts';
 import BlogRoll from 'components/BlogRoll';
+import OpenSourceContributions from 'components/OpenSourceContributions';
 import Wrapper from 'components/Wrapper';
+import Button from 'components/Button';
+import useBlogPosts from 'hooks/useBlogPosts';
+import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 
 export default function Index() {
   const posts = useBlogPosts();
+  const contributions = useOpenSourceContributions();
 
   return (
     <Page>
@@ -31,9 +35,9 @@ export default function Index() {
       <Section title={<SectionTitle>Ausgewählte Projekte</SectionTitle>}>
         <Project
           cta={
-            <ProjectButton href="https://planung.kuechenfinder.com/">
+            <ProjectLink href="https://planung.kuechenfinder.com/">
               Zur App
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Per Dialog zur neuen Küche"
           title="Küchenfinder Planungsapp"
@@ -75,9 +79,9 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectButton href="https://www.kuechenfinder.com/fuer-kuechenexperten">
+            <ProjectLink href="https://www.kuechenfinder.com/fuer-kuechenexperten">
               Mehr erfahren
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Datengetriebene Empfehlungen"
           title="Dashboard für Küchenanbieter"
@@ -119,9 +123,9 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectButton href="https://www.shoemondo.com/uk">
+            <ProjectLink href="https://www.shoemondo.com/uk">
               Zur Website
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Preisvergleich für Schuhliebhaber"
           title="Launch von Shoemondo"
@@ -153,9 +157,9 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectButton href="https://research.fh-ooe.at/de/index">
+            <ProjectLink href="https://research.fh-ooe.at/de/index">
               Zum Portal
-            </ProjectButton>
+            </ProjectLink>
           }
           intro="Forschungsinhalte sichtbar machen"
           title="Wissensportal Relaunch"
@@ -195,6 +199,14 @@ export default function Index() {
       <Section title={<SectionTitle>Letzte Artikel</SectionTitle>}>
         <Wrapper background padding>
           <BlogRoll posts={posts} />
+        </Wrapper>
+      </Section>
+      <Section title={<SectionTitle>Open source contributions</SectionTitle>}>
+        <Wrapper background padding>
+          <OpenSourceContributions
+            contributions={contributions}
+            showMoreButton={<Button>Mehr anzeigen</Button>}
+          />
         </Wrapper>
       </Section>
       <LocalizedFooter />

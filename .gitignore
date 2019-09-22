@@ -5,3 +5,4 @@ public
 firebase-debug.log
 .firebase
 yarn-error.log
+.env

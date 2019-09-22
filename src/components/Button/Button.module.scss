@@ -1,0 +1,41 @@
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/utils';
+
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 22px 32px; // Total height of 64px with caption inside.
+  background-color: $white;
+  border: none;
+
+  @include before {
+    @include fullbleed;
+    border: 2px solid $color-accent;
+    opacity: 0;
+    transform: scale(1.1);
+    @include animate-slow;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::before {
+      opacity: 1;
+      transform: none;
+      @include animate-fast;
+    }
+
+    .text {
+      color: rgba($black, 0.7);
+    }
+  }
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  @include hover-fast-in-slow-out(color);
+}
