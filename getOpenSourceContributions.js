@@ -2,7 +2,7 @@
 const fetch = require('node-fetch');
 require('dotenv').config();
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
 const EARLIEST_CONTRIBUTION_YEAR = 2013;
 
 // The intention is to show PRs to repositories of others.
@@ -49,7 +49,7 @@ const graphQlQuery = `
 async function getPullRequestContributionsPage(from, after) {
   const result = await fetch('https://api.github.com/graphql', {
     headers: {
-      Authorization: `Bearer ${GITHUB_TOKEN}`
+      Authorization: `Bearer ${GITHUB_ACCESS_TOKEN}`
     },
     body: JSON.stringify({
       variables: {first: 100, from, after},

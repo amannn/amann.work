@@ -4,8 +4,13 @@ import styles from './SectionTitle.module.scss';
 
 export default function SectionTitle({children}) {
   return (
-    <Text component="h2" variant="h2">
-      <span className={styles.title}>{children}</span>
+    <Text className={styles.root} component="h2" variant="h2">
+      {children.split(' ').map((part, i, array) => (
+        <span key={part} className={styles.part}>
+          {part}
+          {i < array.length - 1 && ' '}
+        </span>
+      ))}
     </Text>
   );
 }
