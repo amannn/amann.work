@@ -14,7 +14,7 @@ jobs:
       - run: yarn build
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-      - if: github.ref == 'master'
+      - if: github.ref == 'refs/heads/master'
         uses: w9jds/firebase-action@v1.1.0
         with:
           args: deploy
