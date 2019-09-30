@@ -1,8 +1,8 @@
 name: main
 on:
-  push
-  schedule:
-    - cron: '0 0 * * *' # Once per day at midnight
+  - push
+  - schedule:
+      - cron: '0 0 * * *' # Once per day at midnight
 
 jobs:
   setup:
