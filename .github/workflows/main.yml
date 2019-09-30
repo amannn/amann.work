@@ -1,0 +1,22 @@
+name: main
+on: push
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1.0.0
+      - uses: actions/setup-node@v1.1.0
+        with:
+          node-version: '10.x'
+      - run: yarn install --pure-lockfile
+      - run: yarn test
+      - run: yarn build
+        env:
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+      - if: github.ref == 'master'
+        uses: w9jds/firebase-action@v1.1.0
+        with:
+          args: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
