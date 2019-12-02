@@ -105,8 +105,8 @@ export default function Index() {
           <ProjectParagraph>
             More than 120,000 users visit {'"Küchenfinder"'} every month in
             order to learn about kitchen-related topics. Suppliers can sign up
-            to configure criteria, offered services and data which in turn
-            enables the recommendation of potential customers via a{' '}
+            to configure criteria and offered services which in turn enables the
+            recommendation of potential customers via a{' '}
             <ProjectAnchor href="https://www.kuechenfinder.com/kuechenplanung/">
               search engine
             </ProjectAnchor>
