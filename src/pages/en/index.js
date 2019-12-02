@@ -122,6 +122,38 @@ export default function Index() {
         </Project>
         <Project
           cta={
+            <ProjectLink href="https://www.zemtu.com/">Learn more</ProjectLink>
+          }
+          intro="Mobility for the future"
+          title="Carsharing app"
+          visual={
+            <ProjectVisual>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/zemtu-1.png')} />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/zemtu-2.png')} />
+              </DeviceFrame>
+              <DeviceFrame>
+                <img alt="" src={require('../../images/zemtu-3.png')} />
+              </DeviceFrame>
+            </ProjectVisual>
+          }
+        >
+          <ProjectParagraph>
+            In order to meet the high expectations of their international
+            clients, the talented team of Zemtu is developing a modern mobile
+            app which digitally depicts the process from making a reservation to
+            unlocking a car.
+          </ProjectParagraph>
+          <ProjectParagraph>
+            In regular workshops I support the team with consultation and
+            assistance with topics such as software architecture, React,
+            GraphQL, animations and performance.
+          </ProjectParagraph>
+        </Project>
+        <Project
+          cta={
             <ProjectLink href="https://www.shoemondo.com/uk">
               See the website
             </ProjectLink>
