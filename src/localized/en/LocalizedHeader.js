@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import {Link} from 'gatsby';
-import Header, {HeaderMenuItem} from 'components/Header';
+import Header, {HeaderMenuItem, HeaderMenuScrollLink} from 'components/Header';
 
 export default function LocalizedHeader(props) {
   return (
@@ -10,20 +9,14 @@ export default function LocalizedHeader(props) {
       menu={
         <>
           <HeaderMenuItem
-            component={menuItemProps => <Link to="/blog" {...menuItemProps} />}
+            component={menuItemProps => <Link {...menuItemProps} to="/blog" />}
           >
             Blog
           </HeaderMenuItem>
-          <HeaderMenuItem
-            component={menuItemProps => (
-              <a href="#contact" {...menuItemProps} />
-            )}
-          >
-            Contact
-          </HeaderMenuItem>
+          <HeaderMenuScrollLink href="#contact">Contact</HeaderMenuScrollLink>
           <HeaderMenuItem
             color="pale"
-            component={menuItemProps => <Link to="/de" {...menuItemProps} />}
+            component={menuItemProps => <Link {...menuItemProps} to="/de" />}
           >
             DE
           </HeaderMenuItem>

@@ -8,11 +8,7 @@
     box-sizing: border-box;
   }
 
-  // Note: scroll-behaviour should be assigned to `html` instead
-  // of `body`, as the latter doesn't propagate it to the viewport
-  // (see https://drafts.csswg.org/cssom-view/#smooth-scrolling).
   html {
-    scroll-behavior: smooth;
     background-color: $color-background;
   }
 

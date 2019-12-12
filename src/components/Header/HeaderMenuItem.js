@@ -6,20 +6,18 @@ import styles from './HeaderMenuItem.module.scss';
 export default function HeaderMenuItem({
   children,
   color,
-  component = 'button',
+  component: Component = 'button',
   onClick
 }) {
   function ConfiguredButton({className, ...other}) {
-    const renderClassName = cx(styles.root, className);
-
-    return React.createElement(
-      component,
-      {
-        className: renderClassName,
-        onClick,
-        ...other
-      },
-      children
+    return (
+      <Component
+        className={cx(styles.root, className)}
+        onClick={onClick}
+        {...other}
+      >
+        {children}
+      </Component>
     );
   }
 
