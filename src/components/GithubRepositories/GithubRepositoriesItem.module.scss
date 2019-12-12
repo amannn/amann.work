@@ -1,0 +1,22 @@
+@import '~styles/utils';
+
+.meta {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.languageColor {
+  display: inline-block;
+  @include circle(10px);
+  margin-right: 4px;
+}
+
+.stargazers {
+  display: inline-flex;
+  align-items: center;
+
+  * + & {
+    margin-left: 16px;
+  }
+}

@@ -1,17 +1,16 @@
-/* eslint-disable import/no-extraneous-dependencies */
-const fetch = require('node-fetch');
 require('dotenv').config();
 
-const GITHUB_ACCESS_TOKEN = process.env.GITHUB_ACCESS_TOKEN;
-const EARLIEST_CONTRIBUTION_YEAR = 2013;
+const GithubApi = require('./GithubApi');
+const repositoryFragment = require('./repositoryFragment');
 
+const EARLIEST_CONTRIBUTION_YEAR = 2013;
 // The intention is to show PRs to repositories of others.
 const PR_REPO_OWNER_BLACKLIST = ['amannn', 'molindo'];
 // Not particularly interesting PRs.
 const PR_ID_BLACKLIST = ['MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz'];
 
-const graphQlQuery = `
-  query ($from: DateTime, $after: String) {
+const query = /* GraphQL */ `
+  query($from: DateTime, $after: String) {
     viewer {
       login
       contributionsCollection(from: $from) {
@@ -27,15 +26,8 @@ const graphQlQuery = `
                 url
                 state
                 baseRepository {
-                  id
                   isPrivate
-                  name
-                  url
-                  description
-                  owner {
-                    login
-                    url
-                  }
+                  ...repository
                 }
               }
             }
@@ -44,22 +36,12 @@ const graphQlQuery = `
       }
     }
   }
+  ${repositoryFragment}
 `;
 
 async function getPullRequestContributionsPage(from, after) {
-  const result = await fetch('https://api.github.com/graphql', {
-    headers: {
-      Authorization: `Bearer ${GITHUB_ACCESS_TOKEN}`
-    },
-    body: JSON.stringify({
-      variables: {first: 100, from, after},
-      query: graphQlQuery
-    }),
-    method: 'POST'
-  });
-
-  return (await result.json()).data.viewer.contributionsCollection
-    .pullRequestContributions;
+  const result = await GithubApi.query(query, {first: 100, from, after});
+  return result.data.viewer.contributionsCollection.pullRequestContributions;
 }
 
 async function getPullRequestContributions(from) {

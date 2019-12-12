@@ -1,0 +1,11 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+
+.root {
+  padding: 24px;
+  background-color: $white;
+
+  @include match-medium {
+    padding: 40px;
+  }
+}

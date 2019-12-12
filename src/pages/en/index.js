@@ -10,18 +10,21 @@ import Project, {
   ProjectParagraph,
   ProjectVisual
 } from 'components/Project';
-import Section, {SectionTitle} from 'components/Section';
-import DeviceFrame from 'components/DeviceFrame';
-import Wrapper from 'components/Wrapper';
 import BlogRoll from 'components/BlogRoll';
-import OpenSourceContributions from 'components/OpenSourceContributions';
 import Button from 'components/Button';
+import DeviceFrame from 'components/DeviceFrame';
+import GithubRepositories from 'components/GithubRepositories';
+import OpenSourceContributions from 'components/OpenSourceContributions';
+import Section, {SectionTitle} from 'components/Section';
+import Wrapper from 'components/Wrapper';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
+import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
 
 export default function Index() {
   const posts = useBlogPosts();
   const contributions = useOpenSourceContributions();
+  const repositories = useMaintainedOpenSourceRepositories();
 
   return (
     <Page>
@@ -230,6 +233,14 @@ export default function Index() {
       <Section title={<SectionTitle>Latest articles</SectionTitle>}>
         <Wrapper background padding>
           <BlogRoll posts={posts} />
+        </Wrapper>
+      </Section>
+      <Section title={<SectionTitle>Open source libraries</SectionTitle>}>
+        <Wrapper background padding>
+          <GithubRepositories
+            repositories={repositories}
+            showMoreButton={<Button>Show more</Button>}
+          />
         </Wrapper>
       </Section>
       <Section title={<SectionTitle>Open source contributions</SectionTitle>}>

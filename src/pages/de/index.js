@@ -3,7 +3,6 @@ import labels from 'localized/de/labels';
 import LocalizedFooter from 'localized/de/LocalizedFooter';
 import LocalizedHeader from 'localized/de/LocalizedHeader';
 import LocalizedMeta from 'localized/de/LocalizedMeta';
-import Section, {SectionTitle} from 'components/Section';
 import Page from 'components/Page';
 import Project, {
   ProjectAnchor,
@@ -11,17 +10,21 @@ import Project, {
   ProjectParagraph,
   ProjectVisual
 } from 'components/Project';
-import DeviceFrame from 'components/DeviceFrame';
 import BlogRoll from 'components/BlogRoll';
-import OpenSourceContributions from 'components/OpenSourceContributions';
-import Wrapper from 'components/Wrapper';
 import Button from 'components/Button';
+import DeviceFrame from 'components/DeviceFrame';
+import GithubRepositories from 'components/GithubRepositories';
+import OpenSourceContributions from 'components/OpenSourceContributions';
+import Section, {SectionTitle} from 'components/Section';
+import Wrapper from 'components/Wrapper';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
+import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
 
 export default function Index() {
   const posts = useBlogPosts();
   const contributions = useOpenSourceContributions();
+  const repositories = useMaintainedOpenSourceRepositories();
 
   return (
     <Page>
@@ -233,6 +236,14 @@ export default function Index() {
       <Section title={<SectionTitle>Letzte Artikel</SectionTitle>}>
         <Wrapper background padding>
           <BlogRoll posts={posts} />
+        </Wrapper>
+      </Section>
+      <Section title={<SectionTitle>Open source libraries</SectionTitle>}>
+        <Wrapper background padding>
+          <GithubRepositories
+            repositories={repositories}
+            showMoreButton={<Button>Mehr anzeigen</Button>}
+          />
         </Wrapper>
       </Section>
       <Section title={<SectionTitle>Open source contributions</SectionTitle>}>

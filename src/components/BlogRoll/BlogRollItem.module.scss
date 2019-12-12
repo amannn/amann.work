@@ -8,8 +8,6 @@ $animated-offset: 4px;
 .root {
   position: relative;
   display: block;
-  padding: 40px;
-  background-color: $white;
 
   &:before,
   .inner {
@@ -52,5 +50,5 @@ $animated-offset: 4px;
 }
 
 .published {
-  margin-top: 24px;
+  margin-top: 8px;
 }

@@ -7,13 +7,7 @@ const query = graphql`
       nodes {
         repository {
           id
-          name
-          description
-          url
-          owner {
-            url
-            login
-          }
+          ...GithubRepository_repository
         }
         pullRequests {
           id

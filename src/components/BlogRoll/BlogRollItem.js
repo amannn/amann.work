@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import {Link} from 'gatsby';
 import cx from 'classnames';
 import Text from 'components/Text';
+import Card from 'components/Card';
 import styles from './BlogRollItem.module.scss';
 
 export default function BlogRollItem({className, post}) {
@@ -15,15 +16,26 @@ export default function BlogRollItem({className, post}) {
     setIsHighlighted(false);
   }
 
+  const MemoizedComponent = useMemo(
+    () =>
+      function Component(props) {
+        return (
+          <Link
+            {...props}
+            className={cx(styles.root, className, props.className)}
+            onBlur={onUnhighlight}
+            onFocus={onHighlight}
+            onMouseOut={onUnhighlight}
+            onMouseOver={onHighlight}
+            to={post.href}
+          />
+        );
+      },
+    [className, post.href]
+  );
+
   return (
-    <Link
-      className={cx(styles.root, className)}
-      onBlur={onUnhighlight}
-      onFocus={onHighlight}
-      onMouseOut={onUnhighlight}
-      onMouseOver={onHighlight}
-      to={post.href}
-    >
+    <Card component={MemoizedComponent}>
       <div className={styles.inner}>
         <Text
           color={isHighlighted ? undefined : 'accent'}
@@ -37,6 +49,6 @@ export default function BlogRollItem({className, post}) {
           {post.published}
         </Text>
       </div>
-    </Link>
+    </Card>
   );
 }
