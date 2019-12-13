@@ -5,7 +5,7 @@ const repositoryFragment = require('./repositoryFragment');
 
 const EARLIEST_CONTRIBUTION_YEAR = 2013;
 // The intention is to show PRs to repositories of others.
-const PR_REPO_OWNER_BLACKLIST = ['amannn', 'molindo'];
+const PR_REPO_OWNER_BLACKLIST = ['amannn', 'molindo', 'tools-aoeur'];
 // Not particularly interesting PRs.
 const PR_ID_BLACKLIST = ['MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz'];
 
