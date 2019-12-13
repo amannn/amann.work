@@ -93,13 +93,12 @@
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 80px;
-  padding-bottom: 40px;
+  padding: 80px 0 40px 24px;
   max-width: 500px;
 
   @include match-medium {
     padding-top: 200px;
-    padding-left: 0;
+    padding-left: 40px;
     padding-bottom: 40px;
     max-width: 400px;
   }
@@ -107,6 +106,7 @@
   @include match-large {
     padding-top: 280px;
     padding-bottom: 80px;
+    padding-left: 0;
     max-width: 500px;
   }
 }

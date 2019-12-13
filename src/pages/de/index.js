@@ -15,7 +15,7 @@ import Button from 'components/Button';
 import DeviceFrame from 'components/DeviceFrame';
 import GithubRepositories from 'components/GithubRepositories';
 import OpenSourceContributions from 'components/OpenSourceContributions';
-import Section, {SectionTitle} from 'components/Section';
+import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
@@ -35,7 +35,7 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
-      <Section title={<SectionTitle>Ausgewählte Projekte</SectionTitle>}>
+      <Section title="Ausgewählte Projekte">
         <Project
           cta={
             <ProjectLink href="https://planung.kuechenfinder.com/">
@@ -233,12 +233,12 @@ export default function Index() {
           </ProjectParagraph>
         </Project>
       </Section>
-      <Section title={<SectionTitle>Letzte Artikel</SectionTitle>}>
+      <Section title="Letzte Artikel">
         <Wrapper background padding>
           <BlogRoll posts={posts} />
         </Wrapper>
       </Section>
-      <Section title={<SectionTitle>Open source libraries</SectionTitle>}>
+      <Section title="Open source libraries">
         <Wrapper background padding>
           <GithubRepositories
             repositories={repositories}
@@ -246,7 +246,7 @@ export default function Index() {
           />
         </Wrapper>
       </Section>
-      <Section title={<SectionTitle>Open source contributions</SectionTitle>}>
+      <Section title="Open source contributions">
         <Wrapper background padding>
           <OpenSourceContributions
             contributions={contributions}

@@ -15,8 +15,10 @@ import Button from 'components/Button';
 import DeviceFrame from 'components/DeviceFrame';
 import GithubRepositories from 'components/GithubRepositories';
 import OpenSourceContributions from 'components/OpenSourceContributions';
-import Section, {SectionTitle} from 'components/Section';
+import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
+import ResponsiveGrid from 'components/ResponsiveGrid';
+import {ServicesItem} from 'components/Services';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
@@ -35,7 +37,38 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
-      <Section title={<SectionTitle>Selected projects</SectionTitle>}>
+      <Section
+        description="I work with startups and established companies alike. The most
+      important aspect is to create a meaningful experience that has a
+      positive impact on the lives of people."
+        title="Services"
+      >
+        <Wrapper>
+          <ResponsiveGrid>
+            <ServicesItem title="React apps">
+              With more than 4 years of experience with React and more than 3
+              years of GraphQL, I can help you architect and build ambitious web
+              apps that are a delight to use.
+            </ServicesItem>
+            <ServicesItem title="Design systems">
+              User interfaces are component-based and therefore by identifying
+              the fundamental building blocks and creating composable APIs, your
+              apps are set up for success.
+            </ServicesItem>
+            <ServicesItem title="Mobile apps">
+              Offering a great user experience on mobile means putting
+              performance first. However there’s no need to compromise on useful
+              animations and advanced touch gestures.
+            </ServicesItem>
+            <ServicesItem title="Consulting and code reviews">
+              Great projects aren’t created in isolation but what matters is the
+              team behind it. I love helping people by understanding their
+              problems and cooperatively finding the right solution.
+            </ServicesItem>
+          </ResponsiveGrid>
+        </Wrapper>
+      </Section>
+      <Section title="Selected projects">
         <Project
           cta={
             <ProjectLink href="https://planung.kuechenfinder.com/">
@@ -230,12 +263,12 @@ export default function Index() {
           </ProjectParagraph>
         </Project>
       </Section>
-      <Section title={<SectionTitle>Latest articles</SectionTitle>}>
+      <Section title="Latest articles">
         <Wrapper background padding>
           <BlogRoll posts={posts} />
         </Wrapper>
       </Section>
-      <Section title={<SectionTitle>Open source libraries</SectionTitle>}>
+      <Section title="Open source libraries">
         <Wrapper background padding>
           <GithubRepositories
             repositories={repositories}
@@ -243,7 +276,7 @@ export default function Index() {
           />
         </Wrapper>
       </Section>
-      <Section title={<SectionTitle>Open source contributions</SectionTitle>}>
+      <Section title="Open source contributions">
         <Wrapper background padding>
           <OpenSourceContributions
             contributions={contributions}

@@ -3,17 +3,36 @@
 
 .root {
   background-color: $white;
-}
-
-.title {
-  padding: 160px 0 80px;
+  padding-top: 160px;
 
   @include match-medium {
     padding-top: 280px;
-    padding-bottom: 160px;
   }
 }
 
-.children > *:not(:first-child) {
-  margin-top: 120px;
+.description {
+  margin-top: 40px;
+  max-width: 600px;
+  padding-left: 24px;
+
+  @include match-medium {
+    margin-top: 80px;
+    padding-left: 40px;
+  }
+
+  @include match-large {
+    padding-left: 0;
+  }
+}
+
+.children {
+  margin-top: 80px;
+
+  @include match-medium {
+    margin-top: 160px;
+  }
+
+  & > *:not(:first-child) {
+    margin-top: 120px;
+  }
 }

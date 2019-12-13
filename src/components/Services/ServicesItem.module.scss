@@ -1,0 +1,17 @@
+@import '~styles/media-queries';
+
+.root {
+  padding-left: 24px;
+
+  @include match-medium {
+    padding-left: 40px;
+  }
+
+  @include match-large {
+    padding-left: 0;
+  }
+}
+
+.children {
+  margin-top: 8px;
+}
