@@ -38,9 +38,8 @@ export default function Index() {
         title={labels.title}
       />
       <Section
-        description="I work with startups and established companies alike. The most
-      important aspect is to create a meaningful experience that has a
-      positive impact on the lives of people."
+        description="I work with startups and established companies alike. For me, the most
+      important aspect of a project is to create a meaningful and positive experience."
         title="Services"
       >
         <Wrapper>
