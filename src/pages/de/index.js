@@ -17,6 +17,8 @@ import GithubRepositories from 'components/GithubRepositories';
 import OpenSourceContributions from 'components/OpenSourceContributions';
 import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
+import ResponsiveGrid from 'components/ResponsiveGrid';
+import {ServicesItem} from 'components/Services';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
@@ -35,6 +37,38 @@ export default function Index() {
         subtitle={labels.tagline}
         title={labels.title}
       />
+      <Section
+        description="Ich arbeite sowohl mit Start-ups als auch etablierten Unternehmen zusammen. Der wichtigste Aspekt für mich ist eine bedeutungsvolle Lösung zu schaffen die Mehrwert für Menschen bietet."
+        title="Leistungen"
+      >
+        <Wrapper>
+          <ResponsiveGrid>
+            <ServicesItem title="React Apps">
+              Mit mehr als 4 Jahren Erfahrung mit React und mehr als 3 Jahren
+              GraphQL, kann ich Ihnen beim Entwurf und der Umsetzung von
+              anspruchsvollen Apps helfen, die gerne verwendet werden.
+            </ServicesItem>
+            <ServicesItem title="Design-Systeme">
+              User Interfaces sind komponentenbasiert. Durch das Identifizieren
+              der grundlegenden Bausteine und das Erstellen flexibler
+              Schnittstellen stelle ich sicher, dass Ihre Apps auf einem soliden
+              Fundament stehen.
+            </ServicesItem>
+            <ServicesItem title="Mobile Apps">
+              Um eine großartige User Experience auf Mobile zu erreichen muss
+              Performance an erster Stelle stehen. Das bedeutet jedoch nicht,
+              dass Kompromisse bei nützlichen Animationen oder speziellen
+              Touch-Gesten gemacht werden müssen.
+            </ServicesItem>
+            <ServicesItem title="Consulting und Code Reviews">
+              Erfolgreiche Projekte werden nicht in Isolation erstellt, sondern
+              was zählt, ist das Team dahinter. Ich arbeite mich in Ihre
+              Probleme ein und finde gemeinsam mit Ihrem Team die passende
+              Lösung.
+            </ServicesItem>
+          </ResponsiveGrid>
+        </Wrapper>
+      </Section>
       <Section title="Ausgewählte Projekte">
         <Project
           cta={

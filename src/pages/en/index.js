@@ -39,7 +39,7 @@ export default function Index() {
       />
       <Section
         description="I work with startups and established companies alike. For me, the most
-      important aspect of a project is to create a meaningful and positive experience."
+      important aspect of a project is to create a meaningful experience with added value for people."
         title="Services"
       >
         <Wrapper>
@@ -61,8 +61,8 @@ export default function Index() {
             </ServicesItem>
             <ServicesItem title="Consulting and code reviews">
               Great projects aren’t created in isolation but what matters is the
-              team behind it. I love helping people by understanding their
-              problems and cooperatively finding the right solution.
+              team behind it. I can help you by understanding your problems and
+              cooperatively finding the right solution.
             </ServicesItem>
           </ResponsiveGrid>
         </Wrapper>
