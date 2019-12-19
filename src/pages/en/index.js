@@ -39,7 +39,7 @@ export default function Index() {
       />
       <Section
         description="I work with startups and established companies alike. For me, the most
-      important aspect of a project is to create a meaningful experience with added value for people."
+      important aspect of a project is to create a meaningful experience that provides added value for people."
         title="Services"
       >
         <Wrapper>

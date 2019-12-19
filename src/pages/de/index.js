@@ -61,10 +61,9 @@ export default function Index() {
               Touch-Gesten gemacht werden müssen.
             </ServicesItem>
             <ServicesItem title="Consulting und Code Reviews">
-              Erfolgreiche Projekte werden nicht in Isolation erstellt, sondern
-              was zählt, ist das Team dahinter. Ich arbeite mich in Ihre
-              Probleme ein und finde gemeinsam mit Ihrem Team die passende
-              Lösung.
+              Erfolgreiche Projekte werden nicht in Isolation erstellt. Was
+              zählt, ist das Team dahinter. Ich arbeite mich in Ihre Probleme
+              ein und finde gemeinsam mit Ihrem Team die passende Lösung.
             </ServicesItem>
           </ResponsiveGrid>
         </Wrapper>
