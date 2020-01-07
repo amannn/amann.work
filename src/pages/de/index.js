@@ -51,19 +51,19 @@ export default function Index() {
             <ServicesItem title="Design-Systeme">
               User Interfaces sind komponentenbasiert. Durch das Identifizieren
               der grundlegenden Bausteine und das Erstellen flexibler
-              Schnittstellen stelle ich sicher, dass Ihre Apps auf einem soliden
-              Fundament stehen.
+              Schnittstellen, stelle ich sicher, dass Ihre Apps auf einem
+              soliden Fundament stehen.
             </ServicesItem>
             <ServicesItem title="Mobile Apps">
               Um eine großartige User Experience auf Mobile zu erreichen muss
               Performance an erster Stelle stehen. Das bedeutet jedoch nicht,
-              dass Kompromisse bei nützlichen Animationen oder speziellen
-              Touch-Gesten gemacht werden müssen.
+              dass Kompromisse bei Animationen oder nützlichen Touch-Gesten
+              gemacht werden müssen.
             </ServicesItem>
             <ServicesItem title="Consulting und Code Reviews">
-              Erfolgreiche Projekte werden nicht in Isolation erstellt. Was
-              zählt, ist das Team dahinter. Ich arbeite mich in Ihre Probleme
-              ein und finde gemeinsam mit Ihrem Team die passende Lösung.
+              Ich gebe mein Wissen gerne im Rahmen von Planungen, Workshops und
+              Reviews weiter. Ich arbeite mich in Ihre Probleme ein und finde
+              mit Ihrem Team gemeinsam eine passende Lösung.
             </ServicesItem>
           </ResponsiveGrid>
         </Wrapper>

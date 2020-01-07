@@ -56,13 +56,13 @@ export default function Index() {
             </ServicesItem>
             <ServicesItem title="Mobile apps">
               Offering a great user experience on mobile means putting
-              performance first. However there’s no need to compromise on useful
-              animations and advanced touch gestures.
+              performance first. However there’s no need to compromise on
+              animations and useful touch gestures.
             </ServicesItem>
             <ServicesItem title="Consulting and code reviews">
-              Great projects aren’t created in isolation but what matters is the
-              team behind it. I can help you by understanding your problems and
-              cooperatively finding the right solution.
+              I’m happy to share my knowledge in the context of plannings,
+              workshops and reviews. I understand your problems and will find
+              the right solution together with your team.
             </ServicesItem>
           </ResponsiveGrid>
         </Wrapper>
