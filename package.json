@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf public .cache && gatsby build && rm public/index.html",
-    "test": "eslint src functions/*.js",
+    "lint": "eslint src functions/*.js",
     "dev": "gatsby develop --host 0.0.0.0",
     "start": "firebase serve --host 0.0.0.0",
     "deploy": "firebase deploy"

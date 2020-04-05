@@ -74,6 +74,7 @@ export default function Index() {
               See the app
             </ProjectLink>
           }
+          id="kuechenfinder-configurator"
           intro="Guidance through conversation"
           title="Kitchen planning app"
           visual={
@@ -100,9 +101,9 @@ export default function Index() {
           }
         >
           <ProjectParagraph>
-            {'"Küchenfinder"'} is an Austrian service which helps you to
-            purchase your new kitchen. The app guides you question by question
-            to your dream kitchen.
+            Küchenfinder is an Austrian service which helps you to purchase your
+            new kitchen. The app guides you question by question to your dream
+            kitchen.
           </ProjectParagraph>
           <ProjectParagraph>
             This is a project of{' '}
@@ -118,6 +119,7 @@ export default function Index() {
               Read more (DE)
             </ProjectLink>
           }
+          id="kuechenfinder-shops"
           intro="Data-driven recommendations"
           title="Dashboard for kitchen suppliers"
           visual={
@@ -138,10 +140,10 @@ export default function Index() {
           }
         >
           <ProjectParagraph>
-            More than 120,000 users visit {'"Küchenfinder"'} every month in
-            order to learn about kitchen-related topics. Suppliers can sign up
-            to configure criteria and offered services which in turn enables the
-            recommendation of potential customers via a{' '}
+            More than 2 million users visit Küchenfinder per year to learn about
+            kitchen-related topics. Suppliers can sign up to configure criteria
+            and services which in turn enables the recommendation of potential
+            customers via a{' '}
             <ProjectAnchor href="https://www.kuechenfinder.com/kuechenplanung/">
               search engine
             </ProjectAnchor>
@@ -151,14 +153,16 @@ export default function Index() {
           <ProjectParagraph>
             I developed a library comprising more than 100 reusable components
             which represent the basis for all screens of this app. Furthermore I
-            developed a GraphQL API based on REST services which helped reduce
-            the implementation time by using Apollo Client.
+            developed a GraphQL API in node.js that serves as the single entry
+            point to access a data graph that is distributed among micro
+            services with REST APIs.
           </ProjectParagraph>
         </Project>
         <Project
           cta={
             <ProjectLink href="https://www.zemtu.com/">Learn more</ProjectLink>
           }
+          id="zemtu"
           intro="Mobility for the future"
           title="Carsharing app"
           visual={
@@ -193,6 +197,7 @@ export default function Index() {
               See the website
             </ProjectLink>
           }
+          id="shoemondo"
           intro="Price comparison for shoe lovers"
           title="Launch of Shoemondo"
           visual={
@@ -226,6 +231,7 @@ export default function Index() {
               See the web portal
             </ProjectLink>
           }
+          id="fh-ooe-research"
           intro="Make research content visible"
           title="Research portal relaunch"
           visual={

@@ -7,7 +7,10 @@ const EARLIEST_CONTRIBUTION_YEAR = 2013;
 // The intention is to show PRs to repositories of others.
 const PR_REPO_OWNER_BLACKLIST = ['amannn', 'molindo', 'tools-aoeur'];
 // Not particularly interesting PRs.
-const PR_ID_BLACKLIST = ['MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz'];
+const PR_ID_BLACKLIST = [
+  'MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz',
+  'MDExOlB1bGxSZXF1ZXN0MzYwOTI4MzYw'
+];
 
 const query = /* GraphQL */ `
   query($from: DateTime, $after: String) {

@@ -4,6 +4,13 @@
 
 .root {
   overflow: hidden;
+  position: relative;
+}
+
+.anchor {
+  position: absolute;
+  left: 0;
+  top: -50px;
 }
 
 .outer {

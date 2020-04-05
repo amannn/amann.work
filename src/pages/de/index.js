@@ -75,6 +75,7 @@ export default function Index() {
               Zur App
             </ProjectLink>
           }
+          id="kuechenfinder-configurator"
           intro="Per Dialog zur neuen Küche"
           title="Küchenfinder Planungsapp"
           visual={
@@ -119,6 +120,7 @@ export default function Index() {
               Mehr erfahren
             </ProjectLink>
           }
+          id="kuechenfinder-shops"
           intro="Datengetriebene Empfehlungen"
           title="Dashboard für Küchenanbieter"
           visual={
@@ -163,6 +165,7 @@ export default function Index() {
               Mehr erfahren
             </ProjectLink>
           }
+          id="zemtu"
           intro="Mobilität für die Zukunft"
           title="Carsharing App"
           visual={
@@ -197,6 +200,7 @@ export default function Index() {
               Zur Website
             </ProjectLink>
           }
+          id="shoemondo"
           intro="Preisvergleich für Schuhliebhaber"
           title="Launch von Shoemondo"
           visual={
@@ -231,6 +235,7 @@ export default function Index() {
               Zum Portal
             </ProjectLink>
           }
+          id="fh-ooe-research"
           intro="Forschungsinhalte sichtbar machen"
           title="Wissensportal Relaunch"
           visual={

@@ -3,9 +3,10 @@ import cx from 'classnames';
 import Text from 'components/Text';
 import styles from './Project.module.scss';
 
-export default function Project({children, cta, visual, intro, title}) {
+export default function Project({children, cta, id, intro, title, visual}) {
   return (
     <div className={styles.root}>
+      {id && <div className={styles.anchor} id={id} />}
       <div className={styles.outer}>
         <div className={styles.inner}>
           <div className={styles.background} />
@@ -18,9 +19,10 @@ export default function Project({children, cta, visual, intro, title}) {
               {title}
             </Text>
             {children}
-            {React.cloneElement(cta, {
-              className: cx(styles.cta, cta.props.className)
-            })}
+            {cta &&
+              React.cloneElement(cta, {
+                className: cx(styles.cta, cta.props.className)
+              })}
           </div>
         </div>
       </div>
