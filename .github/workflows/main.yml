@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: '10.x'
       - run: yarn install --pure-lockfile
-      - run: yarn test
+      - run: yarn lint
       - run: yarn build
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
