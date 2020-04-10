@@ -47,10 +47,10 @@ export default function Index() {
             <ServicesItem title="React apps">
               With more than 4 years of experience with React and more than 3
               years of GraphQL, I can help you architect and build ambitious web
-              apps that are a delight to use.
+              apps that are a pleasure to use.
             </ServicesItem>
             <ServicesItem title="Design systems">
-              User interfaces are component-based and therefore by identifying
+              User interfaces are component-based and therefore, by identifying
               the fundamental building blocks and creating composable APIs, your
               apps are set up for success.
             </ServicesItem>
@@ -152,10 +152,9 @@ export default function Index() {
           </ProjectParagraph>
           <ProjectParagraph>
             I developed a library comprising more than 100 reusable components
-            which represent the basis for all screens of this app. Furthermore I
-            developed a GraphQL API in node.js that serves as the single entry
-            point to access a data graph that is distributed among micro
-            services with REST APIs.
+            which represent the basis for all screens of this app. Further to
+            this, I developed a GraphQL API in Node.js that provides clients
+            with performant access to distributed data from REST micro services.
           </ProjectParagraph>
         </Project>
         <Project

@@ -48,7 +48,7 @@ export default function Index() {
               GraphQL, kann ich Ihnen beim Entwurf und der Umsetzung von
               anspruchsvollen Apps helfen, die gerne verwendet werden.
             </ServicesItem>
-            <ServicesItem title="Design-Systeme">
+            <ServicesItem title="Design Systems">
               User Interfaces sind komponentenbasiert. Durch das Identifizieren
               der grundlegenden Bausteine und das Erstellen flexibler
               Schnittstellen, stelle ich sicher, dass Ihre Apps auf einem
@@ -61,9 +61,9 @@ export default function Index() {
               gemacht werden müssen.
             </ServicesItem>
             <ServicesItem title="Consulting und Code Reviews">
-              Ich gebe mein Wissen gerne im Rahmen von Planungen, Workshops und
-              Reviews weiter. Ich arbeite mich in Ihre Probleme ein und finde
-              mit Ihrem Team gemeinsam eine passende Lösung.
+              Ich gebe mein Wissen gerne im Rahmen von Projektplanungen,
+              Workshops und Reviews weiter. Ich arbeite mich in Ihre Probleme
+              ein und finde mit Ihrem Team gemeinsam eine passende Lösung.
             </ServicesItem>
           </ResponsiveGrid>
         </Wrapper>
@@ -154,9 +154,9 @@ export default function Index() {
           <ProjectParagraph>
             Für diese App entwickelte ich eine Bibliothek, die mehr als 100
             flexibel wiederverwendbare Komponenten umfasst und die Grundlage
-            sämtlicher Screens darstellt. Zudem entwickelte ich eine GraphQL API
-            auf Basis von REST Services, welche die Entwicklungszeit mit Hilfe
-            von Apollo Client verkürzte.
+            sämtlicher Screens darstellt. Außerdem habe ich eine GraphQL API in
+            Node.js implementiert, welche die verteilten Daten aus REST
+            Microservices für Clients zugänglich macht.
           </ProjectParagraph>
         </Project>
         <Project
