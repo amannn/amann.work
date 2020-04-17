@@ -69,6 +69,48 @@ export default function Index() {
       </Section>
       <Section title="Selected projects">
         <Project
+          id="alpine"
+          intro="Building blocks for ambitious user interfaces"
+          title="React-based design system"
+          visual={
+            <ProjectVisual>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../assets/alpine-design-system.png')}
+                />
+              </DeviceFrame>
+            </ProjectVisual>
+          }
+        >
+          <ProjectParagraph>
+            <ProjectAnchor href="https://www.alpine.com/">
+              Alpine Electronics
+            </ProjectAnchor>{' '}
+            is an international enterprise specialising in car audio and
+            navigation systems that are used by manufacturers such as BMW, Audi,
+            Mercedes & many more. The company counts more than 13&nbsp;000
+            employees and wanted to take their data management apps to the next
+            level by utilising a React-based design system that can be composed
+            in flexible ways.
+          </ProjectParagraph>
+          <ProjectParagraph>
+            To meet this challenge, a team of six frontend specialists from{' '}
+            <ProjectAnchor href="https://alm.sh/">
+              alm engineering
+            </ProjectAnchor>
+            ,{' '}
+            <ProjectAnchor href="https://peerigon.com/">Peerigon</ProjectAnchor>
+            ,{' '}
+            <ProjectAnchor href="https://compose.us/">compose.us</ProjectAnchor>{' '}
+            and me was formed. My contribution was to gather requirements in on
+            site workshops, specification of features & component APIs, UX
+            design, frontend development, code reviews and the definition of
+            GraphQL APIs. A set of more than 150 components now provide the
+            foundation for 20 application packages and counting.
+          </ProjectParagraph>
+        </Project>
+        <Project
           cta={
             <ProjectLink href="https://planung.kuechenfinder.com/">
               See the app
@@ -82,19 +124,19 @@ export default function Index() {
               <DeviceFrame>
                 <img
                   alt=""
-                  src={require('../../images/kfi-configurator-1.png')}
+                  src={require('../../assets/kfi-configurator-1.png')}
                 />
               </DeviceFrame>
               <DeviceFrame>
                 <img
                   alt=""
-                  src={require('../../images/kfi-configurator-2.png')}
+                  src={require('../../assets/kfi-configurator-2.png')}
                 />
               </DeviceFrame>
               <DeviceFrame>
                 <img
                   alt=""
-                  src={require('../../images/kfi-configurator-3.png')}
+                  src={require('../../assets/kfi-configurator-3.png')}
                 />
               </DeviceFrame>
             </ProjectVisual>
@@ -127,13 +169,13 @@ export default function Index() {
               <DeviceFrame type="mobile">
                 <img
                   alt=""
-                  src={require('../../images/kfi-shops-mobile.png')}
+                  src={require('../../assets/kfi-shops-mobile.png')}
                 />
               </DeviceFrame>
               <DeviceFrame type="desktop">
                 <img
                   alt=""
-                  src={require('../../images/kfi-shops-desktop.png')}
+                  src={require('../../assets/kfi-shops-desktop.png')}
                 />
               </DeviceFrame>
             </ProjectVisual>
@@ -167,13 +209,13 @@ export default function Index() {
           visual={
             <ProjectVisual>
               <DeviceFrame>
-                <img alt="" src={require('../../images/zemtu-1.png')} />
+                <img alt="" src={require('../../assets/zemtu-1.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/zemtu-2.png')} />
+                <img alt="" src={require('../../assets/zemtu-2.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/zemtu-3.png')} />
+                <img alt="" src={require('../../assets/zemtu-3.png')} />
               </DeviceFrame>
             </ProjectVisual>
           }
@@ -202,13 +244,13 @@ export default function Index() {
           visual={
             <ProjectVisual>
               <DeviceFrame>
-                <img alt="" src={require('../../images/shoemondo-1.png')} />
+                <img alt="" src={require('../../assets/shoemondo-1.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/shoemondo-2.png')} />
+                <img alt="" src={require('../../assets/shoemondo-2.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/shoemondo-3.png')} />
+                <img alt="" src={require('../../assets/shoemondo-3.png')} />
               </DeviceFrame>
             </ProjectVisual>
           }
@@ -222,48 +264,6 @@ export default function Index() {
           <ProjectParagraph>
             I designed the user interface and implemented it as a server side
             rendered React app which communicates with a GraphQL API.
-          </ProjectParagraph>
-        </Project>
-        <Project
-          cta={
-            <ProjectLink href="https://research.fh-ooe.at/en/index">
-              See the web portal
-            </ProjectLink>
-          }
-          id="fh-ooe-research"
-          intro="Make research content visible"
-          title="Research portal relaunch"
-          visual={
-            <ProjectVisual>
-              <DeviceFrame type="mobile">
-                <img
-                  alt=""
-                  src={require('../../images/fh-research-mobile.png')}
-                />
-              </DeviceFrame>
-              <DeviceFrame type="desktop">
-                <img
-                  alt=""
-                  src={require('../../images/fh-research-desktop.png')}
-                />
-              </DeviceFrame>
-            </ProjectVisual>
-          }
-        >
-          <ProjectParagraph>
-            The University of Applied Sciences Upper Austria is the most
-            research-intensive UAS in Austria. This web portal provides
-            comprehensive access to publications, patents, researchers and
-            projects.
-          </ProjectParagraph>
-          <ProjectParagraph>
-            This project was built together with{' '}
-            <ProjectAnchor href="https://studiomitte.com">
-              Studio Mitte
-            </ProjectAnchor>
-            . My contribution was the creation of screen designs and the
-            implementation of the page layout prototype & fundamental
-            components.
           </ProjectParagraph>
         </Project>
       </Section>

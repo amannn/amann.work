@@ -1,0 +1,32 @@
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/utils';
+
+.root {
+  cursor: pointer;
+  position: relative;
+
+  &_controlsVisible .overlay {
+    @include animate-fast(opacity);
+    opacity: 1;
+  }
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include circle(72px);
+  opacity: 0;
+  background-color: rgba($black, 0.6);
+  @include animate-slow(opacity);
+}
+
+.video {
+  width: 100%;
+  outline: none;
+}

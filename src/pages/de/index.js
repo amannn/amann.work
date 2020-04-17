@@ -70,6 +70,50 @@ export default function Index() {
       </Section>
       <Section title="Ausgewählte Projekte">
         <Project
+          id="alpine"
+          intro="Bausteine für anspruchsvolle User Interfaces"
+          title="React-basiertes Design System"
+          visual={
+            <ProjectVisual>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../assets/alpine-design-system.png')}
+                />
+              </DeviceFrame>
+            </ProjectVisual>
+          }
+        >
+          <ProjectParagraph>
+            <ProjectAnchor href="https://www.alpine.com/">
+              Alpine Electronics
+            </ProjectAnchor>{' '}
+            ist ein internationales Unternehmen, das sich auf Audio- und
+            Navigationssysteme für Autos spezialisiert hat. Die Firma zählt
+            Hersteller wie BMW, Audi und Mercedes zu seinen Kunden und hat mehr
+            als 13&nbsp;000 Angestellte. Ziel dieses Projekts war es ein
+            umfangreiches React-basisertes Design System zu schaffen, welches
+            zukünftig die benutzerfreundliche Grundlage für Datenmanagementapps
+            bildet.
+          </ProjectParagraph>
+          <ProjectParagraph>
+            Um diese Herausforderung zu bewältigen, wurde ein 6-köpfiges Team
+            von Frontend Spezialisten von{' '}
+            <ProjectAnchor href="https://alm.sh/">
+              alm engineering
+            </ProjectAnchor>
+            ,{' '}
+            <ProjectAnchor href="https://peerigon.com/">Peerigon</ProjectAnchor>
+            ,{' '}
+            <ProjectAnchor href="https://compose.us/">compose.us</ProjectAnchor>{' '}
+            und mir geschaffen. Mein Beitrag umfasste Anforderungserhebung in
+            Workshops, Spezfikation von Funktionen & Komponenten APIs, UX
+            Design, Frontend Development, Code Review und die Definition von
+            GraphQL APIs. Eine Palette von mehr als 150 Komponenten bildet nun
+            die Grundlage für 20 Application Packages – Tendenz steigend.
+          </ProjectParagraph>
+        </Project>
+        <Project
           cta={
             <ProjectLink href="https://planung.kuechenfinder.com/">
               Zur App
@@ -83,19 +127,19 @@ export default function Index() {
               <DeviceFrame>
                 <img
                   alt=""
-                  src={require('../../images/kfi-configurator-1.png')}
+                  src={require('../../assets/kfi-configurator-1.png')}
                 />
               </DeviceFrame>
               <DeviceFrame>
                 <img
                   alt=""
-                  src={require('../../images/kfi-configurator-2.png')}
+                  src={require('../../assets/kfi-configurator-2.png')}
                 />
               </DeviceFrame>
               <DeviceFrame>
                 <img
                   alt=""
-                  src={require('../../images/kfi-configurator-3.png')}
+                  src={require('../../assets/kfi-configurator-3.png')}
                 />
               </DeviceFrame>
             </ProjectVisual>
@@ -128,13 +172,13 @@ export default function Index() {
               <DeviceFrame type="mobile">
                 <img
                   alt=""
-                  src={require('../../images/kfi-shops-mobile.png')}
+                  src={require('../../assets/kfi-shops-mobile.png')}
                 />
               </DeviceFrame>
               <DeviceFrame type="desktop">
                 <img
                   alt=""
-                  src={require('../../images/kfi-shops-desktop.png')}
+                  src={require('../../assets/kfi-shops-desktop.png')}
                 />
               </DeviceFrame>
             </ProjectVisual>
@@ -171,13 +215,13 @@ export default function Index() {
           visual={
             <ProjectVisual>
               <DeviceFrame>
-                <img alt="" src={require('../../images/zemtu-1.png')} />
+                <img alt="" src={require('../../assets/zemtu-1.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/zemtu-2.png')} />
+                <img alt="" src={require('../../assets/zemtu-2.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/zemtu-3.png')} />
+                <img alt="" src={require('../../assets/zemtu-3.png')} />
               </DeviceFrame>
             </ProjectVisual>
           }
@@ -206,13 +250,13 @@ export default function Index() {
           visual={
             <ProjectVisual>
               <DeviceFrame>
-                <img alt="" src={require('../../images/shoemondo-1.png')} />
+                <img alt="" src={require('../../assets/shoemondo-1.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/shoemondo-2.png')} />
+                <img alt="" src={require('../../assets/shoemondo-2.png')} />
               </DeviceFrame>
               <DeviceFrame>
-                <img alt="" src={require('../../images/shoemondo-3.png')} />
+                <img alt="" src={require('../../assets/shoemondo-3.png')} />
               </DeviceFrame>
             </ProjectVisual>
           }
@@ -227,47 +271,6 @@ export default function Index() {
             Meine Leistung war die Gestaltung des User Interface und die
             Implementierung davon in Form einer serverseitig gerenderten React
             App, welche mit einer GraphQL API kommuniziert.
-          </ProjectParagraph>
-        </Project>
-        <Project
-          cta={
-            <ProjectLink href="https://research.fh-ooe.at/de/index">
-              Zum Portal
-            </ProjectLink>
-          }
-          id="fh-ooe-research"
-          intro="Forschungsinhalte sichtbar machen"
-          title="Wissensportal Relaunch"
-          visual={
-            <ProjectVisual>
-              <DeviceFrame type="mobile">
-                <img
-                  alt=""
-                  src={require('../../images/fh-research-mobile.png')}
-                />
-              </DeviceFrame>
-              <DeviceFrame type="desktop">
-                <img
-                  alt=""
-                  src={require('../../images/fh-research-desktop.png')}
-                />
-              </DeviceFrame>
-            </ProjectVisual>
-          }
-        >
-          <ProjectParagraph>
-            Die Fachhochschule Oberösterreich ist die forschungsstärkste FH in
-            Österreich. Dieses Portal bietet umfassenden Zugang zu
-            Publikationen, Patenten, Forschern und Projekten.
-          </ProjectParagraph>
-          <ProjectParagraph>
-            Dieses Projekt wurde gemeinsam mit{' '}
-            <ProjectAnchor href="https://studiomitte.com">
-              Studio Mitte
-            </ProjectAnchor>{' '}
-            umgesetzt. Meine Leistung war die Erstellung der Screen Designs,
-            sowie die Implementierung des Layout Prototyps und grundlegender
-            Komponenten.
           </ProjectParagraph>
         </Project>
       </Section>

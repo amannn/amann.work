@@ -54,10 +54,22 @@ const icons = {
       fill="currentColor"
       transform="scale(1.2) translate(3, 1.5)"
     />
+  ),
+  play: (
+    <>
+      <path d="M8 5v14l11-7z" fill="currentColor" />
+      <path d="M0 0h24v24H0z" fill="none" />
+    </>
+  ),
+  pause: (
+    <>
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor" />
+      <path d="M0 0h24v24H0z" fill="none" />
+    </>
   )
 };
 
-export default function Icon({color, className, name}) {
+export default function Icon({color, className, size = 20, name}) {
   const icon = icons[name];
 
   if (!icon) {
@@ -72,11 +84,11 @@ export default function Icon({color, className, name}) {
   return (
     <svg
       className={renderClassName}
-      height="20px"
+      height={size + 'px'}
       style={style}
       version="1.1"
       viewBox="0 0 24 24"
-      width="20px"
+      width={size + 'px'}
       xmlns="http://www.w3.org/2000/svg"
     >
       {icon}

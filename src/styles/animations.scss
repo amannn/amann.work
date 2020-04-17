@@ -9,7 +9,8 @@
 @mixin hover-fast-in-slow-out($attr: all) {
   @include animate-slow($attr);
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     @include animate-fast($attr);
     @content;
   }
