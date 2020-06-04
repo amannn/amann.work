@@ -22,6 +22,7 @@ import {ServicesItem} from 'components/Services';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
+import ScreenVideo from 'components/ScreenVideo';
 
 export default function Index() {
   const posts = useBlogPosts();
@@ -45,14 +46,14 @@ export default function Index() {
         <Wrapper>
           <ResponsiveGrid>
             <ServicesItem title="React apps">
-              With more than 4 years of experience with React and more than 3
-              years of GraphQL, I can help you architect and build ambitious web
-              apps that are a pleasure to use.
+              With 5 years of experience with React and more than 3 years of
+              GraphQL, I can help you architect and build ambitious web apps
+              that are a pleasure to use.
             </ServicesItem>
-            <ServicesItem title="Design systems">
-              User interfaces are component-based and therefore, by identifying
-              the fundamental building blocks and creating composable APIs, your
-              apps are set up for success.
+            <ServicesItem title="Component libraries">
+              User interfaces are component-based. I can identify the
+              fundamental building blocks and make them consumable with a
+              composable API. This sets your apps up for success.
             </ServicesItem>
             <ServicesItem title="Mobile apps">
               Offering a great user experience on mobile means putting
@@ -69,9 +70,57 @@ export default function Index() {
       </Section>
       <Section title="Selected projects">
         <Project
+          cta={
+            <ProjectLink href="https://www.setlist.fm/">
+              Add a setlist
+            </ProjectLink>
+          }
+          id="setlist-edit"
+          intro="Millions of setlists at your finger tips"
+          title="New editing experience for setlist.fm"
+          visual={
+            <ProjectVisual>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../assets/setlist-edit-desktop.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame>
+                <ScreenVideo
+                  autoPlay={false}
+                  poster={require('../../assets/setlist-edit-mobile-poster.png')}
+                  source={require('../../assets/setlist-edit-mobile.mp4')}
+                />
+              </DeviceFrame>
+            </ProjectVisual>
+          }
+        >
+          <ProjectParagraph>
+            With{' '}
+            <ProjectAnchor href="https://www.similarweb.com/website/setlist.fm#overview">
+              millions of monthly visits
+            </ProjectAnchor>
+            , setlist.fm is one of the most popular music services worldwide and
+            enables its users to share their knowledge about concert setlists.
+            The team from{' '}
+            <ProjectAnchor href="http://molindo.at">Molindo</ProjectAnchor> set
+            out to relaunch the core experience of adding and editing setlists
+            and hired me to implement the user interface.
+          </ProjectParagraph>
+          <ProjectParagraph>
+            The frontend of the project consists of four React widgets. These
+            integrate seamlessly with the existing web stack of the platform and
+            communicate with a GraphQL API. To live up to the high expectations
+            of mobile apps, the implementation places special focus on touch
+            gestures, useful animations, runtime performance and an
+            offline-first approach to data.
+          </ProjectParagraph>
+        </Project>
+        <Project
           id="alpine"
           intro="Building blocks for ambitious user interfaces"
-          title="React-based design system"
+          title="React-based component library"
           visual={
             <ProjectVisual>
               <DeviceFrame type="desktop">
@@ -89,10 +138,10 @@ export default function Index() {
             </ProjectAnchor>{' '}
             is an international enterprise specialising in car audio and
             navigation systems that are used by manufacturers such as BMW, Audi,
-            Mercedes & many more. The company counts more than 13&nbsp;000
-            employees and wanted to take their data management apps to the next
-            level by utilising a React-based design system that can be composed
-            in flexible ways.
+            Mercedes & many more. The company counts more than 13,000 employees
+            and wanted to take their data management apps to the next level by
+            utilising a React-based component library that can be composed in
+            flexible ways.
           </ProjectParagraph>
           <ProjectParagraph>
             To meet this challenge, a team of six frontend specialists from{' '}
@@ -103,8 +152,8 @@ export default function Index() {
             <ProjectAnchor href="https://peerigon.com/">Peerigon</ProjectAnchor>
             ,{' '}
             <ProjectAnchor href="https://compose.us/">compose.us</ProjectAnchor>{' '}
-            and me was formed. My contribution was to gather requirements in on
-            site workshops, specification of features & component APIs, UX
+            and me was formed. My contribution was to gather requirements in
+            on-site workshops, specification of features & component APIs, UX
             design, frontend development, code reviews and the definition of
             GraphQL APIs. A set of more than 150 components now provide the
             foundation for 20 application packages and counting.

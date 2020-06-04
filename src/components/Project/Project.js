@@ -15,7 +15,7 @@ export default function Project({children, cta, id, intro, title, visual}) {
             <Text color="accent" variant="label">
               {intro}
             </Text>
-            <Text marginBottom variant="h2">
+            <Text component="h3" marginBottom variant="h2">
               {title}
             </Text>
             {children}

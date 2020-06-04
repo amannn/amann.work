@@ -22,6 +22,7 @@ import {ServicesItem} from 'components/Services';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
+import ScreenVideo from 'components/ScreenVideo';
 
 export default function Index() {
   const posts = useBlogPosts();
@@ -44,15 +45,15 @@ export default function Index() {
         <Wrapper>
           <ResponsiveGrid>
             <ServicesItem title="React Apps">
-              Mit mehr als 4 Jahren Erfahrung mit React und mehr als 3 Jahren
-              GraphQL, kann ich Ihnen beim Entwurf und der Umsetzung von
-              anspruchsvollen Apps helfen, die gerne verwendet werden.
+              Mit 5 Jahren Erfahrung mit React und mehr als 3 Jahren GraphQL,
+              kann ich Ihnen beim Entwurf und der Umsetzung von anspruchsvollen
+              Apps helfen, die gerne verwendet werden.
             </ServicesItem>
-            <ServicesItem title="Design Systems">
-              User Interfaces sind komponentenbasiert. Durch das Identifizieren
-              der grundlegenden Bausteine und das Erstellen flexibler
-              Schnittstellen, stelle ich sicher, dass Ihre Apps auf einem
-              soliden Fundament stehen.
+            <ServicesItem title="Komponentenbibliotheken">
+              User Interfaces sind komponentenbasiert. Ich identifiziere in
+              Ihrem Projekt die grundlegenden Bausteine und versehe diese mit
+              flexiblen Schnittstellen. Dadurch stehen Ihre Apps auf einem
+              soliden Fundament.
             </ServicesItem>
             <ServicesItem title="Mobile Apps">
               Um eine großartige User Experience auf Mobile zu erreichen muss
@@ -70,9 +71,58 @@ export default function Index() {
       </Section>
       <Section title="Ausgewählte Projekte">
         <Project
+          cta={
+            <ProjectLink href="https://www.setlist.fm/">
+              Add a setlist
+            </ProjectLink>
+          }
+          id="setlist-edit"
+          intro="Millionen von Setlists stets zur Hand"
+          title="Neues Editierinterface für setlist.fm"
+          visual={
+            <ProjectVisual>
+              <DeviceFrame type="desktop">
+                <img
+                  alt=""
+                  src={require('../../assets/setlist-edit-desktop.png')}
+                />
+              </DeviceFrame>
+              <DeviceFrame>
+                <ScreenVideo
+                  autoPlay={false}
+                  poster={require('../../assets/setlist-edit-mobile-poster.png')}
+                  source={require('../../assets/setlist-edit-mobile.mp4')}
+                />
+              </DeviceFrame>
+            </ProjectVisual>
+          }
+        >
+          <ProjectParagraph>
+            Mit{' '}
+            <ProjectAnchor href="https://www.similarweb.com/website/setlist.fm#overview">
+              Millionen von monatlichen Aufrufen
+            </ProjectAnchor>{' '}
+            zählt setlist.fm zu den populärsten Musik-Services der Welt und
+            ermöglicht es seinen Usern ihr Wissen über Konzert-Setlists
+            miteinander zu teilen. Das Team von{' '}
+            <ProjectAnchor href="http://molindo.at">Molindo</ProjectAnchor>{' '}
+            machte sich daran das Herzstück der Plattform neu zu denken: Das
+            Hinzufügen und Editieren von Setlists. Für die Implementierung des
+            User Interfaces wurde ich als Entwicklungspartner beauftragt.
+          </ProjectParagraph>
+          <ProjectParagraph>
+            Das Frontend dieses Projekts besteht aus vier React Widgets welche
+            nahtlos in die existierende Plattform integriert sind und mit einer
+            GraphQL API kommunizieren. Um den hohen Erwartungen an Mobile Apps
+            gerecht zu werden wurde besonderer Fokus auf Touch-Gesten,
+            hilfreiche Animationen, Runtime Performance und einen Offline-first
+            Ansatz gelegt.
+          </ProjectParagraph>
+        </Project>
+        <Project
           id="alpine"
           intro="Bausteine für anspruchsvolle User Interfaces"
-          title="React-basiertes Design System"
+          title="React-basierte Komponentenbibliothek"
           visual={
             <ProjectVisual>
               <DeviceFrame type="desktop">
@@ -90,9 +140,9 @@ export default function Index() {
             </ProjectAnchor>{' '}
             ist ein internationales Unternehmen, das sich auf Audio- und
             Navigationssysteme für Autos spezialisiert hat. Die Firma zählt
-            Hersteller wie BMW, Audi und Mercedes zu seinen Kunden und hat mehr
-            als 13&nbsp;000 Angestellte. Ziel dieses Projekts war es ein
-            umfangreiches React-basisertes Design System zu schaffen, welches
+            Hersteller wie BMW, Audi und Mercedes zu ihren Kunden und hat mehr
+            als 13.000 Angestellte. Ziel dieses Projekts war es eine
+            umfangreiche Bibliothek an React-Komponenten zu schaffen, welche
             zukünftig die benutzerfreundliche Grundlage für Datenmanagementapps
             bildet.
           </ProjectParagraph>
@@ -107,7 +157,7 @@ export default function Index() {
             ,{' '}
             <ProjectAnchor href="https://compose.us/">compose.us</ProjectAnchor>{' '}
             und mir geschaffen. Mein Beitrag umfasste Anforderungserhebung in
-            Workshops, Spezfikation von Funktionen & Komponenten APIs, UX
+            Workshops, Spezifikation von Funktionen & Komponenten APIs, UX
             Design, Frontend Development, Code Review und die Definition von
             GraphQL APIs. Eine Palette von mehr als 150 Komponenten bildet nun
             die Grundlage für 20 Application Packages – Tendenz steigend.
@@ -227,10 +277,10 @@ export default function Index() {
           }
         >
           <ProjectParagraph>
-            Um den hohen Erwartungen ihrer internationalen Kunden gerecht zu
-            werden, entwickelt das talentierte Team von Zemtu eine moderne
-            Mobile App, die den Prozess von der Reservierung bis zum Aufsperren
-            eines Autos digital abbildet.
+            Um den Erwartungen ihrer internationalen Kunden gerecht zu werden,
+            entwickelt das talentierte Team von Zemtu eine moderne Mobile App,
+            die den Prozess von der Reservierung bis zum Aufsperren eines Autos
+            digital abbildet.
           </ProjectParagraph>
           <ProjectParagraph>
             In regelmäßigen Workshops unterstütze ich das Team mit Beratung und
@@ -263,9 +313,9 @@ export default function Index() {
         >
           <ProjectParagraph>
             Shoemondo hilft Ihnen dabei Ihr nächstes Lieblingspaar Schuhe zu
-            finden und empfiehlt Ihnen dabei den günstigsten Anbieter. Im ersten
-            Schritt wurden 12 Partner integriert um ein umfangreiches Sortiment
-            an Schuhen zu ermöglichen.
+            finden und empfiehlt Ihnen dabei den günstigsten Anbieter. Um ein
+            umfangreiches Sortiment an Schuhen zu ermöglichen wurden im ersten
+            Schritt 12 Partner integriert.
           </ProjectParagraph>
           <ProjectParagraph>
             Meine Leistung war die Gestaltung des User Interface und die
