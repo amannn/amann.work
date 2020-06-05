@@ -39,21 +39,20 @@ export default function Index() {
         title={labels.title}
       />
       <Section
-        description="Ich arbeite sowohl mit Start-ups als auch etablierten Unternehmen zusammen. Der wichtigste Aspekt für mich ist eine bedeutungsvolle Lösung zu schaffen die Mehrwert für Menschen bietet."
+        description="Ich arbeite sowohl mit Start-ups als auch etablierten Unternehmen zusammen. Der wichtigste Aspekt für mich ist eine bedeutungsvolle Lösung zu schaffen, die Mehrwert für Menschen bietet."
         title="Leistungen"
       >
         <Wrapper>
           <ResponsiveGrid>
             <ServicesItem title="React Apps">
-              Mit 5 Jahren Erfahrung mit React und mehr als 3 Jahren GraphQL,
-              kann ich Ihnen beim Entwurf und der Umsetzung von anspruchsvollen
-              Apps helfen, die gerne verwendet werden.
+              Mit 5 Jahren Erfahrung mit React und 4 Jahren GraphQL kann ich
+              Ihnen beim Entwurf und der Umsetzung von anspruchsvollen Apps
+              helfen, die gerne verwendet werden.
             </ServicesItem>
             <ServicesItem title="Komponentenbibliotheken">
-              User Interfaces sind komponentenbasiert. Ich identifiziere in
-              Ihrem Projekt die grundlegenden Bausteine und versehe diese mit
-              flexiblen Schnittstellen. Dadurch stehen Ihre Apps auf einem
-              soliden Fundament.
+              Stellen Sie Ihre Apps auf ein solides Fundament, indem die
+              grundlegenden Bausteine identifiziert und mit einer flexiblen
+              Schnittstelle versehen werden.
             </ServicesItem>
             <ServicesItem title="Mobile Apps">
               Um eine großartige User Experience auf Mobile zu erreichen muss

@@ -46,14 +46,14 @@ export default function Index() {
         <Wrapper>
           <ResponsiveGrid>
             <ServicesItem title="React apps">
-              With 5 years of experience with React and more than 3 years of
-              GraphQL, I can help you architect and build ambitious web apps
-              that are a pleasure to use.
+              With 5 years of experience with React and 4 years of GraphQL, I
+              can help you architect and build ambitious web apps that are a
+              pleasure to use.
             </ServicesItem>
             <ServicesItem title="Component libraries">
-              User interfaces are component-based. I can identify the
-              fundamental building blocks and make them consumable with a
-              composable API. This sets your apps up for success.
+              By identifying the fundamental building blocks and making them
+              available via a composable API, you can set your apps up for
+              success.
             </ServicesItem>
             <ServicesItem title="Mobile apps">
               Offering a great user experience on mobile means putting
