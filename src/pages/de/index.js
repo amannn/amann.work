@@ -20,10 +20,10 @@ import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
 import ResponsiveGrid from 'components/ResponsiveGrid';
 import {ServicesItem} from 'components/Services';
+import ExpandableDeviceVideo from 'components/ExpandableDeviceVideo';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
-import ScreenVideo from 'components/ScreenVideo';
 
 export default function Index() {
   const posts = useBlogPosts();
@@ -103,13 +103,10 @@ export default function Index() {
                   src={require('../../assets/setlist-edit-desktop.png')}
                 />
               </DeviceFrame>
-              <DeviceFrame>
-                <ScreenVideo
-                  autoPlay={false}
-                  poster={require('../../assets/setlist-edit-mobile-poster.png')}
-                  source={require('../../assets/setlist-edit-mobile.mp4')}
-                />
-              </DeviceFrame>
+              <ExpandableDeviceVideo
+                poster={require('../../assets/setlist-edit-mobile-poster.png')}
+                source={require('../../assets/setlist-edit-mobile.mp4')}
+              />
             </ProjectVisual>
           }
         >

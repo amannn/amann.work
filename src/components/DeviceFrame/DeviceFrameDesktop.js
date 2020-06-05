@@ -3,9 +3,13 @@ import useLoadedWidth from './useLoadedWidth';
 import useLayoutGetter from './useLayoutGetter';
 import styles from './DeviceFrameDesktop.module.scss';
 
-export default function DeviceFrameDesktop({screenBackgroundColor, children}) {
+export default function DeviceFrameDesktop({
+  children,
+  onHasDimensions,
+  screenBackgroundColor
+}) {
   const rootRef = useRef();
-  const width = useLoadedWidth(rootRef);
+  const width = useLoadedWidth(rootRef, onHasDimensions);
   const getLayoutProps = useLayoutGetter(width, 550);
   const toolbarIconSize = 6;
 
