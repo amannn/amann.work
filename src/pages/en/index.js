@@ -1,4 +1,5 @@
 import React from 'react';
+import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import labels from 'localized/en/labels';
 import LocalizedFooter from 'localized/en/LocalizedFooter';
 import LocalizedHeader from 'localized/en/LocalizedHeader';
@@ -20,7 +21,6 @@ import Section from 'components/Section';
 import Wrapper from 'components/Wrapper';
 import ResponsiveGrid from 'components/ResponsiveGrid';
 import {ServicesItem} from 'components/Services';
-import ExpandableDeviceVideo from 'components/ExpandableDeviceVideo';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
@@ -103,7 +103,7 @@ export default function Index() {
                   src={require('../../assets/setlist-edit-desktop.png')}
                 />
               </DeviceFrame>
-              <ExpandableDeviceVideo
+              <LightboxDeviceVideo
                 poster={require('../../assets/setlist-edit-mobile-poster.png')}
                 source={require('../../assets/setlist-edit-mobile.mp4')}
               />
