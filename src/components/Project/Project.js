@@ -1,9 +1,18 @@
 import React from 'react';
 import cx from 'classnames';
 import Text from 'components/Text';
+import Wrapper from 'components/Wrapper';
 import styles from './Project.module.scss';
 
-export default function Project({children, cta, id, intro, title, visual}) {
+export default function Project({
+  children,
+  cta,
+  id,
+  intro,
+  testimonial,
+  title,
+  visual
+}) {
   return (
     <div className={styles.root}>
       {id && <div className={styles.anchor} id={id} />}
@@ -26,6 +35,11 @@ export default function Project({children, cta, id, intro, title, visual}) {
           </div>
         </div>
       </div>
+      {testimonial && (
+        <Wrapper>
+          <div className={styles.testimonial}>{testimonial}</div>
+        </Wrapper>
+      )}
     </div>
   );
 }

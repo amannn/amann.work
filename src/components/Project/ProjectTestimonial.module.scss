@@ -1,0 +1,68 @@
+@import '~styles/media-queries';
+
+.root {
+  display: flex;
+  padding: 40px 0;
+  align-items: flex-start;
+
+  @include match-medium {
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+
+  @include match-medium {
+    height: auto;
+    width: 160px;
+    border-radius: 0;
+  }
+
+  > * {
+    width: 100%;
+    transform: translateX(-6px) translateY(6px) scale(1.75);
+
+    @include match-medium {
+      transform: none;
+    }
+  }
+}
+
+.text {
+  margin-left: 24px;
+
+  @include match-medium {
+    margin: 20px 80px;
+  }
+}
+
+.quote {
+  position: relative;
+
+  > * + * {
+    margin-top: 12px;
+  }
+}
+
+.apostropheStart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-150%);
+}
+
+.apostropheEnd {
+  display: inline-block;
+  transform: translateX(50%);
+}
+
+.person {
+  margin-top: 16px;
+}

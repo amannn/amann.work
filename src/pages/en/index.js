@@ -8,7 +8,8 @@ import Project, {
   ProjectAnchor,
   ProjectLink,
   ProjectParagraph,
-  ProjectVisual
+  ProjectVisual,
+  ProjectTestimonial
 } from 'components/Project';
 import BlogRoll from 'components/BlogRoll';
 import Button from 'components/Button';
@@ -62,8 +63,8 @@ export default function Index() {
             </ServicesItem>
             <ServicesItem title="Consulting and code reviews">
               I’m happy to share my knowledge in the context of plannings,
-              workshops and reviews. I understand your problems and will find
-              the right solution together with your team.
+              workshops and reviews. I take the time to listen and will find the
+              right solution together with your team.
             </ServicesItem>
           </ResponsiveGrid>
         </Wrapper>
@@ -77,6 +78,22 @@ export default function Index() {
           }
           id="setlist-edit"
           intro="Millions of setlists at your finger tips"
+          testimonial={
+            <ProjectTestimonial
+              image={
+                <img
+                  alt="Christof Flachsmann"
+                  src={require('../../assets/christof-flachsmann.jpg')}
+                />
+              }
+              personLink="https://www.flachsmann.at/"
+              personName="Christof Flachsmann"
+              personTitle="UX Designer"
+              quote={
+                'The cooperation with Jan was excellent as always. As a designer, I can rely on the fact that the final product is implemented pixel-perfect and on time.\nWhat I particularly appreciate about Jan is that he also thinks about how to take a design one step further. He proactively contributes to how the product can be improved even more. I am already looking forward to all upcoming projects!'
+              }
+            />
+          }
           title="New editing experience for setlist.fm"
           visual={
             <ProjectVisual>

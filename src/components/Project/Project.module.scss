@@ -79,3 +79,33 @@
 .cta {
   margin-top: 24px;
 }
+
+.testimonial {
+  $horizontal-line-length: 140px;
+
+  position: relative;
+  margin-top: 120px;
+
+  @include before {
+    position: absolute;
+    top: 0;
+    right: $horizontal-line-length / 2;
+    height: 120px;
+    width: 1px;
+    transform: translateY(-100%);
+    background-color: $color-line;
+
+    @include match-medium {
+      height: 160px;
+    }
+  }
+
+  @include after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: $horizontal-line-length;
+    height: 1px;
+    background-color: $color-line;
+  }
+}

@@ -8,7 +8,8 @@ import Project, {
   ProjectAnchor,
   ProjectLink,
   ProjectParagraph,
-  ProjectVisual
+  ProjectVisual,
+  ProjectTestimonial
 } from 'components/Project';
 import BlogRoll from 'components/BlogRoll';
 import Button from 'components/Button';
@@ -72,11 +73,27 @@ export default function Index() {
         <Project
           cta={
             <ProjectLink href="https://www.setlist.fm/">
-              Add a setlist
+              Setlist erstellen
             </ProjectLink>
           }
           id="setlist-edit"
           intro="Millionen von Setlists stets zur Hand"
+          testimonial={
+            <ProjectTestimonial
+              image={
+                <img
+                  alt="Christof Flachsmann"
+                  src={require('../../assets/christof-flachsmann.jpg')}
+                />
+              }
+              personLink="https://www.flachsmann.at/"
+              personName="Christof Flachsmann"
+              personTitle="UX Designer"
+              quote={
+                'Die Zusammenarbeit mit Jan war wie immer hervorragend. Als Designer kann ich mich darauf verlassen, dass das Endprodukt unkompliziert und pünktlich in Perfektion umgesetzt wird.\nBesonders schätze ich an Jan, dass er ein Design weiter denkt und sich proaktiv einbringt, wie man das Produkt noch weiter verbessern kann. Ich freue mich schon auf unser nächstes gemeinsames Projekt!'
+              }
+            />
+          }
           title="Neues Editierinterface für setlist.fm"
           visual={
             <ProjectVisual>
