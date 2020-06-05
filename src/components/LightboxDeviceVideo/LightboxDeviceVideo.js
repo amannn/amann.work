@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-import React, {useState, useRef, useCallback} from 'react';
+import React, {useState, useRef, useCallback, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import cx from 'classnames';
 import DeviceFrame from 'components/DeviceFrame';
@@ -55,6 +55,18 @@ export default function LightboxDeviceVideo({poster, source}) {
       [onClose]
     )
   });
+
+  // Close on scroll
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function onScroll() {
+      setIsPlaying(false);
+    }
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isOpen]);
 
   // We can't let framer-motion take care of resizing the video, as that doesn't
   // work properly. Instead we want framer-motion to only take care of the
