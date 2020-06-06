@@ -337,7 +337,7 @@ export default function Index() {
         </Wrapper>
       </Section>
       <Section
-        description="I'm grateful to be part of a community where ideas and knowledge are openly shared. My contribution is to publish libraries and to participate in the projects of others."
+        description="I'm grateful to be part of a community where ideas and knowledge are openly shared. My contribution is to publish libraries and to participate in projects of others."
         title="Open source"
       >
         <Wrapper background padding>
