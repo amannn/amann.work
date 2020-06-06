@@ -88,7 +88,7 @@ export default function Index() {
               }
               personLink="https://www.flachsmann.at/"
               personName="Christof Flachsmann"
-              personTitle="UX Designer"
+              personTitle="UX/UI Designer"
               quote={
                 'Die Zusammenarbeit mit Jan war wie immer hervorragend. Als Designer kann ich mich darauf verlassen, dass das Endprodukt unkompliziert und pünktlich in Perfektion umgesetzt wird.\nBesonders schätze ich an Jan, dass er ein Design weiter denkt und sich proaktiv einbringt, wie man das Produkt noch weiter verbessern kann. Ich freue mich schon auf unser nächstes gemeinsames Projekt!'
               }

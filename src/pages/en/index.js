@@ -88,7 +88,7 @@ export default function Index() {
               }
               personLink="https://www.flachsmann.at/"
               personName="Christof Flachsmann"
-              personTitle="UX Designer"
+              personTitle="UX/UI Designer"
               quote={
                 'The cooperation with Jan was excellent as always. As a designer, I can rely on the fact that the final product is implemented pixel-perfect and on time.\nWhat I particularly appreciate about Jan is that he also thinks about how to take a design one step further. He proactively contributes to how the product can be improved even more. I am already looking forward to all upcoming projects!'
               }
