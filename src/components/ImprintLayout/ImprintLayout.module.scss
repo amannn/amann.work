@@ -1,0 +1,13 @@
+@import '~styles/media-queries';
+
+.root {
+  padding: 0 24px;
+
+  @include match-medium {
+    padding: 0 40px;
+  }
+
+  @include match-large {
+    padding: 0;
+  }
+}
