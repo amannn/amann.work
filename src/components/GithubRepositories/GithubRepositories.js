@@ -1,5 +1,6 @@
 import React, {cloneElement, useState} from 'react';
 import ResponsiveGrid from 'components/ResponsiveGrid';
+import FadeIn from 'components/FadeIn';
 import GithubRepositoriesItem from './GithubRepositoriesItem';
 import styles from './GithubRepositories.module.scss';
 
@@ -19,8 +20,13 @@ export default function GithubRepositories({
   return (
     <>
       <ResponsiveGrid>
-        {paginatedNodes.map(repository => (
-          <GithubRepositoriesItem key={repository.id} repository={repository} />
+        {paginatedNodes.map((repository, index) => (
+          <FadeIn
+            key={repository.id}
+            delay={Math.max((index - (limit - pageSize)) * 0.15, 0)}
+          >
+            <GithubRepositoriesItem repository={repository} />
+          </FadeIn>
         ))}
       </ResponsiveGrid>
       {hasMore &&

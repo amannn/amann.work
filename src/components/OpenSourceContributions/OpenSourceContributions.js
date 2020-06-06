@@ -1,5 +1,6 @@
 import React, {cloneElement, useState} from 'react';
 import ResponsiveGrid from 'components/ResponsiveGrid';
+import FadeIn from 'components/FadeIn';
 import OpenSourceContributionsItem from './OpenSourceContributionsItem';
 import styles from './OpenSourceContributions.module.scss';
 
@@ -19,11 +20,13 @@ export default function OpenSourceContributions({
   return (
     <>
       <ResponsiveGrid>
-        {paginatedNodes.map(contribution => (
-          <OpenSourceContributionsItem
+        {paginatedNodes.map((contribution, index) => (
+          <FadeIn
             key={contribution.repository.id}
-            contribution={contribution}
-          />
+            delay={Math.max((index - (limit - pageSize)) * 0.15, 0)}
+          >
+            <OpenSourceContributionsItem contribution={contribution} />
+          </FadeIn>
         ))}
       </ResponsiveGrid>
       {hasMore &&
