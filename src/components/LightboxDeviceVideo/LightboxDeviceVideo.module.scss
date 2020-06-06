@@ -1,0 +1,29 @@
+@import '~styles/colors';
+@import '~styles/utils';
+
+.backdrop,
+.inner {
+  transition: 0.5s all cubic-bezier(0, 0, 0.2, 1);
+}
+
+.backdrop {
+  @include fullbleed(fixed);
+  background-color: rgba($black, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  max-width: none !important;
+
+  &_open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.outer {
+  z-index: 1;
+
+  &_open {
+    position: fixed;
+  }
+}

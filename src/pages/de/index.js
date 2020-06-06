@@ -1,4 +1,5 @@
 import React from 'react';
+import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import labels from 'localized/de/labels';
 import LocalizedFooter from 'localized/de/LocalizedFooter';
 import LocalizedHeader from 'localized/de/LocalizedHeader';
@@ -23,7 +24,6 @@ import {ServicesItem} from 'components/Services';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
-import ScreenVideo from 'components/ScreenVideo';
 
 export default function Index() {
   const posts = useBlogPosts();
@@ -88,7 +88,7 @@ export default function Index() {
               }
               personLink="https://www.flachsmann.at/"
               personName="Christof Flachsmann"
-              personTitle="UX Designer"
+              personTitle="UX/UI Designer"
               quote={
                 'Die Zusammenarbeit mit Jan war wie immer hervorragend. Als Designer kann ich mich darauf verlassen, dass das Endprodukt unkompliziert und pünktlich in Perfektion umgesetzt wird.\nBesonders schätze ich an Jan, dass er ein Design weiter denkt und sich proaktiv einbringt, wie man das Produkt noch weiter verbessern kann. Ich freue mich schon auf unser nächstes gemeinsames Projekt!'
               }
@@ -103,13 +103,10 @@ export default function Index() {
                   src={require('../../assets/setlist-edit-desktop.png')}
                 />
               </DeviceFrame>
-              <DeviceFrame>
-                <ScreenVideo
-                  autoPlay={false}
-                  poster={require('../../assets/setlist-edit-mobile-poster.png')}
-                  source={require('../../assets/setlist-edit-mobile.mp4')}
-                />
-              </DeviceFrame>
+              <LightboxDeviceVideo
+                poster={require('../../assets/setlist-edit-mobile-poster.png')}
+                source={require('../../assets/setlist-edit-mobile.mp4')}
+              />
             </ProjectVisual>
           }
         >

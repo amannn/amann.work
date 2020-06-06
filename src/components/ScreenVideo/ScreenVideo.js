@@ -1,11 +1,24 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 import cx from 'classnames';
 import Icon from 'components/Icon';
+import useOptionallyControlledState from 'hooks/useOptionallyControlledState';
 import styles from './ScreenVideo.module.scss';
 
-export default function ScreenVideo({autoPlay = true, poster, source, style}) {
+export default function ScreenVideo({
+  autoPlay = true,
+  isPlaying: receivedIsPlaying,
+  onIsPlayingChange,
+  poster,
+  source,
+  style
+}) {
+  const [isPlaying, setIsPlaying] = useOptionallyControlledState({
+    controlledValue: receivedIsPlaying,
+    initialValue: autoPlay,
+    onChange: onIsPlayingChange
+  });
+
   const videoRef = useRef();
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
   const areControlsVisible = !isPlaying;
   const type = 'video/' + source.split('.').pop();
 

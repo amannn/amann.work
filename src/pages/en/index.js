@@ -1,4 +1,5 @@
 import React from 'react';
+import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import labels from 'localized/en/labels';
 import LocalizedFooter from 'localized/en/LocalizedFooter';
 import LocalizedHeader from 'localized/en/LocalizedHeader';
@@ -23,7 +24,6 @@ import {ServicesItem} from 'components/Services';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
-import ScreenVideo from 'components/ScreenVideo';
 
 export default function Index() {
   const posts = useBlogPosts();
@@ -88,7 +88,7 @@ export default function Index() {
               }
               personLink="https://www.flachsmann.at/"
               personName="Christof Flachsmann"
-              personTitle="UX Designer"
+              personTitle="UX/UI Designer"
               quote={
                 'The cooperation with Jan was excellent as always. As a designer, I can rely on the fact that the final product is implemented pixel-perfect and on time.\nWhat I particularly appreciate about Jan is that he also thinks about how to take a design one step further. He proactively contributes to how the product can be improved even more. I am already looking forward to all upcoming projects!'
               }
@@ -103,13 +103,10 @@ export default function Index() {
                   src={require('../../assets/setlist-edit-desktop.png')}
                 />
               </DeviceFrame>
-              <DeviceFrame>
-                <ScreenVideo
-                  autoPlay={false}
-                  poster={require('../../assets/setlist-edit-mobile-poster.png')}
-                  source={require('../../assets/setlist-edit-mobile.mp4')}
-                />
-              </DeviceFrame>
+              <LightboxDeviceVideo
+                poster={require('../../assets/setlist-edit-mobile-poster.png')}
+                source={require('../../assets/setlist-edit-mobile.mp4')}
+              />
             </ProjectVisual>
           }
         >
