@@ -9,14 +9,8 @@ import {useEffect, useState} from 'react';
 // instances need to be notified when one device updates its width.
 let listeners = [];
 
-export default function useLoadedWidth(ref, onHasDimensions) {
+export default function useLoadedWidth(ref) {
   const [width, setWidth] = useState();
-
-  useEffect(() => {
-    if (width != null && onHasDimensions) {
-      onHasDimensions();
-    }
-  }, [onHasDimensions, width]);
 
   useEffect(() => {
     let isCanceled = false;

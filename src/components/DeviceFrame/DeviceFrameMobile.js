@@ -3,13 +3,9 @@ import useLoadedWidth from './useLoadedWidth';
 import useLayoutGetter from './useLayoutGetter';
 import styles from './DeviceFrameMobile.module.scss';
 
-export default function DeviceFrameMobile({
-  children,
-  onHasDimensions,
-  screenBackgroundColor
-}) {
+export default function DeviceFrameMobile({children, screenBackgroundColor}) {
   const rootRef = useRef();
-  const width = useLoadedWidth(rootRef, onHasDimensions);
+  const width = useLoadedWidth(rootRef);
   const getLayoutProps = useLayoutGetter(width, 180);
 
   const paddingVertical = 40;
