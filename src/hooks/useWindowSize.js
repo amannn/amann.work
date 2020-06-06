@@ -6,12 +6,8 @@ export default function useWindowSize() {
   useLayoutEffect(() => {
     function onResize() {
       setSize({
-        innerHeight: window.visualViewport
-          ? window.visualViewport.height
-          : window.innerHeight,
-        innerWidth: window.visualViewport
-          ? window.visualViewport.width
-          : window.innerWidth
+        innerHeight: window.innerHeight,
+        innerWidth: window.innerWidth
       });
     }
 
