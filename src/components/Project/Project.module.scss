@@ -80,9 +80,9 @@
   margin-top: 24px;
 }
 
-.testimonial {
-  $horizontal-line-length: 140px;
+$horizontal-line-length: 140px;
 
+.testimonial {
   position: relative;
   margin-top: 120px;
 
@@ -108,4 +108,13 @@
     height: 1px;
     background-color: $color-line;
   }
+}
+
+.testimonalLineAfter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  background-color: $color-line;
+  width: $horizontal-line-length;
 }

@@ -37,7 +37,10 @@ export default function Project({
       </div>
       {testimonial && (
         <Wrapper>
-          <div className={styles.testimonial}>{testimonial}</div>
+          <div className={styles.testimonial}>
+            {testimonial}
+            <span className={styles.testimonalLineAfter} />
+          </div>
         </Wrapper>
       )}
     </div>

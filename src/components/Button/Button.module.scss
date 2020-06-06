@@ -1,14 +1,20 @@
 @import '~styles/animations';
 @import '~styles/colors';
+@import '~styles/media-queries';
 @import '~styles/utils';
 
 .root {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 22px 32px; // Total height of 64px with caption inside.
+  padding: 22px 24px; // Total height of 64px with caption inside.
   background-color: $white;
   border: none;
+
+  @include match-medium {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   @include before {
     @include fullbleed;

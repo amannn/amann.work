@@ -17,10 +17,11 @@ import Button from 'components/Button';
 import DeviceFrame from 'components/DeviceFrame';
 import GithubRepositories from 'components/GithubRepositories';
 import OpenSourceContributions from 'components/OpenSourceContributions';
-import Section from 'components/Section';
-import Wrapper from 'components/Wrapper';
+import OpenSourceLayout from 'components/OpenSourceLayout';
 import ResponsiveGrid from 'components/ResponsiveGrid';
+import Section from 'components/Section';
 import {ServicesItem} from 'components/Services';
+import Wrapper from 'components/Wrapper';
 import useBlogPosts from 'hooks/useBlogPosts';
 import useOpenSourceContributions from 'hooks/useOpenSourceContributions';
 import useMaintainedOpenSourceRepositories from 'hooks/useMaintainedOpenSourceRepositories';
@@ -342,19 +343,26 @@ export default function Index() {
           <BlogRoll posts={posts} />
         </Wrapper>
       </Section>
-      <Section title="Open source libraries">
+      <Section
+        description="Ich bin dankbar, Teil einer Community zu sein, in der Ideen und Wissen offen geteilt werden. Mit veröffentlichten Libraries und der Mithilfe bei Projekten Dritter leiste ich meinen Beitrag."
+        title="Open source"
+      >
         <Wrapper background padding>
-          <GithubRepositories
-            repositories={repositories}
-            showMoreButton={<Button>Mehr anzeigen</Button>}
-          />
-        </Wrapper>
-      </Section>
-      <Section title="Open source contributions">
-        <Wrapper background padding>
-          <OpenSourceContributions
-            contributions={contributions}
-            showMoreButton={<Button>Mehr anzeigen</Button>}
+          <OpenSourceLayout
+            contributions={
+              <OpenSourceContributions
+                contributions={contributions}
+                showMoreButton={<Button>Mehr anzeigen</Button>}
+              />
+            }
+            contributionsTitle="Letzte Beiträge"
+            libraries={
+              <GithubRepositories
+                repositories={repositories}
+                showMoreButton={<Button>Mehr anzeigen</Button>}
+              />
+            }
+            librariesTitle="Meine Libraries"
           />
         </Wrapper>
       </Section>
