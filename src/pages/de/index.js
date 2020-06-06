@@ -179,90 +179,43 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectLink href="https://planung.kuechenfinder.com/">
-              Zur App
+            <ProjectLink href="https://www.kuechenfinder.com/kuechenplanung">
+              Küchenexperten finden
             </ProjectLink>
           }
-          id="kuechenfinder-configurator"
-          intro="Per Dialog zur neuen Küche"
-          title="Küchenfinder Planungsapp"
-          visual={
-            <ProjectVisual>
-              <DeviceFrame>
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-configurator-1.png')}
-                />
-              </DeviceFrame>
-              <DeviceFrame>
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-configurator-2.png')}
-                />
-              </DeviceFrame>
-              <DeviceFrame>
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-configurator-3.png')}
-                />
-              </DeviceFrame>
-            </ProjectVisual>
-          }
-        >
-          <ProjectParagraph>
-            Küchenfinder unterstützt Sie beim Kauf Ihrer neuen Küche. Wer
-            unentschlossen ist, kann sich mittels dieser App Frage für Frage zur
-            Traumküche durchklicken.
-          </ProjectParagraph>
-          <ProjectParagraph>
-            Küchenfinder ist ein Projekt von{' '}
-            <ProjectAnchor href="http://www.molindo.at">Molindo</ProjectAnchor>.
-            Mein Beitrag war die Umsetzung des Frontends mit React. Da bei
-            dieser App größtenteils Client-seitiger State anfällt, setzte ich
-            auf Redux als State Management Lösung.
-          </ProjectParagraph>
-        </Project>
-        <Project
-          cta={
-            <ProjectLink href="https://www.kuechenfinder.com/fuer-kuechenexperten">
-              Mehr erfahren
-            </ProjectLink>
-          }
-          id="kuechenfinder-shops"
+          id="kuechenfinder"
           intro="Datengetriebene Empfehlungen"
-          title="Dashboard für Küchenanbieter"
+          title="Küchenexperten-Suche"
           visual={
             <ProjectVisual>
-              <DeviceFrame type="mobile">
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-shops-mobile.png')}
-                />
-              </DeviceFrame>
               <DeviceFrame type="desktop">
                 <img
                   alt=""
                   src={require('../../assets/kfi-shops-desktop.png')}
                 />
               </DeviceFrame>
+              <DeviceFrame>
+                <img
+                  alt=""
+                  src={require('../../assets/kfi-configurator-1.png')}
+                />
+              </DeviceFrame>
             </ProjectVisual>
           }
         >
           <ProjectParagraph>
-            Jeden Monat informieren sich mehr als 120.000 Besucher auf
-            Küchenfinder. Anbieter können sich anmelden und Kriterien,
-            Leistungen & Daten erfassen, wodurch die Vermittlung von
-            Wunschkunden mittels einer{' '}
-            <ProjectAnchor href="https://www.kuechenfinder.com/kuechenplanung/">
-              Suchmaschine
-            </ProjectAnchor>{' '}
-            ermöglicht wird. Kundenanfragen können von Anbietern selbständig in
-            dieser App verwaltet werden.
+            Küchenfinder ist eine österreichische Plattform die von{' '}
+            <ProjectAnchor href="http://www.molindo.at">Molindo</ProjectAnchor>{' '}
+            entwickelt wird und Ihnen dabei hilft eine neue Küche zu finden.
+            Mehr als 2 Millionen Personen besuchen die Seite jährlich und
+            verwenden die datengetriebene Suchmaschine um qualifizierte Experten
+            zu finden.
           </ProjectParagraph>
           <ProjectParagraph>
-            Für diese App entwickelte ich eine Bibliothek, die mehr als 100
-            flexibel wiederverwendbare Komponenten umfasst und die Grundlage
-            sämtlicher Screens darstellt. Außerdem habe ich eine GraphQL API in
+            Ich habe mehrere React Apps für die Plattform entwickelt: Ein
+            Küchenkonfigurator für Kunden, eine App für Experten um
+            Kundenanfragen zu verwalten und eine App für Administratoren um
+            Stammdaten zu konfigurieren. Außerdem habe ich eine GraphQL API in
             Node.js implementiert, welche die verteilten Daten aus REST
             Microservices für Clients zugänglich macht.
           </ProjectParagraph>

@@ -176,90 +176,42 @@ export default function Index() {
         </Project>
         <Project
           cta={
-            <ProjectLink href="https://planung.kuechenfinder.com/">
-              See the app
+            <ProjectLink href="https://www.kuechenfinder.com/kuechenplanung">
+              Find a kitchen expert
             </ProjectLink>
           }
-          id="kuechenfinder-configurator"
-          intro="Guidance through conversation"
-          title="Kitchen planning app"
-          visual={
-            <ProjectVisual>
-              <DeviceFrame>
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-configurator-1.png')}
-                />
-              </DeviceFrame>
-              <DeviceFrame>
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-configurator-2.png')}
-                />
-              </DeviceFrame>
-              <DeviceFrame>
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-configurator-3.png')}
-                />
-              </DeviceFrame>
-            </ProjectVisual>
-          }
-        >
-          <ProjectParagraph>
-            Küchenfinder is an Austrian service which helps you to purchase your
-            new kitchen. The app guides you question by question to your dream
-            kitchen.
-          </ProjectParagraph>
-          <ProjectParagraph>
-            This is a project of{' '}
-            <ProjectAnchor href="http://www.molindo.at">Molindo</ProjectAnchor>.
-            My part was the implementation of the frontend with React. Since
-            this app has mostly client-side state, I used Redux for state
-            management.
-          </ProjectParagraph>
-        </Project>
-        <Project
-          cta={
-            <ProjectLink href="https://www.kuechenfinder.com/fuer-kuechenexperten">
-              Read more (DE)
-            </ProjectLink>
-          }
-          id="kuechenfinder-shops"
+          id="kuechenfinder"
           intro="Data-driven recommendations"
-          title="Dashboard for kitchen suppliers"
+          title="Kitchen expert search"
           visual={
             <ProjectVisual>
-              <DeviceFrame type="mobile">
-                <img
-                  alt=""
-                  src={require('../../assets/kfi-shops-mobile.png')}
-                />
-              </DeviceFrame>
               <DeviceFrame type="desktop">
                 <img
                   alt=""
                   src={require('../../assets/kfi-shops-desktop.png')}
                 />
               </DeviceFrame>
+              <DeviceFrame>
+                <img
+                  alt=""
+                  src={require('../../assets/kfi-configurator-1.png')}
+                />
+              </DeviceFrame>
             </ProjectVisual>
           }
         >
           <ProjectParagraph>
-            More than 2 million users visit Küchenfinder per year to learn about
-            kitchen-related topics. Suppliers can sign up to configure criteria
-            and services which in turn enables the recommendation of potential
-            customers via a{' '}
-            <ProjectAnchor href="https://www.kuechenfinder.com/kuechenplanung/">
-              search engine
-            </ProjectAnchor>
-            . Afterwards suppliers can use this app to manage their customer
-            requests.
+            Küchenfinder is an Austrian platform operated by{' '}
+            <ProjectAnchor href="http://www.molindo.at">Molindo</ProjectAnchor>,
+            which helps you to purchase a new kitchen. More than 2 million users
+            visit the site per year to leverage a data-driven search engine to
+            connect with qualified experts.
           </ProjectParagraph>
           <ProjectParagraph>
-            I developed a library comprising more than 100 reusable components
-            which represent the basis for all screens of this app. Further to
-            this, I developed a GraphQL API in Node.js that provides clients
+            I developed multiple React apps for the platform, covering a kitchen
+            configurator for customers, an app for experts to manage customer
+            inquiries and one for admins to configure core data. Further to
+            this, I developed a GraphQL API in Node.js which provides clients
             with performant access to distributed data from REST micro services.
           </ProjectParagraph>
         </Project>
