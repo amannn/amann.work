@@ -140,6 +140,51 @@ export default function Index() {
             </ProjectParagraph>
           </Project>
           <Project
+            cta={
+              <ProjectLink href="https://www.kuechenfinder.com/kuechenplanung">
+                Küchenexperten finden
+              </ProjectLink>
+            }
+            id="kuechenfinder"
+            intro="Datengetriebene Empfehlungen"
+            title="Küchenexperten-Suche"
+            visual={
+              <ProjectVisual>
+                <DeviceFrame type="desktop">
+                  <img
+                    alt=""
+                    src={require('../../assets/kfi-shops-desktop.png')}
+                  />
+                </DeviceFrame>
+                <DeviceFrame>
+                  <img
+                    alt=""
+                    src={require('../../assets/kfi-configurator-1.png')}
+                  />
+                </DeviceFrame>
+              </ProjectVisual>
+            }
+          >
+            <ProjectParagraph>
+              Küchenfinder ist eine österreichische Plattform die von{' '}
+              <ProjectAnchor href="http://www.molindo.at">
+                Molindo
+              </ProjectAnchor>{' '}
+              entwickelt wird und Ihnen dabei hilft eine neue Küche zu finden.
+              Mehr als 2 Millionen Personen besuchen die Seite jährlich und
+              verwenden die datengetriebene Suchmaschine um qualifizierte
+              Experten zu finden.
+            </ProjectParagraph>
+            <ProjectParagraph>
+              Ich habe mehrere React Apps für die Plattform entwickelt: Ein
+              Küchenkonfigurator für Kunden, eine App für Experten um
+              Kundenanfragen zu verwalten und eine App für Administratoren um
+              Stammdaten zu konfigurieren. Außerdem habe ich eine GraphQL API in
+              Node.js implementiert, welche die verteilten Daten aus REST
+              Microservices für Clients zugänglich macht.
+            </ProjectParagraph>
+          </Project>
+          <Project
             id="alpine"
             intro="Bausteine für anspruchsvolle User Interfaces"
             title="React-basierte Komponentenbibliothek"
@@ -185,51 +230,6 @@ export default function Index() {
               Design, Frontend Development, Code Review und die Definition von
               GraphQL APIs. Eine Palette von mehr als 150 Komponenten bildet nun
               die Grundlage für 20 Application Packages – Tendenz steigend.
-            </ProjectParagraph>
-          </Project>
-          <Project
-            cta={
-              <ProjectLink href="https://www.kuechenfinder.com/kuechenplanung">
-                Küchenexperten finden
-              </ProjectLink>
-            }
-            id="kuechenfinder"
-            intro="Datengetriebene Empfehlungen"
-            title="Küchenexperten-Suche"
-            visual={
-              <ProjectVisual>
-                <DeviceFrame type="desktop">
-                  <img
-                    alt=""
-                    src={require('../../assets/kfi-shops-desktop.png')}
-                  />
-                </DeviceFrame>
-                <DeviceFrame>
-                  <img
-                    alt=""
-                    src={require('../../assets/kfi-configurator-1.png')}
-                  />
-                </DeviceFrame>
-              </ProjectVisual>
-            }
-          >
-            <ProjectParagraph>
-              Küchenfinder ist eine österreichische Plattform die von{' '}
-              <ProjectAnchor href="http://www.molindo.at">
-                Molindo
-              </ProjectAnchor>{' '}
-              entwickelt wird und Ihnen dabei hilft eine neue Küche zu finden.
-              Mehr als 2 Millionen Personen besuchen die Seite jährlich und
-              verwenden die datengetriebene Suchmaschine um qualifizierte
-              Experten zu finden.
-            </ProjectParagraph>
-            <ProjectParagraph>
-              Ich habe mehrere React Apps für die Plattform entwickelt: Ein
-              Küchenkonfigurator für Kunden, eine App für Experten um
-              Kundenanfragen zu verwalten und eine App für Administratoren um
-              Stammdaten zu konfigurieren. Außerdem habe ich eine GraphQL API in
-              Node.js implementiert, welche die verteilten Daten aus REST
-              Microservices für Clients zugänglich macht.
             </ProjectParagraph>
           </Project>
           <Project

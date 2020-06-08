@@ -137,6 +137,50 @@ export default function Index() {
             </ProjectParagraph>
           </Project>
           <Project
+            cta={
+              <ProjectLink href="https://www.kuechenfinder.com/kuechenplanung">
+                Find a kitchen expert
+              </ProjectLink>
+            }
+            id="kuechenfinder"
+            intro="Data-driven recommendations"
+            title="Kitchen expert search"
+            visual={
+              <ProjectVisual>
+                <DeviceFrame type="desktop">
+                  <img
+                    alt=""
+                    src={require('../../assets/kfi-shops-desktop.png')}
+                  />
+                </DeviceFrame>
+                <DeviceFrame>
+                  <img
+                    alt=""
+                    src={require('../../assets/kfi-configurator-1.png')}
+                  />
+                </DeviceFrame>
+              </ProjectVisual>
+            }
+          >
+            <ProjectParagraph>
+              Küchenfinder is an Austrian platform operated by{' '}
+              <ProjectAnchor href="http://www.molindo.at">
+                Molindo
+              </ProjectAnchor>
+              , which helps you to purchase a new kitchen. More than 2 million
+              users visit the site per year to leverage a data-driven search
+              engine to connect with qualified experts.
+            </ProjectParagraph>
+            <ProjectParagraph>
+              I developed multiple React apps for the platform, covering a
+              kitchen configurator for customers, an app for experts to manage
+              customer inquiries and one for admins to configure core data.
+              Further to this, I developed a GraphQL API in Node.js which
+              provides clients with performant access to distributed data from
+              REST micro services.
+            </ProjectParagraph>
+          </Project>
+          <Project
             id="alpine"
             intro="Building blocks for ambitious user interfaces"
             title="React-based component library"
@@ -180,50 +224,6 @@ export default function Index() {
               design, frontend development, code reviews and the definition of
               GraphQL APIs. A set of more than 150 components now provide the
               foundation for 20 application packages and counting.
-            </ProjectParagraph>
-          </Project>
-          <Project
-            cta={
-              <ProjectLink href="https://www.kuechenfinder.com/kuechenplanung">
-                Find a kitchen expert
-              </ProjectLink>
-            }
-            id="kuechenfinder"
-            intro="Data-driven recommendations"
-            title="Kitchen expert search"
-            visual={
-              <ProjectVisual>
-                <DeviceFrame type="desktop">
-                  <img
-                    alt=""
-                    src={require('../../assets/kfi-shops-desktop.png')}
-                  />
-                </DeviceFrame>
-                <DeviceFrame>
-                  <img
-                    alt=""
-                    src={require('../../assets/kfi-configurator-1.png')}
-                  />
-                </DeviceFrame>
-              </ProjectVisual>
-            }
-          >
-            <ProjectParagraph>
-              Küchenfinder is an Austrian platform operated by{' '}
-              <ProjectAnchor href="http://www.molindo.at">
-                Molindo
-              </ProjectAnchor>
-              , which helps you to purchase a new kitchen. More than 2 million
-              users visit the site per year to leverage a data-driven search
-              engine to connect with qualified experts.
-            </ProjectParagraph>
-            <ProjectParagraph>
-              I developed multiple React apps for the platform, covering a
-              kitchen configurator for customers, an app for experts to manage
-              customer inquiries and one for admins to configure core data.
-              Further to this, I developed a GraphQL API in Node.js which
-              provides clients with performant access to distributed data from
-              REST micro services.
             </ProjectParagraph>
           </Project>
           <Project
