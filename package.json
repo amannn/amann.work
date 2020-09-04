@@ -55,7 +55,7 @@
     "gatsby-source-filesystem": "2.0.29",
     "graphql": "0.13.0",
     "node-fetch": "2.6.0",
-    "node-sass": "4.11.0",
+    "node-sass": "4.13.1",
     "prettier": "1.16.4"
   },
   "engines": {
