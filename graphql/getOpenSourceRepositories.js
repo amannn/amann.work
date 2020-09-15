@@ -3,8 +3,9 @@ const repositoryFragment = require('./repositoryFragment');
 
 const MAINTAINED_REPOSITORIES = [
   'molindo/react-apollo-network-status',
-  'amannn/multi-sitemap',
   'amannn/action-semantic-pull-request',
+  'amannn/next-client-script',
+  'amannn/multi-sitemap',
   'amannn/atom-format-javascript-comment',
   'molindo/eslint-config-molindo'
 ];

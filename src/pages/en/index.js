@@ -49,9 +49,9 @@ export default function Index() {
         <Wrapper>
           <ResponsiveGrid>
             <ServicesItem title="React apps">
-              With 5 years of experience with React and 4 years of GraphQL, I
-              can help you architect and build ambitious web apps that are a
-              pleasure to use.
+              With 10 years of experience with web apps and 5 years of React, I
+              can help you architect and build ambitious web experiences that
+              are a pleasure to use.
             </ServicesItem>
             <ServicesItem title="Component libraries">
               By identifying the fundamental building blocks and making them

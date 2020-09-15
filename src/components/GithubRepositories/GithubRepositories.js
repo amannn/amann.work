@@ -6,7 +6,7 @@ import styles from './GithubRepositories.module.scss';
 
 export default function GithubRepositories({
   repositories,
-  pageSize = 2,
+  pageSize = 4,
   showMoreButton
 }) {
   const [limit, setLimit] = useState(pageSize);
