@@ -29,6 +29,8 @@
       "title": "Selected projects",
       "showMore": "Show more projects",
       "setlistEdit": {
+        "intro": "Millions of setlists at your finger tips",
+        "title": "New editing experience for setlist.fm",
         "id": "setlist-edit",
         "visitsHref": "https://www.similarweb.com/website/setlist.fm#overview",
         "clientHref": "http://molindo.at",
@@ -43,6 +45,51 @@
           "personTitle": "UX/UI Designer",
           "personLink": "https://www.flachsmann.at/",
           "quote": "The cooperation with Jan was excellent as always. As a designer, I can rely on the fact that the final product is implemented pixel-perfect and on time.\nWhat I particularly appreciate about Jan is that he also thinks about how to take a design one step further. He proactively contributes to how the product can be improved even more. I am already looking forward to all upcoming projects!"
+        }
+      },
+      "kuechenfinder": {
+        "intro": "Data-driven recommendations",
+        "title": "Kitchen expert search",
+        "id": "kuechenfinder",
+        "clientHref": "http://molindo.at",
+        "description1": "Küchenfinder is an Austrian platform operated by <client>Molindo</client>, which helps you to purchase a new kitchen. More than 2 million users visit the site per year to leverage a data-driven search engine to connect with qualified experts.",
+        "description2": "I developed multiple React apps for the platform, covering a kitchen configurator for customers, an app for experts to manage customer inquiries and one for admins to configure core data. Further to this, I developed a GraphQL API in Node.js which provides clients with performant access to distributed data from REST micro services.",
+        "cta": {
+          "label": "Find a kitchen expert",
+          "href": "https://www.kuechenfinder.com/kuechenplanung"
+        }
+      },
+      "alpine": {
+        "intro": "Building blocks for ambitious user interfaces",
+        "title": "React-based component library",
+        "id": "alpine",
+        "clientHref": "https://www.alpine.com/",
+        "description1": "<client>Alpine Electronics</client> is an international enterprise specialising in car audio and navigation systems that are used by manufacturers such as BMW, Audi, Mercedes & many more. The company counts more than 13,000 employees and wanted to take their data management apps to the next level by utilising a React-based component library that can be composed in flexible ways.",
+        "almHref": "https://alm.sh/",
+        "peerigonHref": "https://peerigon.com/",
+        "composeUsHref": "https://compose.us/",
+        "description2": "To meet this challenge, a team of six frontend specialists from <alm>alm engineering</alm>, <peerigon>Peerigon</peerigon>, <composeUs>compose.us</composeUs> and me was formed. My contribution was to gather requirements in on-site workshops, specification of features & component APIs, UX design, frontend development, code reviews and the definition of GraphQL APIs. A set of more than 150 components now provide the foundation for 20 application packages and counting."
+      },
+      "zemtu": {
+        "intro": "Mobility for the future",
+        "title": "Carsharing app",
+        "id": "zemtu",
+        "description1": "In order to meet the high expectations of their international clients, the talented team of Zemtu is developing a modern mobile app which digitally depicts the process from making a reservation to unlocking a car.",
+        "description2": "In regular workshops I support the team with consultation and assistance with topics such as software architecture, React, GraphQL, animations and performance.",
+        "cta": {
+          "label": "Learn more",
+          "href": "https://www.zemtu.com/"
+        }
+      },
+      "shoemondo": {
+        "intro": "Price comparison for shoe lovers",
+        "title": "Launch of Shoemondo",
+        "id": "shoemondo",
+        "description1": "Shoemondo helps you to find your next favourite pair of shoes and recommends the cheapest store to buy them. As a first step, 12 partner stores where integrated in order to offer an extensive product range.",
+        "description2": "I designed the user interface and implemented it as a server side rendered React app which communicates with a GraphQL API.",
+        "cta": {
+          "label": "See the website",
+          "href": "https://www.shoemondo.com/uk"
         }
       }
     }
