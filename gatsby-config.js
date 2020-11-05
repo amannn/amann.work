@@ -29,7 +29,7 @@ module.exports = {
           {
             family: 'Ubuntu',
             subsets: ['latin'],
-            variants: ['300', '400']
+            variants: ['400', '500']
           }
         ]
       }

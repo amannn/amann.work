@@ -9,7 +9,7 @@
 .languageColor {
   display: inline-block;
   @include circle(10px);
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 .stargazers {
@@ -19,4 +19,8 @@
   * + & {
     margin-left: 16px;
   }
+}
+
+.stargazersIcon {
+  margin-right: 4px;
 }

@@ -30,7 +30,7 @@ export default function GithubRepositoriesItem({repository}) {
           </div>
         )}
         <Text className={styles.stargazers}>
-          <Icon color="grey" name="star" />{' '}
+          <Icon className={styles.stargazersIcon} color="grey" name="star" />
           {formatStargazers(repository.stargazers)}
         </Text>
       </div>

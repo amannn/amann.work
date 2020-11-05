@@ -8,9 +8,13 @@ $violet: #6544bc;
 
 $color-background: hsl(180, 25%, 97%);
 $color-background-dark: #303236;
-$color-line: rgba($black, 0.1);
+$color-line: hsl(180deg, 13%, 83%);
 $color-line-inverted: rgba($white, 0.1);
 $color-accent-light: #8bc1bf;
 $color-accent: $green;
 $color-pale: rgba($black, 0.5);
 $color-pale-inverted: rgba($white, 0.5);
+
+$color-text-dark: hsl(180, 35%, 12%);
+$color-text-normal: hsl(180deg, 35%, 6%);
+$color-text-light: hsl(180deg, 7%, 35%);

@@ -8,6 +8,8 @@ const EARLIEST_CONTRIBUTION_YEAR = 2013;
 const PR_REPO_OWNER_BLACKLIST = ['amannn', 'molindo', 'tools-aoeur'];
 // Not particularly interesting PRs.
 const PR_ID_BLACKLIST = [
+  'MDExOlB1bGxSZXF1ZXN0NTEzMDI3MzY2',
+  'MDExOlB1bGxSZXF1ZXN0NTEyMzM0MTg4',
   'MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz',
   'MDExOlB1bGxSZXF1ZXN0MzYwOTI4MzYw',
   'MDExOlB1bGxSZXF1ZXN0NDc0Nzk1MDc3'

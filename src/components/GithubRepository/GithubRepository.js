@@ -5,18 +5,26 @@ import Text from 'components/Text';
 import Link from 'components/Link';
 import styles from './GithubRepository.module.scss';
 
-export default function GithubRepository({children, repository}) {
+export default function GithubRepository({
+  children,
+  repository,
+  descriptionMaxLength = 85
+}) {
   function formatDescription(description) {
-    return (
-      description
-        // Remove emojis (https://stackoverflow.com/a/10999907/343045)
-        .replace(
-          /([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g,
-          ''
-        )
-        // Github uses proprietary emojis like ":recycle:".
-        .replace(/:\w+:/, '')
-    );
+    description = description
+      // Remove emojis (https://stackoverflow.com/a/10999907/343045)
+      .replace(
+        /([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g,
+        ''
+      )
+      // Github uses proprietary emojis like ":recycle:".
+      .replace(/:\w+:/, '');
+
+    if (description.length > descriptionMaxLength) {
+      description = description.slice(0, descriptionMaxLength) + '…';
+    }
+
+    return description;
   }
 
   return (
