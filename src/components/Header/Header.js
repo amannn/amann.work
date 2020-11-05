@@ -1,14 +1,12 @@
-import React from 'react';
 import cx from 'classnames';
-import {Link} from 'gatsby';
-import Wrapper from 'components/Wrapper';
+import Link from 'next/link';
 import Logo from 'components/Logo';
 import Text from 'components/Text';
+import Wrapper from 'components/Wrapper';
 import styles from './Header.module.scss';
 
 export default function Header({
   description,
-  homeLink,
   menu,
   showPortrait = false,
   subtitle,
@@ -20,8 +18,10 @@ export default function Header({
     >
       <Wrapper innerClassName={styles.inner}>
         <div className={styles.navigation}>
-          <Link to={homeLink}>
-            <Logo />
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
           </Link>
           <div className={styles.menu}>{menu}</div>
         </div>

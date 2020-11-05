@@ -18,11 +18,6 @@ yarn dev
 
 ```sh
 yarn build
-
-# Test locally
 yarn start
-
-# Push to production
-yarn deploy
 ```
 

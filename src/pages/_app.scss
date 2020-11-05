@@ -1,0 +1,21 @@
+@import '~styles/colors';
+@import '~styles/lib/reset';
+
+@include apply-reset();
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $color-background;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
