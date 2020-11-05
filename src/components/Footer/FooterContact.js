@@ -1,17 +1,16 @@
-import React, {useState} from 'react';
 import cx from 'classnames';
-import VisibilitySensor from 'components/VisibilitySensor';
-import Text from 'components/Text';
+import React, {useState} from 'react';
 import Icon from 'components/Icon';
+import Text from 'components/Text';
+import VisibilitySensor from 'components/VisibilitySensor';
+import useTranslations from 'hooks/useTranslations';
 import styles from './FooterContact.module.scss';
 
-export default function FooterContact({
-  email = 'jan@amann.me',
-  intro,
-  telephone = '+43 681 / 84 39 0 333',
-  title
-}) {
+export default function FooterContact() {
   const [animated, setAnimated] = useState(false);
+  const t = useTranslations('FooterContact');
+  const telephone = t('telephone');
+  const email = t('email');
 
   function onVisible() {
     if (!animated) {
@@ -25,10 +24,10 @@ export default function FooterContact({
     <>
       <VisibilitySensor onVisible={onVisible} />
       <Text color="paleInverted" component="h2" variant="label">
-        {intro}
+        {t('intro')}
       </Text>
       <Text color="accentLight" variant="h2">
-        {title}
+        {t('title')}
       </Text>
       <div>
         <a className={cx(styles.email, styles.item)} href={`mailto:${email}`}>

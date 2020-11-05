@@ -2,6 +2,7 @@ import {useRouter} from 'next/router';
 import React from 'react';
 import Button from 'components/Button';
 import DeviceFrame from 'components/DeviceFrame';
+import Footer from 'components/Footer';
 import Header, {HeaderMenuItem} from 'components/Header';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import Meta from 'components/Meta';
@@ -251,6 +252,8 @@ export default function Index() {
           </Project>
         </Projects>
       </Section>
+      <div style={{padding: 50}}>TODO</div>
+      <Footer />
     </>
   );
 }

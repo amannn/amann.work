@@ -1,4 +1,23 @@
 {
+  "Footer": {
+    "id": "contact",
+    "blog": "Blog",
+    "imprint": "Imprint",
+    "github": {
+      "label": "Github",
+      "href": "https://github.com/amannn"
+    },
+    "twitter": {
+      "label": "Twitter",
+      "href": "https://twitter.com/jamannnnnn"
+    }
+  },
+  "FooterContact": {
+    "email": "jan@amann.me",
+    "intro": "Planning a project?",
+    "telephone": "+43 681 / 84 39 0 333",
+    "title": "Let's talk!"
+  },
   "Index": {
     "header": {
       "title": "Jan Amann",
