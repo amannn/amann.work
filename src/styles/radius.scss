@@ -1,0 +1,7 @@
+@function radius($value) {
+  @if $value == 1 {
+    @return 4px;
+  }
+
+  @error "Unknown radius";
+}

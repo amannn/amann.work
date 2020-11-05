@@ -1,9 +1,11 @@
 @import '~styles/colors';
 @import '~styles/media-queries';
+@import '~styles/radius';
 
 .root {
   padding: 24px;
   background-color: $white;
+  border-radius: radius(1);
 
   @include match-medium {
     padding: 40px;

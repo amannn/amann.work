@@ -1,6 +1,7 @@
 @import '~styles/animations';
 @import '~styles/colors';
 @import '~styles/media-queries';
+@import '~styles/radius';
 @import '~styles/utils';
 
 $animated-offset: 4px;
@@ -24,6 +25,8 @@ $animated-offset: 4px;
     transform-origin: left;
     transform: scaleX(0);
     @include animate-slow;
+    border-top-left-radius: radius(1);
+    border-bottom-left-radius: radius(1);
   }
 
   &:hover,

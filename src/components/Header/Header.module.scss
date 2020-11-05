@@ -9,7 +9,8 @@
   background: $color-background;
 
   &_showPortrait .inner {
-    min-height: 80vh;
+    height: 80vh;
+    max-height: 800px;
   }
 }
 

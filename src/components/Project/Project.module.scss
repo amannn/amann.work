@@ -1,5 +1,6 @@
 @import '~styles/colors';
 @import '~styles/media-queries';
+@import '~styles/radius';
 @import '~styles/utils';
 
 .root {
@@ -41,6 +42,8 @@
   right: -100vw;
   bottom: 0;
   background-color: $color-background;
+  border-top-left-radius: radius(1);
+  border-bottom-left-radius: radius(1);
 
   @include match-large {
     left: 40px;

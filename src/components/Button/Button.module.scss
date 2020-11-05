@@ -1,6 +1,7 @@
 @import '~styles/animations';
 @import '~styles/colors';
 @import '~styles/media-queries';
+@import '~styles/radius';
 @import '~styles/utils';
 
 .root {
@@ -9,6 +10,7 @@
   align-items: center;
   padding: 22px 24px; // Total height of 64px with caption inside.
   border: none;
+  border-radius: radius(1);
 
   @include match-medium {
     padding-left: 40px;
@@ -21,6 +23,7 @@
     opacity: 0;
     transform: scale(1.1);
     @include animate-slow;
+    border-radius: radius(1);
   }
 
   &:hover,
