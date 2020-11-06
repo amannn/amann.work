@@ -1,0 +1,8 @@
+@import '~styles/media-queries';
+
+.root {
+  &_slim {
+    max-width: 600px;
+    margin: auto;
+  }
+}

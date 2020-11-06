@@ -8,9 +8,25 @@
   overflow: hidden;
   background: $color-background;
 
-  &_showPortrait .inner {
-    height: 80vh;
-    max-height: 800px;
+  &_showPortrait {
+    .text {
+      padding-top: 60px;
+      padding-left: 24px;
+
+      @include match-medium {
+        padding-top: 200px;
+        padding-left: 40px;
+      }
+
+      @include match-large {
+        padding-top: 280px;
+      }
+    }
+
+    .inner {
+      height: 80vh;
+      max-height: 800px;
+    }
   }
 }
 
@@ -94,21 +110,26 @@
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 60px 0 16px 24px;
+  padding-top: 40px;
+  padding-bottom: 16px;
   max-width: 500px;
 
   @include match-medium {
-    padding-top: 200px;
-    padding-left: 40px;
+    padding-top: 80px;
     padding-bottom: 40px;
     max-width: 400px;
   }
 
   @include match-large {
-    padding-top: 280px;
+    padding-top: 140px;
     padding-bottom: 80px;
-    padding-left: 0;
     max-width: 500px;
+  }
+
+  &_slim {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
   }
 }
 

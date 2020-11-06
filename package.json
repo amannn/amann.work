@@ -16,10 +16,13 @@
     "url": "https://github.com/amannn/amann.me"
   },
   "dependencies": {
+    "@mdx-js/react": "^1.6.19",
     "classnames": "2.2.6",
     "framer-motion": "2.0.0-beta.72",
+    "gray-matter": "^4.0.2",
     "intl-messageformat": "^9.3.13",
     "next": "10.0.1",
+    "next-mdx-enhanced": "^5.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },

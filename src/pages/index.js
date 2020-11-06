@@ -1,10 +1,10 @@
-import {useRouter} from 'next/router';
 import React from 'react';
+import BlogRoll from 'components/BlogRoll';
 import Button from 'components/Button';
 import DeviceFrame from 'components/DeviceFrame';
 import Footer from 'components/Footer';
 import GithubRepositories from 'components/GithubRepositories';
-import Header, {HeaderMenuItem} from 'components/Header';
+import Header from 'components/Header';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import Meta from 'components/Meta';
 import OpenSourceContributions from 'components/OpenSourceContributions';
@@ -22,21 +22,21 @@ import Section from 'components/Section';
 import {ServicesItem} from 'components/Services';
 import Wrapper from 'components/Wrapper';
 import useTranslations from 'hooks/useTranslations';
+import BlogRepository from 'repositories/BlogRepository';
 import GithubContributionsRepository from 'repositories/GithubContributionsRepository';
 
 export async function getStaticProps() {
   return {
     props: {
       openSourceContributions: await GithubContributionsRepository.getOpenSourceContributions(),
-      repositories: await GithubContributionsRepository.getOpenSourceRepositories()
+      repositories: await GithubContributionsRepository.getOpenSourceRepositories(),
+      posts: await BlogRepository.getPosts()
     }
   };
 }
 
-export default function Index({openSourceContributions, repositories}) {
+export default function Index({openSourceContributions, posts, repositories}) {
   const t = useTranslations('Index');
-  const router = useRouter();
-  const otherLocale = router.locales.find((cur) => cur !== router.locale);
 
   function linkFor(href) {
     // eslint-disable-next-line react/display-name
@@ -52,15 +52,6 @@ export default function Index({openSourceContributions, repositories}) {
       <Meta />
       <Header
         description={t('header.description')}
-        menu={
-          <>
-            <HeaderMenuItem href="/blog">Blog</HeaderMenuItem>
-            <HeaderMenuItem href="#contact">Contact</HeaderMenuItem>
-            <HeaderMenuItem color="pale" href="/" locale={otherLocale}>
-              {otherLocale.toUpperCase()}
-            </HeaderMenuItem>
-          </>
-        }
         showPortrait
         subtitle={t('header.tagline')}
         title={t('header.title')}
@@ -264,6 +255,11 @@ export default function Index({openSourceContributions, repositories}) {
             </ProjectParagraph>
           </Project>
         </Projects>
+      </Section>
+      <Section title={t('blog')}>
+        <Wrapper background padding>
+          <BlogRoll posts={posts} />
+        </Wrapper>
       </Section>
       <Section
         description={t('openSource.description')}

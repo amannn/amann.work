@@ -13,6 +13,10 @@
   &_background {
     background-color: $color-background;
   }
+
+  &_slim .inner {
+    max-width: 648px;
+  }
 }
 
 .inner {
