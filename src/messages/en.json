@@ -27,6 +27,9 @@
     "telephone": "+43 681 / 84 39 0 333",
     "title": "Let's talk!"
   },
+  "GithubRepositories": {
+    "showMore": "Show more"
+  },
   "Header": {
     "blog": "Blog",
     "contact": "Contact"
@@ -146,5 +149,11 @@
   "Meta": {
     "title": "Jan Amann – Partner for User Interface Engineering and Design",
     "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
+  },
+  "OpenSourceContributions": {
+    "showMore": "Show more"
+  },
+  "Projects": {
+    "showMore": "Show more projects"
   }
 }

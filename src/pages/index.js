@@ -78,11 +78,7 @@ export default function Index({openSourceContributions, posts, repositories}) {
         </Wrapper>
       </Section>
       <Section title={t('projects.title')}>
-        <Projects
-          showMoreButton={
-            <Button color="accent">{t('projects.showMore')}</Button>
-          }
-        >
+        <Projects>
           <Project
             cta={
               <ProjectLink href={t('projects.setlistEdit.cta.href')}>
@@ -270,16 +266,10 @@ export default function Index({openSourceContributions, posts, repositories}) {
             contributions={
               <OpenSourceContributions
                 contributions={openSourceContributions}
-                showMoreButton={<Button>{t('openSource.showMore')}</Button>}
               />
             }
             contributionsTitle={t('openSource.contributions')}
-            libraries={
-              <GithubRepositories
-                repositories={repositories}
-                showMoreButton={<Button>{t('openSource.showMore')}</Button>}
-              />
-            }
+            libraries={<GithubRepositories repositories={repositories} />}
             librariesTitle={t('openSource.libraries')}
           />
         </Wrapper>

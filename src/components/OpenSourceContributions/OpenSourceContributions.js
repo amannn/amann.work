@@ -1,14 +1,13 @@
-import React, {cloneElement, useState} from 'react';
+import React, {useState} from 'react';
+import Button from 'components/Button';
 import FadeIn from 'components/FadeIn';
 import ResponsiveGrid from 'components/ResponsiveGrid';
+import useTranslations from 'hooks/useTranslations';
 import styles from './OpenSourceContributions.module.scss';
 import OpenSourceContributionsItem from './OpenSourceContributionsItem';
 
-export default function OpenSourceContributions({
-  contributions,
-  pageSize = 4,
-  showMoreButton
-}) {
+export default function OpenSourceContributions({contributions, pageSize = 4}) {
+  const t = useTranslations('OpenSourceContributions');
   const [limit, setLimit] = useState(pageSize);
   const paginatedNodes = contributions.nodes.slice(0, limit);
   const hasMore = paginatedNodes.length < contributions.nodes.length;
@@ -29,11 +28,11 @@ export default function OpenSourceContributions({
           </FadeIn>
         ))}
       </ResponsiveGrid>
-      {hasMore &&
-        cloneElement(showMoreButton, {
-          className: styles.showMoreButton,
-          onClick: onShowMore
-        })}
+      {hasMore && (
+        <Button className={styles.showMoreButton} onClick={onShowMore}>
+          {t('showMore')}
+        </Button>
+      )}
     </>
   );
 }
