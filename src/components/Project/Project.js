@@ -1,5 +1,5 @@
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 import Text from 'components/Text';
 import Wrapper from 'components/Wrapper';
 import styles from './Project.module.scss';

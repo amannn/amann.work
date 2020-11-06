@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
-import useLoadedWidth from './useLoadedWidth';
-import useLayoutGetter from './useLayoutGetter';
 import styles from './DeviceFrameMobile.module.scss';
+import useLayoutGetter from './useLayoutGetter';
+import useLoadedWidth from './useLoadedWidth';
 
 export default function DeviceFrameMobile({children, screenBackgroundColor}) {
   const rootRef = useRef();

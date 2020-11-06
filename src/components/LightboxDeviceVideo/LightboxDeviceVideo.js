@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */
-import React, {useState, useRef, useCallback, useEffect} from 'react';
-import {motion} from 'framer-motion';
 import cx from 'classnames';
+import {motion} from 'framer-motion';
+import React, {useState, useRef, useCallback, useEffect} from 'react';
 import DeviceFrame from 'components/DeviceFrame';
 import ScreenVideo from 'components/ScreenVideo';
-import useWindowSize from 'hooks/useWindowSize';
 import useKeyboardShortcut from 'hooks/useKeyboardShortcut';
+import useWindowSize from 'hooks/useWindowSize';
 import styles from './LightboxDeviceVideo.module.scss';
 
 export default function LightboxDeviceVideo({poster, source}) {
@@ -47,7 +47,7 @@ export default function LightboxDeviceVideo({poster, source}) {
   useKeyboardShortcut({
     isActive: isPlaying,
     onKeyDown: useCallback(
-      event => {
+      (event) => {
         if (event.key === 'Escape') {
           onClose();
         }

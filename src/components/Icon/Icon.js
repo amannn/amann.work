@@ -1,6 +1,6 @@
 /* eslint-disable css-modules/no-unused-class */
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 import styles from './Icon.module.scss';
 
 const icons = {
@@ -69,7 +69,7 @@ const icons = {
   )
 };
 
-export default function Icon({color, className, size = 20, name}) {
+export default function Icon({className, color, name, size = 20}) {
   const icon = icons[name];
 
   if (!icon) {

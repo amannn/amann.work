@@ -1,8 +1,8 @@
 import React from 'react';
-import Wrapper from 'components/Wrapper';
 import Text from 'components/Text';
-import SectionTitle from './SectionTitle';
+import Wrapper from 'components/Wrapper';
 import styles from './Section.module.scss';
+import SectionTitle from './SectionTitle';
 
 export default function Section({children, description, title}) {
   return (

@@ -1,9 +1,12 @@
-import React, {Children, useState, cloneElement} from 'react';
 import {motion} from 'framer-motion';
+import React, {Children, useState} from 'react';
+import Button from 'components/Button';
 import Wrapper from 'components/Wrapper';
+import useTranslations from 'hooks/useTranslations';
 import styles from './Projects.module.scss';
 
-export default function Projects({children, pageSize = 3, showMoreButton}) {
+export default function Projects({children, pageSize = 3}) {
+  const t = useTranslations('Projects');
   const [limit, setLimit] = useState(pageSize);
   const projects = Children.toArray(children);
   const hasMore = limit < projects.length;
@@ -31,7 +34,11 @@ export default function Projects({children, pageSize = 3, showMoreButton}) {
         );
       })}
       {hasMore && (
-        <Wrapper>{cloneElement(showMoreButton, {onClick: onShowMore})}</Wrapper>
+        <Wrapper>
+          <Button color="accent" onClick={onShowMore}>
+            {t('showMore')}
+          </Button>
+        </Wrapper>
       )}
     </>
   );

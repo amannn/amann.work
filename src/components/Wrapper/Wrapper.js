@@ -1,5 +1,5 @@
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 import styles from './Wrapper.module.scss';
 
 export default function Wrapper({
@@ -8,13 +8,15 @@ export default function Wrapper({
   className,
   innerClassName,
   padding,
+  slim,
   style
 }) {
   return (
     <div
       className={cx(styles.root, className, {
         [styles.root_background]: background,
-        [styles.root_padding]: padding
+        [styles.root_padding]: padding,
+        [styles.root_slim]: slim
       })}
       style={style}
     >

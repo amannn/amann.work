@@ -1,9 +1,9 @@
 import React, {createRef, useEffect} from 'react';
 
 export default function VisibilitySensor({
-  onVisibleChange,
+  onInvisible,
   onVisible,
-  onInvisible
+  onVisibleChange
 }) {
   const rootRef = createRef();
 
@@ -11,7 +11,7 @@ export default function VisibilitySensor({
     const node = rootRef.current;
 
     function onIntersectionChange(records) {
-      records.forEach(record => {
+      records.forEach((record) => {
         if (record.intersectionRatio > 0) {
           if (onVisibleChange) onVisibleChange(true);
           if (onVisible) onVisible();

@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
-import useLoadedWidth from './useLoadedWidth';
-import useLayoutGetter from './useLayoutGetter';
 import styles from './DeviceFrameDesktop.module.scss';
+import useLayoutGetter from './useLayoutGetter';
+import useLoadedWidth from './useLoadedWidth';
 
 export default function DeviceFrameDesktop({children, screenBackgroundColor}) {
   const rootRef = useRef();
@@ -9,16 +9,18 @@ export default function DeviceFrameDesktop({children, screenBackgroundColor}) {
   const getLayoutProps = useLayoutGetter(width, 550);
   const toolbarIconSize = 6;
 
-  const ToolbarIcon = () => (
-    <span
-      className={styles.toolbarIcon}
-      style={getLayoutProps({
-        width: toolbarIconSize,
-        height: toolbarIconSize,
-        marginRight: 4
-      })}
-    />
-  );
+  function ToolbarIcon() {
+    return (
+      <span
+        className={styles.toolbarIcon}
+        style={getLayoutProps({
+          width: toolbarIconSize,
+          height: toolbarIconSize,
+          marginRight: 4
+        })}
+      />
+    );
+  }
 
   return (
     <div ref={rootRef} className={styles.root}>

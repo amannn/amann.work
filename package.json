@@ -1,66 +1,41 @@
 {
   "name": "amann.me",
   "private": true,
-  "description": "My personal website featuring some projects I worked on.",
+  "description": "My personal website featuring some projects I've worked on.",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf public .cache && gatsby build && rm public/index.html",
-    "lint": "eslint src functions/*.js",
-    "dev": "gatsby develop --host 0.0.0.0",
-    "start": "firebase serve --host 0.0.0.0",
-    "deploy": "firebase deploy"
+    "build": "next build",
+    "lint": "eslint src",
+    "dev": "next dev",
+    "start": "next start"
   },
   "author": "Jan Amann <jan@amann.me>",
   "repository": {
     "type": "git",
     "url": "https://github.com/amannn/amann.me"
   },
-  "resolutions": {
-    "graphql": "0.13.0"
-  },
   "dependencies": {
-    "@mdx-js/react": "1.0.6",
-    "accept-language": "3.0.18",
+    "@mdx-js/react": "^1.6.19",
     "classnames": "2.2.6",
+    "core-js": "^3.7.0",
     "framer-motion": "2.0.0-beta.72",
-    "gatsby": "2.3.5",
-    "intersection-observer": "0.6.0",
+    "gray-matter": "^4.0.2",
+    "intl-messageformat": "^9.3.13",
+    "next": "10.0.1",
+    "next-mdx-enhanced": "^5.0.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-helmet": "5.2.0"
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@babel/helper-validator-identifier": "^7.10.4",
-    "@mdx-js/mdx": "1.0.10",
-    "babel-eslint": "10.0.1",
-    "dotenv": "8.1.0",
-    "eslint": "5.16.0",
-    "eslint-config-molindo": "3.0.0",
-    "eslint-plugin-css-modules": "2.11.0",
-    "eslint-plugin-import": "2.16.0",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-prettier": "3.0.1",
-    "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-react-hooks": "1.6.0",
-    "firebase": "7.6.0",
-    "firebase-admin": "8.8.0",
-    "firebase-functions": "3.3.0",
-    "firebase-tools": "7.10.0",
-    "gatsby-mdx": "0.6.2",
-    "gatsby-plugin-i18n": "1.0.1",
-    "gatsby-plugin-prefetch-google-fonts": "1.4.2",
-    "gatsby-plugin-react-helmet": "3.0.12",
-    "gatsby-plugin-sass": "2.0.11",
-    "gatsby-plugin-sitemap": "2.0.12",
-    "gatsby-source-filesystem": "2.0.29",
-    "graphql": "0.13.0",
-    "node-fetch": "2.6.0",
-    "node-sass": "4.11.0",
-    "prettier": "1.16.4"
+    "eslint": "7.4.0",
+    "eslint-config-molindo": "5.0.1",
+    "next-images": "^1.6.2",
+    "next-videos": "^1.4.0",
+    "sass": "^1.29.0"
   },
   "engines": {
-    "node": "^10.0.0",
+    "node": "^14.0.0",
     "yarn": "^1.15.0"
   }
 }

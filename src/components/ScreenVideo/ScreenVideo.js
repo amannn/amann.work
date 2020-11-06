@@ -1,5 +1,5 @@
-import React, {useRef, useEffect} from 'react';
 import cx from 'classnames';
+import React, {useRef, useEffect} from 'react';
 import Icon from 'components/Icon';
 import useOptionallyControlledState from 'hooks/useOptionallyControlledState';
 import styles from './ScreenVideo.module.scss';

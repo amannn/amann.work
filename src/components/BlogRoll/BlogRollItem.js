@@ -1,12 +1,15 @@
-import React, {useState, useMemo} from 'react';
-import {Link} from 'gatsby';
+/* eslint-disable jsx-a11y/anchor-has-content */
 import cx from 'classnames';
-import Text from 'components/Text';
+import Link from 'next/link';
+import React, {useState, useMemo} from 'react';
 import Card from 'components/Card';
+import Text from 'components/Text';
+import useTranslations from 'hooks/useTranslations';
 import styles from './BlogRollItem.module.scss';
 
 export default function BlogRollItem({className, post}) {
   const [isHighlighted, setIsHighlighted] = useState(false);
+  const t = useTranslations('BlogRollItem');
 
   function onHighlight() {
     setIsHighlighted(true);
@@ -20,15 +23,16 @@ export default function BlogRollItem({className, post}) {
     () =>
       function Component(props) {
         return (
-          <Link
-            {...props}
-            className={cx(styles.root, className, props.className)}
-            onBlur={onUnhighlight}
-            onFocus={onHighlight}
-            onMouseOut={onUnhighlight}
-            onMouseOver={onHighlight}
-            to={post.href}
-          />
+          <Link href={post.href}>
+            <a
+              {...props}
+              className={cx(styles.root, className, props.className)}
+              onBlur={onUnhighlight}
+              onFocus={onHighlight}
+              onMouseOut={onUnhighlight}
+              onMouseOver={onHighlight}
+            />
+          </Link>
         );
       },
     [className, post.href]
@@ -46,7 +50,7 @@ export default function BlogRollItem({className, post}) {
         </Text>
         <Text className={styles.description}>{post.excerpt}</Text>
         <Text className={styles.published} color="pale">
-          {post.published}
+          {t('date', {date: new Date(post.date)})}
         </Text>
       </div>
     </Card>

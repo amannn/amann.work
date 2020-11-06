@@ -1,6 +1,6 @@
 import React from 'react';
-import DeviceFrameMobile from './DeviceFrameMobile';
 import DeviceFrameDesktop from './DeviceFrameDesktop';
+import DeviceFrameMobile from './DeviceFrameMobile';
 
 /**
  * Renders media like an image or a video within a device frame

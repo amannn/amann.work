@@ -1,14 +1,13 @@
-import React, {cloneElement, useState} from 'react';
-import ResponsiveGrid from 'components/ResponsiveGrid';
+import React, {useState} from 'react';
+import Button from 'components/Button';
 import FadeIn from 'components/FadeIn';
-import GithubRepositoriesItem from './GithubRepositoriesItem';
+import ResponsiveGrid from 'components/ResponsiveGrid';
+import useTranslations from 'hooks/useTranslations';
 import styles from './GithubRepositories.module.scss';
+import GithubRepositoriesItem from './GithubRepositoriesItem';
 
-export default function GithubRepositories({
-  repositories,
-  pageSize = 4,
-  showMoreButton
-}) {
+export default function GithubRepositories({pageSize = 4, repositories}) {
+  const t = useTranslations('GithubRepositories');
   const [limit, setLimit] = useState(pageSize);
   const paginatedNodes = repositories.nodes.slice(0, limit);
   const hasMore = paginatedNodes.length < repositories.nodes.length;
@@ -29,11 +28,11 @@ export default function GithubRepositories({
           </FadeIn>
         ))}
       </ResponsiveGrid>
-      {hasMore &&
-        cloneElement(showMoreButton, {
-          className: styles.showMoreButton,
-          onClick: onShowMore
-        })}
+      {hasMore && (
+        <Button className={styles.showMoreButton} onClick={onShowMore}>
+          {t('showMore')}
+        </Button>
+      )}
     </>
   );
 }

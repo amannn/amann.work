@@ -1,16 +1,40 @@
 import React from 'react';
-import cx from 'classnames';
+import Icon from 'components/Icon';
 import Wrapper from 'components/Wrapper';
+import useTranslations from 'hooks/useTranslations';
 import styles from './Footer.module.scss';
+import FooterContact from './FooterContact';
+import FooterMenuItem from './FooterMenuItem';
+import FooterSocialIcon from './FooterSocialIcon';
 
-export default function Footer({children, className, menu, social}) {
+export default function Footer() {
+  const t = useTranslations('Footer');
+
   return (
-    <div className={cx(styles.root, className)}>
+    <div className={styles.root}>
       <Wrapper>
-        {children}
+        <div id={t('id')}>
+          <FooterContact />
+        </div>
         <div className={styles.navigation}>
-          <div className={styles.menu}>{menu}</div>
-          <div>{social}</div>
+          <div className={styles.menu}>
+            <FooterMenuItem href="/blog">{t('blog')}</FooterMenuItem>
+            <FooterMenuItem href="/imprint">{t('imprint')}</FooterMenuItem>
+          </div>
+          <div>
+            <FooterSocialIcon
+              aria-label={t('github.label')}
+              href={t('github.href')}
+            >
+              <Icon name="github" />
+            </FooterSocialIcon>
+            <FooterSocialIcon
+              aria-label={t('twitter.label')}
+              href={t('twitter.href')}
+            >
+              <Icon name="twitter" />
+            </FooterSocialIcon>
+          </div>
         </div>
       </Wrapper>
     </div>

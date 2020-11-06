@@ -2,7 +2,7 @@ import React from 'react';
 import Text from 'components/Text';
 import styles from './Figure.module.scss';
 
-export default function Figure({children, caption}) {
+export default function Figure({caption, children}) {
   return (
     <figure className={styles.root}>
       {children}
