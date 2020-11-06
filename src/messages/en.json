@@ -2,6 +2,9 @@
   "BlogPost": {
     "date": "{date, date, medium}"
   },
+  "BlogPosts": {
+    "title": "Blog"
+  },
   "BlogRollItem": {
     "date": "{date, date, medium}"
   },
@@ -27,6 +30,15 @@
   "Header": {
     "blog": "Blog",
     "contact": "Contact"
+  },
+  "Imprint": {
+    "title": "Imprint",
+    "name": "Jan Amann",
+    "subline": "Partner for User Interface Engineering and Design",
+    "address": "Wiesenrainstraße 15\n6890 Lustenau\nAustria",
+    "uid": "UID: ATU70057369",
+    "contact": "E-Mail: jan@amann.me\nTel: +43 681 / 84 39 0 333",
+    "privacy": "No tracking, no privacy policy ✌️"
   },
   "Index": {
     "header": {
