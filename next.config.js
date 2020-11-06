@@ -13,9 +13,6 @@ module.exports = withMdxEnhanced(
       i18n: {
         locales: ['en', 'de'],
         defaultLocale: 'en'
-      },
-      experimental: {
-        optimizeFonts: true
       }
     })
   )
