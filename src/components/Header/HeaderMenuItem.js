@@ -18,7 +18,9 @@ export default function HeaderMenuItem({
   function onClick(event) {
     if (!isScrollLink) return;
 
-    const selector = event.target.getAttribute('href');
+    const selector = event.currentTarget
+      .getAttribute('href')
+      .replace(/.+#/, '#');
     const element = document.querySelector(selector);
 
     if (element.scrollIntoView) {
