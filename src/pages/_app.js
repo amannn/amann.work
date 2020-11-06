@@ -1,3 +1,4 @@
+import 'core-js/features/string/starts-with';
 import App from 'next/app';
 import {IntlMessagesContext} from 'hooks/useTranslations';
 import './_app.scss';

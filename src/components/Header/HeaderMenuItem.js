@@ -13,9 +13,8 @@ export default function HeaderMenuItem({
   href,
   locale
 }) {
-  const isScrollLink = href.startsWith('#');
-
   function onClick(event) {
+    const isScrollLink = href.startsWith('#');
     if (!isScrollLink) return;
 
     const selector = event.currentTarget
