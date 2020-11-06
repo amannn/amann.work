@@ -3,10 +3,10 @@ import Text from '../Text';
 import styles from './OpenSourceLayout.module.scss';
 
 export default function OpenSourceLayout({
-  librariesTitle,
-  libraries,
+  contributions,
   contributionsTitle,
-  contributions
+  libraries,
+  librariesTitle
 }) {
   return (
     <>

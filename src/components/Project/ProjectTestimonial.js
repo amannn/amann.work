@@ -4,9 +4,9 @@ import styles from './ProjectTestimonial.module.scss';
 
 export default function ProjectTestimonial({
   image,
+  personLink,
   personName,
   personTitle,
-  personLink,
   quote
 }) {
   const PersonNameComponent = useMemo(

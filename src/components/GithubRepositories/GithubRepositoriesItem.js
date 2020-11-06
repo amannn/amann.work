@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from 'components/Icon';
 import GithubRepository from 'components/GithubRepository';
+import Icon from 'components/Icon';
 import Text from 'components/Text';
 import styles from './GithubRepositoriesItem.module.scss';
 

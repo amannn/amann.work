@@ -22,7 +22,7 @@ export default function useLoadedWidth(ref) {
     }
 
     function notifyOtherListeners() {
-      listeners.forEach(listener => {
+      listeners.forEach((listener) => {
         if (listener !== updateWidth) listener();
       });
     }
@@ -31,7 +31,7 @@ export default function useLoadedWidth(ref) {
 
     const image = ref.current.querySelector('img');
     if (image) {
-      mediaLoadedPromise = new Promise(resolve => {
+      mediaLoadedPromise = new Promise((resolve) => {
         if (image.complete) {
           resolve();
         } else {
@@ -43,7 +43,7 @@ export default function useLoadedWidth(ref) {
 
     const video = ref.current.querySelector('video');
     if (video) {
-      mediaLoadedPromise = new Promise(resolve => {
+      mediaLoadedPromise = new Promise((resolve) => {
         const isAtLeastMetadataFetched = video.readyState >= 1;
 
         if (isAtLeastMetadataFetched) {
@@ -66,7 +66,7 @@ export default function useLoadedWidth(ref) {
     window.addEventListener('resize', updateWidth);
 
     return () => {
-      listeners = listeners.filter(listener => listener !== updateWidth);
+      listeners = listeners.filter((listener) => listener !== updateWidth);
 
       isCanceled = true;
       window.removeEventListener('resize', updateWidth);

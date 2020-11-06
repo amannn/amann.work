@@ -5,7 +5,7 @@ export default function useLayoutGetter(actualWidth, originalWidth) {
     const scale = actualWidth / originalWidth;
 
     const props = {};
-    Object.keys(template).forEach(key => {
+    Object.keys(template).forEach((key) => {
       props[key] = template[key] * scale;
     });
 

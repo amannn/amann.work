@@ -1,6 +1,6 @@
 /* eslint-disable css-modules/no-unused-class */
-import React from 'react';
 import cx from 'classnames';
+import React from 'react';
 import Text from 'components/Text';
 import styles from './Button.module.scss';
 

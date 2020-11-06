@@ -1,6 +1,5 @@
 import React from 'react';
 import BlogRoll from 'components/BlogRoll';
-import Button from 'components/Button';
 import DeviceFrame from 'components/DeviceFrame';
 import Footer from 'components/Footer';
 import GithubRepositories from 'components/GithubRepositories';

@@ -27,7 +27,7 @@ export default function useOptionallyControlledState({
   } else {
     return [
       stateValue,
-      value => {
+      (value) => {
         setStateValue(value);
         if (onChange) onChange(value);
       }
