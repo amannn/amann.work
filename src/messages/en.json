@@ -58,7 +58,7 @@
       },
       "componentLibraries": {
         "title": "Component libraries",
-        "description": "With 10 years of experience with web apps and 5 years of React, I can help you architect and build ambitious web experiences that are a pleasure to use."
+        "description": "By identifying the fundamental building blocks and making them available via a composable API, you can set your apps up for success."
       },
       "mobileApps": {
         "title": "Mobile apps",
@@ -148,7 +148,7 @@
   },
   "Meta": {
     "title": "Jan Amann – Partner for User Interface Engineering and Design",
-    "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
+    "description": "My passion is to create web-based products where design, usability and performance matter. I’m specialised in developing with React."
   },
   "OpenSourceContributions": {
     "showMore": "Show more"

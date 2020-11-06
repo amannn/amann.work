@@ -20,6 +20,7 @@
 
       @include match-large {
         padding-top: 280px;
+        padding-left: 0;
       }
     }
 
@@ -110,7 +111,7 @@
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 40px;
+  padding-top: 60px;
   padding-bottom: 16px;
   max-width: 500px;
 
