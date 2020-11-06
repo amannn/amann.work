@@ -1,5 +1,159 @@
 {
+  "BlogPost": {
+    "date": "{date, date, medium}"
+  },
+  "BlogPosts": {
+    "title": "Blog"
+  },
+  "BlogRollItem": {
+    "date": "{date, date, medium}"
+  },
+  "Footer": {
+    "id": "contact",
+    "blog": "Blog",
+    "imprint": "Impressum",
+    "github": {
+      "label": "Github",
+      "href": "https://github.com/amannn"
+    },
+    "twitter": {
+      "label": "Twitter",
+      "href": "https://twitter.com/jamannnnnn"
+    }
+  },
+  "FooterContact": {
+    "email": "jan@amann.me",
+    "intro": "Sie planen ein Projekt?",
+    "telephone": "+43 681 / 84 39 0 333",
+    "title": "Freut mich von Ihnen zu hören!"
+  },
+  "GithubRepositories": {
+    "showMore": "Show more"
+  },
+  "Header": {
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "Imprint": {
+    "title": "Impressum",
+    "name": "Jan Amann",
+    "subline": "Partner für User Interface Entwicklung und Design",
+    "address": "Wiesenrainstraße 15\n6890 Lustenau\nÖsterreich",
+    "uid": "UID: ATU70057369",
+    "contact": "E-Mail: jan@amann.me\nTel: +43 681 / 84 39 0 333",
+    "privacy": "Kein Tracking, keine Datenschutzerklärung ✌️"
+  },
   "Index": {
-    "home": "Heim"
+    "header": {
+      "title": "Jan Amann",
+      "tagline": "Partner for User Interface Engineering and Design",
+      "description": "My passion is to create web-based products where design, usability and performance matter. I’m specialised in developing with React."
+    },
+    "services": {
+      "title": "Services",
+      "description": "I work with startups and established companies alike. For me, the most important aspect of a project is to create a meaningful experience that provides added value for people.",
+      "reactApps": {
+        "title": "React apps",
+        "description": "With 10 years of experience with web apps and 5 years of React, I can help you architect and build ambitious web experiences that are a pleasure to use."
+      },
+      "componentLibraries": {
+        "title": "Component libraries",
+        "description": "With 10 years of experience with web apps and 5 years of React, I can help you architect and build ambitious web experiences that are a pleasure to use."
+      },
+      "mobileApps": {
+        "title": "Mobile apps",
+        "description": "Offering a great user experience on mobile means putting performance first. However there’s no need to compromise on animations and useful touch gestures."
+      },
+      "consulting": {
+        "title": "Consulting and code reviews",
+        "description": "I’m happy to share my knowledge in the context of plannings, workshops and reviews. I take the time to listen and will find the right solution together with your team."
+      }
+    },
+    "projects": {
+      "title": "Selected projects",
+      "showMore": "Show more projects",
+      "setlistEdit": {
+        "intro": "Millions of setlists at your finger tips",
+        "title": "New editing experience for setlist.fm",
+        "id": "setlist-edit",
+        "visitsHref": "https://www.similarweb.com/website/setlist.fm#overview",
+        "clientHref": "http://molindo.at",
+        "description1": "With <visits>millions of monthly visits</visits>, setlist.fm is one of the most popular music services worldwide and enables its users to share their knowledge about concert setlists. The team from <client>Molindo</client> set out to relaunch the core experience of adding and editing setlists and hired me to implement the user interface.",
+        "description2": "The frontend of the project consists of four React widgets. These integrate seamlessly with the existing web stack of the platform and communicate with a GraphQL API. To live up to the high expectations of mobile apps, the implementation places special focus on touch gestures, useful animations, runtime performance and an offline-first approach to data.",
+        "cta": {
+          "label": "Add a setlist",
+          "href": "https://www.setlist.fm/"
+        },
+        "testimonial": {
+          "personName": "Christof Flachsmann",
+          "personTitle": "UX/UI Designer",
+          "personLink": "https://www.flachsmann.at/",
+          "quote": "The cooperation with Jan was excellent as always. As a designer, I can rely on the fact that the final product is implemented pixel-perfect and on time.\nWhat I particularly appreciate about Jan is that he also thinks about how to take a design one step further. He proactively contributes to how the product can be improved even more. I am already looking forward to all upcoming projects!"
+        }
+      },
+      "kuechenfinder": {
+        "intro": "Data-driven recommendations",
+        "title": "Kitchen expert search",
+        "id": "kuechenfinder",
+        "clientHref": "http://molindo.at",
+        "description1": "Küchenfinder is an Austrian platform operated by <client>Molindo</client>, which helps you to purchase a new kitchen. More than 2 million users visit the site per year to leverage a data-driven search engine to connect with qualified experts.",
+        "description2": "I developed multiple React apps for the platform, covering a kitchen configurator for customers, an app for experts to manage customer inquiries and one for admins to configure core data. Further to this, I developed a GraphQL API in Node.js which provides clients with performant access to distributed data from REST micro services.",
+        "cta": {
+          "label": "Find a kitchen expert",
+          "href": "https://www.kuechenfinder.com/kuechenplanung"
+        }
+      },
+      "alpine": {
+        "intro": "Building blocks for ambitious user interfaces",
+        "title": "React-based component library",
+        "id": "alpine",
+        "clientHref": "https://www.alpine.com/",
+        "description1": "<client>Alpine Electronics</client> is an international enterprise specialising in car audio and navigation systems that are used by manufacturers such as BMW, Audi, Mercedes & many more. The company counts more than 13,000 employees and wanted to take their data management apps to the next level by utilising a React-based component library that can be composed in flexible ways.",
+        "almHref": "https://alm.sh/",
+        "peerigonHref": "https://peerigon.com/",
+        "composeUsHref": "https://compose.us/",
+        "description2": "To meet this challenge, a team of six frontend specialists from <alm>alm engineering</alm>, <peerigon>Peerigon</peerigon>, <composeUs>compose.us</composeUs> and me was formed. My contribution was to gather requirements in on-site workshops, specification of features & component APIs, UX design, frontend development, code reviews and the definition of GraphQL APIs. A set of more than 150 components now provide the foundation for 20 application packages and counting."
+      },
+      "zemtu": {
+        "intro": "Mobility for the future",
+        "title": "Carsharing app",
+        "id": "zemtu",
+        "description1": "In order to meet the high expectations of their international clients, the talented team of Zemtu is developing a modern mobile app which digitally depicts the process from making a reservation to unlocking a car.",
+        "description2": "In regular workshops I support the team with consultation and assistance with topics such as software architecture, React, GraphQL, animations and performance.",
+        "cta": {
+          "label": "Learn more",
+          "href": "https://www.zemtu.com/"
+        }
+      },
+      "shoemondo": {
+        "intro": "Price comparison for shoe lovers",
+        "title": "Launch of Shoemondo",
+        "id": "shoemondo",
+        "description1": "Shoemondo helps you to find your next favourite pair of shoes and recommends the cheapest store to buy them. As a first step, 12 partner stores where integrated in order to offer an extensive product range.",
+        "description2": "I designed the user interface and implemented it as a server side rendered React app which communicates with a GraphQL API.",
+        "cta": {
+          "label": "See the website",
+          "href": "https://www.shoemondo.com/uk"
+        }
+      }
+    },
+    "blog": "Latest articles",
+    "openSource": {
+      "title": "Open source",
+      "description": "I'm grateful to be part of a community where ideas and knowledge are openly shared. My contribution is to publish libraries and to participate in projects of others.",
+      "libraries": "My libraries",
+      "contributions": "Latest contributions",
+      "showMore": "Show more"
+    }
+  },
+  "Meta": {
+    "title": "Jan Amann – Partner for User Interface Engineering and Design",
+    "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
+  },
+  "OpenSourceContributions": {
+    "showMore": "Show more"
+  },
+  "Projects": {
+    "showMore": "Show more projects"
   }
 }
