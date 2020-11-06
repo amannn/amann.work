@@ -1,8 +1,8 @@
 import React, {cloneElement, useState} from 'react';
-import ResponsiveGrid from 'components/ResponsiveGrid';
 import FadeIn from 'components/FadeIn';
-import OpenSourceContributionsItem from './OpenSourceContributionsItem';
+import ResponsiveGrid from 'components/ResponsiveGrid';
 import styles from './OpenSourceContributions.module.scss';
+import OpenSourceContributionsItem from './OpenSourceContributionsItem';
 
 export default function OpenSourceContributions({
   contributions,

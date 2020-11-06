@@ -1,14 +1,13 @@
 import React from 'react';
-import {graphql} from 'gatsby';
 import Card from 'components/Card';
-import Text from 'components/Text';
 import Link from 'components/Link';
+import Text from 'components/Text';
 import styles from './GithubRepository.module.scss';
 
 export default function GithubRepository({
   children,
-  repository,
-  descriptionMaxLength = 85
+  descriptionMaxLength = 85,
+  repository
 }) {
   function formatDescription(description) {
     description = description
@@ -43,24 +42,3 @@ export default function GithubRepository({
     </Card>
   );
 }
-
-export const repositoryFragment = graphql`
-  fragment GithubRepository_repository on GithubRepository {
-    name
-    description
-    url
-    owner {
-      url
-      login
-    }
-    stargazers {
-      totalCount
-    }
-    languages {
-      nodes {
-        name
-        color
-      }
-    }
-  }
-`;

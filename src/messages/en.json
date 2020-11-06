@@ -111,6 +111,13 @@
           "href": "https://www.shoemondo.com/uk"
         }
       }
+    },
+    "openSource": {
+      "title": "Open source",
+      "description": "I'm grateful to be part of a community where ideas and knowledge are openly shared. My contribution is to publish libraries and to participate in projects of others.",
+      "libraries": "My libraries",
+      "contributions": "Latest contributions",
+      "showMore": "Show more"
     }
   },
   "Meta": {

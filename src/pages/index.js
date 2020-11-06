@@ -3,9 +3,12 @@ import React from 'react';
 import Button from 'components/Button';
 import DeviceFrame from 'components/DeviceFrame';
 import Footer from 'components/Footer';
+import GithubRepositories from 'components/GithubRepositories';
 import Header, {HeaderMenuItem} from 'components/Header';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import Meta from 'components/Meta';
+import OpenSourceContributions from 'components/OpenSourceContributions';
+import OpenSourceLayout from 'components/OpenSourceLayout';
 import Project, {
   ProjectAnchor,
   ProjectLink,
@@ -19,8 +22,18 @@ import Section from 'components/Section';
 import {ServicesItem} from 'components/Services';
 import Wrapper from 'components/Wrapper';
 import useTranslations from 'hooks/useTranslations';
+import GithubContributionsRepository from 'repositories/GithubContributionsRepository';
 
-export default function Index() {
+export async function getStaticProps() {
+  return {
+    props: {
+      openSourceContributions: await GithubContributionsRepository.getOpenSourceContributions(),
+      repositories: await GithubContributionsRepository.getOpenSourceRepositories()
+    }
+  };
+}
+
+export default function Index({openSourceContributions, repositories}) {
   const t = useTranslations('Index');
   const router = useRouter();
   const otherLocale = router.locales.find((cur) => cur !== router.locale);
@@ -252,7 +265,29 @@ export default function Index() {
           </Project>
         </Projects>
       </Section>
-      <div style={{padding: 50}}>TODO</div>
+      <Section
+        description={t('openSource.description')}
+        title={t('openSource.title')}
+      >
+        <Wrapper background padding>
+          <OpenSourceLayout
+            contributions={
+              <OpenSourceContributions
+                contributions={openSourceContributions}
+                showMoreButton={<Button>{t('openSource.showMore')}</Button>}
+              />
+            }
+            contributionsTitle={t('openSource.contributions')}
+            libraries={
+              <GithubRepositories
+                repositories={repositories}
+                showMoreButton={<Button>{t('openSource.showMore')}</Button>}
+              />
+            }
+            librariesTitle={t('openSource.libraries')}
+          />
+        </Wrapper>
+      </Section>
       <Footer />
     </>
   );
