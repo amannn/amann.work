@@ -1,4 +1,5 @@
 import React from 'react';
+import Anchor from 'components/Anchor';
 import Layout from 'components/Layout';
 import Meta from 'components/Meta';
 import Text from 'components/Text';
@@ -27,7 +28,16 @@ export default function Imprint() {
         <Text className={styles.line} marginBottom>
           {t('contact')}
         </Text>
-        <Text className={styles.line}>{t('privacy')}</Text>
+        <Text className={styles.line}>
+          {t('privacy', {
+            // eslint-disable-next-line react/display-name
+            privacyLink: (children) => (
+              <Anchor key="privacyLink" href={t('privacyHref')}>
+                {children}
+              </Anchor>
+            )
+          })}
+        </Text>
       </Layout>
     </>
   );
