@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "next build",
+    "build": "next build && node scripts/createSitemap.js",
     "lint": "eslint src",
     "dev": "next dev",
     "start": "next start"
@@ -28,6 +28,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@sergeymyssak/nextjs-sitemap": "^1.1.1",
     "eslint": "7.4.0",
     "eslint-config-molindo": "5.0.1",
     "next-images": "^1.6.2",

@@ -1291,6 +1291,13 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.2.tgz#a8d0048fed2885802351144bfc651f06b5178521"
   integrity sha512-X02i2RNDDXioOmWs2zejBtLvdTaC82ltoGFBWtdhuIoBN1tH2uGxgPterxX/hBWTCprSxVaigMK43qs76qnIgw==
 
+"@sergeymyssak/nextjs-sitemap@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@sergeymyssak/nextjs-sitemap/-/nextjs-sitemap-1.1.1.tgz#6208316926d2d126e72576e0a5ecdbb35f83efbc"
+  integrity sha512-LadL2a4MSSkf/8AzE7J/06mC7gwk7MSPuASVW7j7sEr6l0Pi453C9dagjieCLdXyuPA3UW2ANsklRUzB9qh1uA==
+  dependencies:
+    date-fns "^2.15.0"
+
 "@types/eslint-visitor-keys@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#1ee30d79544ca84d68d4b3cdb0af4f205663dd2d"
@@ -2687,6 +2694,11 @@ data-uri-to-buffer@3.0.0:
   integrity sha512-MJ6mFTZ+nPQO+39ua/ltwNePXrfdF3Ww0wP1Od7EePySXN1cP9XNqRQOG3FxTfipp8jx898LUCgBCEP11Qw/ZQ==
   dependencies:
     buffer-from "^1.1.1"
+
+date-fns@^2.15.0:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
+  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
 
 date-now@^0.1.4:
   version "0.1.4"
