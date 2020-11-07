@@ -1,13 +1,10 @@
 import React from 'react';
-import BlogRoll from 'components/BlogRoll';
+import CardLink from 'components/CardLink';
 import DeviceFrame from 'components/DeviceFrame';
 import Footer from 'components/Footer';
-import GithubRepositories from 'components/GithubRepositories';
 import Header from 'components/Header';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import Meta from 'components/Meta';
-import OpenSourceContributions from 'components/OpenSourceContributions';
-import OpenSourceLayout from 'components/OpenSourceLayout';
 import Project, {
   ProjectAnchor,
   ProjectLink,
@@ -21,20 +18,9 @@ import Section from 'components/Section';
 import {ServicesItem} from 'components/Services';
 import Wrapper from 'components/Wrapper';
 import useTranslations from 'hooks/useTranslations';
-import BlogRepository from 'repositories/BlogRepository';
-import GithubContributionsRepository from 'repositories/GithubContributionsRepository';
+import styles from './index.module.scss';
 
-export async function getStaticProps() {
-  return {
-    props: {
-      openSourceContributions: await GithubContributionsRepository.getOpenSourceContributions(),
-      repositories: await GithubContributionsRepository.getOpenSourceRepositories(),
-      posts: await BlogRepository.getPosts()
-    }
-  };
-}
-
-export default function Index({openSourceContributions, posts, repositories}) {
+export default function Index() {
   const t = useTranslations('Index');
 
   function linkFor(href) {
@@ -251,28 +237,20 @@ export default function Index({openSourceContributions, posts, repositories}) {
           </Project>
         </Projects>
       </Section>
-      <Section title={t('blog')}>
-        <Wrapper background padding>
-          <BlogRoll posts={posts} />
-        </Wrapper>
-      </Section>
-      <Section
-        description={t('openSource.description')}
-        title={t('openSource.title')}
-      >
-        <Wrapper background padding>
-          <OpenSourceLayout
-            contributions={
-              <OpenSourceContributions
-                contributions={openSourceContributions}
-              />
-            }
-            contributionsTitle={t('openSource.contributions')}
-            libraries={<GithubRepositories repositories={repositories} />}
-            librariesTitle={t('openSource.libraries')}
+      <Wrapper background className={styles.links}>
+        <ResponsiveGrid>
+          <CardLink
+            description={t('links.blog.description')}
+            href="/blog"
+            title={t('links.blog.title')}
           />
-        </Wrapper>
-      </Section>
+          <CardLink
+            description={t('links.openSource.description')}
+            href="/open-source"
+            title={t('links.openSource.title')}
+          />
+        </ResponsiveGrid>
+      </Wrapper>
       <Footer />
     </>
   );

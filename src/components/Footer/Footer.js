@@ -19,6 +19,9 @@ export default function Footer() {
         <div className={styles.navigation}>
           <div className={styles.menu}>
             <FooterMenuItem href="/blog">{t('blog')}</FooterMenuItem>
+            <FooterMenuItem href="/open-source">
+              {t('openSource')}
+            </FooterMenuItem>
             <FooterMenuItem href="/imprint">{t('imprint')}</FooterMenuItem>
           </div>
           <div>

@@ -32,6 +32,9 @@ export default function Header({
           </Link>
           <div className={styles.menu}>
             <HeaderMenuItem href="/blog">{t('blog')}</HeaderMenuItem>
+            <HeaderMenuItem href="/open-source">
+              {t('openSource')}
+            </HeaderMenuItem>
             <HeaderMenuItem href="#contact">{t('contact')}</HeaderMenuItem>
             <HeaderMenuItem color="pale" href="/" locale={otherLocale}>
               {otherLocale.toUpperCase()}

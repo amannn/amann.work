@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import cx from 'classnames';
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 import React from 'react';
 import Text from 'components/Text';
 import styles from './HeaderMenuItem.module.scss';
@@ -13,6 +14,9 @@ export default function HeaderMenuItem({
   href,
   locale
 }) {
+  const router = useRouter();
+  const isActive = href === router.pathname;
+
   function onClick(event) {
     const isScrollLink = href.startsWith('#');
     if (!isScrollLink) return;
@@ -32,7 +36,10 @@ export default function HeaderMenuItem({
 
   return (
     <Link href={href} locale={locale}>
-      <a className={cx(styles.root, className)} onClick={onClick}>
+      <a
+        className={cx(styles.root, className, isActive && styles.root_active)}
+        onClick={onClick}
+      >
         <Text color={color} component="span" variant="label">
           {children}
         </Text>

@@ -34,7 +34,7 @@ export default function Projects({children, pageSize = 3}) {
         );
       })}
       {hasMore && (
-        <Wrapper>
+        <Wrapper className={styles.showMoreWrapper}>
           <Button color="accent" onClick={onShowMore}>
             {t('showMore')}
           </Button>

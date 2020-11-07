@@ -2,7 +2,7 @@
 
 .root {
   > *:not(:first-child) {
-    margin-top: 40px;
+    margin-top: 20px;
 
     @include match-medium {
       margin-top: 0;

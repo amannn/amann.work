@@ -12,21 +12,27 @@
     .text {
       padding-top: 60px;
       padding-left: 24px;
+      padding-bottom: 12px;
 
       @include match-medium {
         padding-top: 200px;
         padding-left: 40px;
+        padding-bottom: 40px;
       }
 
       @include match-large {
         padding-top: 280px;
         padding-left: 0;
+        padding-bottom: 80px;
       }
     }
 
     .inner {
-      height: 80vh;
       max-height: 800px;
+
+      @include match-medium {
+        height: 80vh;
+      }
     }
   }
 }
@@ -112,17 +118,16 @@
   flex-direction: column;
   justify-content: flex-end;
   padding-top: 60px;
-  padding-bottom: 16px;
+  padding-bottom: 40px;
   max-width: 500px;
 
   @include match-medium {
     padding-top: 80px;
-    padding-bottom: 40px;
     max-width: 400px;
   }
 
   @include match-large {
-    padding-top: 140px;
+    padding-top: 200px;
     padding-bottom: 80px;
     max-width: 500px;
   }

@@ -11,6 +11,7 @@
   "Footer": {
     "id": "contact",
     "blog": "Blog",
+    "openSource": "Open Source",
     "imprint": "Impressum",
     "github": {
       "label": "Github",
@@ -32,6 +33,7 @@
   },
   "Header": {
     "blog": "Blog",
+    "openSource": "Open Source",
     "contact": "Kontakt"
   },
   "Imprint": {
@@ -138,18 +140,25 @@
         }
       }
     },
-    "blog": "Letzte Artikel",
-    "openSource": {
-      "title": "Open Source",
-      "description": "Ich bin dankbar, Teil einer Community zu sein, in der Ideen und Wissen offen geteilt werden. Mit veröffentlichten Libraries und der Mithilfe bei Projekten Dritter leiste ich meinen Beitrag.",
-      "libraries": "Meine Libraries",
-      "contributions": "Letzte Beiträge",
-      "showMore": "Mehr anzeigen"
+    "links": {
+      "blog": {
+        "title": "Blog",
+        "description": "Meine Entdeckungen um User Experiences mit Animationen und Touch-Gesten zu verbessern."
+      },
+      "openSource": {
+        "title": "Open source",
+        "description": "Ideen verpackt in wiederverwendbare Libraries und Beiträge für die Community."
+      }
     }
   },
   "Meta": {
     "title": "Jan Amann – Partner für User Interface Entwicklung und Design",
     "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
+  },
+  "OpenSource": {
+    "title": "Open Source",
+    "description": "Ich bin dankbar, Teil einer Community zu sein, in der Ideen und Wissen offen geteilt werden. Mit veröffentlichten Libraries und der Mithilfe bei Projekten Dritter leiste ich meinen Beitrag.",
+    "contributions": "Letzte Beiträge"
   },
   "OpenSourceContributions": {
     "showMore": "Mehr anzeigen"
