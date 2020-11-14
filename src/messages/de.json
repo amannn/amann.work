@@ -1,12 +1,6 @@
 {
-  "BlogPost": {
-    "date": "{date, date, medium}"
-  },
   "BlogPosts": {
     "title": "Blog"
-  },
-  "BlogRollItem": {
-    "date": "{date, date, medium}"
   },
   "Footer": {
     "id": "contact",

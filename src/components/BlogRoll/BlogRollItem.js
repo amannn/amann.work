@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import CardLink from 'components/CardLink';
 import Text from 'components/Text';
-import useTranslations from 'hooks/useTranslations';
+import useDateFormatting from 'hooks/useDateFormatting';
 import styles from './BlogRollItem.module.scss';
 
 export default function BlogRollItem({className, post}) {
-  const t = useTranslations('BlogRollItem');
+  const formatDate = useDateFormatting();
 
   return (
     <CardLink
@@ -15,7 +15,7 @@ export default function BlogRollItem({className, post}) {
       title={post.title}
     >
       <Text className={styles.published} color="pale">
-        {t('date', {date: new Date(post.date)})}
+        {formatDate(new Date(post.date))}
       </Text>
     </CardLink>
   );
