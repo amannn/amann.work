@@ -1,0 +1,14 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+
+.list {
+  padding: 80px 0;
+
+  @include match-medium {
+    padding: 160px 0;
+  }
+
+  & > * + * {
+    margin-top: 120px;
+  }
+}

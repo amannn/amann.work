@@ -11,11 +11,12 @@ export default function HeaderMenuItem({
   children,
   className,
   color,
+  detectActive = true,
   href,
   locale
 }) {
   const router = useRouter();
-  const isActive = href === router.pathname;
+  const isActive = detectActive && href === router.pathname;
 
   function onClick(event) {
     const isScrollLink = href.startsWith('#');

@@ -11,6 +11,7 @@ import HeaderMenuItem from './HeaderMenuItem';
 export default function Header({
   description = undefined,
   slim = false,
+  hasBackground = true,
   showPortrait = false,
   subtitle = undefined,
   title
@@ -21,7 +22,11 @@ export default function Header({
 
   return (
     <div
-      className={cx(styles.root, {[styles.root_showPortrait]: showPortrait})}
+      className={cx(
+        styles.root,
+        showPortrait && styles.root_showPortrait,
+        hasBackground && styles.root_background
+      )}
     >
       <Wrapper innerClassName={styles.inner}>
         <div className={styles.navigation}>
@@ -31,12 +36,18 @@ export default function Header({
             </a>
           </Link>
           <div className={styles.menu}>
+            <HeaderMenuItem href="/work">{t('work')}</HeaderMenuItem>
             <HeaderMenuItem href="/blog">{t('blog')}</HeaderMenuItem>
             <HeaderMenuItem href="/open-source">
               {t('openSource')}
             </HeaderMenuItem>
             <HeaderMenuItem href="#contact">{t('contact')}</HeaderMenuItem>
-            <HeaderMenuItem color="pale" href="/" locale={otherLocale}>
+            <HeaderMenuItem
+              color="pale"
+              detectActive={false}
+              href="/"
+              locale={otherLocale}
+            >
               {otherLocale.toUpperCase()}
             </HeaderMenuItem>
           </div>

@@ -1,7 +1,7 @@
 import cx from 'classnames';
 import React, {useRef, useEffect} from 'react';
+import useOptionallyControlledState from 'use-optionally-controlled-state';
 import Icon from 'components/Icon';
-import useOptionallyControlledState from 'hooks/useOptionallyControlledState';
 import styles from './ScreenVideo.module.scss';
 
 export default function ScreenVideo({

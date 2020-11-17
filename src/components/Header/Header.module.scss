@@ -6,7 +6,10 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: $color-background;
+
+  &_background {
+    background: $color-background;
+  }
 
   &_showPortrait {
     .text {
@@ -28,7 +31,7 @@
     }
 
     .inner {
-      max-height: 800px;
+      max-height: 760px;
 
       @include match-medium {
         height: 80vh;

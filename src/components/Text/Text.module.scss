@@ -17,6 +17,7 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
   font-family: $font-stack-sans-serif;
   -webkit-font-smoothing: antialiased;
   @include animate-slow(color);
+  white-space: pre-wrap;
 
   /**
    * Variants
