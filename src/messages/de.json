@@ -1,6 +1,7 @@
 {
   "BlogPosts": {
-    "title": "Blog"
+    "title": "Blog",
+    "description": "Meine Experimente um User Experiences mit Animationen und Touch-Gesten zu verbessern."
   },
   "Footer": {
     "id": "contact",
