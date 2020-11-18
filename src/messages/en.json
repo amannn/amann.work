@@ -82,6 +82,13 @@
     "title": "Jan Amann – Partner for User Interface Engineering and Design",
     "description": "My passion is to create web-based products where design, usability and performance matter. I’m specialised in developing with React."
   },
+  "NavigationMenu": {
+    "home": "Home",
+    "work": "Work",
+    "blog": "Blog",
+    "openSource": "Open source",
+    "contact": "Contact"
+  },
   "OpenSource": {
     "title": "Open source",
     "description": "I'm grateful to be part of a community where ideas and knowledge are openly shared. My contribution is to publish libraries and to participate in projects of others.",

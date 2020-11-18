@@ -1,7 +1,7 @@
 import 'core-js/features/string/starts-with';
 import NextApp from 'next/app';
 import {memo, useMemo} from 'react';
-import OffCanvas from 'components/OffCanvas';
+import Navigation from 'components/Navigation';
 import {IntlMessagesContext} from 'hooks/useTranslations';
 import './_app.scss';
 
@@ -13,9 +13,9 @@ export default function App({Component, messages, pageProps}) {
 
   return (
     <IntlMessagesContext.Provider value={messages}>
-      <OffCanvas>
+      <Navigation>
         <StaticComponent {...pageProps} />
-      </OffCanvas>
+      </Navigation>
     </IntlMessagesContext.Provider>
   );
 }

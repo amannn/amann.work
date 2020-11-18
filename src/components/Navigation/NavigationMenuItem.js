@@ -6,9 +6,9 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import React from 'react';
 import Text from 'components/Text';
-import styles from './OffCanvasMenuItem.module.scss';
+import styles from './NavigationMenuItem.module.scss';
 
-export default function OffCanvasMenuItem({
+export default function NavigationMenuItem({
   children,
   className,
   color = 'white',
@@ -16,6 +16,7 @@ export default function OffCanvasMenuItem({
   detectActive = true,
   href,
   locale,
+  onClick,
   transition,
   variant = 'h3'
 }) {
@@ -26,7 +27,9 @@ export default function OffCanvasMenuItem({
     color = 'accentLight';
   }
 
-  function onClick(event) {
+  function onLinkClick(event) {
+    if (onClick) onClick();
+
     const isScrollLink = href.startsWith('#');
     if (!isScrollLink) return;
 
@@ -37,18 +40,21 @@ export default function OffCanvasMenuItem({
 
     if (element.scrollIntoView) {
       event.preventDefault();
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
+
+      setTimeout(() => {
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }, 500);
     }
   }
 
   return (
     <Link href={href} locale={locale} passHref>
       <motion.a
-        className={cx(styles.root, className)}
+        className={cx(styles.root, className, isActive && styles.root_active)}
         initial="hidden"
-        onClick={onClick}
+        onClick={onLinkClick}
         variants={{
           visible: {
             opacity: 1,

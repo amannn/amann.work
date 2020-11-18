@@ -1,0 +1,42 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+.root {
+  overflow: hidden;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+
+  @include match-medium {
+    padding-top: 80px;
+  }
+}
+
+.menu {
+  position: relative;
+  flex: 1;
+  margin-left: 24px;
+  text-align: right;
+
+  @include after {
+    position: absolute;
+    left: 0;
+    right: -100vw;
+    height: 1px;
+    background-color: $color-line;
+  }
+}
+
+.menuButton {
+  right: -10px;
+
+  @include match-medium {
+    right: 0;
+  }
+}

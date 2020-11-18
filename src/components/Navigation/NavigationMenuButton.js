@@ -1,12 +1,14 @@
 import cx from 'classnames';
 import {motion, useAnimation} from 'framer-motion';
-import {useContext, useRef} from 'react';
+import {useRef} from 'react';
 import useUpdateEffect from 'use-update-effect';
-import styles from './HeaderMenuButton.module.scss';
-import HeaderMenuContext from './HeaderMenuContext';
+import styles from './NavigationMenuButton.module.scss';
 
-export default function HeaderMenuButton({className}) {
-  const {isMenuOpen, onMenuOpenChange} = useContext(HeaderMenuContext);
+export default function NavigationMenuButton({
+  className,
+  isMenuOpen,
+  onMenuOpenChange
+}) {
   const nodeRef = useRef();
   const controls = useAnimation();
 

@@ -7,10 +7,6 @@
   flex-direction: column;
   overflow: hidden;
 
-  &_background {
-    background: $color-background;
-  }
-
   &_showPortrait {
     .text {
       padding-top: 60px;
@@ -31,10 +27,10 @@
     }
 
     .inner {
-      max-height: 760px;
+      max-height: 640px;
 
       @include match-medium {
-        height: 80vh;
+        height: 70vh;
       }
     }
   }
@@ -47,7 +43,6 @@
   flex-grow: 1;
 }
 
-.navigation,
 .text {
   position: relative;
   z-index: 1;
@@ -77,39 +72,6 @@
 
   @include match-huge {
     transform: translateX(80px);
-  }
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-
-  @include match-medium {
-    padding-top: 80px;
-  }
-}
-
-.menu {
-  position: relative;
-  flex: 1;
-  margin-left: 24px;
-  text-align: right;
-
-  @include after {
-    position: absolute;
-    left: 0;
-    right: -100vw;
-    height: 1px;
-    background-color: $color-line;
-  }
-}
-
-.menuButton {
-  right: -10px;
-
-  @include match-medium {
-    right: 0;
   }
 }
 
