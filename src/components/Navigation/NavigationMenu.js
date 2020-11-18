@@ -24,7 +24,8 @@ export default function NavigationMenu({
       initial="hidden"
     >
       {[
-        <NavigationMenuItem key="home" href="/">
+        // Attach the current locale, otherwise a reload is triggered on Vercel.
+        <NavigationMenuItem key="home" href={'/' + router.locale}>
           {t('home')}
         </NavigationMenuItem>,
         <NavigationMenuItem key="work" href="/work">
