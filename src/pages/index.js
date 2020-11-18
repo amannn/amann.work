@@ -13,6 +13,11 @@ import Wrapper from 'components/Wrapper';
 import useTranslations from 'hooks/useTranslations';
 import styles from './index.module.scss';
 
+// Force SSG as we're fetching data in `_app`
+export function getStaticProps() {
+  return {props: {}};
+}
+
 export default function Index() {
   const t = useTranslations('Index');
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import DeviceFrame from 'components/DeviceFrame';
+import FadeIn from 'components/FadeIn';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import {ProjectAnchor} from 'components/Project';
 import Project from 'components/Project/Project';
@@ -190,5 +191,9 @@ export default function ProjectsList({limit = undefined}) {
     </Project>
   ];
 
-  return projects.slice(0, limit);
+  return projects.slice(0, limit).map((project, index) => (
+    <FadeIn key={project.key} delay={0.3 + index * 0.2}>
+      {project}
+    </FadeIn>
+  ));
 }

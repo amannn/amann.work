@@ -6,6 +6,11 @@ import Text from 'components/Text';
 import useTranslations from 'hooks/useTranslations';
 import styles from './imprint.module.scss';
 
+// Force SSG as we're fetching data in `_app`
+export function getStaticProps() {
+  return {props: {}};
+}
+
 export default function Imprint() {
   const t = useTranslations('Imprint');
 

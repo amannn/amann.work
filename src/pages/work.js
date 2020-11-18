@@ -7,6 +7,11 @@ import useBackgroundColor from 'hooks/useBackgroundColor';
 import useTranslations from 'hooks/useTranslations';
 import styles from './work.module.scss';
 
+// Force SSG as we're fetching data in `_app`
+export function getStaticProps() {
+  return {props: {}};
+}
+
 export default function Work() {
   const t = useTranslations('Work');
   useBackgroundColor('white');
