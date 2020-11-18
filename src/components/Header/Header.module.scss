@@ -96,22 +96,20 @@
   margin-left: 24px;
   text-align: right;
 
-  > * {
-    &:not(:first-child) {
-      margin-left: 20px;
-
-      @include match-medium {
-        margin-left: 24px;
-      }
-    }
-  }
-
   @include after {
     position: absolute;
     left: 0;
     right: -100vw;
     height: 1px;
     background-color: $color-line;
+  }
+}
+
+.menuButton {
+  right: -10px;
+
+  @include match-medium {
+    right: 0;
   }
 }
 

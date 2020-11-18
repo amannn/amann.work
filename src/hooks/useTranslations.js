@@ -22,6 +22,11 @@ export default function useTranslations(componentName) {
     values = undefined
   ) {
     let message = messages[componentName];
+
+    if (!message) {
+      throw new Error(`No messages for component \`${componentName}\` found.`);
+    }
+
     idPath.split('.').forEach((part) => {
       const next = message[part];
 

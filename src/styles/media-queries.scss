@@ -1,17 +1,19 @@
+@import '~styles/media-queries.module';
+
 @mixin match-medium {
-  @media (min-width: 720px) {
+  @media (min-width: $breakpoint-medium) {
     @content;
   }
 }
 
 @mixin match-large {
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-large) {
     @content;
   }
 }
 
 @mixin match-huge {
-  @media (min-width: 1200px) {
+  @media (min-width: $breakpoint-huge) {
     @content;
   }
 }

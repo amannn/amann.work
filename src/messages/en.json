@@ -27,12 +27,6 @@
   "GithubRepositories": {
     "showMore": "Show more"
   },
-  "Header": {
-    "work": "Work",
-    "blog": "Blog",
-    "openSource": "Open source",
-    "contact": "Contact"
-  },
   "Imprint": {
     "title": "Imprint",
     "name": "Jan Amann",

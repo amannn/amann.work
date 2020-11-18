@@ -1,0 +1,46 @@
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/radius';
+@import '~styles/utils';
+
+.root {
+  position: relative;
+  @include square(44px);
+  background: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  border-radius: radius(1);
+  -webkit-tap-highlight-color: transparent;
+
+  @include match-medium {
+    &:focus {
+      background-color: rgba($black, 0.1);
+    }
+  }
+
+  > * {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 21px;
+    right: 10px;
+    background-color: $grey-dark;
+    border-radius: radius(1);
+    transform-origin: center;
+
+    &:nth-child(1) {
+      transform: translateY(-8px);
+      width: 24px;
+    }
+
+    &:nth-child(2) {
+      width: 20px;
+    }
+
+    &:nth-child(3) {
+      transform: translateY(8px);
+      width: 24px;
+    }
+  }
+}

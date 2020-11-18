@@ -80,6 +80,7 @@ export default function LightboxDeviceVideo({poster, source}) {
       <motion.div
         animate
         className={cx(styles.outer, isOpen && styles.outer_open)}
+        inherit={false}
         style={{
           ...(isOpen && {
             // Center in the middle of the viewport

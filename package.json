@@ -20,17 +20,21 @@
     "classnames": "2.2.6",
     "core-js": "^3.7.0",
     "date-fns": "^2.16.1",
-    "framer-motion": "2.0.0-beta.72",
+    "framer-motion": "2.9.4",
     "gray-matter": "^4.0.2",
     "intl-messageformat": "^9.3.13",
     "next": "10.0.1",
     "next-mdx-enhanced": "^5.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "use-optionally-controlled-state": "^1.0.1"
+    "use-breakpoint": "^1.1.2",
+    "use-isomorphic-layout-effect": "^1.1.0",
+    "use-optionally-controlled-state": "^1.0.1",
+    "use-update-effect": "^1.0.0"
   },
   "devDependencies": {
     "@sergeymyssak/nextjs-sitemap": "^1.1.1",
+    "@types/react": "^16.9.56",
     "eslint": "7.4.0",
     "eslint-config-molindo": "5.0.1",
     "next-images": "^1.6.2",
