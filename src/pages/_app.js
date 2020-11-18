@@ -7,6 +7,13 @@ import {IsSsrContext} from 'hooks/useSsr';
 import {IntlMessagesContext} from 'hooks/useTranslations';
 import './_app.scss';
 
+// Workaround for https://github.com/vercel/next.js/issues/17464#issuecomment-724345414
+import '.';
+import './imprint';
+import './open-source';
+import './work';
+import 'components/BlogPost';
+
 export default function App({Component, messages, pageProps, router}) {
   // Avoid context changes in the off canvas from re-rendering the whole tree
   const StaticComponent = useMemo(() => memo(Component, () => true), [
