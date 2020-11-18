@@ -1,3 +1,4 @@
+@import '~styles/animations';
 @import '~styles/colors';
 
 .root {
@@ -26,6 +27,7 @@
 
 .children {
   position: relative;
+  @include animate-slow(background-color);
 }
 
 .menu {
