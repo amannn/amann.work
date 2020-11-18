@@ -26,7 +26,7 @@ export default function Header({
             >
               {subtitle}
             </Text>
-            <Text>{description}</Text>
+            <Text className={styles.description}>{description}</Text>
           </div>
         )}
         {showPortrait && <div className={styles.portrait} />}
