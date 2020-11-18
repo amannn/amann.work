@@ -1,9 +1,15 @@
 @import '~styles/colors';
 @import '~styles/utils';
 
+$transition-duration: 0.5s;
+
+:export {
+  transitionDuration: $transition-duration;
+}
+
 .backdrop,
 .inner {
-  transition: 0.5s all cubic-bezier(0, 0, 0.2, 1);
+  transition: $transition-duration all cubic-bezier(0, 0, 0.2, 1);
 }
 
 .backdrop {

@@ -8,6 +8,8 @@ import useKeyboardShortcut from 'hooks/useKeyboardShortcut';
 import useWindowSize from 'hooks/useWindowSize';
 import styles from './LightboxDeviceVideo.module.scss';
 
+const transitionDuration = parseFloat(styles.transitionDuration);
+
 export default function LightboxDeviceVideo({poster, source}) {
   const [isPlaying, setIsPlaying] = useState(false);
   const innerRef = useRef();
@@ -78,9 +80,9 @@ export default function LightboxDeviceVideo({poster, source}) {
         onClick={onClose}
       />
       <motion.div
-        animate
         className={cx(styles.outer, isOpen && styles.outer_open)}
         inherit={false}
+        layout
         style={{
           ...(isOpen && {
             // Center in the middle of the viewport
@@ -88,9 +90,11 @@ export default function LightboxDeviceVideo({poster, source}) {
             left: (windowSize.innerWidth - contentSize.offsetWidth) / 2,
             // Fixate height, so it doesn't collapse when the position gets fixed.
             height: contentSize.offsetHeight,
-            width: contentSize.offsetWidth
+            width: contentSize.offsetWidth,
+            transform: `scale(${getExpandedScale()})`
           })
         }}
+        transition={{duration: transitionDuration}}
       >
         <div
           ref={innerRef}
