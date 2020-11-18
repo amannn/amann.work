@@ -45,7 +45,7 @@ export default function NavigationMenu({
           className={styles.language}
           color="paleInverted"
           detectActive={false}
-          href="/"
+          href={'/' + otherLocale}
           locale={otherLocale}
           variant="label"
         >
