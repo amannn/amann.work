@@ -19,4 +19,6 @@ jobs:
       - run: yarn install --pure-lockfile
       - run: yarn lint
       - run: yarn build
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - run: yarn test
