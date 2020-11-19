@@ -16,3 +16,5 @@ jobs:
           version: '12.x'
       - run: yarn install --pure-lockfile
       - run: yarn lint
+      - run: yarn build
+      - run: yarn test

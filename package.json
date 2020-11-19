@@ -5,10 +5,11 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
+    "dev": "next dev",
+    "start": "next start",
     "build": "next build && node scripts/createSitemap.js",
     "lint": "eslint src",
-    "dev": "next dev",
-    "start": "next start"
+    "test": "start-server-and-test start http://localhost:3000 'node scripts/testPages.js'"
   },
   "author": "Jan Amann <jan@amann.me>",
   "repository": {
@@ -41,7 +42,10 @@
     "eslint-config-molindo": "5.0.1",
     "next-images": "^1.6.2",
     "next-videos": "^1.4.0",
-    "sass": "^1.29.0"
+    "puppeteer": "^5.5.0",
+    "sass": "^1.29.0",
+    "start-server-and-test": "^1.11.5",
+    "xml2js": "^0.4.23"
   },
   "engines": {
     "node": "12.x",
