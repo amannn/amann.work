@@ -192,7 +192,7 @@ export default function ProjectsList({limit = undefined}) {
   ];
 
   return projects.slice(0, limit).map((project, index) => (
-    <FadeIn key={project.key} delay={0.3 + index * 0.2}>
+    <FadeIn key={project.key} delay={0.5 + index * 0.2}>
       {project}
     </FadeIn>
   ));

@@ -7,7 +7,7 @@ export default function BlogRoll({posts}) {
   return (
     <ResponsiveGrid>
       {posts.map((post, index) => (
-        <FadeIn key={post.slug} delay={0.3 + index * 0.1}>
+        <FadeIn key={post.slug} delay={0.5 + index * 0.1}>
           <BlogRollItem post={post} />
         </FadeIn>
       ))}

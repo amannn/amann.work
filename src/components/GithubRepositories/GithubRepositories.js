@@ -24,7 +24,7 @@ export default function GithubRepositories({
     <>
       <ResponsiveGrid className={className}>
         {paginatedNodes.map((repository, index) => (
-          <FadeIn key={repository.id} delay={0.3 + index * 0.1}>
+          <FadeIn key={repository.id} delay={0.5 + index * 0.1}>
             <GithubRepositoriesItem repository={repository} />
           </FadeIn>
         ))}
