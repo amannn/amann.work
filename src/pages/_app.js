@@ -11,6 +11,7 @@ import './_app.scss';
 import '.';
 import './imprint';
 import './open-source';
+import './blog';
 import './work';
 import 'components/BlogPost';
 
