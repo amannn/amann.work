@@ -37,7 +37,15 @@ export default function App({Component, messages, pageProps, router}) {
               initial={isSsr ? 'visible' : 'initial'}
               transition={{duration: 0.3}}
               variants={{
-                visible: {opacity: 1, y: 0, transition: {duration: 0.6}},
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.6,
+                    // Fade in at the same time when the menu button expands
+                    delay: 0.25
+                  }
+                },
                 hidden: {opacity: 0, y: 0},
                 initial: {opacity: 0, y: 16}
               }}
