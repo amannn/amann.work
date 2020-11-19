@@ -24,8 +24,13 @@ module.exports = withMdxEnhanced(
             {
               key: 'Cache-Control',
               value: 'public,max-age=31536000,immutable'
-            },
-            // https://github.com/framer/motion/issues/441#issuecomment-684689731
+            }
+          ]
+        },
+        // https://github.com/framer/motion/issues/441#issuecomment-684689731
+        {
+          source: '/(.*)',
+          headers: [
             {
               key: 'Cross-Origin-Opener-Policy',
               value: 'same-origin'
