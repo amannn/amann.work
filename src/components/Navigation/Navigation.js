@@ -17,7 +17,7 @@ export default function Navigation({children}) {
   const transition = {
     type: 'spring',
     damping: 20,
-    stiffness: breakpoint === breakpoints.small ? 100 : 80
+    stiffness: 80
   };
 
   function onClose() {
@@ -56,7 +56,7 @@ export default function Navigation({children}) {
             x: breakpoint === breakpoints.small ? 'calc(-100% + 72px)' : -400,
             transition: {
               ...transition,
-              delay: 0.3
+              delay: 0.4
             }
           }
         }}

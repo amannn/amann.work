@@ -13,10 +13,14 @@ export default function NavigationMenuButton({
   const controls = useAnimation();
 
   const transition = {
+    type: 'spring',
     damping: 20,
-    stiffness: 80
+    stiffness: 120
   };
 
+  // Framer Motion theoretically would have a keyframes feature, but it doesn't
+  // support springs and separate transition configs per step. We can achieve
+  // the desired effect with separate variants that we animate in sequence.
   useUpdateEffect(() => {
     let isCanceled = false;
 
