@@ -14,6 +14,9 @@ import './open-source';
 import './blog';
 import './work';
 import 'components/BlogPost';
+import 'components/Figure';
+import 'components/DeviceFrame';
+import 'components/ScreenVideo';
 
 export default function App({Component, messages, pageProps, router}) {
   // Avoid context changes in the off canvas from re-rendering the whole tree

@@ -49,7 +49,7 @@ export default function ScreenVideo({
         autoPlay={autoPlay}
         className={styles.video}
         disablePictureInPicture
-        disableremoteplayback="true"
+        disableRemotePlayback
         loop
         muted
         onClick={onVideoClick}
