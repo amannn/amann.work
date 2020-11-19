@@ -11,6 +11,7 @@
   padding: 8px 0;
   outline: none;
 
+  &.root_active,
   &:hover,
   &:focus {
     &::before,

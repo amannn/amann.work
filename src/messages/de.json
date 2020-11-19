@@ -1,16 +1,13 @@
 {
-  "BlogPost": {
-    "date": "{date, date, medium}"
-  },
   "BlogPosts": {
-    "title": "Blog"
-  },
-  "BlogRollItem": {
-    "date": "{date, date, medium}"
+    "title": "Blog",
+    "description": "Werfen Sie einen Blick auf meine Experimente im Bereich Animationen und Touch-Gesten mit React."
   },
   "Footer": {
     "id": "contact",
+    "work": "Projekte",
     "blog": "Blog",
+    "openSource": "Open Source",
     "imprint": "Impressum",
     "github": {
       "label": "Github",
@@ -30,10 +27,6 @@
   "GithubRepositories": {
     "showMore": "Mehr anzeigen"
   },
-  "Header": {
-    "blog": "Blog",
-    "contact": "Kontakt"
-  },
   "Imprint": {
     "title": "Impressum",
     "name": "Jan Amann",
@@ -41,7 +34,7 @@
     "address": "Wiesenrainstraße 15\n6890 Lustenau\nÖsterreich",
     "uid": "UID: ATU70057369",
     "contact": "E-Mail: jan@amann.me\nTel: +43 681 / 84 39 0 333",
-    "privacy": "Ich respektierte Ihr Recht auf Datenschutz und verzichte bei dieser Webseite auf Cookies. Bitte beachten Sie jedoch, dass die Plattform auf der diese Webseite bereitgestellt wird Verbindungsdaten aufzeichnet (siehe deren <privacyLink>Datenschutzerklärung</privacyLink>).",
+    "privacy": "Ich respektierte Ihr Recht auf Datenschutz und verzichte bei dieser Webseite auf Cookies. Bitte beachten Sie jedoch, dass die Plattform, auf der diese Webseite bereitgestellt wird, Verbindungsdaten aufzeichnet (siehe deren <privacyLink>Datenschutzerklärung</privacyLink>).",
     "privacyHref": "https://vercel.com/legal/privacy-policy#customers"
   },
   "Index": {
@@ -70,9 +63,47 @@
         "description": "Ich gebe mein Wissen gerne im Rahmen von Projektplanungen, Workshops und Reviews weiter. Ich arbeite mich in Ihre Probleme ein und finde mit Ihrem Team gemeinsam eine passende Lösung."
       }
     },
-    "projects": {
+    "work": {
       "title": "Ausgewählte Projekte",
-      "showMore": "Mehr Projekte anzeigen",
+      "showMore": "Mehr Projekte anzeigen"
+    },
+    "links": {
+      "blog": {
+        "title": "Blog",
+        "description": "Werfen Sie einen Blick auf meine Experimente im Bereich Animationen und Touch-Gesten."
+      },
+      "openSource": {
+        "title": "Open source",
+        "description": "Ideen verpackt in wiederverwendbare Libraries und Beiträge für die Community."
+      }
+    }
+  },
+  "Meta": {
+    "title": "Jan Amann – Partner für User Interface Entwicklung und Design",
+    "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
+  },
+  "NavigationMenu": {
+    "home": "Start",
+    "work": "Projekte",
+    "blog": "Blog",
+    "openSource": "Open Source",
+    "contact": "Kontakt"
+  },
+  "OpenSource": {
+    "title": "Open Source",
+    "description": "Ich bin dankbar, Teil einer Community zu sein, in der Ideen und Wissen offen geteilt werden. Mit veröffentlichten Libraries und der Mithilfe bei Projekten Dritter leiste ich meinen Beitrag.",
+    "contributions": "Letzte Beiträge"
+  },
+  "OpenSourceContributions": {
+    "showMore": "Mehr anzeigen"
+  },
+  "Work": {
+    "title": "Ausgewählte Projekte",
+    "description": "Ich habe das Privileg mit Unternehmen zusammenzuarbeiten, die es verstehen, kommerziellen Erfolg mit bedeutungsvollen Lösungen zu verschmelzen. Oftmals kleine Teams, stets großer Effekt."
+  },
+  "ProjectsList": {
+    "showMore": "Mehr Projekte anzeigen",
+    "projects": {
       "setlistEdit": {
         "intro": "Millionen von Setlists stets zur Hand",
         "title": "Neues Editierinterface für setlist.fm",
@@ -137,24 +168,6 @@
           "href": "https://www.shoemondo.com/uk"
         }
       }
-    },
-    "blog": "Letzte Artikel",
-    "openSource": {
-      "title": "Open Source",
-      "description": "Ich bin dankbar, Teil einer Community zu sein, in der Ideen und Wissen offen geteilt werden. Mit veröffentlichten Libraries und der Mithilfe bei Projekten Dritter leiste ich meinen Beitrag.",
-      "libraries": "Meine Libraries",
-      "contributions": "Letzte Beiträge",
-      "showMore": "Mehr anzeigen"
     }
-  },
-  "Meta": {
-    "title": "Jan Amann – Partner für User Interface Entwicklung und Design",
-    "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
-  },
-  "OpenSourceContributions": {
-    "showMore": "Mehr anzeigen"
-  },
-  "Projects": {
-    "showMore": "Mehr Projekte anzeigen"
   }
 }

@@ -9,6 +9,9 @@ const withVideos = require('next-videos');
 module.exports = withMdxEnhanced(
   withVideos(
     withImages({
+      experimental: {
+        reactMode: 'concurrent'
+      },
       pageExtensions: ['js', 'md', 'mdx'],
       i18n: {
         locales: ['en', 'de'],

@@ -5,10 +5,11 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
+    "dev": "next dev",
+    "start": "next start",
     "build": "next build && node scripts/createSitemap.js",
     "lint": "eslint src",
-    "dev": "next dev",
-    "start": "next start"
+    "test": "start-server-and-test start http://localhost:3000 'node scripts/testPages.js'"
   },
   "author": "Jan Amann <jan@amann.me>",
   "repository": {
@@ -17,23 +18,35 @@
   },
   "dependencies": {
     "@mdx-js/react": "^1.6.19",
+    "@use-it/event-listener": "^0.1.5",
     "classnames": "2.2.6",
+    "conditional-wrap": "^1.0.2",
     "core-js": "^3.7.0",
-    "framer-motion": "2.0.0-beta.72",
+    "date-fns": "^2.16.1",
+    "framer-motion": "2.9.4",
     "gray-matter": "^4.0.2",
     "intl-messageformat": "^9.3.13",
-    "next": "10.0.1",
+    "next": "10.0.2",
     "next-mdx-enhanced": "^5.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "^0.0.0-experimental-4ead6b530",
+    "react-dom": "^0.0.0-experimental-4ead6b530",
+    "use-breakpoint": "^1.1.2",
+    "use-constant": "^1.1.0",
+    "use-isomorphic-layout-effect": "^1.1.0",
+    "use-optionally-controlled-state": "^1.0.1",
+    "use-update-effect": "^1.0.0"
   },
   "devDependencies": {
     "@sergeymyssak/nextjs-sitemap": "^1.1.1",
+    "@types/react": "^16.9.56",
     "eslint": "7.4.0",
     "eslint-config-molindo": "5.0.1",
     "next-images": "^1.6.2",
     "next-videos": "^1.4.0",
-    "sass": "^1.29.0"
+    "puppeteer": "^5.5.0",
+    "sass": "^1.29.0",
+    "start-server-and-test": "^1.11.5",
+    "xml2js": "^0.4.23"
   },
   "engines": {
     "node": "12.x",

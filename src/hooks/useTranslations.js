@@ -14,14 +14,25 @@ export const IntlMessagesContext = createContext({
  */
 export default function useTranslations(componentName) {
   const messages = useContext(IntlMessagesContext);
+
+  if (!messages) {
+    throw new Error('No IntlMessagesContext configured.');
+  }
+
   const router = useRouter();
+  const componentMessages = messages[componentName];
+
+  if (!componentMessages) {
+    throw new Error(`No messages for component \`${componentName}\` found.`);
+  }
 
   function translate(
     /** Use a dot to indicate a level of nesting (e.g. `namespace.nestedLabel`). */
     idPath,
     values = undefined
   ) {
-    let message = messages[componentName];
+    let message = componentMessages;
+
     idPath.split('.').forEach((part) => {
       const next = message[part];
 

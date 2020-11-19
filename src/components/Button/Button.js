@@ -1,20 +1,26 @@
 /* eslint-disable css-modules/no-unused-class */
 import cx from 'classnames';
-import React from 'react';
+import React, {forwardRef} from 'react';
 import Text from 'components/Text';
 import styles from './Button.module.scss';
 
-export default function Button({
-  children,
-  className = undefined,
-  color = 'white',
-  component: Component = 'button',
-  onClick
-}) {
+function Button(
+  {
+    children,
+    className = undefined,
+    color = 'white',
+    component: Component = 'button',
+    onClick,
+    ...rest
+  },
+  ref
+) {
   return (
     <Component
+      ref={ref}
       className={cx(styles.root, className, styles['root_color-' + color])}
       onClick={onClick}
+      {...rest}
     >
       <Text
         className={styles.text}
@@ -27,3 +33,5 @@ export default function Button({
     </Component>
   );
 }
+
+export default forwardRef(Button);

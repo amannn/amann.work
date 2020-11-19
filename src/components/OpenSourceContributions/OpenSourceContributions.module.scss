@@ -1,3 +1,9 @@
+.list {
+  > * + * {
+    margin-top: 20px;
+  }
+}
+
 .showMoreButton {
   margin-top: 40px;
 }

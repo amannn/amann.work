@@ -62,10 +62,10 @@ export default class GithubContributionsRepository {
       }));
   }
 
-  static async getOpenSourceContributions(opts = {}) {
+  static async getPullRequestContributions(opts = {}) {
     let {limit, skip} = opts;
     skip ??= 0;
-    limit ??= 20;
+    limit ??= 150;
 
     const EARLIEST_CONTRIBUTION_YEAR = 2013;
     // The intention is to show PRs to repositories of others.
@@ -84,7 +84,7 @@ export default class GithubContributionsRepository {
     let pullRequestContributions = [];
     for (let year = EARLIEST_CONTRIBUTION_YEAR; year <= endYear; year++) {
       const from = `${year}-01-01T00:00:00`;
-      const curResults = await GithubContributionsRepository.getPullRequestContributions(
+      const curResults = await GithubContributionsRepository.getPullRequestContributionsPart(
         from
       );
       pullRequestContributions.push(...curResults);
@@ -101,21 +101,35 @@ export default class GithubContributionsRepository {
       )
       .sort((a, b) =>
         a.pullRequest.createdAt < b.pullRequest.createdAt ? 1 : -1
-      );
+      )
+      .map((cur) => cur.pullRequest);
 
-    const pullRequestContributionsByRepository = pullRequestContributions
+    return {
+      totalCount: pullRequestContributions.length,
+      nodes: pullRequestContributions.slice(skip, limit)
+    };
+  }
+
+  static async getContributionsByRepository(opts = {}) {
+    let {limit, skip} = opts;
+    skip ??= 0;
+    limit ??= 20;
+
+    const pullRequestContributionsByRepository = (
+      await this.getPullRequestContributions()
+    ).nodes
       .reduce((acc, cur) => {
-        const pullRequest = {...cur.pullRequest, baseRepository: null};
+        const pullRequest = {...cur, baseRepository: null};
         const existingRepository = acc.find(
           (curRepository) =>
-            curRepository.repository.id === cur.pullRequest.baseRepository.id
+            curRepository.repository.id === cur.baseRepository.id
         );
 
         if (existingRepository) {
           existingRepository.pullRequests.push(pullRequest);
         } else {
           acc.push({
-            repository: cur.pullRequest.baseRepository,
+            repository: cur.baseRepository,
             pullRequests: [pullRequest]
           });
         }
@@ -169,7 +183,7 @@ export default class GithubContributionsRepository {
     return result.data.viewer.contributionsCollection.pullRequestContributions;
   }
 
-  static async getPullRequestContributions(from) {
+  static async getPullRequestContributionsPart(from) {
     const results = [];
 
     let cursor;

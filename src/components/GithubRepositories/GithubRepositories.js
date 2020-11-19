@@ -6,7 +6,11 @@ import useTranslations from 'hooks/useTranslations';
 import styles from './GithubRepositories.module.scss';
 import GithubRepositoriesItem from './GithubRepositoriesItem';
 
-export default function GithubRepositories({pageSize = 4, repositories}) {
+export default function GithubRepositories({
+  className,
+  pageSize = 4,
+  repositories
+}) {
   const t = useTranslations('GithubRepositories');
   const [limit, setLimit] = useState(pageSize);
   const paginatedNodes = repositories.nodes.slice(0, limit);
@@ -18,12 +22,9 @@ export default function GithubRepositories({pageSize = 4, repositories}) {
 
   return (
     <>
-      <ResponsiveGrid>
+      <ResponsiveGrid className={className}>
         {paginatedNodes.map((repository, index) => (
-          <FadeIn
-            key={repository.id}
-            delay={Math.max((index - (limit - pageSize)) * 0.15, 0)}
-          >
+          <FadeIn key={repository.id} delay={0.6 + index * 0.1}>
             <GithubRepositoriesItem repository={repository} />
           </FadeIn>
         ))}

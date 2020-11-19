@@ -5,7 +5,7 @@ import Anchor from 'components/Anchor';
 import Layout from 'components/Layout';
 import Meta from 'components/Meta';
 import Text from 'components/Text';
-import useTranslations from 'hooks/useTranslations';
+import useDateFormatting from 'hooks/useDateFormatting';
 
 const components = {
   h1: (props) => <Text marginBottom variant="h1" {...props} />,
@@ -21,14 +21,14 @@ const components = {
 };
 
 export default function BlogPost({children, frontMatter}) {
-  const t = useTranslations('BlogPost');
+  const formatDate = useDateFormatting();
 
   return (
     <>
       <Meta description={frontMatter.excerpt} title={frontMatter.title} />
       <Layout
         slim
-        subtitle={t('date', {date: frontMatter.date})}
+        subtitle={formatDate(frontMatter.date)}
         title={frontMatter.title}
       >
         <MDXProvider components={components}>{children}</MDXProvider>

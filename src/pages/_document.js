@@ -13,6 +13,9 @@ export default class Document extends NextDocument {
         <body>
           <Main />
           <NextScript />
+          {/* Prevent transitions from running on load in Chrome.
+              https://stackoverflow.com/a/42969608/343045 */}
+          <script> </script>
         </body>
       </Html>
     );

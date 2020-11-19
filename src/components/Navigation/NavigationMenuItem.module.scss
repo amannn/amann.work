@@ -1,0 +1,39 @@
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+.root {
+  display: block;
+  border: none;
+  background: none;
+  outline: none;
+
+  &.root_active,
+  &:hover,
+  &:focus {
+    .text::after {
+      @include animate-slow(opacity);
+      opacity: 1;
+    }
+  }
+}
+
+.text {
+  position: relative;
+  padding: 8px 0;
+  display: inline-block;
+
+  @include after {
+    @include animate-fast(opacity);
+    position: absolute;
+    opacity: 0;
+    bottom: 4px;
+    height: 2px;
+    z-index: 1;
+    border-radius: 4px;
+    left: 0;
+    width: 100%;
+    background-color: $color-accent;
+  }
+}

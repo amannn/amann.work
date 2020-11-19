@@ -1,50 +1,25 @@
+import Link from 'next/link';
 import React from 'react';
-import BlogRoll from 'components/BlogRoll';
-import DeviceFrame from 'components/DeviceFrame';
+import Button from 'components/Button';
+import CardLink from 'components/CardLink';
 import Footer from 'components/Footer';
-import GithubRepositories from 'components/GithubRepositories';
 import Header from 'components/Header';
-import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import Meta from 'components/Meta';
-import OpenSourceContributions from 'components/OpenSourceContributions';
-import OpenSourceLayout from 'components/OpenSourceLayout';
-import Project, {
-  ProjectAnchor,
-  ProjectLink,
-  ProjectParagraph,
-  ProjectTestimonial,
-  ProjectVisual
-} from 'components/Project';
-import Projects from 'components/Projects';
+import ProjectsList from 'components/ProjectsList';
 import ResponsiveGrid from 'components/ResponsiveGrid';
 import Section from 'components/Section';
 import {ServicesItem} from 'components/Services';
 import Wrapper from 'components/Wrapper';
 import useTranslations from 'hooks/useTranslations';
-import BlogRepository from 'repositories/BlogRepository';
-import GithubContributionsRepository from 'repositories/GithubContributionsRepository';
+import styles from './index.module.scss';
 
-export async function getStaticProps() {
-  return {
-    props: {
-      openSourceContributions: await GithubContributionsRepository.getOpenSourceContributions(),
-      repositories: await GithubContributionsRepository.getOpenSourceRepositories(),
-      posts: await BlogRepository.getPosts()
-    }
-  };
+// Force SSG as we're fetching data in `_app`
+export function getStaticProps() {
+  return {props: {}};
 }
 
-export default function Index({openSourceContributions, posts, repositories}) {
+export default function Index() {
   const t = useTranslations('Index');
-
-  function linkFor(href) {
-    // eslint-disable-next-line react/display-name
-    return (children) => (
-      <ProjectAnchor key={href} href={href}>
-        {children}
-      </ProjectAnchor>
-    );
-  }
 
   return (
     <>
@@ -76,203 +51,30 @@ export default function Index({openSourceContributions, posts, repositories}) {
           </ResponsiveGrid>
         </Wrapper>
       </Section>
-      <Section title={t('projects.title')}>
-        <Projects>
-          <Project
-            cta={
-              <ProjectLink href={t('projects.setlistEdit.cta.href')}>
-                {t('projects.setlistEdit.cta.label')}
-              </ProjectLink>
-            }
-            id={t('projects.setlistEdit.id')}
-            intro={t('projects.setlistEdit.intro')}
-            testimonial={
-              <ProjectTestimonial
-                image={
-                  <img
-                    alt={t('projects.setlistEdit.testimonial.personName')}
-                    src={require('../assets/christof-flachsmann.jpg')}
-                  />
-                }
-                personLink={t('projects.setlistEdit.testimonial.personLink')}
-                personName={t('projects.setlistEdit.testimonial.personName')}
-                personTitle={t('projects.setlistEdit.testimonial.personTitle')}
-                quote={t('projects.setlistEdit.testimonial.quote')}
-              />
-            }
-            title={t('projects.setlistEdit.title')}
-            visual={
-              <ProjectVisual>
-                <DeviceFrame type="desktop">
-                  <img
-                    alt=""
-                    src={require('../assets/setlist-edit-desktop.png')}
-                  />
-                </DeviceFrame>
-                <LightboxDeviceVideo
-                  poster={require('../assets/setlist-edit-mobile-poster.png')}
-                  source={require('../assets/setlist-edit-mobile.mp4')}
-                />
-              </ProjectVisual>
-            }
-          >
-            <ProjectParagraph>
-              {t('projects.setlistEdit.description1', {
-                visits: linkFor(t('projects.setlistEdit.visitsHref')),
-                client: linkFor(t('projects.setlistEdit.clientHref'))
-              })}
-            </ProjectParagraph>
-            <ProjectParagraph>
-              {t('projects.setlistEdit.description2')}
-            </ProjectParagraph>
-          </Project>
-          <Project
-            cta={
-              <ProjectLink href={t('projects.kuechenfinder.cta.href')}>
-                {t('projects.kuechenfinder.cta.label')}
-              </ProjectLink>
-            }
-            id={t('projects.kuechenfinder.id')}
-            intro={t('projects.kuechenfinder.intro')}
-            title={t('projects.kuechenfinder.title')}
-            visual={
-              <ProjectVisual>
-                <DeviceFrame type="desktop">
-                  <img
-                    alt=""
-                    src={require('../assets/kfi-shops-desktop.png')}
-                  />
-                </DeviceFrame>
-                <DeviceFrame>
-                  <img
-                    alt=""
-                    src={require('../assets/kfi-configurator-1.png')}
-                  />
-                </DeviceFrame>
-              </ProjectVisual>
-            }
-          >
-            <ProjectParagraph>
-              {t('projects.kuechenfinder.description1', {
-                client: linkFor(t('projects.kuechenfinder.clientHref'))
-              })}
-            </ProjectParagraph>
-            <ProjectParagraph>
-              {t('projects.kuechenfinder.description2')}
-            </ProjectParagraph>
-          </Project>
-          <Project
-            id={t('projects.alpine.id')}
-            intro={t('projects.alpine.intro')}
-            title={t('projects.alpine.title')}
-            visual={
-              <ProjectVisual>
-                <DeviceFrame type="desktop">
-                  <img
-                    alt=""
-                    src={require('../assets/alpine-design-system.png')}
-                  />
-                </DeviceFrame>
-              </ProjectVisual>
-            }
-          >
-            <ProjectParagraph>
-              {t('projects.alpine.description1', {
-                client: linkFor(t('projects.alpine.clientHref'))
-              })}
-            </ProjectParagraph>
-            <ProjectParagraph>
-              {t('projects.alpine.description2', {
-                alm: linkFor(t('projects.alpine.almHref')),
-                peerigon: linkFor(t('projects.alpine.peerigonHref')),
-                composeUs: linkFor(t('projects.alpine.composeUsHref'))
-              })}
-            </ProjectParagraph>
-          </Project>
-          <Project
-            cta={
-              <ProjectLink href={t('projects.zemtu.cta.href')}>
-                {t('projects.zemtu.cta.label')}
-              </ProjectLink>
-            }
-            id={t('projects.zemtu.id')}
-            intro={t('projects.zemtu.intro')}
-            title={t('projects.zemtu.title')}
-            visual={
-              <ProjectVisual>
-                <DeviceFrame>
-                  <img alt="" src={require('../assets/zemtu-1.png')} />
-                </DeviceFrame>
-                <DeviceFrame>
-                  <img alt="" src={require('../assets/zemtu-2.png')} />
-                </DeviceFrame>
-                <DeviceFrame>
-                  <img alt="" src={require('../assets/zemtu-3.png')} />
-                </DeviceFrame>
-              </ProjectVisual>
-            }
-          >
-            <ProjectParagraph>
-              {t('projects.zemtu.description1')}
-            </ProjectParagraph>
-            <ProjectParagraph>
-              {t('projects.zemtu.description2')}
-            </ProjectParagraph>
-          </Project>
-          <Project
-            cta={
-              <ProjectLink href={t('projects.shoemondo.cta.href')}>
-                {t('projects.shoemondo.cta.label')}
-              </ProjectLink>
-            }
-            id={t('projects.shoemondo.id')}
-            intro={t('projects.shoemondo.intro')}
-            title={t('projects.shoemondo.title')}
-            visual={
-              <ProjectVisual>
-                <DeviceFrame>
-                  <img alt="" src={require('../assets/shoemondo-1.png')} />
-                </DeviceFrame>
-                <DeviceFrame>
-                  <img alt="" src={require('../assets/shoemondo-2.png')} />
-                </DeviceFrame>
-                <DeviceFrame>
-                  <img alt="" src={require('../assets/shoemondo-3.png')} />
-                </DeviceFrame>
-              </ProjectVisual>
-            }
-          >
-            <ProjectParagraph>
-              {t('projects.shoemondo.description1')}
-            </ProjectParagraph>
-            <ProjectParagraph>
-              {t('projects.shoemondo.description2')}
-            </ProjectParagraph>
-          </Project>
-        </Projects>
-      </Section>
-      <Section title={t('blog')}>
-        <Wrapper background padding>
-          <BlogRoll posts={posts} />
+      <Section title={t('work.title')}>
+        <ProjectsList limit={3} />
+        <Wrapper className={styles.showMoreProjects}>
+          <Link href="/work" passHref>
+            <Button color="accent" component="a">
+              {t('work.showMore')}
+            </Button>
+          </Link>
         </Wrapper>
       </Section>
-      <Section
-        description={t('openSource.description')}
-        title={t('openSource.title')}
-      >
-        <Wrapper background padding>
-          <OpenSourceLayout
-            contributions={
-              <OpenSourceContributions
-                contributions={openSourceContributions}
-              />
-            }
-            contributionsTitle={t('openSource.contributions')}
-            libraries={<GithubRepositories repositories={repositories} />}
-            librariesTitle={t('openSource.libraries')}
+      <Wrapper background className={styles.links}>
+        <ResponsiveGrid>
+          <CardLink
+            description={t('links.blog.description')}
+            href="/blog"
+            title={t('links.blog.title')}
           />
-        </Wrapper>
-      </Section>
+          <CardLink
+            description={t('links.openSource.description')}
+            href="/open-source"
+            title={t('links.openSource.title')}
+          />
+        </ResponsiveGrid>
+      </Wrapper>
       <Footer />
     </>
   );

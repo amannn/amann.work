@@ -1,0 +1,37 @@
+@import '~styles/animations';
+@import '~styles/colors';
+
+.root {
+  background-color: $color-background-dark;
+
+  &_open {
+    .children {
+      box-shadow: 0 0 20px black;
+    }
+  }
+
+  &_background {
+    &-default {
+      .children {
+        background-color: $color-background;
+      }
+    }
+
+    &-white {
+      .children {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.children {
+  position: relative;
+  @include animate-slow(background-color);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+}

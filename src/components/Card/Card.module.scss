@@ -3,11 +3,28 @@
 @import '~styles/radius';
 
 .root {
-  padding: 24px;
   background-color: $white;
   border-radius: radius(1);
 
   @include match-medium {
     padding: 40px;
+  }
+
+  &_size {
+    &-small {
+      padding: 12px;
+
+      @include match-medium {
+        padding: 20px;
+      }
+    }
+
+    &-medium {
+      padding: 24px;
+
+      @include match-medium {
+        padding: 40px;
+      }
+    }
   }
 }

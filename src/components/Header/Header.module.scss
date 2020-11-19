@@ -6,27 +6,32 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: $color-background;
 
   &_showPortrait {
     .text {
       padding-top: 60px;
       padding-left: 24px;
+      padding-bottom: 12px;
 
       @include match-medium {
         padding-top: 200px;
         padding-left: 40px;
+        padding-bottom: 40px;
       }
 
       @include match-large {
         padding-top: 280px;
         padding-left: 0;
+        padding-bottom: 80px;
       }
     }
 
     .inner {
-      height: 80vh;
-      max-height: 800px;
+      max-height: 640px;
+
+      @include match-medium {
+        height: 70vh;
+      }
     }
   }
 }
@@ -38,7 +43,6 @@
   flex-grow: 1;
 }
 
-.navigation,
 .text {
   position: relative;
   z-index: 1;
@@ -71,58 +75,22 @@
   }
 }
 
-.navigation {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-
-  @include match-medium {
-    padding-top: 80px;
-  }
-}
-
-.menu {
-  position: relative;
-  flex: 1;
-  margin-left: 24px;
-  text-align: right;
-
-  > * {
-    &:not(:first-child) {
-      margin-left: 20px;
-
-      @include match-medium {
-        margin-left: 24px;
-      }
-    }
-  }
-
-  @include after {
-    position: absolute;
-    left: 0;
-    right: -100vw;
-    height: 1px;
-    background-color: $color-line;
-  }
-}
-
 .text {
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
   padding-top: 60px;
-  padding-bottom: 16px;
+  padding-bottom: 40px;
   max-width: 500px;
 
   @include match-medium {
     padding-top: 80px;
-    padding-bottom: 40px;
     max-width: 400px;
   }
 
   @include match-large {
-    padding-top: 140px;
+    padding-top: 200px;
     padding-bottom: 80px;
     max-width: 500px;
   }
@@ -148,4 +116,8 @@
   @include match-large {
     margin-bottom: 8px;
   }
+}
+
+.description {
+  white-space: pre-wrap;
 }

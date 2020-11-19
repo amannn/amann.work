@@ -2,6 +2,7 @@ $white: white;
 $black: black;
 $grey-light: rgba($black, 0.1);
 $grey: rgba($black, 0.7);
+$grey-dark: hsl(180, 35%, 12%);
 $green: #489292;
 $red: #9e2530;
 $violet: #6544bc;
@@ -15,6 +16,6 @@ $color-accent: $green;
 $color-pale: rgba($black, 0.5);
 $color-pale-inverted: rgba($white, 0.5);
 
-$color-text-dark: hsl(180, 35%, 12%);
+$color-text-dark: $grey-dark;
 $color-text-normal: hsl(180deg, 35%, 6%);
 $color-text-light: hsl(180deg, 7%, 35%);
