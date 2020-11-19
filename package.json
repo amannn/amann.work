@@ -20,6 +20,7 @@
     "@mdx-js/react": "^1.6.19",
     "@use-it/event-listener": "^0.1.5",
     "classnames": "2.2.6",
+    "conditional-wrap": "^1.0.2",
     "core-js": "^3.7.0",
     "date-fns": "^2.16.1",
     "framer-motion": "2.9.4",

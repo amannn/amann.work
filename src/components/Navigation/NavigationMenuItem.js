@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import cx from 'classnames';
+import ConditionalWrap from 'conditional-wrap';
 import {motion} from 'framer-motion';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
@@ -22,6 +23,7 @@ export default function NavigationMenuItem({
 }) {
   const router = useRouter();
   const isActive = detectActive && href === router.pathname;
+  const isScrollLink = href.startsWith('#');
 
   if (isActive) {
     color = 'accentLight';
@@ -30,7 +32,6 @@ export default function NavigationMenuItem({
   function onLinkClick(event) {
     if (onClick) onClick();
 
-    const isScrollLink = href.startsWith('#');
     if (!isScrollLink) return;
 
     const selector = event.currentTarget
@@ -50,9 +51,17 @@ export default function NavigationMenuItem({
   }
 
   return (
-    <Link href={href} locale={locale} passHref>
+    <ConditionalWrap
+      condition={!isScrollLink}
+      wrap={(content) => (
+        <Link href={href} locale={locale}>
+          {content}
+        </Link>
+      )}
+    >
       <motion.a
         className={cx(styles.root, className, isActive && styles.root_active)}
+        href={href}
         initial="hidden"
         onClick={onLinkClick}
         variants={{
@@ -77,6 +86,6 @@ export default function NavigationMenuItem({
           {children}
         </Text>
       </motion.a>
-    </Link>
+    </ConditionalWrap>
   );
 }
