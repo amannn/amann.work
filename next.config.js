@@ -26,20 +26,6 @@ module.exports = withMdxEnhanced(
               value: 'public,max-age=31536000,immutable'
             }
           ]
-        },
-        // https://github.com/framer/motion/issues/441#issuecomment-684689731
-        {
-          source: '/(.*)',
-          headers: [
-            {
-              key: 'Cross-Origin-Opener-Policy',
-              value: 'same-origin'
-            },
-            {
-              key: 'Cross-Origin-Embedder-Policy',
-              value: 'require-corp'
-            }
-          ]
         }
       ]
     })
