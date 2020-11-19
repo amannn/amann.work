@@ -11,6 +11,8 @@ jobs:
           path: |
             .next/cache
             node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-node-
       - uses: actions/setup-node@v1
         with:
           version: '12.x'
