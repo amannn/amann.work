@@ -1,3 +1,4 @@
+import {useTranslations} from 'next-intl';
 import Link from 'next/link';
 import React from 'react';
 import Button from 'components/Button';
@@ -10,7 +11,6 @@ import ResponsiveGrid from 'components/ResponsiveGrid';
 import Section from 'components/Section';
 import {ServicesItem} from 'components/Services';
 import Wrapper from 'components/Wrapper';
-import useTranslations from 'hooks/useTranslations';
 import styles from './index.module.scss';
 
 // Force SSG as we're fetching data in `_app`

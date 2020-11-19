@@ -1,10 +1,10 @@
 import 'core-js/features/string/starts-with';
 import {AnimatePresence, motion} from 'framer-motion';
+import {NextIntlProvider} from 'next-intl';
 import NextApp from 'next/app';
 import {memo, useMemo} from 'react';
 import Navigation from 'components/Navigation';
 import {IsSsrContext} from 'hooks/useSsr';
-import {IntlMessagesContext} from 'hooks/useTranslations';
 import './_app.scss';
 
 // Workaround for https://github.com/vercel/next.js/issues/17464#issuecomment-724345414
@@ -30,7 +30,7 @@ export default function App({Component, messages, pageProps, router}) {
 
   return (
     <IsSsrContext.Provider value={isSsr}>
-      <IntlMessagesContext.Provider value={messages}>
+      <NextIntlProvider messages={messages}>
         <Navigation>
           <AnimatePresence exitBeforeEnter>
             <motion.div
@@ -57,7 +57,7 @@ export default function App({Component, messages, pageProps, router}) {
             </motion.div>
           </AnimatePresence>
         </Navigation>
-      </IntlMessagesContext.Provider>
+      </NextIntlProvider>
     </IsSsrContext.Provider>
   );
 }

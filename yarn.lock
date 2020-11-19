@@ -337,10 +337,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.4.tgz#19bf0f5af19149111c40d98bb0cf82119f5d9eeb"
   integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
 
-"@formatjs/ecma402-abstract@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-1.3.0.tgz#c9aa2a71173e61c6c3a965c47b2affa073776267"
-  integrity sha512-Bu9rvgsFH7LVVGf2v3jImowP7GJ2RkkLQdeBEu/mmT4xFWtKJN6JwYRYjB3MNsnmKLmGiCCDyNTSLQaM/Ji0YQ==
+"@formatjs/ecma402-abstract@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-1.4.0.tgz#ac6c17a8fffac43c6d68c849a7b732626d32654c"
+  integrity sha512-Mv027hcLFjE45K8UJ8PjRpdDGfR0aManEFj1KzoN8zXNveHGEygpZGfFf/FTTMl+QEVSrPAUlyxaCApvmv47AQ==
   dependencies:
     tslib "^2.0.1"
 
@@ -3403,21 +3403,21 @@ internal-slot@^1.0.2:
     has "^1.0.3"
     side-channel "^1.0.2"
 
-intl-messageformat-parser@^6.0.12:
-  version "6.0.12"
-  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.0.12.tgz#9a4f4e109384eeaa5e9c2de9db03a4098b9f192a"
-  integrity sha512-IXxFpNhFFtucwOHS5aj91EIm97um6p/dyu0G88UTH0K8DwQHmTB2HqRtsEwl38+V1ebL9s+qz5TjR04A1EIu6A==
+intl-messageformat-parser@6.0.16:
+  version "6.0.16"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-6.0.16.tgz#4049e07d0834635ab08e1a1f255287b9c83888e5"
+  integrity sha512-Qy3Zz0vF4fhMVuW4BDqUr55LsOl9enM03wuwbP4Yg7v29rYNpf7Z76Whstu6uDLDJokrjbpgDvRcjSDTAhxKJw==
   dependencies:
-    "@formatjs/ecma402-abstract" "^1.3.0"
+    "@formatjs/ecma402-abstract" "1.4.0"
     tslib "^2.0.1"
 
-intl-messageformat@^9.3.13:
-  version "9.3.13"
-  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.3.13.tgz#3b7e8a933bccec02d7faa7961abb4f8c71ff8ef5"
-  integrity sha512-F6sacmeykGuxfrBtHVddvdc5FGI+jz1gUxr00zE092rb6tQq+XjZVjtxje7vPyBoTMP6GSgKwYL8ZvO2opDJ4w==
+intl-messageformat@^9.3.18:
+  version "9.3.18"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.3.18.tgz#26074d0793b72b117acdef927f30518ebcdcedcc"
+  integrity sha512-OKrLWppdxXtRdRCPjmRZ9Ru7UZkZJDlMl+1Vpb3sCLWK0mFpr129K+gIlIb5zrWoAH3NiYDzekBXPTRWCyHSIA==
   dependencies:
     fast-memoize "^2.5.2"
-    intl-messageformat-parser "^6.0.12"
+    intl-messageformat-parser "6.0.16"
     tslib "^2.0.1"
 
 is-accessor-descriptor@^0.1.6:
@@ -4296,6 +4296,14 @@ next-images@^1.6.2:
   dependencies:
     file-loader "^6.0.0"
     url-loader "^4.0.0"
+
+next-intl@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-0.0.2.tgz#d47e06bdf75ad6fe0c5b6c0e5e88a1389c5f10de"
+  integrity sha512-1G754q0DAfbNizgGKiUdXRim/cbDpCXxo4gHvHfF+AhU+GzUCyHNgwlKnDPnFfwloMWl8FFil8kohR8NTGApVA==
+  dependencies:
+    intl-messageformat "^9.3.18"
+    tslib "^2.0.0"
 
 next-mdx-enhanced@^5.0.0:
   version "5.0.0"

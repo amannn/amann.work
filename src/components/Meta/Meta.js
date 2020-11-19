@@ -1,5 +1,5 @@
+import {useTranslations} from 'next-intl';
 import Head from 'next/head';
-import useTranslations from 'hooks/useTranslations';
 
 export default function Meta({description, title}) {
   const t = useTranslations('Meta');

@@ -1,9 +1,9 @@
+import {useTranslations} from 'next-intl';
 import React from 'react';
 import Anchor from 'components/Anchor';
 import Layout from 'components/Layout';
 import Meta from 'components/Meta';
 import Text from 'components/Text';
-import useTranslations from 'hooks/useTranslations';
 import styles from './imprint.module.scss';
 
 // Force SSG as we're fetching data in `_app`

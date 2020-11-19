@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Button from 'components/Button';
 import FadeIn from 'components/FadeIn';
 import ResponsiveGrid from 'components/ResponsiveGrid';
-import useTranslations from 'hooks/useTranslations';
+import {useTranslations} from 'next-intl';
 import styles from './GithubRepositories.module.scss';
 import GithubRepositoriesItem from './GithubRepositoriesItem';
 

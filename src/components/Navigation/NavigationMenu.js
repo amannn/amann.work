@@ -1,8 +1,8 @@
 import cx from 'classnames';
 import {motion} from 'framer-motion';
+import {useTranslations} from 'next-intl';
 import {useRouter} from 'next/router';
 import {cloneElement} from 'react';
-import useTranslations from 'hooks/useTranslations';
 import styles from './NavigationMenu.module.scss';
 import NavigationMenuItem from './NavigationMenuItem';
 

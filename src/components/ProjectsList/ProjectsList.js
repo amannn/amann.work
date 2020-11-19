@@ -8,7 +8,7 @@ import ProjectLink from 'components/Project/ProjectLink';
 import ProjectParagraph from 'components/Project/ProjectParagraph';
 import ProjectTestimonial from 'components/Project/ProjectTestimonial';
 import ProjectVisual from 'components/Project/ProjectVisual';
-import useTranslations from 'hooks/useTranslations';
+import {useTranslations} from 'next-intl';
 
 export default function ProjectsList({limit = undefined}) {
   const t = useTranslations('ProjectsList');

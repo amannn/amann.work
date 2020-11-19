@@ -1,10 +1,10 @@
+import {useTranslations} from 'next-intl';
 import React from 'react';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 import Meta from 'components/Meta';
 import ProjectsList from 'components/ProjectsList';
 import useBackgroundColor from 'hooks/useBackgroundColor';
-import useTranslations from 'hooks/useTranslations';
 import styles from './work.module.scss';
 
 // Force SSG as we're fetching data in `_app`
