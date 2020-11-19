@@ -1,7 +1,7 @@
 {
   "BlogPosts": {
     "title": "Blog",
-    "description": "Meine Experimente um User Experiences mit Animationen und Touch-Gesten zu verbessern."
+    "description": "Werfen Sie einen Blick auf meine Experimente im Bereich Animationen und Touch-Gesten mit React."
   },
   "Footer": {
     "id": "contact",
@@ -70,7 +70,7 @@
     "links": {
       "blog": {
         "title": "Blog",
-        "description": "Meine Experimente um User Experiences mit Animationen und Touch-Gesten zu verbessern."
+        "description": "Werfen Sie einen Blick auf meine Experimente im Bereich Animationen und Touch-Gesten."
       },
       "openSource": {
         "title": "Open source",

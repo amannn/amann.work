@@ -1,7 +1,7 @@
 {
   "BlogPosts": {
     "title": "Blog",
-    "description": "My explorations about pushing user experiences with animations and touch gestures."
+    "description": "Have a look at my explorations in the space of animations and touch gestures with React."
   },
   "Footer": {
     "id": "contact",
@@ -70,7 +70,7 @@
     "links": {
       "blog": {
         "title": "Blog",
-        "description": "My explorations about pushing user experiences with animations and touch gestures."
+        "description": "Have a look at my explorations in the space of animations and touch gestures with React."
       },
       "openSource": {
         "title": "Open source",

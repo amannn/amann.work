@@ -18,7 +18,7 @@ export default function BlogPosts({posts}) {
 
   return (
     <>
-      <Meta title={t('title')} />
+      <Meta description={t('description')} title={t('title')} />
       <Layout description={t('description')} title={t('title')}>
         <BlogRoll posts={posts} />
       </Layout>
