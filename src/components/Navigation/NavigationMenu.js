@@ -15,7 +15,7 @@ export default function NavigationMenu({
   const t = useTranslations('NavigationMenu');
   const router = useRouter();
   const otherLocale = router.locales.find((cur) => cur !== router.locale);
-  const initialDelay = 0.4;
+  const initialDelay = 0.6;
 
   return (
     <motion.div
@@ -53,7 +53,7 @@ export default function NavigationMenu({
         </NavigationMenuItem>
       ].map((element, index) =>
         cloneElement(element, {
-          delay: initialDelay + index * 0.1,
+          delay: initialDelay + index * 0.075,
           transition,
           onClick: onClose
         })

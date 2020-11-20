@@ -1,5 +1,16 @@
 import GithubRepository from './GithubRepository';
 
+const MAINTAINED_REPOSITORIES = [
+  'molindo/react-apollo-network-status',
+  'amannn/action-semantic-pull-request',
+  'amannn/next-client-script',
+  'amannn/multi-sitemap',
+  'amannn/next-intl',
+  'amannn/react-hooks',
+  'amannn/atom-format-javascript-comment',
+  'molindo/eslint-config-molindo'
+];
+
 const repositoryFragment = /* GraphQL */ `
   fragment repository on Repository {
     id
@@ -28,15 +39,6 @@ export default class GithubContributionsRepository {
     let {limit, skip} = opts;
     skip ??= 0;
     limit ??= 20;
-
-    const MAINTAINED_REPOSITORIES = [
-      'molindo/react-apollo-network-status',
-      'amannn/action-semantic-pull-request',
-      'amannn/next-client-script',
-      'amannn/multi-sitemap',
-      'amannn/atom-format-javascript-comment',
-      'molindo/eslint-config-molindo'
-    ];
 
     const query = /* GraphQL */ `
       query($owner: String!, $name: String!) {
