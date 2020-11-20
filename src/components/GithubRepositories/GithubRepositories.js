@@ -1,8 +1,8 @@
+import {useTranslations} from 'next-intl';
 import React, {useState} from 'react';
 import Button from 'components/Button';
 import FadeIn from 'components/FadeIn';
 import ResponsiveGrid from 'components/ResponsiveGrid';
-import {useTranslations} from 'next-intl';
 import styles from './GithubRepositories.module.scss';
 import GithubRepositoriesItem from './GithubRepositoriesItem';
 

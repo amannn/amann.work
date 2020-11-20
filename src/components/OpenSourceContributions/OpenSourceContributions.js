@@ -1,7 +1,7 @@
+import {useTranslations} from 'next-intl';
 import React, {useState} from 'react';
 import Button from 'components/Button';
 import FadeIn from 'components/FadeIn';
-import {useTranslations} from 'next-intl';
 import styles from './OpenSourceContributions.module.scss';
 import OpenSourceContributionsItem from './OpenSourceContributionsItem';
 
