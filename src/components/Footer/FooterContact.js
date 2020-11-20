@@ -1,9 +1,9 @@
 import cx from 'classnames';
+import {useTranslations} from 'next-intl';
 import React, {useState} from 'react';
 import Icon from 'components/Icon';
 import Text from 'components/Text';
 import VisibilitySensor from 'components/VisibilitySensor';
-import useTranslations from 'hooks/useTranslations';
 import styles from './FooterContact.module.scss';
 
 export default function FooterContact() {

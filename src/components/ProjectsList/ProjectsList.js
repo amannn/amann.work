@@ -1,3 +1,4 @@
+import {useTranslations} from 'next-intl';
 import React from 'react';
 import DeviceFrame from 'components/DeviceFrame';
 import FadeIn from 'components/FadeIn';
@@ -8,7 +9,6 @@ import ProjectLink from 'components/Project/ProjectLink';
 import ProjectParagraph from 'components/Project/ProjectParagraph';
 import ProjectTestimonial from 'components/Project/ProjectTestimonial';
 import ProjectVisual from 'components/Project/ProjectVisual';
-import useTranslations from 'hooks/useTranslations';
 
 export default function ProjectsList({limit = undefined}) {
   const t = useTranslations('ProjectsList');

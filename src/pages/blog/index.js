@@ -1,8 +1,8 @@
+import {useTranslations} from 'next-intl';
 import React from 'react';
 import BlogRoll from 'components/BlogRoll';
 import Layout from 'components/Layout';
 import Meta from 'components/Meta';
-import useTranslations from 'hooks/useTranslations';
 import BlogRepository from 'repositories/BlogRepository';
 
 export async function getStaticProps() {

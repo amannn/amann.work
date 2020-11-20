@@ -1,10 +1,10 @@
+import {useTranslations} from 'next-intl';
 import React from 'react';
 import GithubRepositories from 'components/GithubRepositories';
 import Layout from 'components/Layout';
 import Meta from 'components/Meta';
 import OpenSourceContributions from 'components/OpenSourceContributions';
 import Text from 'components/Text';
-import useTranslations from 'hooks/useTranslations';
 import GithubContributionsRepository from 'repositories/GithubContributionsRepository';
 import styles from './open-source.module.scss';
 
