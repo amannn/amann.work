@@ -20,11 +20,19 @@ export default function GithubRepositories({
     setLimit(limit + pageSize);
   }
 
+  function getDelay(index) {
+    // Add initial delay for the ones that appear on page load
+    const initialDelay = index < pageSize ? 0.6 : 0;
+
+    const appearIndex = pageSize - limit + index;
+    return initialDelay + appearIndex * 0.1;
+  }
+
   return (
     <>
       <ResponsiveGrid className={className}>
         {paginatedNodes.map((repository, index) => (
-          <FadeIn key={repository.id} delay={0.6 + index * 0.1}>
+          <FadeIn key={repository.id} delay={getDelay(index)}>
             <GithubRepositoriesItem repository={repository} />
           </FadeIn>
         ))}
