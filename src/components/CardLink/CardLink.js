@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import cx from 'classnames';
+import ConditionalWrap from 'conditional-wrap';
 import Link from 'next/link';
 import React, {useState, useMemo} from 'react';
 import Card from 'components/Card';
@@ -11,7 +12,9 @@ export default function CardLink({
   className,
   description,
   href,
-  title
+  target,
+  title,
+  ...rest
 }) {
   const [isHighlighted, setIsHighlighted] = useState(false);
 
@@ -26,33 +29,44 @@ export default function CardLink({
   const MemoizedComponent = useMemo(
     () =>
       function Component(props) {
+        const isExternal = href.startsWith('http');
+
         return (
-          <Link href={href}>
+          <ConditionalWrap
+            condition={!isExternal}
+            wrap={(content) => <Link href={href}>{content}</Link>}
+          >
             <a
               {...props}
               className={cx(styles.root, className, props.className)}
+              href={href}
               onBlur={onUnhighlight}
               onFocus={onHighlight}
               onMouseOut={onUnhighlight}
               onMouseOver={onHighlight}
+              target={target}
             />
-          </Link>
+          </ConditionalWrap>
         );
       },
-    [className, href]
+    [className, href, target]
   );
 
   return (
-    <Card component={MemoizedComponent}>
+    <Card component={MemoizedComponent} {...rest}>
       <div className={styles.inner}>
-        <Text
-          color={isHighlighted ? undefined : 'accent'}
-          component="h2"
-          variant="h3"
-        >
-          {title}
-        </Text>
-        <Text className={styles.description}>{description}</Text>
+        {title && (
+          <Text
+            color={isHighlighted ? undefined : 'accent'}
+            component="h2"
+            variant="h3"
+          >
+            {title}
+          </Text>
+        )}
+        {description && (
+          <Text className={styles.description}>{description}</Text>
+        )}
         {children}
       </div>
     </Card>
