@@ -6,7 +6,7 @@ import styles from './GithubRepository.module.scss';
 
 export default function GithubRepository({
   children,
-  descriptionMaxLength = 85,
+  descriptionMaxLength = 84,
   repository
 }) {
   function formatDescription(description) {
