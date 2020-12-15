@@ -65,7 +65,7 @@
     },
     "work": {
       "title": "Selected work",
-      "showMore": "Show more projects"
+      "showMore": "Show all projects"
     },
     "links": {
       "blog": {
@@ -141,10 +141,7 @@
         "id": "alpine",
         "clientHref": "https://www.alpine.com/",
         "description1": "<client>Alpine Electronics</client> is an international enterprise specialising in car audio and navigation systems that are used by manufacturers such as BMW, Audi, Mercedes & many more. The company counts more than 13,000 employees and wanted to take their data management apps to the next level by utilising a React-based component library that can be composed in flexible ways.",
-        "almHref": "https://alm.sh/",
-        "peerigonHref": "https://peerigon.com/",
-        "composeUsHref": "https://compose.us/",
-        "description2": "To meet this challenge, a team of six frontend specialists from <alm>alm engineering</alm>, <peerigon>Peerigon</peerigon>, <composeUs>compose.us</composeUs> and me was formed. My contribution was to gather requirements in on-site workshops, specification of features & component APIs, UX design, frontend development, code reviews and the definition of GraphQL APIs. A set of more than 150 components now provide the foundation for 20 application packages and counting."
+        "description2": "To meet this challenge, a team of six frontend specialists was formed. My contribution was to gather requirements in on-site workshops, specification of features & component APIs, UX design, frontend development, code reviews and the definition of GraphQL APIs. A set of more than 150 components now provide the foundation for 20 apps and counting."
       },
       "zemtu": {
         "intro": "Mobility for the future",

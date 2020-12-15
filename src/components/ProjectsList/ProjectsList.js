@@ -112,7 +112,7 @@ export default function ProjectsList({limit = undefined}) {
           <DeviceFrame type="desktop">
             <img
               alt=""
-              src={require('../../assets/alpine-design-system.png')}
+              src={require('../../assets/alpine-component-library.png')}
             />
           </DeviceFrame>
         </ProjectVisual>
@@ -123,13 +123,7 @@ export default function ProjectsList({limit = undefined}) {
           client: linkFor(t('projects.alpine.clientHref'))
         })}
       </ProjectParagraph>
-      <ProjectParagraph>
-        {t('projects.alpine.description2', {
-          alm: linkFor(t('projects.alpine.almHref')),
-          peerigon: linkFor(t('projects.alpine.peerigonHref')),
-          composeUs: linkFor(t('projects.alpine.composeUsHref'))
-        })}
-      </ProjectParagraph>
+      <ProjectParagraph>{t('projects.alpine.description2')}</ProjectParagraph>
     </Project>,
     <Project
       key="zemtu"
