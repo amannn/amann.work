@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import styles from './Anchor.module.scss';
 
-export default function Anchor({children, href, target = '_blank'}) {
+function Anchor(
+  {children, href, rel = 'noopener noreferrer', target = '_blank', ...rest},
+  ref
+) {
   return (
     <a
+      ref={ref}
       className={styles.root}
       href={href}
-      rel="noopener noreferrer"
+      rel={rel}
       target={target}
+      {...rest}
     >
       {children}
     </a>
   );
 }
+
+export default forwardRef(Anchor);

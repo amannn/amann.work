@@ -89,6 +89,10 @@
     "openSource": "Open Source",
     "contact": "Kontakt"
   },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Bitte um Verzeihung, die Seite die Sie angefordert haben existiert nicht (Code: 404). Zurück zum <home>Start</home>."
+  },
   "OpenSource": {
     "title": "Open Source",
     "description": "Ich bin dankbar, Teil einer Community zu sein, in der Ideen und Wissen offen geteilt werden. Mit veröffentlichten Libraries und der Mithilfe bei Projekten Dritter leiste ich meinen Beitrag.",

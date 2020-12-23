@@ -4297,13 +4297,12 @@ next-images@^1.6.2:
     file-loader "^6.0.0"
     url-loader "^4.0.0"
 
-next-intl@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-0.0.2.tgz#d47e06bdf75ad6fe0c5b6c0e5e88a1389c5f10de"
-  integrity sha512-1G754q0DAfbNizgGKiUdXRim/cbDpCXxo4gHvHfF+AhU+GzUCyHNgwlKnDPnFfwloMWl8FFil8kohR8NTGApVA==
+next-intl@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-0.4.0.tgz#fe2097095fcbad10efbb253c6e3618e91e414b7e"
+  integrity sha512-P/Oz3NQtGDj9TuejkKpGSTNMSNZvecVC286mhafNJEJYgwY3EZ5mWP/cvb8ZSvx+x7NVYRY0BJqic2X9Pl9TVA==
   dependencies:
-    intl-messageformat "^9.3.18"
-    tslib "^2.0.0"
+    use-intl "^0.3.0"
 
 next-mdx-enhanced@^5.0.0:
   version "5.0.0"
@@ -6698,6 +6697,13 @@ use-constant@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/use-constant/-/use-constant-1.1.0.tgz#76d36a0edf16d4cc8565361f522b55da5f8f3f22"
   integrity sha512-yrflEfv7Xv/W8WlYV6nwRH01K+2BpR4cWxuzY03yPRjYZuHixhGlvnJN5O2bRYrXGpJ4zy8QjFABGIQ2QXeBOA==
+
+use-intl@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-0.3.1.tgz#bafe7cbdc32771aae7e6676279512646e1874315"
+  integrity sha512-jsOtcrBa5fv+x3pOz58qgcS9CMZlPSZ5JyGyZ75ExfrpTM7I03yg2YyaSWxIlPSCcoyjm8KHeJtUTnpU3+7hnw==
+  dependencies:
+    intl-messageformat "^9.3.18"
 
 use-isomorphic-layout-effect@^1.1.0:
   version "1.1.0"
