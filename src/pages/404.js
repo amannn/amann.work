@@ -4,7 +4,6 @@ import React from 'react';
 import Anchor from 'components/Anchor';
 import Layout from 'components/Layout';
 import Meta from 'components/Meta';
-import Text from 'components/Text';
 
 // Force SSG as we're fetching data in `_app`
 export function getStaticProps() {
