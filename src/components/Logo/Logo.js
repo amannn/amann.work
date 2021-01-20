@@ -1,7 +1,18 @@
+import {useTranslations} from 'next-intl';
 import React from 'react';
 import styles from './Logo.module.scss';
 import logoImage from './logo.svg';
 
 export default function Logo() {
-  return <img alt="Jan Amann" className={styles.root} src={logoImage} />;
+  const t = useTranslations('Logo');
+
+  return (
+    <img
+      alt={t('alt')}
+      className={styles.root}
+      height={60}
+      src={logoImage}
+      width={60}
+    />
+  );
 }
