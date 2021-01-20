@@ -8,7 +8,7 @@
   background: none;
   padding: 8px 0;
   color: $white;
-  opacity: 0.5;
+  opacity: 0.6;
 
   @include hover-fast-in-slow-out {
     opacity: 1;
