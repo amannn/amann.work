@@ -6,14 +6,14 @@ import styles from './GithubRepository.module.scss';
 
 export default function GithubRepository({
   children,
-  descriptionMaxLength = 84,
+  descriptionMaxLength = 85,
   repository
 }) {
   function formatDescription(description) {
     description = description
-      // Remove emojis (https://stackoverflow.com/a/10999907/343045)
+      // Remove emojis (https://stackoverflow.com/a/41543705/343045)
       .replace(
-        /([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g,
+        /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
         ''
       )
       // Github uses proprietary emojis like ":recycle:".

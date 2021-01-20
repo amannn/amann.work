@@ -13,7 +13,8 @@ export async function getStaticProps() {
     props: {
       repositories: await GithubContributionsRepository.getOpenSourceRepositories(),
       pullRequestContributions: await GithubContributionsRepository.getPullRequestContributions()
-    }
+    },
+    revalidate: 86400 // Once per day
   };
 }
 
