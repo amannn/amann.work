@@ -1,4 +1,5 @@
 import {useTranslations} from 'next-intl';
+import Image from 'next/image';
 import React from 'react';
 import DeviceFrame from 'components/DeviceFrame';
 import FadeIn from 'components/FadeIn';
@@ -35,9 +36,11 @@ export default function ProjectsList({limit = undefined}) {
       testimonial={
         <ProjectTestimonial
           image={
-            <img
+            <Image
               alt={t('projects.setlistEdit.testimonial.personName')}
+              height={240}
               src={require('../../assets/christof-flachsmann.jpg')}
+              width={160}
             />
           }
           personLink={t('projects.setlistEdit.testimonial.personLink')}
@@ -50,9 +53,11 @@ export default function ProjectsList({limit = undefined}) {
       visual={
         <ProjectVisual>
           <DeviceFrame type="desktop">
-            <img
+            <Image
               alt=""
+              height={305}
               src={require('../../assets/setlist-edit-desktop.png')}
+              width={550}
             />
           </DeviceFrame>
           <LightboxDeviceVideo
@@ -85,10 +90,20 @@ export default function ProjectsList({limit = undefined}) {
       visual={
         <ProjectVisual>
           <DeviceFrame type="desktop">
-            <img alt="" src={require('../../assets/kfi-shops-desktop.png')} />
+            <Image
+              alt=""
+              height={336}
+              src={require('../../assets/kfi-shops-desktop.png')}
+              width={550}
+            />
           </DeviceFrame>
           <DeviceFrame>
-            <img alt="" src={require('../../assets/kfi-configurator-1.png')} />
+            <Image
+              alt=""
+              height={286}
+              src={require('../../assets/kfi-configurator-1.png')}
+              width={160}
+            />
           </DeviceFrame>
         </ProjectVisual>
       }
@@ -110,9 +125,11 @@ export default function ProjectsList({limit = undefined}) {
       visual={
         <ProjectVisual>
           <DeviceFrame type="desktop">
-            <img
+            <Image
               alt=""
+              height={305}
               src={require('../../assets/alpine-component-library.png')}
+              width={550}
             />
           </DeviceFrame>
         </ProjectVisual>
@@ -138,13 +155,28 @@ export default function ProjectsList({limit = undefined}) {
       visual={
         <ProjectVisual>
           <DeviceFrame>
-            <img alt="" src={require('../../assets/zemtu-1.png')} />
+            <Image
+              alt=""
+              height={300}
+              src={require('../../assets/zemtu-1.png')}
+              width={169}
+            />
           </DeviceFrame>
           <DeviceFrame>
-            <img alt="" src={require('../../assets/zemtu-2.png')} />
+            <Image
+              alt=""
+              height={300}
+              src={require('../../assets/zemtu-2.png')}
+              width={169}
+            />
           </DeviceFrame>
           <DeviceFrame>
-            <img alt="" src={require('../../assets/zemtu-3.png')} />
+            <Image
+              alt=""
+              height={300}
+              src={require('../../assets/zemtu-3.png')}
+              width={169}
+            />
           </DeviceFrame>
         </ProjectVisual>
       }
@@ -165,13 +197,28 @@ export default function ProjectsList({limit = undefined}) {
       visual={
         <ProjectVisual>
           <DeviceFrame>
-            <img alt="" src={require('../../assets/shoemondo-1.png')} />
+            <Image
+              alt=""
+              height={300}
+              src={require('../../assets/shoemondo-1.png')}
+              width={169}
+            />
           </DeviceFrame>
           <DeviceFrame>
-            <img alt="" src={require('../../assets/shoemondo-2.png')} />
+            <Image
+              alt=""
+              height={300}
+              src={require('../../assets/shoemondo-2.png')}
+              width={169}
+            />
           </DeviceFrame>
           <DeviceFrame>
-            <img alt="" src={require('../../assets/shoemondo-3.png')} />
+            <Image
+              alt=""
+              height={300}
+              src={require('../../assets/shoemondo-3.png')}
+              width={169}
+            />
           </DeviceFrame>
         </ProjectVisual>
       }
