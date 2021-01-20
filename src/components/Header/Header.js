@@ -33,7 +33,7 @@ export default function Header({
         )}
         {showPortrait && (
           <div className={styles.portrait}>
-            <Image height={801} src={portrait} width={929} />
+            <Image height={801} priority src={portrait} width={929} />
           </div>
         )}
       </Wrapper>
