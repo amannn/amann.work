@@ -1,5 +1,6 @@
 import cx from 'classnames';
 import {motion, useAnimation} from 'framer-motion';
+import {useTranslations} from 'next-intl';
 import {useRef} from 'react';
 import useUpdateEffect from 'use-update-effect';
 import styles from './NavigationMenuButton.module.scss';
@@ -9,6 +10,7 @@ export default function NavigationMenuButton({
   isMenuOpen,
   onMenuOpenChange
 }) {
+  const t = useTranslations('NavigationMenuButton');
   const nodeRef = useRef();
   const controls = useAnimation();
 
@@ -49,6 +51,7 @@ export default function NavigationMenuButton({
   return (
     <motion.button
       ref={nodeRef}
+      aria-label={t('toggleMenu', {isMenuOpen})}
       className={cx(className, styles.root)}
       onClick={onClick}
       type="button"

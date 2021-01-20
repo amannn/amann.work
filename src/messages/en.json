@@ -92,6 +92,9 @@
     "openSource": "Open source",
     "contact": "Contact"
   },
+  "NavigationMenuButton": {
+    "toggleMenu": "{isMenuOpen, select, true {Close menu} false {Open menu}}"
+  },
   "NotFound": {
     "title": "Page not found (404)",
     "description": "Sorry, the page you requested does not exist. Return to <home>home</home>."

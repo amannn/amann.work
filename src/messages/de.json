@@ -92,6 +92,9 @@
     "openSource": "Open Source",
     "contact": "Kontakt"
   },
+  "NavigationMenuButton": {
+    "toggleMenu": "{isMenuOpen, select, true {Menü schließen} false {Menü öffnen}}"
+  },
   "NotFound": {
     "title": "Seite nicht gefunden",
     "description": "Bitte um Verzeihung, die von Ihnen angeforderte Seite existiert nicht (Code: 404). Zurück zum <home>Start</home>."
