@@ -120,7 +120,7 @@
         "id": "setlist-edit",
         "visitsHref": "https://www.similarweb.com/website/setlist.fm#overview",
         "clientHref": "http://molindo.at",
-        "description1": "With <visits>millions of monthly visits</visits>, setlist.fm is one of the most popular music services worldwide and enables its users to share their knowledge about concert setlists. The team from <client>Molindo</client> set out to relaunch the core experience of adding and editing setlists and hired me to implement the user interface.",
+        "description1": "With <visits>millions of monthly visits</visits>, setlist.fm is one of the most popular music services worldwide and enables its users to share their knowledge about concert setlists. The team from <client>Molindo</client> set out to relaunch the core experience of editing setlists and hired me to implement the user interface.",
         "description2": "The frontend of the project consists of four React widgets. These integrate seamlessly with the existing web stack of the platform and communicate with a GraphQL API. To live up to the high expectations of mobile apps, the implementation places special focus on touch gestures, useful animations, runtime performance and an offline-first approach to data.",
         "cta": {
           "label": "Add a setlist",
