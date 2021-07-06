@@ -3,8 +3,8 @@ import GithubRepository from './GithubRepository';
 const MAINTAINED_REPOSITORIES = [
   'molindo/react-apollo-network-status',
   'amannn/action-semantic-pull-request',
-  'amannn/next-client-script',
   'amannn/next-intl',
+  'amannn/next-client-script',
   'amannn/multi-sitemap',
   'amannn/react-hooks',
   'amannn/atom-format-javascript-comment',
@@ -71,9 +71,17 @@ export default class GithubContributionsRepository {
 
     const EARLIEST_CONTRIBUTION_YEAR = 2013;
     // The intention is to show PRs to repositories of others.
-    const PR_REPO_OWNER_BLACKLIST = ['amannn', 'molindo', 'tools-aoeur'];
+    const PR_REPO_OWNER_IGNORELIST = [
+      'amannn',
+      'molindo',
+      'tools-aoeur',
+      'CaritasDeutschland',
+      'virtualidentityag'
+    ];
+
     // Not particularly interesting PRs.
-    const PR_ID_BLACKLIST = [
+    const PR_ID_IGNORELIST = [
+      'MDExOlB1bGxSZXF1ZXN0NTYwMDU5MTcx',
       'MDExOlB1bGxSZXF1ZXN0NTEzMDI3MzY2',
       'MDExOlB1bGxSZXF1ZXN0NTEyMzM0MTg4',
       'MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz',
@@ -96,10 +104,10 @@ export default class GithubContributionsRepository {
       .filter(
         (result) =>
           result.pullRequest.baseRepository.isPrivate === false &&
-          !PR_REPO_OWNER_BLACKLIST.includes(
+          !PR_REPO_OWNER_IGNORELIST.includes(
             result.pullRequest.baseRepository.owner.login
           ) &&
-          !PR_ID_BLACKLIST.includes(result.pullRequest.id)
+          !PR_ID_IGNORELIST.includes(result.pullRequest.id)
       )
       .sort((a, b) =>
         a.pullRequest.createdAt < b.pullRequest.createdAt ? 1 : -1
