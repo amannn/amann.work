@@ -28,6 +28,7 @@
     "next-intl": "^2.0.0",
     "react": "18.0.0-alpha-bc4e75112-20210815",
     "react-dom": "18.0.0-alpha-bc4e75112-20210815",
+    "sharp": "0.29.0",
     "use-breakpoint": "^2.0.1",
     "use-constant": "^1.1.0",
     "use-isomorphic-layout-effect": "^1.1.1",
