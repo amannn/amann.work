@@ -44,7 +44,7 @@
     "eslint-config-molindo": "5.1.0",
     "next-images": "^1.8.1",
     "next-videos": "^1.4.0",
-    "puppeteer": "^5.5.0",
+    "puppeteer": "^10.2.0",
     "sass": "^1.38.2",
     "start-server-and-test": "^1.13.1",
     "xml2js": "^0.4.23"

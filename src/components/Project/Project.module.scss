@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '~styles/colors';
 @import '~styles/media-queries';
 @import '~styles/radius';
@@ -92,7 +93,7 @@ $horizontal-line-length: 140px;
   @include before {
     position: absolute;
     top: 0;
-    right: $horizontal-line-length / 2;
+    right: math.div($horizontal-line-length, 2);
     height: 120px;
     width: 1px;
     transform: translateY(-100%);

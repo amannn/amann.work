@@ -17,7 +17,7 @@ export default function NotFound() {
     <>
       <Meta title={t('title')} />
       <Layout
-        description={t('description', {
+        description={t.rich('description', {
           // eslint-disable-next-line react/display-name
           home: (children) => (
             <Link href="/" passHref>
