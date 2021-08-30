@@ -15,7 +15,7 @@ export async function getStaticProps() {
       pullRequestContributions: await GithubContributionsRepository.getPullRequestContributions(),
       generationTime: new Date().toISOString()
     },
-    revalidate: 3600 // Once per hour
+    revalidate: 900 // Once every 15min
   };
 }
 
