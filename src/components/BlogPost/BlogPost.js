@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
 import {MDXProvider} from '@mdx-js/react';
+import {parseISO} from 'date-fns';
 import React from 'react';
 import Anchor from 'components/Anchor';
 import Layout from 'components/Layout';
@@ -20,18 +21,20 @@ const components = {
   )
 };
 
-export default function BlogPost({children, frontMatter}) {
+export default function BlogPost({children, metadata}) {
   const formatDate = useDateFormatting();
 
   return (
     <>
-      <Meta description={frontMatter.excerpt} title={frontMatter.title} />
+      <Meta description={metadata.excerpt} title={metadata.title} />
       <Layout
         slim
-        subtitle={formatDate(frontMatter.date)}
-        title={frontMatter.title}
+        subtitle={formatDate(parseISO(metadata.date))}
+        title={metadata.title}
       >
-        <MDXProvider components={components}>{children}</MDXProvider>
+        <MDXProvider components={components} disableParentContext>
+          {children}
+        </MDXProvider>
       </Layout>
     </>
   );
