@@ -31,7 +31,18 @@ export default function App({Component, messages, pageProps, router}) {
   return (
     <Suspense fallback={null}>
       <IsSsrContext.Provider value={isSsr}>
-        <NextIntlProvider messages={messages}>
+        <NextIntlProvider
+          formats={{
+            dateTime: {
+              date: {
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric'
+              }
+            }
+          }}
+          messages={messages}
+        >
           <Navigation>
             <AnimatePresence exitBeforeEnter>
               <motion.div
@@ -67,6 +78,6 @@ export default function App({Component, messages, pageProps, router}) {
 App.getInitialProps = async function getInitialProps(context) {
   return {
     ...(await NextApp.getInitialProps(context)),
-    messages: require(`messages/${context.router.locale}.json`)
+    messages: require(`../../messages/${context.router.locale}.json`)
   };
 };

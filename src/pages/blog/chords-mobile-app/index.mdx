@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import BlogPost from 'components/BlogPost';
 import DeviceFrame from 'components/DeviceFrame';
 import Figure from 'components/Figure';
@@ -18,7 +19,7 @@ This app is my attempt at delivering a good user experience for an app that help
 
 <Figure>
   <DeviceFrame>
-    <img src={require('./songs.png')} />
+    <Image src={require('./songs.png')} />
   </DeviceFrame>
 </Figure>
 
@@ -28,7 +29,7 @@ If you happen to have a lot of songs, you can still use the search feature. But 
 
 <Figure>
   <DeviceFrame>
-    <img src={require('./search.png')} />
+    <Image src={require('./search.png')} />
   </DeviceFrame>
 </Figure>
 
@@ -38,7 +39,7 @@ Furthermore, specific chords are always highlighted with the same colour, so if 
 
 <Figure>
   <DeviceFrame>
-    <img src={require('./detail.png')} />
+    <Image src={require('./detail.png')} />
   </DeviceFrame>
 </Figure>
 
@@ -47,7 +48,7 @@ From here you can also save the song as a favourite, or transpose the song up or
 What enhances the experience is that the colour used for the play button is always computed dynamically from the shown image.
 
 <Figure>
-  <img style={{maxWidth: 400}} src={require('./colours.png')} />
+  <Image src={require('./colours.png')} />
 </Figure>
 
 This is achieved through [Color Thief](https://lokeshdhakar.com/projects/color-thief/) – a small colour extraction library. It's not much effort to implement, but I think it really improves the experience.

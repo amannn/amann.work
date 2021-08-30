@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import BlogPost from 'components/BlogPost';
 import DeviceFrame from 'components/DeviceFrame';
 import Figure from 'components/Figure';
@@ -27,14 +28,14 @@ Such apps tend to have quite a bit of side effects if you don't use an abstracti
 
 I initially tried running the animation loop via `setState`, but that turned out to be too slow. Therefore I wanted something that bypasses React altogether for my animation purposes: Introducing [RxJS](https://rxjs-dev.firebaseapp.com/). Observables are interesting for gestures where a single touch movement controls multiple effects.
 
-In my case I'm reading `scrollTop` on every animation frame, feed that into a stream which all animatable elements subscribe to and transform it as necessary. Reading `scrollTop` via `requestAnimationFrame` produces better results in comparison to a scroll listener, as the latter can fire too often which will cause jank. Therefore every frame starts with a single read operation from the DOM followed by a few write operations. That avoids [layout thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing) and reduces CPU work.
+In my case I'm reading `scrollTop` on every animation frame, feed that into a stream which all animatable elements subscribe to and transform it as necessary. Reading `scrollTop` via `requestAnimationFrame` produces better results in comparison to a scroll listener, as the latter can fire too often and cause jank. Therefore every frame starts with a single read operation from the DOM followed by a few write operations. That avoids [layout thrashing](https://developers.google.com/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing) and reduces CPU work.
 
 <Figure caption="A bit of JavaScript is necessary, but the animation runs with 60 FPS on mobile (screenshot from a MacBook Pro with 4x CPU slowdown).">
-  <img src={require('./timeline.png')} />
+  <Image src={require('./timeline.png')} />
 </Figure>
 
 Credit for using RxJS for animation goes to [@DavidKPiano](https://twitter.com/DavidKPiano), [@BenLesh](https://twitter.com/BenLesh) and [@appsforartists](https://twitter.com/appsforartists).
 
-To me, the most promising aspect of Hooks was having another tool in the box to create abstractions for shared behaviour. This can lead to [slimmer components](https://twitter.com/jamannnnnn/status/1057025220362543116). Also `useEffect` is just amazing in comparison to `componentDidMount`, `-DidUpdate` and `-WillUnmount`.
+To me, the most promising aspect of Hooks was having another tool in the box to create abstractions for shared behaviour. This can lead to [slimmer components](https://twitter.com/jamannnnnn/status/1057025220362543116). Also `useEffect` seems much more ergnomic than `componentDidMount`, `-DidUpdate` and `-WillUnmount`.
 
 The code is [available on Github](https://github.com/amannn/friends-ui).

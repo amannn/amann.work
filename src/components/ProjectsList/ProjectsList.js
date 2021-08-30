@@ -61,7 +61,9 @@ export default function ProjectsList({limit = undefined}) {
             />
           </DeviceFrame>
           <LightboxDeviceVideo
-            poster={require('../../assets/setlist-edit-mobile-poster.png')}
+            poster={
+              require('../../assets/setlist-edit-mobile-poster.png').default.src
+            }
             source={require('../../assets/setlist-edit-mobile.mp4')}
           />
         </ProjectVisual>

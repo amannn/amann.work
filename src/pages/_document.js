@@ -2,7 +2,13 @@ import NextDocument, {Html, Head, Main, NextScript} from 'next/document';
 import Fonts from 'components/Fonts';
 
 export default class Document extends NextDocument {
+  static async getInitialProps(ctx) {
+    const initialProps = await NextDocument.getInitialProps(ctx);
+    return {...initialProps, locale: ctx.locale};
+  }
+
   render() {
+    const {locale} = this.props;
     return (
       <Html>
         <Head>
@@ -16,6 +22,12 @@ export default class Document extends NextDocument {
         </Head>
         <body>
           <Main />
+          <script
+            // Conditionally polyfill Intl API as needed
+            dangerouslySetInnerHTML={{
+              __html: `(window.Intl && window.Intl.PluralRules && Intl.DateTimeFormat && Intl.NumberFormat) || document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=Intl%2CIntl.DateTimeFormat%2CIntl.DateTimeFormat.%7Elocale.${locale}"><\\/script>');`
+            }}
+          />
           <NextScript />
           {/* Prevent transitions from running on load in Chrome.
               https://stackoverflow.com/a/42969608/343045 */}
