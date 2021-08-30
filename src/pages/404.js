@@ -21,7 +21,7 @@ export default function NotFound() {
           // eslint-disable-next-line react/display-name
           home: (children) => (
             <Link href="/" passHref>
-              <Anchor key="privacyLink" rel={null} target={null}>
+              <Anchor rel={null} target={null}>
                 {children}
               </Anchor>
             </Link>

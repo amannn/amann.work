@@ -28,18 +28,24 @@ export default function Imprint() {
           {t('address')}
         </Text>
         <Text className={styles.line} marginBottom>
-          {t('uid')}
-        </Text>
-        <Text className={styles.line} marginBottom>
           {t('contact')}
+        </Text>
+        <Text className={styles.line}>{t('uid')}</Text>
+        <Text className={styles.line} marginBottom>
+          {t.rich('ethics', {
+            // eslint-disable-next-line react/display-name
+            argeLink: (children) => (
+              <Anchor href="https://www.wko.at/service/netzwerke/arge-proethik.html">
+                {children}
+              </Anchor>
+            )
+          })}
         </Text>
         <Text className={styles.line}>
           {t.rich('privacy', {
             // eslint-disable-next-line react/display-name
             privacyLink: (children) => (
-              <Anchor key="privacyLink" href={t('privacyHref')}>
-                {children}
-              </Anchor>
+              <Anchor href={t('privacyHref')}>{children}</Anchor>
             )
           })}
         </Text>
