@@ -1,16 +1,16 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const withImages = require('next-images');
-const withMdxEnhanced = require('next-mdx-enhanced')({
-  layoutPath: 'src/components/BlogPost',
-  defaultLayout: true
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx$/
 });
+const withImages = require('next-images');
 const withVideos = require('next-videos');
 
-module.exports = withMdxEnhanced(
+module.exports = withMDX(
   withVideos(
     withImages({
-      experimental: {
-        reactMode: 'concurrent'
+      reactStrictMode: true,
+      images: {
+        disableStaticImages: true
       },
       pageExtensions: ['js', 'md', 'mdx'],
       i18n: {
@@ -27,7 +27,9 @@ module.exports = withMdxEnhanced(
             }
           ]
         }
-      ]
+      ],
+      // Runs separately
+      eslint: {ignoreDuringBuilds: true}
     })
   )
 );

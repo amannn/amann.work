@@ -15,7 +15,7 @@ jobs:
           restore-keys: ${{ runner.os }}-node-
       - uses: actions/setup-node@v1
         with:
-          version: '12.x'
+          version: '14.x'
       - run: yarn install --pure-lockfile
       - run: yarn lint
       - run: yarn build

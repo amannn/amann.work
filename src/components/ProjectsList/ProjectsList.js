@@ -68,7 +68,7 @@ export default function ProjectsList({limit = undefined}) {
       }
     >
       <ProjectParagraph>
-        {t('projects.setlistEdit.description1', {
+        {t.rich('projects.setlistEdit.description1', {
           visits: linkFor(t('projects.setlistEdit.visitsHref')),
           client: linkFor(t('projects.setlistEdit.clientHref'))
         })}
@@ -109,7 +109,7 @@ export default function ProjectsList({limit = undefined}) {
       }
     >
       <ProjectParagraph>
-        {t('projects.kuechenfinder.description1', {
+        {t.rich('projects.kuechenfinder.description1', {
           client: linkFor(t('projects.kuechenfinder.clientHref'))
         })}
       </ProjectParagraph>
@@ -136,7 +136,7 @@ export default function ProjectsList({limit = undefined}) {
       }
     >
       <ProjectParagraph>
-        {t('projects.alpine.description1', {
+        {t.rich('projects.alpine.description1', {
           client: linkFor(t('projects.alpine.clientHref'))
         })}
       </ProjectParagraph>

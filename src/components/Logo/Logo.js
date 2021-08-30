@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {useTranslations} from 'next-intl';
 import React from 'react';
 import styles from './Logo.module.scss';

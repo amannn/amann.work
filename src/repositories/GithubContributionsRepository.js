@@ -86,7 +86,8 @@ export default class GithubContributionsRepository {
       'MDExOlB1bGxSZXF1ZXN0NTEyMzM0MTg4',
       'MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz',
       'MDExOlB1bGxSZXF1ZXN0MzYwOTI4MzYw',
-      'MDExOlB1bGxSZXF1ZXN0NDc0Nzk1MDc3'
+      'MDExOlB1bGxSZXF1ZXN0NDc0Nzk1MDc3',
+      'MDExOlB1bGxSZXF1ZXN0NzEyMDk0NTI1'
     ];
 
     const endYear = new Date().getFullYear();

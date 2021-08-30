@@ -34,7 +34,7 @@ export default function Imprint() {
           {t('contact')}
         </Text>
         <Text className={styles.line}>
-          {t('privacy', {
+          {t.rich('privacy', {
             // eslint-disable-next-line react/display-name
             privacyLink: (children) => (
               <Anchor key="privacyLink" href={t('privacyHref')}>
