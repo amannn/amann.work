@@ -78,6 +78,6 @@ export default function App({Component, messages, pageProps, router}) {
 App.getInitialProps = async function getInitialProps(context) {
   return {
     ...(await NextApp.getInitialProps(context)),
-    messages: require(`messages/${context.router.locale}.json`)
+    messages: require(`../../messages/${context.router.locale}.json`)
   };
 };
