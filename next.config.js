@@ -8,6 +8,7 @@ const withVideos = require('next-videos');
 module.exports = withMDX(
   withVideos(
     withImages({
+      reactStrictMode: true,
       images: {
         disableStaticImages: true
       },
@@ -26,7 +27,9 @@ module.exports = withMDX(
             }
           ]
         }
-      ]
+      ],
+      // Runs separately
+      eslint: {ignoreDuringBuilds: true}
     })
   )
 );
