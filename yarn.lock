@@ -5407,10 +5407,10 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
-use-breakpoint@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/use-breakpoint/-/use-breakpoint-2.0.1.tgz#0e98cd55a6b0173147b84837a8cdecc63eabfcd7"
-  integrity sha512-f9PuRHzPsCIBW6oizdGpTAuH+49Tt9hMvByWQYpqI95tUN8k6qDX5WhL5s3b6cQfbubtIHCd1bw/8s5CzSbXpA==
+use-breakpoint@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/use-breakpoint/-/use-breakpoint-2.0.2.tgz#915a07529414255600b5b8e9136899598ab7c0be"
+  integrity sha512-xBZvpxPImdAz+gB5jAB6apmxBxE/qUXurk1FJWjJhUq2VAWMXq9sEwiBVLu0oJ1WgqJDJGRhn8eusVVcxDPjhg==
 
 use-constant@^1.1.0:
   version "1.1.0"

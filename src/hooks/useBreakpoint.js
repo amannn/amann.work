@@ -1,7 +1,6 @@
 /* eslint-disable css-modules/no-undef-class */
 import useBaseBreakpoint from 'use-breakpoint';
 import styles from 'styles/media-queries.module.scss';
-import EnvUtils from 'utils/EnvUtils';
 
 const breakpointsByName = {
   small: 0,
@@ -19,9 +18,5 @@ export const breakpoints = Object.keys(breakpointsByName).reduce(
 );
 
 export default function useBreakpoint() {
-  return EnvUtils.isClient()
-    ? // Avoid warnings about using layout effect on the server
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      breakpoints[useBaseBreakpoint(breakpointsByName)?.breakpoint]
-    : undefined;
+  return breakpoints[useBaseBreakpoint(breakpointsByName)?.breakpoint];
 }
