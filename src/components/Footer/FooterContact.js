@@ -26,7 +26,7 @@ export default function FooterContact() {
       <Text color="paleInverted" component="h2" variant="label">
         {t('intro')}
       </Text>
-      <Text color="accentLight" variant="h2">
+      <Text color="primaryLight" variant="h2">
         {t('title')}
       </Text>
       <div>
