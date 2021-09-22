@@ -124,7 +124,7 @@
         "title": "Kitchen expert search",
         "id": "kuechenfinder",
         "clientHref": "http://molindo.at",
-        "description1": "Küchenfinder is an Austrian platform operated by <client>Molindo</client>, which helps you to purchase a new kitchen. More than 2 million users visit the site per year to leverage a data-driven search engine to connect with qualified experts.",
+        "description1": "Küchenfinder is an Austrian platform operated by <client>Molindo</client>, which helps you to purchase a new kitchen. About 6 million users visit the site per year to leverage a data-driven search engine to connect with qualified experts.",
         "description2": "I developed multiple React apps for the platform, covering a kitchen configurator for customers, an app for experts to manage customer inquiries and one for admins to configure core data. Further to this, I developed a GraphQL API in Node.js which provides clients with performant access to distributed data from REST micro services.",
         "cta": {
           "label": "Find a kitchen expert",
