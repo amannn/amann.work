@@ -21,7 +21,7 @@ export default function Project({
           <div className={styles.background} />
           <div className={styles.visual}>{visual}</div>
           <div className={styles.text}>
-            <Text color="accent" variant="label">
+            <Text color="primary" variant="label">
               {intro}
             </Text>
             <Text component="h3" marginBottom variant="h2">

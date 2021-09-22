@@ -39,7 +39,7 @@ export default function ProjectTestimonial({
         </Text>
 
         <footer className={styles.person}>
-          <Text color="accent" component={PersonNameComponent} variant="h3">
+          <Text color="primary" component={PersonNameComponent} variant="h3">
             {personName}
           </Text>
           <Text color="pale" variant="caption">

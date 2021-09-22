@@ -8,6 +8,14 @@
   @include match-medium {
     padding-top: 280px;
   }
+
+  &_intro .children {
+    margin-top: 80px;
+
+    @include match-medium {
+      margin-top: 160px;
+    }
+  }
 }
 
 .description {
@@ -26,12 +34,6 @@
 }
 
 .children {
-  margin-top: 80px;
-
-  @include match-medium {
-    margin-top: 160px;
-  }
-
   & > *:not(:first-child) {
     margin-top: 120px;
   }

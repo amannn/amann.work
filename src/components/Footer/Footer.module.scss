@@ -24,12 +24,16 @@
   }
 }
 
-.menu > * {
-  &:not(:first-child) {
-    margin-left: 20px;
+.menu {
+  margin-bottom: 16px;
 
-    @include match-medium {
-      margin-left: 24px;
+  @include match-medium {
+    margin-bottom: 0;
+  }
+
+  > * {
+    &:not(:last-child) {
+      margin-right: 24px;
     }
   }
 }

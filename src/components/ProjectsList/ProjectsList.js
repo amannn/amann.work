@@ -1,12 +1,12 @@
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 import React from 'react';
+import CallToAction from 'components/CallToAction';
 import DeviceFrame from 'components/DeviceFrame';
 import FadeIn from 'components/FadeIn';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
 import {ProjectAnchor} from 'components/Project';
 import Project from 'components/Project/Project';
-import ProjectLink from 'components/Project/ProjectLink';
 import ProjectParagraph from 'components/Project/ProjectParagraph';
 import ProjectTestimonial from 'components/Project/ProjectTestimonial';
 import ProjectVisual from 'components/Project/ProjectVisual';
@@ -27,9 +27,9 @@ export default function ProjectsList({limit = undefined}) {
     <Project
       key="setlist-edit"
       cta={
-        <ProjectLink href={t('projects.setlistEdit.cta.href')}>
+        <CallToAction href={t('projects.setlistEdit.cta.href')} target="_blank">
           {t('projects.setlistEdit.cta.label')}
-        </ProjectLink>
+        </CallToAction>
       }
       id={t('projects.setlistEdit.id')}
       intro={t('projects.setlistEdit.intro')}
@@ -39,6 +39,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt={t('projects.setlistEdit.testimonial.personName')}
               height={240}
+              placeholder="blur"
               src={require('../../assets/christof-flachsmann.jpg')}
               width={160}
             />
@@ -56,6 +57,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={305}
+              placeholder="blur"
               src={require('../../assets/setlist-edit-desktop.png')}
               width={550}
             />
@@ -82,9 +84,12 @@ export default function ProjectsList({limit = undefined}) {
     <Project
       key="kuechenfinder"
       cta={
-        <ProjectLink href={t('projects.kuechenfinder.cta.href')}>
+        <CallToAction
+          href={t('projects.kuechenfinder.cta.href')}
+          target="_blank"
+        >
           {t('projects.kuechenfinder.cta.label')}
-        </ProjectLink>
+        </CallToAction>
       }
       id={t('projects.kuechenfinder.id')}
       intro={t('projects.kuechenfinder.intro')}
@@ -95,6 +100,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={336}
+              placeholder="blur"
               src={require('../../assets/kfi-shops-desktop.png')}
               width={550}
             />
@@ -103,6 +109,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={286}
+              placeholder="blur"
               src={require('../../assets/kfi-configurator-1.png')}
               width={160}
             />
@@ -130,6 +137,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={305}
+              placeholder="blur"
               src={require('../../assets/alpine-component-library.png')}
               width={550}
             />
@@ -147,9 +155,9 @@ export default function ProjectsList({limit = undefined}) {
     <Project
       key="zemtu"
       cta={
-        <ProjectLink href={t('projects.zemtu.cta.href')}>
+        <CallToAction href={t('projects.zemtu.cta.href')} target="_blank">
           {t('projects.zemtu.cta.label')}
-        </ProjectLink>
+        </CallToAction>
       }
       id={t('projects.zemtu.id')}
       intro={t('projects.zemtu.intro')}
@@ -160,6 +168,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={300}
+              placeholder="blur"
               src={require('../../assets/zemtu-1.png')}
               width={169}
             />
@@ -168,6 +177,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={300}
+              placeholder="blur"
               src={require('../../assets/zemtu-2.png')}
               width={169}
             />
@@ -176,6 +186,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={300}
+              placeholder="blur"
               src={require('../../assets/zemtu-3.png')}
               width={169}
             />
@@ -189,9 +200,9 @@ export default function ProjectsList({limit = undefined}) {
     <Project
       key="shoemondo"
       cta={
-        <ProjectLink href={t('projects.shoemondo.cta.href')}>
+        <CallToAction href={t('projects.shoemondo.cta.href')} target="_blank">
           {t('projects.shoemondo.cta.label')}
-        </ProjectLink>
+        </CallToAction>
       }
       id={t('projects.shoemondo.id')}
       intro={t('projects.shoemondo.intro')}
@@ -202,6 +213,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={300}
+              placeholder="blur"
               src={require('../../assets/shoemondo-1.png')}
               width={169}
             />
@@ -210,6 +222,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={300}
+              placeholder="blur"
               src={require('../../assets/shoemondo-2.png')}
               width={169}
             />
@@ -218,6 +231,7 @@ export default function ProjectsList({limit = undefined}) {
             <Image
               alt=""
               height={300}
+              placeholder="blur"
               src={require('../../assets/shoemondo-3.png')}
               width={169}
             />

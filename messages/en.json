@@ -6,6 +6,7 @@
   "Footer": {
     "id": "contact",
     "work": "Work",
+    "services": "Services",
     "blog": "Blog",
     "openSource": "Open source",
     "imprint": "Imprint",
@@ -40,29 +41,12 @@
   },
   "Index": {
     "header": {
-      "title": "Jan Amann",
-      "tagline": "Partner for User Interface Engineering and Design",
-      "description": "My passion is to create web-based products where design, usability and performance matter. I’m specialised in developing with React."
+      "title": "User Interface Engineering & Design",
+      "tagline": "Jan Amann"
     },
-    "services": {
-      "title": "Services",
-      "description": "I work with startups and established companies alike. For me, the most important aspect of a project is to create a meaningful experience that provides added value for people.",
-      "reactApps": {
-        "title": "React apps",
-        "description": "With 10 years of experience with web apps and 5 years of React, I can help you architect and build ambitious web experiences that are a pleasure to use."
-      },
-      "componentLibraries": {
-        "title": "Component libraries",
-        "description": "By identifying the fundamental building blocks and making them available via a composable API, you can set your apps up for success."
-      },
-      "mobileApps": {
-        "title": "Mobile apps",
-        "description": "Offering a great user experience on mobile means putting performance first. However there’s no need to compromise on animations and useful touch gestures."
-      },
-      "consulting": {
-        "title": "Consulting and code reviews",
-        "description": "I’m happy to share my knowledge in the context of plannings, workshops and reviews. I take the time to listen and will find the right solution together with your team."
-      }
+    "intro": {
+      "description": "With more than 10 years of experience with web apps and 6 years of React, I can help you architect and build ambitious web experiences that are a pleasure to use.",
+      "services": "Services"
     },
     "work": {
       "title": "Selected work",
@@ -89,6 +73,7 @@
   "NavigationMenu": {
     "home": "Home",
     "work": "Work",
+    "services": "Services",
     "blog": "Blog",
     "openSource": "Open source",
     "contact": "Contact"
@@ -117,7 +102,7 @@
     "projects": {
       "setlistEdit": {
         "intro": "Millions of setlists at your finger tips",
-        "title": "New editing experience for setlist.fm",
+        "title": "setlist.fm editing experience",
         "id": "setlist-edit",
         "visitsHref": "https://www.similarweb.com/website/setlist.fm#overview",
         "clientHref": "http://molindo.at",
@@ -139,7 +124,7 @@
         "title": "Kitchen expert search",
         "id": "kuechenfinder",
         "clientHref": "http://molindo.at",
-        "description1": "Küchenfinder is an Austrian platform operated by <client>Molindo</client>, which helps you to purchase a new kitchen. More than 2 million users visit the site per year to leverage a data-driven search engine to connect with qualified experts.",
+        "description1": "Küchenfinder is an Austrian platform operated by <client>Molindo</client>, which helps you to purchase a new kitchen. About 6 million users visit the site per year to leverage a data-driven search engine to connect with qualified experts.",
         "description2": "I developed multiple React apps for the platform, covering a kitchen configurator for customers, an app for experts to manage customer inquiries and one for admins to configure core data. Further to this, I developed a GraphQL API in Node.js which provides clients with performant access to distributed data from REST micro services.",
         "cta": {
           "label": "Find a kitchen expert",
@@ -177,5 +162,26 @@
         }
       }
     }
+  },
+  "Services": {
+    "title": "Services",
+    "description": "I work with startups and established companies alike. For me, the most important aspect of a project is to create a meaningful experience that provides added value for people.",
+    "reactApps": {
+      "title": "React apps",
+      "description": "With more than 10 years of experience with web apps and 6 years of React, I can help you architect and build ambitious web experiences that are a pleasure to use."
+    },
+    "componentLibraries": {
+      "title": "Component libraries",
+      "description": "By identifying the fundamental building blocks and making them available via a composable API, you can set your apps up for success."
+    },
+    "mobileApps": {
+      "title": "Mobile apps",
+      "description": "Offering a great user experience on mobile means putting performance first. However there’s no need to compromise on animations and useful touch gestures."
+    },
+    "consulting": {
+      "title": "Consulting and code reviews",
+      "description": "I’m happy to share my knowledge in the context of plannings, workshops and reviews. I take the time to listen and will find the right solution together with your team."
+    },
+    "work": "See selected work"
   }
 }

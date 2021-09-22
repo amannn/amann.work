@@ -1,3 +1,59 @@
+@import '~styles/colors';
+@import '~styles/radius';
+@import '~styles/media-queries';
+
+.uiSketch {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  right: -160px;
+
+  @include match-medium {
+    left: auto;
+    right: -280px;
+  }
+}
+
+.intro {
+  position: relative;
+}
+
+.introPortrait {
+  display: inline-flex;
+  border-radius: radius(1);
+  overflow: hidden;
+
+  @include match-large {
+    margin-left: 0;
+  }
+
+  @include match-huge {
+    margin-left: -200px;
+  }
+}
+
+.introText {
+  padding: 24px;
+  background-color: $white;
+  border-radius: radius(1);
+
+  @include match-large {
+    position: absolute;
+    bottom: -68px; // Match the bottom line of the image
+    width: 500px;
+    right: 0;
+    padding: 40px;
+  }
+
+  @include match-huge {
+    width: 700px;
+  }
+}
+
+.introCta {
+  margin-top: 24px;
+}
+
 .links {
   padding: 200px 0;
 }

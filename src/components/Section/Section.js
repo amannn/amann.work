@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import React from 'react';
 import Text from 'components/Text';
 import Wrapper from 'components/Wrapper';
@@ -6,9 +7,11 @@ import SectionTitle from './SectionTitle';
 
 export default function Section({children, description, title}) {
   return (
-    <div className={styles.root}>
+    <div
+      className={cx(styles.root, (title || description) && styles.root_intro)}
+    >
       <Wrapper>
-        <SectionTitle>{title}</SectionTitle>
+        {title && <SectionTitle>{title}</SectionTitle>}
         {description && (
           <Text className={styles.description} variant="h3">
             {description}

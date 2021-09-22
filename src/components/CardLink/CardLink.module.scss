@@ -21,7 +21,7 @@ $animated-offset: 4px;
     height: 100%;
     left: 0;
     top: 0;
-    background-color: $color-accent-light;
+    background-color: $color-primary-light;
     transform-origin: left;
     transform: scaleX(0);
     @include animate-slow;

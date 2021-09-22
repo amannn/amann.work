@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import {useTranslations} from 'next-intl';
 import React from 'react';
 import Icon from 'components/Icon';
@@ -7,11 +8,11 @@ import FooterContact from './FooterContact';
 import FooterMenuItem from './FooterMenuItem';
 import FooterSocialIcon from './FooterSocialIcon';
 
-export default function Footer() {
+export default function Footer({className}) {
   const t = useTranslations('Footer');
 
   return (
-    <div className={styles.root}>
+    <div className={cx(className, styles.root)}>
       <Wrapper>
         <div id={t('id')}>
           <FooterContact />
@@ -19,10 +20,11 @@ export default function Footer() {
         <div className={styles.navigation}>
           <div className={styles.menu}>
             <FooterMenuItem href="/work">{t('work')}</FooterMenuItem>
-            <FooterMenuItem href="/blog">{t('blog')}</FooterMenuItem>
+            <FooterMenuItem href="/services">{t('services')}</FooterMenuItem>
             <FooterMenuItem href="/open-source">
               {t('openSource')}
             </FooterMenuItem>
+            <FooterMenuItem href="/blog">{t('blog')}</FooterMenuItem>
             <FooterMenuItem href="/imprint">{t('imprint')}</FooterMenuItem>
           </div>
           <div>

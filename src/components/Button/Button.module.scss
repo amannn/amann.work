@@ -19,7 +19,7 @@
 
   @include before {
     @include fullbleed;
-    border: 2px solid $color-accent;
+    border: 2px solid $color-primary;
     opacity: 0;
     transform: scale(1.1);
     @include animate-slow;
@@ -46,8 +46,8 @@
       background-color: $white;
     }
 
-    &-accent {
-      background-color: $color-accent;
+    &-primary {
+      background-color: $color-primary;
       @include animate-slow(background-color);
 
       &:hover,

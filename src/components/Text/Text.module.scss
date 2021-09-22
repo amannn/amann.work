@@ -22,6 +22,19 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
    * Variants
    */
 
+  &_variant-title {
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-text-dark;
+    font-weight: 500;
+    @include margin-bottom(24px);
+
+    @include match-large {
+      font-size: 72px;
+      line-height: 80px;
+    }
+  }
+
   &_variant-h1 {
     font-size: 32px;
     line-height: 40px;
@@ -142,16 +155,16 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
   }
 
   /**
-   * Weight
-   */
-
-  &_weight-bold {
-    font-weight: 500;
-  }
-
-  /**
    * Color
    */
+
+  &_color-primaryLight {
+    color: $color-primary-light;
+  }
+
+  &_color-primary {
+    color: $color-primary;
+  }
 
   &_color-accentLight {
     color: $color-accent-light;
@@ -171,5 +184,17 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
 
   &_color-paleInverted {
     color: $color-pale-inverted;
+  }
+
+  /**
+   * Other
+   */
+
+  &_weight-bold {
+    font-weight: 500;
+  }
+
+  &_windows {
+    -webkit-font-smoothing: auto;
   }
 }

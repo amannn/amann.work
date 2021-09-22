@@ -20,7 +20,7 @@ export default function OpenSourceContributionsItem({pullRequest}) {
           name="pull-request"
         />
         <div className={styles.text}>
-          <Text color="accent">
+          <Text color="primary">
             <span>{pullRequest.baseRepository.owner.login}</span>
             <Text color="pale" component="span">
               {' / '}
