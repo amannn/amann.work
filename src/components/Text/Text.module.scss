@@ -155,14 +155,6 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
   }
 
   /**
-   * Weight
-   */
-
-  &_weight-bold {
-    font-weight: 500;
-  }
-
-  /**
    * Color
    */
 
@@ -192,5 +184,17 @@ $font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
 
   &_color-paleInverted {
     color: $color-pale-inverted;
+  }
+
+  /**
+   * Other
+   */
+
+  &_weight-bold {
+    font-weight: 500;
+  }
+
+  &_windows {
+    -webkit-font-smoothing: auto;
   }
 }
