@@ -6,6 +6,7 @@
   "Footer": {
     "id": "contact",
     "work": "Projekte",
+    "services": "Services",
     "blog": "Blog",
     "openSource": "Open Source",
     "imprint": "Impressum",
@@ -40,29 +41,12 @@
   },
   "Index": {
     "header": {
-      "title": "Jan Amann",
-      "tagline": "Partner für User Interface Entwicklung und Design",
-      "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
+      "title": "User Interface Engineering & Design",
+      "tagline": "Jan Amann"
     },
-    "services": {
-      "title": "Leistungen",
-      "description": "Ich arbeite sowohl mit Start-ups als auch etablierten Unternehmen zusammen. Der wichtigste Aspekt für mich ist eine bedeutungsvolle Lösung zu schaffen, die Mehrwert für Menschen bietet.",
-      "reactApps": {
-        "title": "React Apps",
-        "description": "Mit 10 Jahren Erfahrung mit Web Apps und 5 Jahren React kann ich Ihnen beim Entwurf und der Umsetzung von anspruchsvollen Apps helfen, die gerne verwendet werden."
-      },
-      "componentLibraries": {
-        "title": "Komponentenbibliotheken",
-        "description": "Stellen Sie Ihre Apps auf ein solides Fundament, indem die grundlegenden Bausteine identifiziert und mit einer flexiblen Schnittstelle versehen werden."
-      },
-      "mobileApps": {
-        "title": "Mobile Apps",
-        "description": "Um eine großartige User Experience auf Mobile zu erreichen muss Performance an erster Stelle stehen. Das bedeutet jedoch nicht, dass Kompromisse bei Animationen oder nützlichen Touch-Gesten gemacht werden müssen."
-      },
-      "consulting": {
-        "title": "Consulting und Code Reviews",
-        "description": "Ich gebe mein Wissen gerne im Rahmen von Projektplanungen, Workshops und Reviews weiter. Ich arbeite mich in Ihre Probleme ein und finde mit Ihrem Team gemeinsam eine passende Lösung."
-      }
+    "intro": {
+      "description": "Mit 10 Jahren Erfahrung mit Web Apps und 5 Jahren React kann ich Ihnen beim Entwurf und der Umsetzung von anspruchsvollen Apps helfen, die gerne verwendet werden.",
+      "services": "Services"
     },
     "work": {
       "title": "Ausgewählte Projekte",
@@ -89,6 +73,7 @@
   "NavigationMenu": {
     "home": "Start",
     "work": "Projekte",
+    "services": "Services",
     "blog": "Blog",
     "openSource": "Open Source",
     "contact": "Kontakt"
@@ -117,7 +102,7 @@
     "projects": {
       "setlistEdit": {
         "intro": "Millionen von Setlists stets zur Hand",
-        "title": "Neues Editierinterface für setlist.fm",
+        "title": "setlist.fm Editor",
         "id": "setlist-edit",
         "visitsHref": "https://www.similarweb.com/website/setlist.fm#overview",
         "clientHref": "http://molindo.at",
@@ -177,5 +162,26 @@
         }
       }
     }
+  },
+  "Services": {
+    "title": "Services",
+    "description": "Ich arbeite sowohl mit Start-ups als auch etablierten Unternehmen zusammen. Der wichtigste Aspekt für mich ist eine bedeutungsvolle Lösung zu schaffen, die Mehrwert für Menschen bietet.",
+    "reactApps": {
+      "title": "React Apps",
+      "description": "Mit 10 Jahren Erfahrung mit Web Apps und 5 Jahren React kann ich Ihnen beim Entwurf und der Umsetzung von anspruchsvollen Apps helfen, die gerne verwendet werden."
+    },
+    "componentLibraries": {
+      "title": "Komponentenbibliotheken",
+      "description": "Stellen Sie Ihre Apps auf ein solides Fundament, indem die grundlegenden Bausteine identifiziert und mit einer flexiblen Schnittstelle versehen werden."
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Um eine großartige User Experience auf Mobile zu erreichen muss Performance an erster Stelle stehen. Das bedeutet jedoch nicht, dass Kompromisse bei Animationen oder nützlichen Touch-Gesten gemacht werden müssen."
+    },
+    "consulting": {
+      "title": "Consulting und Code Reviews",
+      "description": "Ich gebe mein Wissen gerne im Rahmen von Projektplanungen, Workshops und Reviews weiter. Ich arbeite mich in Ihre Probleme ein und finde mit Ihrem Team gemeinsam eine passende Lösung."
+    },
+    "work": "Projekte"
   }
 }

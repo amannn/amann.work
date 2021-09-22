@@ -57,7 +57,7 @@ export default function CardLink({
       <div className={styles.inner}>
         {title && (
           <Text
-            color={isHighlighted ? undefined : 'accent'}
+            color={isHighlighted ? undefined : 'primary'}
             component="h2"
             variant="h3"
           >

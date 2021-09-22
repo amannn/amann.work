@@ -13,6 +13,7 @@ import './imprint';
 import './open-source';
 import './blog';
 import './work';
+import './services';
 import 'components/BlogPost';
 import 'components/Figure';
 import 'components/DeviceFrame';

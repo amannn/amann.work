@@ -26,7 +26,7 @@ export default function NavigationMenuItem({
   const isScrollLink = href.startsWith('#');
 
   if (isActive) {
-    color = 'accentLight';
+    color = 'primaryLight';
   }
 
   function onLinkClick(event) {

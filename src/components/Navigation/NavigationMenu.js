@@ -31,11 +31,14 @@ export default function NavigationMenu({
         <NavigationMenuItem key="work" href="/work">
           {t('work')}
         </NavigationMenuItem>,
-        <NavigationMenuItem key="blog" href="/blog">
-          {t('blog')}
+        <NavigationMenuItem key="services" href="/services">
+          {t('services')}
         </NavigationMenuItem>,
         <NavigationMenuItem key="open-source" href="/open-source">
           {t('openSource')}
+        </NavigationMenuItem>,
+        <NavigationMenuItem key="blog" href="/blog">
+          {t('blog')}
         </NavigationMenuItem>,
         <NavigationMenuItem key="contact" href="#contact">
           {t('contact')}

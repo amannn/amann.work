@@ -19,11 +19,7 @@ export default function Work() {
   return (
     <>
       <Meta title={t('title')} />
-      <Header
-        description={t('description')}
-        hasBackground={false}
-        title={t('title')}
-      />
+      <Header description={t('description')} title={t('title')} />
       <div className={styles.list}>
         <ProjectsList />
       </div>

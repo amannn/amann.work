@@ -33,7 +33,7 @@ export default function FooterContact() {
         <a className={cx(styles.email, styles.item)} href={`mailto:${email}`}>
           <Icon
             className={cx(styles.icon, {[styles.mail_animated]: animated})}
-            color="accentLight"
+            color="primaryLight"
             name="mail"
           />
           <Text className={styles.itemText} color="white" component="span">
@@ -45,7 +45,7 @@ export default function FooterContact() {
         <a className={styles.item} href={`tel:${telephoneNumber}`}>
           <Icon
             className={cx(styles.icon, {[styles.phone_animated]: animated})}
-            color="accentLight"
+            color="primaryLight"
             name="phone"
           />
           <Text className={styles.itemText} color="white" component="span">

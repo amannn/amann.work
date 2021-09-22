@@ -3,7 +3,7 @@
 @import '~styles/utils';
 
 .root {
-  border-bottom: 1px solid $color-accent;
+  border-bottom: 1px solid $color-primary;
   @include hover-fast-in-slow-out;
   font-weight: 400;
 

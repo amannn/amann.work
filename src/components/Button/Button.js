@@ -24,7 +24,7 @@ function Button(
     >
       <Text
         className={styles.text}
-        color={color === 'white' ? 'accent' : 'white'}
+        color={color === 'white' ? 'primary' : 'white'}
         component="span"
         variant="caption"
       >

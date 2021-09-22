@@ -28,7 +28,7 @@ export default function GithubRepository({
 
   return (
     <Card>
-      <Text color="accent" component="h2" variant="h3">
+      <Text color="primary" component="h2" variant="h3">
         <Link href={repository.owner.url}>{repository.owner.login}</Link>
         <Text color="pale" component="span" variant="h3">
           {' / '}
