@@ -50,12 +50,7 @@ export default function ContactLink({isVisible = true}) {
       onClick={onClick}
     >
       <span className={styles.arrow} />
-      <Text
-        className={styles.text}
-        color="accent"
-        component="span"
-        variant="caption"
-      >
+      <Text color="accent" component="span" variant="caption">
         Contact
       </Text>
     </a>
