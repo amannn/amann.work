@@ -1,9 +1,11 @@
 $breakpoint-medium: 720px;
 $breakpoint-large: 1024px;
 $breakpoint-huge: 1200px;
+$breakpoint-giant: 1300px;
 
 :export {
   breakpointMedium: $breakpoint-medium;
   breakpointLarge: $breakpoint-large;
   breakpointHuge: $breakpoint-huge;
+  breakpointGiant: $breakpoint-giant;
 }
