@@ -2,7 +2,8 @@ import 'core-js/features/string/starts-with';
 import {AnimatePresence, motion} from 'framer-motion';
 import {NextIntlProvider} from 'next-intl';
 import NextApp from 'next/app';
-import {memo, Suspense, useMemo} from 'react';
+import {memo, Suspense, useMemo, useState} from 'react';
+import ContactLink from 'components/ContactLink';
 import Navigation from 'components/Navigation';
 import {IsSsrContext} from 'hooks/useSsr';
 import './_app.scss';
@@ -20,6 +21,8 @@ import 'components/DeviceFrame';
 import 'components/ScreenVideo';
 
 export default function App({Component, messages, pageProps, router}) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   // Avoid context changes in the off canvas from re-rendering the whole tree
   const StaticComponent = useMemo(() => memo(Component, () => true), [
     Component
@@ -44,7 +47,7 @@ export default function App({Component, messages, pageProps, router}) {
           }}
           messages={messages}
         >
-          <Navigation>
+          <Navigation isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
             <AnimatePresence exitBeforeEnter>
               <motion.div
                 key={router.route}
@@ -70,6 +73,7 @@ export default function App({Component, messages, pageProps, router}) {
               </motion.div>
             </AnimatePresence>
           </Navigation>
+          <ContactLink isVisible={!isMenuOpen} />
         </NextIntlProvider>
       </IsSsrContext.Provider>
     </Suspense>

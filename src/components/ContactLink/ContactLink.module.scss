@@ -1,0 +1,39 @@
+@import '~styles/animations';
+@import '~styles/colors';
+@import '~styles/media-queries';
+@import '~styles/utils';
+
+$line-length: 48px;
+$animation-offset: 8px;
+
+.root {
+  position: fixed;
+  bottom: -$animation-offset;
+  left: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  opacity: 0;
+  @include animate-slow;
+
+  &:hover {
+    transform: rotate(-90deg) translateX($animation-offset);
+    @include animate-fast;
+  }
+}
+
+@include match-giant {
+  .root_visible {
+    opacity: 1;
+  }
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  width: $line-length + $animation-offset;
+  margin-right: 16px;
+  background-color: $red;
+  height: 1px;
+}

@@ -12,7 +12,7 @@ export default function Footer({className}) {
   const t = useTranslations('Footer');
 
   return (
-    <div className={cx(className, styles.root)}>
+    <div className={cx(className, styles.root)} id="footer">
       <Wrapper>
         <div id={t('id')}>
           <FooterContact />

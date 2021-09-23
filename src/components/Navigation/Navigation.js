@@ -9,9 +9,8 @@ import NavigationBar from './NavigationBar';
 import NavigationContext from './NavigationContext';
 import NavigationMenu from './NavigationMenu';
 
-export default function Navigation({children}) {
+export default function Navigation({children, isMenuOpen, onMenuOpenChange}) {
   const [backgroundColor, setBackgroundColor] = useState('default');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const breakpoint = useBreakpoint();
 
   const transition = {
@@ -21,12 +20,12 @@ export default function Navigation({children}) {
   };
 
   function onClose() {
-    setIsMenuOpen(false);
+    onMenuOpenChange(false);
   }
 
   useEventListener('scroll', () => {
     if (!isMenuOpen) return;
-    setIsMenuOpen(false);
+    onMenuOpenChange(false);
   });
 
   return (
@@ -63,7 +62,7 @@ export default function Navigation({children}) {
       >
         <NavigationBar
           isMenuOpen={isMenuOpen}
-          onMenuOpenChange={setIsMenuOpen}
+          onMenuOpenChange={onMenuOpenChange}
         />
         <NavigationContext.Provider
           value={{onBackgroundColorChange: setBackgroundColor, backgroundColor}}

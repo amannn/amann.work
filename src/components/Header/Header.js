@@ -26,7 +26,7 @@ export default function Header({
               </Text>
               <Text
                 className={styles.subtitle}
-                color="accent"
+                color={large ? 'accent' : 'primary'}
                 component="h2"
                 variant={large ? 'h2' : 'h3'}
               >
