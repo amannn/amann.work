@@ -15,6 +15,7 @@ $animation-offset: 8px;
   transform-origin: bottom left;
   transform: rotate(-90deg);
   opacity: 0;
+  pointer-events: none;
   @include animate-slow;
 
   &:hover {
@@ -25,6 +26,7 @@ $animation-offset: 8px;
 
 @include match-giant {
   .root_visible {
+    pointer-events: all;
     opacity: 1;
   }
 }

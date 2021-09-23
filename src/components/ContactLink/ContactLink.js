@@ -5,6 +5,7 @@ import styles from './ContactLink.module.scss';
 
 export default function ContactLink({isVisible = true}) {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const href = '#footer';
 
   function getContactNode() {
@@ -18,6 +19,16 @@ export default function ContactLink({isVisible = true}) {
       event.preventDefault();
     }
   }
+
+  useEffect(() => {
+    function onScroll() {
+      const value = window.scrollY > window.innerHeight * 0.75;
+      setHasScrolled(value);
+    }
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     const contactNode = getContactNode();
@@ -44,7 +55,7 @@ export default function ContactLink({isVisible = true}) {
     <a
       className={cx(
         styles.root,
-        isVisible && !isFooterVisible && styles.root_visible
+        isVisible && hasScrolled && !isFooterVisible && styles.root_visible
       )}
       href={href}
       onClick={onClick}
