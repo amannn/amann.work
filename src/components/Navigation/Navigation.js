@@ -2,7 +2,7 @@
 import useEventListener from '@use-it/event-listener';
 import cx from 'classnames';
 import {motion} from 'framer-motion';
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 import useBreakpoint, {breakpoints} from 'hooks/useBreakpoint';
 import styles from './Navigation.module.scss';
 import NavigationBar from './NavigationBar';
@@ -12,6 +12,7 @@ import NavigationMenu from './NavigationMenu';
 export default function Navigation({children, isMenuOpen, onMenuOpenChange}) {
   const [backgroundColor, setBackgroundColor] = useState('default');
   const breakpoint = useBreakpoint();
+  const childrenNodeRef = useRef();
 
   const transition = {
     type: 'spring',
@@ -28,6 +29,14 @@ export default function Navigation({children, isMenuOpen, onMenuOpenChange}) {
     onMenuOpenChange(false);
   });
 
+  function onAnimationStart() {
+    childrenNodeRef.current.style.willChange = 'transform';
+  }
+
+  function onAnimationComplete() {
+    childrenNodeRef.current.style.willChange = '';
+  }
+
   return (
     <div
       className={cx(
@@ -43,9 +52,12 @@ export default function Navigation({children, isMenuOpen, onMenuOpenChange}) {
         transition={transition}
       />
       <motion.div
+        ref={childrenNodeRef}
         animate={isMenuOpen ? 'open' : 'closed'}
         className={styles.children}
         initial="closed"
+        onAnimationComplete={onAnimationComplete}
+        onAnimationStart={onAnimationStart}
         variants={{
           closed: {
             x: 0,

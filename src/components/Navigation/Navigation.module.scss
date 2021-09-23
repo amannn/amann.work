@@ -28,7 +28,6 @@
 .children {
   position: relative;
   @include animate-slow(background-color);
-  will-change: transform;
 }
 
 .menu {
