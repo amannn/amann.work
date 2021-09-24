@@ -1,0 +1,11 @@
+.root {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+
+  &_visible {
+    opacity: 1;
+    transform: none !important;
+  }
+}

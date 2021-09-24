@@ -1,28 +1,31 @@
-import {motion} from 'framer-motion';
-import React from 'react';
-import useSsr from 'hooks/useSsr';
+import cx from 'classnames';
+import React, {useEffect, useState} from 'react';
+import styles from './FadeIn.module.scss';
 
-export default function FadeIn({children, delay, duration}) {
-  const isSsr = useSsr();
+export default function FadeIn({
+  children,
+  delay,
+  duration = 0.3,
+  isVisible: controlledIsVisible,
+  offset = 8
+}) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (controlledIsVisible != null) setIsVisible(controlledIsVisible);
+    else setIsVisible(true);
+  }, [controlledIsVisible]);
 
   return (
-    <motion.div
-      animate="visible"
-      inherit={false}
-      initial={isSsr ? 'visible' : 'hidden'}
-      transition={{delay, duration}}
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 8
-        },
-        visible: {
-          opacity: 1,
-          y: 0
-        }
+    <div
+      className={cx(styles.root, isVisible && styles.root_visible)}
+      style={{
+        transform: `translateY(${offset}px)`,
+        transitionDelay: `${delay}s`,
+        transitionDuration: `${duration}s`
       }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

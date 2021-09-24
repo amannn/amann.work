@@ -12,9 +12,11 @@
     opacity: 1;
   }
 
-  &:hover .overlay {
-    transform: translate(-50%, -50%) scale(1.25);
-    @include animate-fast;
+  @include match-medium {
+    &:hover .overlay {
+      transform: translate(-50%, -50%) scale(1.25);
+      @include animate-fast;
+    }
   }
 }
 

@@ -1,10 +1,14 @@
-import React, {createRef, useEffect} from 'react';
+import React, {createRef, useEffect, useState} from 'react';
 
 export default function VisibilitySensor({
+  children,
   onInvisible,
   onVisible,
-  onVisibleChange
+  onVisibleChange,
+  once,
+  threshold = [0, 1] // Fully visible or invisible
 }) {
+  const [isVisible, setIsVisible] = useState(false);
   const rootRef = createRef();
 
   useEffect(() => {
@@ -15,20 +19,22 @@ export default function VisibilitySensor({
         if (record.intersectionRatio > 0) {
           if (onVisibleChange) onVisibleChange(true);
           if (onVisible) onVisible();
+          setIsVisible(true);
         } else {
           if (onVisibleChange) onVisibleChange(false);
           if (onInvisible) onInvisible();
+          if (!once) setIsVisible(false);
         }
       });
     }
 
     const observer = new IntersectionObserver(onIntersectionChange, {
-      threshold: [0, 1] // Fully visible or invisible
+      threshold
     });
     observer.observe(node);
 
     return () => observer.unobserve(node);
-  }, [onInvisible, onVisible, onVisibleChange, rootRef]);
+  }, [onInvisible, onVisible, onVisibleChange, once, rootRef, threshold]);
 
-  return <span ref={rootRef} />;
+  return <span ref={rootRef}>{children && children(isVisible)}</span>;
 }
