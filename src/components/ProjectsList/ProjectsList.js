@@ -1,6 +1,7 @@
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
-import React from 'react';
+import React, {useState} from 'react';
+import Button from 'components/Button';
 import CallToAction from 'components/CallToAction';
 import DeviceFrame from 'components/DeviceFrame';
 import FadeIn from 'components/FadeIn';
@@ -10,9 +11,15 @@ import Project from 'components/Project/Project';
 import ProjectParagraph from 'components/Project/ProjectParagraph';
 import ProjectTestimonial from 'components/Project/ProjectTestimonial';
 import ProjectVisual from 'components/Project/ProjectVisual';
+import Wrapper from 'components/Wrapper';
 
-export default function ProjectsList({limit = undefined}) {
+export default function ProjectsList({initialLimit = undefined}) {
+  const [limit, setLimit] = useState(initialLimit);
   const t = useTranslations('ProjectsList');
+
+  function onShowMore() {
+    setLimit(undefined);
+  }
 
   function linkFor(href) {
     // eslint-disable-next-line react/display-name
@@ -247,9 +254,20 @@ export default function ProjectsList({limit = undefined}) {
     </Project>
   ];
 
-  return projects.slice(0, limit).map((project, index) => (
-    <FadeIn key={project.key} delay={0.6 + index * 0.2}>
-      {project}
-    </FadeIn>
-  ));
+  return (
+    <>
+      {projects.slice(0, limit).map((project) => (
+        <FadeIn key={project.key} duration={0.5}>
+          {project}
+        </FadeIn>
+      ))}
+      {limit != null && (
+        <Wrapper>
+          <Button color="primary" component="a" onClick={onShowMore}>
+            {t('showMore')}
+          </Button>
+        </Wrapper>
+      )}
+    </>
+  );
 }

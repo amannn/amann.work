@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 import React from 'react';
 import useSsr from 'hooks/useSsr';
 
-export default function FadeIn({children, delay}) {
+export default function FadeIn({children, delay, duration}) {
   const isSsr = useSsr();
 
   return (
@@ -10,7 +10,7 @@ export default function FadeIn({children, delay}) {
       animate="visible"
       inherit={false}
       initial={isSsr ? 'visible' : 'hidden'}
-      transition={{delay}}
+      transition={{delay, duration}}
       variants={{
         hidden: {
           opacity: 0,

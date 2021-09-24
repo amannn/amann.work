@@ -57,17 +57,10 @@ export default function Index() {
           </div>
         </Wrapper>
       </Section>
-      <Section title={t('work.title')}>
-        <ProjectsList limit={3} />
-        <Wrapper className={styles.showMoreProjects}>
-          <Link href="/work" passHref>
-            <Button color="primary" component="a">
-              {t('work.showMore')}
-            </Button>
-          </Link>
-        </Wrapper>
+      <Section className={styles.projects} title={t('work.title')}>
+        <ProjectsList initialLimit={3} />
       </Section>
-      <Wrapper background className={styles.links}>
+      <Wrapper className={styles.links}>
         <ResponsiveGrid>
           <CardLink
             description={t('links.openSource.description')}

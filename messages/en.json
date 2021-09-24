@@ -49,8 +49,7 @@
       "services": "Services"
     },
     "work": {
-      "title": "Selected work",
-      "showMore": "Show all projects"
+      "title": "Selected work"
     },
     "links": {
       "blog": {
