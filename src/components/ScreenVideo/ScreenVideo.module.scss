@@ -37,6 +37,14 @@
   }
 }
 
+.playIcon {
+  transform: scale(0.75);
+
+  @include match-medium {
+    transform: none;
+  }
+}
+
 .video {
   display: block; // Removes strange margin-bottom
   width: 100%;

@@ -42,7 +42,12 @@ export default function ScreenVideo({
       })}
     >
       <div className={styles.overlay}>
-        <Icon color="white" name={isPlaying ? 'pause' : 'play'} size={40} />
+        <Icon
+          className={styles.playIcon}
+          color="white"
+          name={isPlaying ? 'pause' : 'play'}
+          size={40}
+        />
       </div>
       <video
         ref={videoRef}
