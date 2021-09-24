@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="778px" height="570px" viewBox="0 0 778 570" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sketch-illustration-foreground</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="188" height="306" rx="4"></rect>
+    </defs>
+    <g id="sketch-illustration-foreground" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(394.000000, 298.000000) rotate(-360.000000) translate(-394.000000, -298.000000) translate(300.000000, 145.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Rectangle" stroke="#579B9B" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <rect id="Rectangle" fill="#F5F9F9" mask="url(#mask-2)" x="1" y="38" width="185" height="267" rx="3"></rect>
+            <g id="Group-7" mask="url(#mask-2)">
+                <g transform="translate(11.000000, 57.000000)">
+                    <rect id="Rectangle-Copy-14" fill="#FFFFFF" x="0" y="0" width="165" height="40" rx="2"></rect>
+                    <rect id="Rectangle-Copy-11" fill-opacity="0.2" fill="#579B9B" x="8.62745098" y="11" width="83.0392157" height="6" rx="2"></rect>
+                    <rect id="Rectangle-Copy-19" fill-opacity="0.2" fill="#579B9B" x="8.62745098" y="23" width="64.7058824" height="6" rx="2"></rect>
+                </g>
+            </g>
+            <g id="Group-7-Copy" mask="url(#mask-2)">
+                <g transform="translate(11.000000, 106.000000)">
+                    <rect id="Rectangle-Copy-14" fill="#FFFFFF" x="0" y="0" width="165" height="40" rx="2"></rect>
+                    <rect id="Rectangle-Copy-11" fill-opacity="0.2" fill="#579B9B" x="8.62745098" y="11" width="83.0392157" height="6" rx="2"></rect>
+                    <rect id="Rectangle-Copy-19" fill-opacity="0.2" fill="#579B9B" x="8.62745098" y="23" width="64.7058824" height="6" rx="2"></rect>
+                </g>
+            </g>
+            <g id="Group-7-Copy-2" mask="url(#mask-2)">
+                <g transform="translate(11.000000, 155.000000)">
+                    <rect id="Rectangle-Copy-14" fill="#FFFFFF" x="0" y="0" width="165" height="40" rx="2"></rect>
+                    <rect id="Rectangle-Copy-11" fill-opacity="0.2" fill="#579B9B" x="8.62745098" y="11" width="83.0392157" height="6" rx="2"></rect>
+                    <rect id="Rectangle-Copy-19" fill-opacity="0.2" fill="#579B9B" x="8.62745098" y="23" width="64.7058824" height="6" rx="2"></rect>
+                </g>
+            </g>
+            <rect id="Rectangle-Copy-15" fill-opacity="0.2" fill="#579B9B" mask="url(#mask-2)" x="41" y="17" width="63" height="6" rx="2"></rect>
+            <circle id="Oval-Copy-7" fill-opacity="0.2" fill="#579B9B" mask="url(#mask-2)" cx="21" cy="19" r="10"></circle>
+            <g id="Group-2" mask="url(#mask-2)" fill="#579B9B" fill-opacity="0.2">
+                <g transform="translate(0.000000, 266.000000)">
+                    <rect id="Rectangle-Copy-14" x="0" y="0" width="188" height="40" rx="2"></rect>
+                    <rect id="Rectangle-Copy-19" x="16.8156382" y="16.7894737" width="40" height="6" rx="2"></rect>
+                    <rect id="Rectangle-Copy-20" x="74.5627647" y="16.7894737" width="40" height="6" rx="2"></rect>
+                </g>
+            </g>
+            <circle id="Oval-Copy-2" fill="#FFFFFF" mask="url(#mask-2)" cx="156" cy="266" r="20"></circle>
+        </g>
+    </g>
+</svg>

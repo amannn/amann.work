@@ -1,0 +1,22 @@
+@import '~styles/utils';
+
+.root {
+  position: relative;
+
+  > * {
+    display: flex;
+    bottom: -88px;
+    transform: rotate(15deg);
+  }
+}
+
+.sketchBackground {
+  position: relative;
+}
+
+.sketchIllustrationBackground,
+.sketchIllustrationForeground {
+  position: absolute;
+  left: 0;
+  will-change: transform;
+}
