@@ -26,7 +26,7 @@ export default function ProjectTestimonial({
     <div className={styles.root}>
       <div className={styles.image}>{image}</div>
       <blockquote className={styles.text}>
-        <Text className={styles.quote} component="div">
+        <Text className={styles.quote} component="div" variant="h3">
           {quote.split('\n').map((part, index, parts) => (
             <p key={index}>
               {index === 0 && <span className={styles.apostropheStart}>“</span>}

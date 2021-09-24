@@ -8,8 +8,13 @@
   position: relative;
 
   &_controlsVisible .overlay {
-    @include animate-fast(opacity);
+    @include animate-fast;
     opacity: 1;
+  }
+
+  &:hover .overlay {
+    transform: translate(-50%, -50%) scale(1.25);
+    @include animate-fast;
   }
 }
 
@@ -23,8 +28,8 @@
   transform: translate(-50%, -50%);
   @include circle(40px);
   opacity: 0;
-  background-color: rgba($black, 0.6);
-  @include animate-slow(opacity);
+  background-color: $red;
+  @include animate-slow;
   pointer-events: none;
 
   @include match-medium {

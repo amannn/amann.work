@@ -45,7 +45,7 @@
       "tagline": "Jan Amann"
     },
     "intro": {
-      "description": "Mit mehr als 10 Jahren Erfahrung mit Web Apps und 6 Jahren React kann ich Ihnen beim Entwurf und der Umsetzung von anspruchsvollen Apps helfen, die gerne verwendet werden.",
+      "description": "Mit mehr als 10 Jahren Erfahrung mit Web Apps kann ich Ihnen bei der Umsetzung von anspruchsvollen Apps helfen, die mit erstklassiger User Experience überzeugen. Ich bin spezialisiert auf die Entwicklung mit React.",
       "services": "Services"
     },
     "work": {
@@ -104,12 +104,11 @@
         "intro": "Millionen von Setlists stets zur Hand",
         "title": "setlist.fm Editor",
         "id": "setlist-edit",
-        "visitsHref": "https://www.similarweb.com/website/setlist.fm#overview",
         "clientHref": "http://molindo.at",
-        "description1": "Mit <visits>Millionen von monatlichen Aufrufen</visits> zählt setlist.fm zu den populärsten Musik-Services der Welt und ermöglicht es seinen Usern ihr Wissen über Konzert-Setlists miteinander zu teilen. Das Team von <client>Molindo</client> machte sich daran das Herzstück der Plattform neu zu denken: Das Editieren von Setlists. Für die Implementierung des User Interfaces wurde ich als Entwicklungspartner beauftragt.",
+        "description1": "Mit Millionen von monatlichen Aufrufen zählt setlist.fm zu den populärsten Musik-Services der Welt und ermöglicht es seinen Usern ihr Wissen über Konzert-Setlists miteinander zu teilen. Das Team von <client>Molindo</client> machte sich daran das Herzstück der Plattform neu zu denken: Das Editieren von Setlists. Für die Implementierung des User Interfaces wurde ich als Entwicklungspartner beauftragt.",
         "description2": "Das Frontend dieses Projekts besteht aus vier React Widgets welche nahtlos in die existierende Plattform integriert sind und mit einer GraphQL API kommunizieren. Um den hohen Erwartungen an Mobile Apps gerecht zu werden wurde besonderer Fokus auf Touch-Gesten, hilfreiche Animationen, Runtime Performance und einen Offline-first Ansatz gelegt.",
         "cta": {
-          "label": "Setlist erstellen",
+          "label": "setlist.fm",
           "href": "https://www.setlist.fm/"
         },
         "testimonial": {
@@ -127,7 +126,7 @@
         "description1": "Küchenfinder ist eine österreichische Plattform die von <client>Molindo</client> entwickelt wird und Ihnen dabei hilft eine neue Küche zu finden. Ca. 6 Millionen Personen besuchen die Seite jährlich und verwenden die datengetriebene Suchmaschine um qualifizierte Experten zu finden.",
         "description2": "Ich habe mehrere React Apps für die Plattform entwickelt: Ein Küchenkonfigurator für Kunden, eine App für Experten um Kundenanfragen zu verwalten und eine App für Administratoren um Stammdaten zu konfigurieren. Außerdem habe ich eine GraphQL API in Node.js implementiert, welche die verteilten Daten aus REST Microservices für Clients zugänglich macht.",
         "cta": {
-          "label": "Küchenexperten finden",
+          "label": "Küchenfinder",
           "href": "https://www.kuechenfinder.com/kuechenplanung"
         }
       },
@@ -168,7 +167,7 @@
     "description": "Ich arbeite sowohl mit Start-ups als auch etablierten Unternehmen zusammen. Der wichtigste Aspekt für mich ist eine bedeutungsvolle Lösung zu schaffen, die Mehrwert für Menschen bietet.",
     "reactApps": {
       "title": "React Apps",
-      "description": "Mit mehr als 10 Jahren Erfahrung mit Web Apps und 6 Jahren React kann ich Ihnen bei der Umsetzung von anspruchsvollen Apps helfen, die gerne verwendet werden."
+      "description": "Durch meine Spezialisierung auf React habe ich Erfahrung mit erprobten Architekturpatterns, die es ermöglichen, eine erstklassige User Experience zu liefern."
     },
     "componentLibraries": {
       "title": "Komponentenbibliotheken",

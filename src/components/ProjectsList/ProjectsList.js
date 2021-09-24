@@ -73,7 +73,6 @@ export default function ProjectsList({limit = undefined}) {
     >
       <ProjectParagraph>
         {t.rich('projects.setlistEdit.description1', {
-          visits: linkFor(t('projects.setlistEdit.visitsHref')),
           client: linkFor(t('projects.setlistEdit.clientHref'))
         })}
       </ProjectParagraph>
