@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React from 'react';
 import portrait from 'assets/jan-amann.jpg';
 import mockupIllustration from 'assets/mockup-illustration.svg';
-import Button from 'components/Button';
 import CallToAction from 'components/CallToAction';
 import CardLink from 'components/CardLink';
 import Footer from 'components/Footer';
