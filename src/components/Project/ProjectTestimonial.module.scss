@@ -1,12 +1,14 @@
 @import '~styles/media-queries';
 
 .root {
-  display: flex;
   padding: 40px 0;
+  display: flex;
+  flex-direction: column-reverse;
   align-items: flex-start;
 
   @include match-medium {
-    align-items: center;
+    display: flex;
+    flex-direction: row;
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -18,8 +20,12 @@
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 50%;
+  margin-top: -56px;
+  margin-left: 24px;
 
   @include match-medium {
+    margin-top: 8px;
+    margin-left: 0;
     height: auto;
     width: 160px;
     border-radius: 0;
@@ -39,7 +45,7 @@
   margin-left: 24px;
 
   @include match-medium {
-    margin: 20px 80px;
+    margin-left: 80px;
   }
 }
 
@@ -64,5 +70,11 @@
 }
 
 .person {
-  margin-top: 16px;
+  margin-top: 32px;
+  margin-left: 100px;
+
+  @include match-medium {
+    margin-top: 16px;
+    margin-left: 0;
+  }
 }

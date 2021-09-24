@@ -5,10 +5,14 @@ import Wrapper from 'components/Wrapper';
 import styles from './Section.module.scss';
 import SectionTitle from './SectionTitle';
 
-export default function Section({children, description, title}) {
+export default function Section({children, className, description, title}) {
   return (
     <div
-      className={cx(styles.root, (title || description) && styles.root_intro)}
+      className={cx(
+        className,
+        styles.root,
+        (title || description) && styles.root_intro
+      )}
     >
       <Wrapper>
         {title && <SectionTitle>{title}</SectionTitle>}
