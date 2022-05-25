@@ -12,17 +12,12 @@ export async function getStaticProps() {
   return {
     props: {
       repositories: await GithubContributionsRepository.getOpenSourceRepositories(),
-      pullRequestContributions: await GithubContributionsRepository.getPullRequestContributions(),
-      generationTime: new Date().toISOString()
+      pullRequestContributions: await GithubContributionsRepository.getPullRequestContributions()
     }
   };
 }
 
-export default function OpenSource({
-  generationTime,
-  pullRequestContributions,
-  repositories
-}) {
+export default function OpenSource({pullRequestContributions, repositories}) {
   const t = useTranslations('OpenSource');
 
   return (
@@ -38,7 +33,6 @@ export default function OpenSource({
           pullRequestContributions={pullRequestContributions}
         />
       </Layout>
-      <p hidden>{generationTime}</p>
     </>
   );
 }
