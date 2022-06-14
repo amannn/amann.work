@@ -12,6 +12,29 @@ const MAINTAINED_REPOSITORIES = [
   'molindo/eslint-config-molindo'
 ];
 
+const EARLIEST_CONTRIBUTION_YEAR = 2013;
+
+// The intention is to show PRs to repositories of others.
+const PR_REPO_OWNER_IGNORELIST = [
+  'amannn',
+  'molindo',
+  'tools-aoeur',
+  'CaritasDeutschland',
+  'virtualidentityag',
+  'Onlineberatung'
+];
+
+// Not particularly interesting PRs.
+const PR_ID_IGNORELIST = [
+  'MDExOlB1bGxSZXF1ZXN0NTYwMDU5MTcx',
+  'MDExOlB1bGxSZXF1ZXN0NTEzMDI3MzY2',
+  'MDExOlB1bGxSZXF1ZXN0NTEyMzM0MTg4',
+  'MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz',
+  'MDExOlB1bGxSZXF1ZXN0MzYwOTI4MzYw',
+  'MDExOlB1bGxSZXF1ZXN0NDc0Nzk1MDc3',
+  'MDExOlB1bGxSZXF1ZXN0NzEyMDk0NTI1'
+];
+
 const repositoryFragment = /* GraphQL */ `
   fragment repository on Repository {
     id
@@ -69,27 +92,6 @@ export default class GithubContributionsRepository {
     let {limit, skip} = opts;
     skip ??= 0;
     limit ??= 150;
-
-    const EARLIEST_CONTRIBUTION_YEAR = 2013;
-    // The intention is to show PRs to repositories of others.
-    const PR_REPO_OWNER_IGNORELIST = [
-      'amannn',
-      'molindo',
-      'tools-aoeur',
-      'CaritasDeutschland',
-      'virtualidentityag'
-    ];
-
-    // Not particularly interesting PRs.
-    const PR_ID_IGNORELIST = [
-      'MDExOlB1bGxSZXF1ZXN0NTYwMDU5MTcx',
-      'MDExOlB1bGxSZXF1ZXN0NTEzMDI3MzY2',
-      'MDExOlB1bGxSZXF1ZXN0NTEyMzM0MTg4',
-      'MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz',
-      'MDExOlB1bGxSZXF1ZXN0MzYwOTI4MzYw',
-      'MDExOlB1bGxSZXF1ZXN0NDc0Nzk1MDc3',
-      'MDExOlB1bGxSZXF1ZXN0NzEyMDk0NTI1'
-    ];
 
     const endYear = new Date().getFullYear();
 

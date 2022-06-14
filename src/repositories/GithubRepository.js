@@ -8,6 +8,11 @@ export default class GithubRepository {
       },
       body: JSON.stringify({variables, query}),
       method: 'POST'
-    }).then((response) => response.json());
+    }).then(async (response) => {
+      if (!response.ok) {
+        throw new Error([response.url, await response.text()].join('\n'));
+      }
+      return response.json();
+    });
   }
 }
