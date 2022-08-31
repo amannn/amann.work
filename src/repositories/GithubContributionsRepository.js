@@ -108,6 +108,7 @@ export default class GithubContributionsRepository {
       .filter(
         (result) =>
           result.pullRequest.baseRepository.isPrivate === false &&
+          result.pullRequest.state !== 'CLOSED' &&
           !PR_REPO_OWNER_IGNORELIST.includes(
             result.pullRequest.baseRepository.owner.login
           ) &&
