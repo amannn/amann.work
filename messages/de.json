@@ -135,7 +135,7 @@
         "id": "alpine",
         "clientHref": "https://www.alpine.com/",
         "description1": "<client>Alpine Electronics</client> ist ein internationales Unternehmen, das sich auf Audio- und Navigationssysteme für Autos spezialisiert hat. Die Firma zählt Hersteller wie BMW, Audi und Mercedes zu ihren Kunden und hat mehr als 13.000 Angestellte. Ziel dieses Projekts war es, eine umfangreiche Bibliothek an React-Komponenten zu schaffen, welche die Grundlage für Datenmanagementapps bildet.",
-        "description2": "Um diese Herausforderung zu bewältigen, wurde ein 6-köpfiges Team von Frontend-Spezialisten geschaffen. Mein Beitrag umfasste Anforderungserhebung in Workshops, Spezifikation von Funktionen & Komponenten APIs, UX Design, Frontend Development, Code Review und die Definition von GraphQL APIs. Eine Palette von mehr als 150 Komponenten bildet nun die Grundlage für 20 Apps – Tendenz steigend."
+        "description2": "Um diese Herausforderung zu bewältigen, wurde ein 6-köpfiges Team von Frontend-Spezialisten geschaffen. Mein Beitrag umfasste Anforderungserhebung in Workshops, Spezifikation von Funktionen & Komponenten APIs, UX Design, Frontend Development, Code Review und die Definition von GraphQL APIs. Eine Palette von mehr als 150 Komponenten bildet nun die Grundlage für 20 Apps—Tendenz steigend."
       },
       "zemtu": {
         "intro": "Mobilität für die Zukunft",
