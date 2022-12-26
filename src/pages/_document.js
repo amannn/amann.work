@@ -17,8 +17,14 @@ export default class Document extends NextDocument {
           />
           <meta content="#303236" name="theme-color" />
           <link href="/manifest.json" rel="manifest" />
-          <meta content="https://amann.me/jan-amann.jpg" property="og:image" />
-          <meta content="https://amann.me/jan-amann.jpg" name="twitter:image" />
+          <meta
+            content="https://amann.work/jan-amann.jpg"
+            property="og:image"
+          />
+          <meta
+            content="https://amann.work/jan-amann.jpg"
+            name="twitter:image"
+          />
           <meta content="Jan Amann" name="twitter:image:alt" />
           <meta content="@jamannnnnn" name="twitter:site" />
         </Head>

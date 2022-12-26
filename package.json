@@ -1,5 +1,5 @@
 {
-  "name": "amann.me",
+  "name": "amann.work",
   "private": true,
   "description": "My personal website featuring some projects I've worked on.",
   "version": "1.0.0",
@@ -11,10 +11,10 @@
     "lint": "eslint src",
     "test": "start-server-and-test start http://localhost:3000 'node scripts/testPages.js'"
   },
-  "author": "Jan Amann <jan@amann.me>",
+  "author": "Jan Amann <jan@amann.work>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amannn/amann.me"
+    "url": "https://github.com/amannn/amann.work"
   },
   "dependencies": {
     "@mdx-js/react": "^1.6.22",

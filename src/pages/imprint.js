@@ -30,16 +30,8 @@ export default function Imprint() {
         <Text className={styles.line} marginBottom>
           {t('contact')}
         </Text>
-        <Text className={styles.line}>{t('uid')}</Text>
         <Text className={styles.line} marginBottom>
-          {t.rich('ethics', {
-            // eslint-disable-next-line react/display-name
-            argeLink: (children) => (
-              <Anchor href="https://www.wko.at/service/netzwerke/arge-proethik.html">
-                {children}
-              </Anchor>
-            )
-          })}
+          {t('uid')}
         </Text>
         <Text className={styles.line}>
           {t.rich('privacy', {
