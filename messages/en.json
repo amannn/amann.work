@@ -122,10 +122,10 @@
         "id": "webgears-commerce",
         "clientHref": "https://www.webgears-group.com/",
         "description1": "The <client>Webgears Group</client> connects more than 300,000 daily online shoppers with 12,750 advertising partners. At the core of their business model lies a modular web platform that is integrated with publishing partners to inform consumers about current deals & savings.",
-        "description2": "I helped the in-house team to incrementally transition to a new generation of the frontend that is based on React and Next.js. The new architecture puts performance at its center and allows for customisation per publishing partner, while sharing relevant code via a component library. 13 partner apps have been launched so far, with more on the horizon.",
+        "description2": "I proposed a modernised architecture for the platform that leverages React & Next.js and helped the in-house team to incrementally adopt it. The new architecture puts performance at its center and allows for customisation per publishing partner, while sharing relevant code via a component library. 13 partner apps have been launched so far, with more on the horizon.",
         "cta": {
-          "label": "Voucherbox.co.uk (example)",
-          "href": "https://www.voucherbox.co.uk/"
+          "label": "Voucherbox.co.uk (Adidas)",
+          "href": "https://www.voucherbox.co.uk/vouchers/adidas"
         }
       },
       "kuechenfinder": {
