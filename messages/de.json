@@ -116,6 +116,18 @@
           "quote": "Die Zusammenarbeit mit Jan war wie immer hervorragend. Als Designer kann ich mich darauf verlassen, dass das Endprodukt unkompliziert und pünktlich in Perfektion umgesetzt wird.\nBesonders schätze ich an Jan, dass er ein Design weiter denkt und sich proaktiv einbringt, wie man das Produkt noch weiter verbessern kann. Ich freue mich schon auf unser nächstes gemeinsames Projekt!"
         }
       },
+      "webgearsCommerce": {
+        "intro": "Mit Lichtgeschwindigkeit",
+        "title": "High-performance Commerce Plattform",
+        "id": "webgears-commerce",
+        "clientHref": "https://www.webgears-group.com/",
+        "description1": "Die Webgears Group verbindet täglich mehr als 300.000 Online-Shopper mit 12.750 Werbepartnern. Im Kern ihres Geschäftsmodells liegt eine modulare Webplattform, die mit Publishing Partnern integriert ist, um Konsumenten über aktuelle Angebote und Ersparnisse zu informieren.",
+        "description2": "Ich habe das Inhouse-Team dabei unterstützt, iterativ auf eine neue Generation des Frontends auf Basis von React und Next.js umzusteigen. Die neue Architektur setzt Performance in den Mittelpunkt und ermöglicht die Anpassung an jeden Publishing Partner, während relevanter Code mittels einer Komponentenbibliothek geteilt wird. Bis dato wurden 13 Partner-Apps gelaunched, weitere stehen in den Startlöchern.",
+        "cta": {
+          "label": "Gutscheinsammler.de (Beispiel)",
+          "href": "https://www.gutscheinsammler.de/"
+        }
+      },
       "kuechenfinder": {
         "intro": "Datengetriebene Empfehlungen",
         "title": "Küchenexperten-Suche",
@@ -146,19 +158,7 @@
           "label": "Mehr erfahren",
           "href": "https://www.zemtu.com/"
         }
-      },
-      "shoemondo": {
-        "intro": "Preisvergleich für Schuhliebhaber",
-        "title": "Launch von Shoemondo",
-        "id": "shoemondo",
-        "description1": "Shoemondo hilft Ihnen dabei, Ihr nächstes Lieblingspaar Schuhe zu finden und empfiehlt Ihnen dabei den günstigsten Anbieter. Um ein umfangreiches Sortiment an Schuhen zu ermöglichen, wurden im ersten Schritt 12 Partner integriert.",
-        "description2": "Meine Leistung war die Gestaltung des User Interface und die Implementierung davon in Form einer serverseitig gerenderten React App, welche mit einer GraphQL API kommuniziert.",
-        "cta": {
-          "label": "Zur Website",
-          "href": "https://www.shoemondo.com/uk"
-        }
       }
-    }
   },
   "Services": {
     "title": "Services",

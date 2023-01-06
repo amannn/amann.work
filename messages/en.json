@@ -116,6 +116,18 @@
           "quote": "The cooperation with Jan was excellent as always. As a designer, I can rely on the fact that the product is implemented pixel-perfect and on time.\nWhat I particularly appreciate about Jan is that he also thinks about how to take a design one step further. He proactively contributes to how the product can be improved even more. I am already looking forward to all upcoming projects!"
         }
       },
+      "webgearsCommerce": {
+        "intro": "At the speed of light",
+        "title": "High-performance commerce platform",
+        "id": "webgears-commerce",
+        "clientHref": "https://www.webgears-group.com/",
+        "description1": "The <client>Webgears Group</client> connects more than 300,000 daily online shoppers with 12,750 advertising partners. At the core of their business model lies a modular web platform that is integrated with publishing partners to inform consumers about current deals & savings.",
+        "description2": "I helped the in-house team to incrementally transition to a new generation of the frontend that is based on React and Next.js. The new architecture puts performance at its center and allows for customisation per publishing partner, while sharing relevant code via a component library. 13 partner apps have been launched so far, with more on the horizon.",
+        "cta": {
+          "label": "Voucherbox.co.uk (example)",
+          "href": "https://www.voucherbox.co.uk/"
+        }
+      },
       "kuechenfinder": {
         "intro": "Data-driven recommendations",
         "title": "Kitchen expert search",
@@ -145,17 +157,6 @@
         "cta": {
           "label": "Learn more",
           "href": "https://www.zemtu.com/"
-        }
-      },
-      "shoemondo": {
-        "intro": "Price comparison for shoe lovers",
-        "title": "Launch of Shoemondo",
-        "id": "shoemondo",
-        "description1": "Shoemondo helps you to find your next favourite pair of shoes and recommends the cheapest store to buy them. As a first step, 12 partner stores where integrated in order to offer an extensive product range.",
-        "description2": "I designed the user interface and implemented it as a server side rendered React app which communicates with a GraphQL API.",
-        "cta": {
-          "label": "See the website",
-          "href": "https://www.shoemondo.com/uk"
         }
       }
     }

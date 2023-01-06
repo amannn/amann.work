@@ -32,7 +32,7 @@ export default function ProjectsList({initialLimit = undefined}) {
 
   const projects = [
     <Project
-      key="setlist-edit"
+      key="setlistEdit"
       cta={
         <CallToAction href={t('projects.setlistEdit.cta.href')} target="_blank">
           {t('projects.setlistEdit.cta.label')}
@@ -85,6 +85,52 @@ export default function ProjectsList({initialLimit = undefined}) {
       </ProjectParagraph>
       <ProjectParagraph>
         {t('projects.setlistEdit.description2')}
+      </ProjectParagraph>
+    </Project>,
+    <Project
+      key="webgearsCommerce"
+      cta={
+        <CallToAction
+          href={t('projects.webgearsCommerce.cta.href')}
+          target="_blank"
+        >
+          {t('projects.webgearsCommerce.cta.label')}
+        </CallToAction>
+      }
+      id={t('projects.webgearsCommerce.id')}
+      intro={t('projects.webgearsCommerce.intro')}
+      title={t('projects.webgearsCommerce.title')}
+      visual={
+        <ProjectVisual>
+          <DeviceFrame type="desktop">
+            <Image
+              alt=""
+              height={305}
+              placeholder="blur"
+              src={require('../../assets/setlist-edit-desktop.png')}
+              width={550}
+            />
+          </DeviceFrame>
+          <LightboxDeviceVideo
+            poster={
+              require('../../assets/setlist-edit-mobile-poster.png').default.src
+            }
+            source={require('../../assets/setlist-edit-mobile.mp4')}
+          />
+        </ProjectVisual>
+      }
+    >
+      <ProjectParagraph>
+        {t.rich('projects.webgearsCommerce.description1', {
+          client: linkFor(t('projects.webgearsCommerce.clientHref'))
+        })}
+      </ProjectParagraph>
+      <ProjectParagraph>
+        {t('projects.webgearsCommerce.description2')}
+      </ProjectParagraph>
+      <ProjectParagraph>
+        TODO: show publishing partner screenshots (the sun, wikihow etc),
+        lighthouse score (95+)
       </ProjectParagraph>
     </Project>,
     <Project
@@ -202,55 +248,6 @@ export default function ProjectsList({initialLimit = undefined}) {
     >
       <ProjectParagraph>{t('projects.zemtu.description1')}</ProjectParagraph>
       <ProjectParagraph>{t('projects.zemtu.description2')}</ProjectParagraph>
-    </Project>,
-    <Project
-      key="shoemondo"
-      cta={
-        <CallToAction href={t('projects.shoemondo.cta.href')} target="_blank">
-          {t('projects.shoemondo.cta.label')}
-        </CallToAction>
-      }
-      id={t('projects.shoemondo.id')}
-      intro={t('projects.shoemondo.intro')}
-      title={t('projects.shoemondo.title')}
-      visual={
-        <ProjectVisual>
-          <DeviceFrame>
-            <Image
-              alt=""
-              height={300}
-              placeholder="blur"
-              src={require('../../assets/shoemondo-1.png')}
-              width={169}
-            />
-          </DeviceFrame>
-          <DeviceFrame>
-            <Image
-              alt=""
-              height={300}
-              placeholder="blur"
-              src={require('../../assets/shoemondo-2.png')}
-              width={169}
-            />
-          </DeviceFrame>
-          <DeviceFrame>
-            <Image
-              alt=""
-              height={300}
-              placeholder="blur"
-              src={require('../../assets/shoemondo-3.png')}
-              width={169}
-            />
-          </DeviceFrame>
-        </ProjectVisual>
-      }
-    >
-      <ProjectParagraph>
-        {t('projects.shoemondo.description1')}
-      </ProjectParagraph>
-      <ProjectParagraph>
-        {t('projects.shoemondo.description2')}
-      </ProjectParagraph>
     </Project>
   ];
 
