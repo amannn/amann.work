@@ -6,12 +6,14 @@ import CallToAction from 'components/CallToAction';
 import DeviceFrame from 'components/DeviceFrame';
 import FadeIn from 'components/FadeIn';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
+import LighthouseGauge from 'components/LighthouseGauge';
 import {ProjectAnchor} from 'components/Project';
 import Project from 'components/Project/Project';
 import ProjectParagraph from 'components/Project/ProjectParagraph';
 import ProjectTestimonial from 'components/Project/ProjectTestimonial';
 import ProjectVisual from 'components/Project/ProjectVisual';
 import Wrapper from 'components/Wrapper';
+import styles from './ProjectsList.module.scss';
 
 export default function ProjectsList({initialLimit = undefined}) {
   const [limit, setLimit] = useState(initialLimit);
@@ -101,23 +103,38 @@ export default function ProjectsList({initialLimit = undefined}) {
       intro={t('projects.webgearsCommerce.intro')}
       title={t('projects.webgearsCommerce.title')}
       visual={
-        <ProjectVisual>
-          <DeviceFrame type="desktop">
+        <>
+          <ProjectVisual>
+            <DeviceFrame type="desktop">
+              <Image
+                alt=""
+                height={305}
+                placeholder="blur"
+                src={require('../../assets/webgears-desktop-2.png')}
+                width={550}
+              />
+            </DeviceFrame>
+            <DeviceFrame>
+              <Image
+                alt=""
+                height={286}
+                placeholder="blur"
+                src={require('../../assets/webgears-mobile-3.png')}
+                width={160}
+              />
+            </DeviceFrame>
+          </ProjectVisual>
+          <LighthouseGauge className={styles.webgearsLighthouse} score={97} />
+          <div className={styles.webgearsPartners}>
             <Image
               alt=""
-              height={305}
+              height={160}
               placeholder="blur"
-              src={require('../../assets/setlist-edit-desktop.png')}
-              width={550}
+              src={require('../../assets/webgears-partners.png')}
+              width={600}
             />
-          </DeviceFrame>
-          <LightboxDeviceVideo
-            poster={
-              require('../../assets/setlist-edit-mobile-poster.png').default.src
-            }
-            source={require('../../assets/setlist-edit-mobile.mp4')}
-          />
-        </ProjectVisual>
+          </div>
+        </>
       }
     >
       <ProjectParagraph>
@@ -127,10 +144,6 @@ export default function ProjectsList({initialLimit = undefined}) {
       </ProjectParagraph>
       <ProjectParagraph>
         {t('projects.webgearsCommerce.description2')}
-      </ProjectParagraph>
-      <ProjectParagraph>
-        TODO: show publishing partner screenshots (the sun, wikihow etc),
-        lighthouse score (95+)
       </ProjectParagraph>
     </Project>,
     <Project

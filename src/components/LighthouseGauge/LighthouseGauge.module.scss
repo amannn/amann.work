@@ -1,0 +1,78 @@
+@import '~styles/colors';
+
+.wrapper {
+  --color-green-700: #080;
+  --color-green: #0c6;
+  --color-pass-secondary: var(--color-green-700);
+  --color-pass: var(--color-green);
+  --gauge-circle-size-big: 96px;
+  --gauge-percentage-font-size-big: 38px;
+  --report-font-family-monospace: 'Roboto Mono', 'Menlo', 'dejavu sans mono',
+    'Consolas', 'Lucida Console', monospace;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  contain: content;
+  will-change: opacity;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0 2px 20px rgba($black, 0.1);
+}
+
+.wrapperPass {
+  color: var(--color-pass-secondary);
+  fill: var(--color-pass);
+  stroke: var(--color-pass);
+}
+
+.gaugeBase {
+  opacity: 0.1;
+}
+
+@keyframes load-gauge {
+  from {
+    stroke-dasharray: 0 352;
+  }
+}
+
+.gaugeArc {
+  fill: none;
+  transform-origin: 50% 50%;
+}
+
+.gaugeArcAnimated {
+  animation: load-gauge 1s ease forwards;
+  animation-delay: 250ms;
+}
+
+.svgWrapper {
+  --gauge-circle-size: var(--gauge-circle-size-big);
+}
+
+.svgWrapper {
+  position: relative;
+  height: var(--gauge-circle-size);
+}
+
+.gauge {
+  --gauge-circle-size: var(--gauge-circle-size-big);
+  stroke-linecap: round;
+  width: var(--gauge-circle-size);
+  height: var(--gauge-circle-size);
+}
+
+.percentage {
+  --gauge-circle-size: var(--gauge-circle-size-big);
+  --gauge-percentage-font-size: var(--gauge-percentage-font-size-big);
+  width: 100%;
+  height: var(--gauge-circle-size);
+  position: absolute;
+  font-family: var(--report-font-family-monospace);
+  font-size: calc(var(--gauge-circle-size) * 0.34 + 1.3px);
+  line-height: 0;
+  text-align: center;
+  top: calc(var(--gauge-circle-size) / 2);
+}

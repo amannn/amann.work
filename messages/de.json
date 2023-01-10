@@ -122,10 +122,10 @@
         "id": "webgears-commerce",
         "clientHref": "https://www.webgears-group.com/",
         "description1": "Die <client>Webgears Group</client> verbindet täglich mehr als 300.000 Online-Shopper:innen mit 12.750 Werbepartnern. Im Kern ihres Geschäftsmodells liegt eine modulare Webplattform, die mit Publishing Partnern integriert ist, um Konsumenten über aktuelle Angebote und Ersparnisse zu informieren.",
-        "description2": "Ich habe eine auf React & Next.js-basierende Architektur für die Plattform erarbeitet und das Team beim iterativen Umstieg begleitet. Die neue Architektur setzt Performance in den Mittelpunkt und ermöglicht die Anpassung an jeden Partner, während gemeinsame Komponenten wiederverwendet werden. Bis dato wurden 13 Partner-Apps gelaunched, weitere stehen in den Startlöchern.",
+        "description2": "Ich habe eine auf React & Next.js-basierende Architektur für die Plattform erarbeitet, welche Performance in den Mittelpunkt setzt. Die neue Architektur ermöglicht die Anpassung an jeden Partner, während gemeinsame Komponenten wiederverwendet werden. Über einer mehrjährige Projektlaufzeit habe ich das Team beim Umstieg auf die neue Plattform begleitet. Bis dato wurden 13 Partner-Apps gelaunched, weitere stehen in den Startlöchern.",
         "cta": {
-          "label": "Gutscheinsammler.de (Adidas)",
-          "href": "https://www.gutscheinsammler.de/gutscheine/adidas"
+          "label": "Gutscheinsammler.de (Beispiel)",
+          "href": "https://www.gutscheinsammler.de"
         }
       },
       "kuechenfinder": {
