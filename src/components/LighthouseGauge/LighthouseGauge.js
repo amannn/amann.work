@@ -3,7 +3,7 @@ import {useState} from 'react';
 import VisibilitySensor from 'components/VisibilitySensor';
 import styles from './LighthouseGauge.module.scss';
 
-export default function LighthouseGauge({className, score}) {
+export default function LighthouseGauge({className, score, label = score}) {
   const [animate, setAnimate] = useState(false);
   const maxGaugeArc = 352;
   const gaugeArc = (score / 100) * maxGaugeArc;
@@ -47,7 +47,8 @@ export default function LighthouseGauge({className, score}) {
           />
         </svg>
       </div>
-      <div className={styles.percentage}>{score}</div>
+      <div className={styles.percentage}>{label}</div>
+      <p className={styles.lhLabel}>Lighthouse score</p>
     </div>
   );
 }

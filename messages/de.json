@@ -100,7 +100,7 @@
     "projects": {
       "setlistEdit": {
         "intro": "Millionen von Setlists stets zur Hand",
-        "title": "setlist.fm Editor",
+        "title": "setlist.fm Editor-App",
         "id": "setlist-edit",
         "clientHref": "http://molindo.at",
         "description1": "Mit Millionen von monatlichen Aufrufen zählt setlist.fm zu den populärsten Musik-Services der Welt und ermöglicht es seinen Usern, ihr Wissen über Konzert-Setlists miteinander zu teilen. Das Team von <client>Molindo</client> machte sich daran, das Herzstück der Plattform neu zu denken: Das Editieren von Setlists. Für die Implementierung des User Interfaces wurde ich als Entwicklungspartner beauftragt.",
@@ -117,14 +117,14 @@
         }
       },
       "webgearsCommerce": {
-        "intro": "Mit Lichtgeschwindigkeit",
+        "intro": "At the speed of light",
         "title": "High-performance Commerce Plattform",
         "id": "webgears-commerce",
         "clientHref": "https://www.webgears-group.com/",
-        "description1": "Die <client>Webgears Group</client> verbindet täglich mehr als 300.000 Online-Shopper:innen mit 12.750 Werbepartnern. Im Kern ihres Geschäftsmodells liegt eine modulare Webplattform, die mit Publishing Partnern integriert ist, um Konsumenten über aktuelle Angebote und Ersparnisse zu informieren.",
-        "description2": "Ich habe eine auf React & Next.js-basierende Architektur für die Plattform erarbeitet, welche Performance in den Mittelpunkt setzt. Die neue Architektur ermöglicht die Anpassung an jeden Partner, während gemeinsame Komponenten wiederverwendet werden. Über einer mehrjährige Projektlaufzeit habe ich das Team beim Umstieg auf die neue Plattform begleitet. Bis dato wurden 13 Partner-Apps gelaunched, weitere stehen in den Startlöchern.",
+        "description1": "Die <client>Webgears Group</client> verbindet täglich mehr als 300.000 Online-Shopper:innen mit über 12.000 Werbepartnern weltweit. Das Unternehmen integriert eine modulare Webplattform in Websites von Publishing Partnern, um Konsumenten über aktuelle Angebote zu informieren.",
+        "description2": "Ich habe eine auf React & Next.js-basierende Architektur für die Plattform erarbeitet, die Performance in den Mittelpunkt stellt. Die neue Architektur ermöglicht partnerspezifisches Theming, während gemeinsame Komponenten wiederverwendet werden können. Ich habe das firmeninterne Team über mehrere Jahre hinweg beim Umstieg auf die neue Plattform begleitet. In diesem Zeitrum wurden 13 Partner-Apps gelaunched, weitere stehen in den Startlöchern.",
         "cta": {
-          "label": "Gutscheinsammler.de (Beispiel)",
+          "label": "Gutscheinsammler.de",
           "href": "https://www.gutscheinsammler.de"
         }
       },

@@ -124,7 +124,11 @@ export default function ProjectsList({initialLimit = undefined}) {
               />
             </DeviceFrame>
           </ProjectVisual>
-          <LighthouseGauge className={styles.webgearsLighthouse} score={97} />
+          <LighthouseGauge
+            className={styles.webgearsLighthouse}
+            label="95+"
+            score={95}
+          />
           <div className={styles.webgearsPartners}>
             <Image
               alt=""

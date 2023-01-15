@@ -100,7 +100,7 @@
     "projects": {
       "setlistEdit": {
         "intro": "Millions of setlists at your finger tips",
-        "title": "setlist.fm editing experience",
+        "title": "setlist.fm editor app",
         "id": "setlist-edit",
         "clientHref": "http://molindo.at",
         "description1": "With millions of monthly visits, setlist.fm is one of the most popular music services worldwide and enables its users to share their knowledge about concert setlists. The team from <client>Molindo</client> set out to relaunch the core experience of editing setlists and hired me to implement the user interface.",
@@ -121,10 +121,10 @@
         "title": "High-performance commerce platform",
         "id": "webgears-commerce",
         "clientHref": "https://www.webgears-group.com/",
-        "description1": "The <client>Webgears Group</client> connects more than 300,000 daily online shoppers with 12,750 advertising partners. At the core of their business model lies a modular web platform that is integrated with publishing partners to inform consumers about current deals & savings.",
-        "description2": "I proposed a modernised architecture for the platform based on React & Next.js that puts performance at its center. The new architecture allows for customisation per publishing partner, while sharing relevant code via a component library. As a multi-year endeavor I helped the in-house team transition to the new platform, launching 13 partner apps, with more on the horizon.",
+        "description1": "The <client>Webgears Group</client> connects more than 300,000 online shoppers on a daily basis with over 12,000 advertising partners worldwide. The company integrates a modular web platform into the websites of publishing partners to inform consumers about current deals.",
+        "description2": "I proposed a modernised architecture for the platform based on React & Next.js that puts performance at its center. The new architecture allows for theming per publishing partner, while sharing relevant code via a component library. As a multi-year endeavor I helped the in-house team transition to the new platform, launching 13 partner apps, with more on the horizon.",
         "cta": {
-          "label": "Voucherbox.co.uk (example)",
+          "label": "Voucherbox.co.uk",
           "href": "https://www.voucherbox.co.uk"
         }
       },

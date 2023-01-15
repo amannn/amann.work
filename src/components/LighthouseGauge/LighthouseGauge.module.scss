@@ -6,7 +6,7 @@
   --color-pass-secondary: var(--color-green-700);
   --color-pass: var(--color-green);
   --gauge-circle-size-big: 96px;
-  --gauge-percentage-font-size-big: 38px;
+  --gauge-percentage-font-size-big: 32px;
   --report-font-family-monospace: 'Roboto Mono', 'Menlo', 'dejavu sans mono',
     'Consolas', 'Lucida Console', monospace;
 
@@ -71,8 +71,22 @@
   height: var(--gauge-circle-size);
   position: absolute;
   font-family: var(--report-font-family-monospace);
-  font-size: calc(var(--gauge-circle-size) * 0.34 + 1.3px);
+  font-size: calc(var(--gauge-circle-size) * 0.3 + 1.3px);
   line-height: 0;
   text-align: center;
-  top: calc(var(--gauge-circle-size) / 2);
+  top: calc(var(--gauge-circle-size) / 2 - 9px);
+}
+
+.lhLabel {
+  --gauge-circle-size: var(--gauge-circle-size-big);
+  position: absolute;
+  width: 90%;
+  top: calc((var(--gauge-circle-size) / 2) + 8px);
+  // top: 56px;
+  line-height: 1.2em;
+  font-family: var(--report-font-family-monospace);
+  text-align: center;
+  font-size: 11px;
+  color: rgba($black, 0.5);
+  // opacity: 0.7;
 }
