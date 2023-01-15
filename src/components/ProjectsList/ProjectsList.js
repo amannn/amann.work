@@ -1,5 +1,6 @@
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
+import {useRouter} from 'next/router';
 import React, {useState} from 'react';
 import Button from 'components/Button';
 import CallToAction from 'components/CallToAction';
@@ -18,6 +19,8 @@ import styles from './ProjectsList.module.scss';
 export default function ProjectsList({initialLimit = undefined}) {
   const [limit, setLimit] = useState(initialLimit);
   const t = useTranslations('ProjectsList');
+  const router = useRouter();
+  const locale = router.locale;
 
   function onShowMore() {
     setLimit(undefined);
@@ -110,7 +113,7 @@ export default function ProjectsList({initialLimit = undefined}) {
                 alt=""
                 height={305}
                 placeholder="blur"
-                src={require('../../assets/webgears-desktop-2.png')}
+                src={require(`../../assets/webgears-desktop-2-${locale}.png`)}
                 width={550}
               />
             </DeviceFrame>
