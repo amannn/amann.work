@@ -1,0 +1,22 @@
+@import '~styles/media-queries';
+
+.webgearsPartners {
+  filter: grayscale(1) !important;
+  opacity: 0.3;
+  margin-top: 80px;
+
+  @include match-medium {
+    padding-left: 140px;
+  }
+}
+
+.webgearsLighthouse {
+  position: absolute;
+  top: 150px;
+  left: 130px;
+
+  @include match-medium {
+    top: 290px;
+    left: 340px;
+  }
+}

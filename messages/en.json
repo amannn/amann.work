@@ -64,6 +64,9 @@
   "Logo": {
     "alt": "Back to home"
   },
+  "LighthouseGauge": {
+    "description": "Lighthouse score"
+  },
   "Meta": {
     "title": "Jan Amann – Partner for User Interface Engineering and Design",
     "description": "My passion is to create web-based products where design, usability and performance matter. I’m specialised in developing with React."
@@ -100,7 +103,7 @@
     "projects": {
       "setlistEdit": {
         "intro": "Millions of setlists at your finger tips",
-        "title": "setlist.fm editing experience",
+        "title": "setlist.fm editor app",
         "id": "setlist-edit",
         "clientHref": "http://molindo.at",
         "description1": "With millions of monthly visits, setlist.fm is one of the most popular music services worldwide and enables its users to share their knowledge about concert setlists. The team from <client>Molindo</client> set out to relaunch the core experience of editing setlists and hired me to implement the user interface.",
@@ -114,6 +117,18 @@
           "personTitle": "UX/UI Designer",
           "personLink": "https://www.flachsmann.at/",
           "quote": "The cooperation with Jan was excellent as always. As a designer, I can rely on the fact that the product is implemented pixel-perfect and on time.\nWhat I particularly appreciate about Jan is that he also thinks about how to take a design one step further. He proactively contributes to how the product can be improved even more. I am already looking forward to all upcoming projects!"
+        }
+      },
+      "webgearsCommerce": {
+        "intro": "At the speed of light",
+        "title": "High-performance commerce platform",
+        "id": "webgears-commerce",
+        "clientHref": "https://www.webgears-group.com/",
+        "description1": "The <client>Webgears Group</client> connects more than 300,000 online shoppers on a daily basis with over 12,000 advertising partners worldwide. The company integrates a modular web platform into the websites of publishing partners to inform consumers about current deals.",
+        "description2": "I proposed a modernised architecture for the platform based on React & Next.js that puts performance at its center. The new architecture allows for theming per publishing partner, while sharing relevant code via a component library. As a multi-year endeavor I helped the in-house team transition to the new platform, launching 13 partner apps, with more on the horizon.",
+        "cta": {
+          "label": "Voucherbox.co.uk",
+          "href": "https://www.voucherbox.co.uk"
         }
       },
       "kuechenfinder": {
@@ -145,17 +160,6 @@
         "cta": {
           "label": "Learn more",
           "href": "https://www.zemtu.com/"
-        }
-      },
-      "shoemondo": {
-        "intro": "Price comparison for shoe lovers",
-        "title": "Launch of Shoemondo",
-        "id": "shoemondo",
-        "description1": "Shoemondo helps you to find your next favourite pair of shoes and recommends the cheapest store to buy them. As a first step, 12 partner stores where integrated in order to offer an extensive product range.",
-        "description2": "I designed the user interface and implemented it as a server side rendered React app which communicates with a GraphQL API.",
-        "cta": {
-          "label": "See the website",
-          "href": "https://www.shoemondo.com/uk"
         }
       }
     }

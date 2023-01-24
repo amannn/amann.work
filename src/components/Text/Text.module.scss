@@ -1,11 +1,7 @@
 @import '~styles/animations';
 @import '~styles/colors';
+@import '~styles/fonts';
 @import '~styles/media-queries';
-
-$font-stack-sans-serif: Ubuntu, -apple-system, system-ui, 'Segoe UI', Helvetica,
-  Arial, sans-serif;
-$font-stack-monospace: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,
-  Courier, monospace;
 
 @mixin margin-bottom($value) {
   &.root_marginBottom {

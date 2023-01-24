@@ -1,21 +1,26 @@
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
+import {useRouter} from 'next/router';
 import React, {useState} from 'react';
 import Button from 'components/Button';
 import CallToAction from 'components/CallToAction';
 import DeviceFrame from 'components/DeviceFrame';
 import FadeIn from 'components/FadeIn';
 import LightboxDeviceVideo from 'components/LightboxDeviceVideo';
+import LighthouseGauge from 'components/LighthouseGauge';
 import {ProjectAnchor} from 'components/Project';
 import Project from 'components/Project/Project';
 import ProjectParagraph from 'components/Project/ProjectParagraph';
 import ProjectTestimonial from 'components/Project/ProjectTestimonial';
 import ProjectVisual from 'components/Project/ProjectVisual';
 import Wrapper from 'components/Wrapper';
+import styles from './ProjectsList.module.scss';
 
 export default function ProjectsList({initialLimit = undefined}) {
   const [limit, setLimit] = useState(initialLimit);
   const t = useTranslations('ProjectsList');
+  const router = useRouter();
+  const locale = router.locale;
 
   function onShowMore() {
     setLimit(undefined);
@@ -32,7 +37,7 @@ export default function ProjectsList({initialLimit = undefined}) {
 
   const projects = [
     <Project
-      key="setlist-edit"
+      key="setlistEdit"
       cta={
         <CallToAction href={t('projects.setlistEdit.cta.href')} target="_blank">
           {t('projects.setlistEdit.cta.label')}
@@ -85,6 +90,67 @@ export default function ProjectsList({initialLimit = undefined}) {
       </ProjectParagraph>
       <ProjectParagraph>
         {t('projects.setlistEdit.description2')}
+      </ProjectParagraph>
+    </Project>,
+    <Project
+      key="webgearsCommerce"
+      cta={
+        <CallToAction
+          href={t('projects.webgearsCommerce.cta.href')}
+          target="_blank"
+        >
+          {t('projects.webgearsCommerce.cta.label')}
+        </CallToAction>
+      }
+      id={t('projects.webgearsCommerce.id')}
+      intro={t('projects.webgearsCommerce.intro')}
+      title={t('projects.webgearsCommerce.title')}
+      visual={
+        <>
+          <ProjectVisual>
+            <DeviceFrame type="desktop">
+              <Image
+                alt=""
+                height={305}
+                placeholder="blur"
+                src={require(`../../assets/webgears-desktop-${locale}.png`)}
+                width={550}
+              />
+            </DeviceFrame>
+            <DeviceFrame>
+              <Image
+                alt=""
+                height={286}
+                placeholder="blur"
+                src={require('../../assets/webgears-mobile.png')}
+                width={160}
+              />
+            </DeviceFrame>
+          </ProjectVisual>
+          <LighthouseGauge
+            className={styles.webgearsLighthouse}
+            score={95}
+            scoreLabel="95+"
+          />
+          <div className={styles.webgearsPartners}>
+            <Image
+              alt=""
+              height={160}
+              placeholder="blur"
+              src={require('../../assets/webgears-partners.png')}
+              width={600}
+            />
+          </div>
+        </>
+      }
+    >
+      <ProjectParagraph>
+        {t.rich('projects.webgearsCommerce.description1', {
+          client: linkFor(t('projects.webgearsCommerce.clientHref'))
+        })}
+      </ProjectParagraph>
+      <ProjectParagraph>
+        {t('projects.webgearsCommerce.description2')}
       </ProjectParagraph>
     </Project>,
     <Project
@@ -202,55 +268,6 @@ export default function ProjectsList({initialLimit = undefined}) {
     >
       <ProjectParagraph>{t('projects.zemtu.description1')}</ProjectParagraph>
       <ProjectParagraph>{t('projects.zemtu.description2')}</ProjectParagraph>
-    </Project>,
-    <Project
-      key="shoemondo"
-      cta={
-        <CallToAction href={t('projects.shoemondo.cta.href')} target="_blank">
-          {t('projects.shoemondo.cta.label')}
-        </CallToAction>
-      }
-      id={t('projects.shoemondo.id')}
-      intro={t('projects.shoemondo.intro')}
-      title={t('projects.shoemondo.title')}
-      visual={
-        <ProjectVisual>
-          <DeviceFrame>
-            <Image
-              alt=""
-              height={300}
-              placeholder="blur"
-              src={require('../../assets/shoemondo-1.png')}
-              width={169}
-            />
-          </DeviceFrame>
-          <DeviceFrame>
-            <Image
-              alt=""
-              height={300}
-              placeholder="blur"
-              src={require('../../assets/shoemondo-2.png')}
-              width={169}
-            />
-          </DeviceFrame>
-          <DeviceFrame>
-            <Image
-              alt=""
-              height={300}
-              placeholder="blur"
-              src={require('../../assets/shoemondo-3.png')}
-              width={169}
-            />
-          </DeviceFrame>
-        </ProjectVisual>
-      }
-    >
-      <ProjectParagraph>
-        {t('projects.shoemondo.description1')}
-      </ProjectParagraph>
-      <ProjectParagraph>
-        {t('projects.shoemondo.description2')}
-      </ProjectParagraph>
     </Project>
   ];
 
