@@ -1,15 +1,11 @@
 @import '~styles/colors';
+@import '~styles/fonts';
+
+$color-pass: #0c6;
+$color-pass-secondary: #080;
+$circle-size-big: 96px;
 
 .wrapper {
-  --color-green-700: #080;
-  --color-green: #0c6;
-  --color-pass-secondary: var(--color-green-700);
-  --color-pass: var(--color-green);
-  --gauge-circle-size-big: 96px;
-  --gauge-percentage-font-size-big: 32px;
-  --report-font-family-monospace: 'Roboto Mono', 'Menlo', 'dejavu sans mono',
-    'Consolas', 'Lucida Console', monospace;
-
   position: relative;
   display: flex;
   align-items: center;
@@ -23,70 +19,50 @@
 }
 
 .wrapperPass {
-  color: var(--color-pass-secondary);
-  fill: var(--color-pass);
-  stroke: var(--color-pass);
+  color: $color-pass-secondary;
+  fill: $color-pass;
+  stroke: $color-pass;
 }
 
 .gaugeBase {
   opacity: 0.1;
 }
 
-@keyframes load-gauge {
-  from {
-    stroke-dasharray: 0 352;
-  }
-}
-
 .gaugeArc {
   fill: none;
   transform-origin: 50% 50%;
-}
-
-.gaugeArcAnimated {
-  animation: load-gauge 1s ease forwards;
-  animation-delay: 250ms;
-}
-
-.svgWrapper {
-  --gauge-circle-size: var(--gauge-circle-size-big);
+  transition: 1.2s ease;
 }
 
 .svgWrapper {
   position: relative;
-  height: var(--gauge-circle-size);
+  height: $circle-size-big;
 }
 
 .gauge {
-  --gauge-circle-size: var(--gauge-circle-size-big);
   stroke-linecap: round;
-  width: var(--gauge-circle-size);
-  height: var(--gauge-circle-size);
+  width: $circle-size-big;
+  height: $circle-size-big;
 }
 
-.percentage {
-  --gauge-circle-size: var(--gauge-circle-size-big);
-  --gauge-percentage-font-size: var(--gauge-percentage-font-size-big);
+.scoreLabel {
   width: 100%;
-  height: var(--gauge-circle-size);
+  height: $circle-size-big;
   position: absolute;
-  font-family: var(--report-font-family-monospace);
-  font-size: calc(var(--gauge-circle-size) * 0.3 + 1.3px);
+  font-family: $font-stack-monospace;
+  font-size: calc(#{$circle-size-big} * 0.3 + 1.3px);
   line-height: 0;
   text-align: center;
-  top: calc(var(--gauge-circle-size) / 2 - 9px);
+  top: calc(#{$circle-size-big} / 2 - 9px);
 }
 
-.lhLabel {
-  --gauge-circle-size: var(--gauge-circle-size-big);
+.description {
   position: absolute;
   width: 90%;
-  top: calc((var(--gauge-circle-size) / 2) + 8px);
-  // top: 56px;
+  top: calc((#{$circle-size-big} / 2) + 8px);
   line-height: 1.2em;
-  font-family: var(--report-font-family-monospace);
+  font-family: $font-stack-monospace;
   text-align: center;
   font-size: 11px;
   color: rgba($black, 0.5);
-  // opacity: 0.7;
 }

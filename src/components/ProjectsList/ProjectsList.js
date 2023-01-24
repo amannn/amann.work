@@ -113,7 +113,7 @@ export default function ProjectsList({initialLimit = undefined}) {
                 alt=""
                 height={305}
                 placeholder="blur"
-                src={require(`../../assets/webgears-desktop-2-${locale}.png`)}
+                src={require(`../../assets/webgears-desktop-${locale}.png`)}
                 width={550}
               />
             </DeviceFrame>
@@ -122,15 +122,15 @@ export default function ProjectsList({initialLimit = undefined}) {
                 alt=""
                 height={286}
                 placeholder="blur"
-                src={require('../../assets/webgears-mobile-3.png')}
+                src={require('../../assets/webgears-mobile.png')}
                 width={160}
               />
             </DeviceFrame>
           </ProjectVisual>
           <LighthouseGauge
             className={styles.webgearsLighthouse}
-            label="95+"
             score={95}
+            scoreLabel="95+"
           />
           <div className={styles.webgearsPartners}>
             <Image

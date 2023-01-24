@@ -64,6 +64,9 @@
   "Logo": {
     "alt": "Zurück zur Startseite"
   },
+  "LighthouseGauge": {
+    "description": "Lighthouse score"
+  },
   "Meta": {
     "title": "Jan Amann – Partner für User Interface Entwicklung und Design",
     "description": "Meine Leidenschaft ist die Entwicklung von webbasierten Produkten mit besonderem Anspruch an Design, Usability und Performance. Ich bin spezialisiert auf die Entwicklung mit React."
@@ -121,8 +124,8 @@
         "title": "High-performance Commerce Plattform",
         "id": "webgears-commerce",
         "clientHref": "https://www.webgears-group.com/",
-        "description1": "Die <client>Webgears Group</client> verbindet täglich mehr als 300.000 Online-Shopper:innen mit über 12.000 Werbepartnern weltweit. Das Unternehmen integriert eine modulare Webplattform in Websites von Publishing Partnern, um Konsumenten über aktuelle Angebote zu informieren.",
-        "description2": "Ich habe eine auf React & Next.js-basierende Architektur für die Plattform erarbeitet, die Performance in den Mittelpunkt stellt. Die neue Architektur ermöglicht partnerspezifisches Theming, während gemeinsame Komponenten wiederverwendet werden können. Ich habe das firmeninterne Team über mehrere Jahre hinweg beim Umstieg auf die neue Plattform begleitet. In diesem Zeitrum wurden 13 Partner-Apps gelaunched, weitere stehen in den Startlöchern.",
+        "description1": "Die <client>Webgears Group</client> verbindet täglich mehr als 300.000 Online-Shopper:innen mit über 12.000 Werbepartnern weltweit. Das Unternehmen integriert eine modulare Webplattform in Websites von Publishing-Partnern, um Konsumenten über aktuelle Angebote zu informieren.",
+        "description2": "Ich habe eine auf React & Next.js-basierende Architektur für die Plattform erarbeitet, die Performance in den Mittelpunkt stellt. Die neue Architektur ermöglicht partnerspezifisches Theming, während gemeinsame Komponenten wiederverwendet werden können. Ich habe das firmeninterne Team über mehrere Jahre hinweg beim Umstieg auf die neue Plattform begleitet, um in diesem Zeitraum 13 Partner-Apps zu launchen. Weitere stehen bereits in den Startlöchern.",
         "cta": {
           "label": "Gutscheinsammler.de",
           "href": "https://www.gutscheinsammler.de"

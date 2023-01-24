@@ -1,12 +1,19 @@
 import cx from 'classnames';
+import {useTranslations} from 'next-intl';
 import {useState} from 'react';
 import VisibilitySensor from 'components/VisibilitySensor';
 import styles from './LighthouseGauge.module.scss';
 
-export default function LighthouseGauge({className, score, label = score}) {
+export default function LighthouseGauge({
+  className,
+  score,
+  scoreLabel = score
+}) {
+  const t = useTranslations('LighthouseGauge');
   const [animate, setAnimate] = useState(false);
+
   const maxGaugeArc = 352;
-  const gaugeArc = (score / 100) * maxGaugeArc;
+  const gaugeArc = animate ? (score / 100) * maxGaugeArc : 0;
 
   function onVisible() {
     setAnimate(true);
@@ -25,30 +32,20 @@ export default function LighthouseGauge({className, score, label = score}) {
             strokeWidth="8"
           />
           <circle
-            // animate="end"
-            className={cx(styles.gaugeArc, animate && styles.gaugeArcAnimated)}
+            className={styles.gaugeArc}
             cx="60"
             cy="60"
-            // initial="start"
             r="56"
             strokeWidth="8"
             style={{
               transform: 'rotate(-87.9537deg)',
               strokeDasharray: gaugeArc + ', 352'
             }}
-            // variants={{
-            //   start: {
-            //     strokeDasharray: '0, 352'
-            //   },
-            //   end: {
-            //     strokeDasharray: gaugeArc + ', 352'
-            //   }
-            // }}
           />
         </svg>
       </div>
-      <div className={styles.percentage}>{label}</div>
-      <p className={styles.lhLabel}>Lighthouse score</p>
+      <div className={styles.scoreLabel}>{scoreLabel}</div>
+      <p className={styles.description}>{t('description')}</p>
     </div>
   );
 }
