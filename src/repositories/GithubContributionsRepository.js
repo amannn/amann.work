@@ -3,11 +3,11 @@ import GithubRepository from './GithubRepository';
 const MAINTAINED_REPOSITORIES = [
   'amannn/next-intl',
   'molindo/react-apollo-network-status',
-  'amannn/next-query-params',
   'amannn/action-semantic-pull-request',
+  'amannn/next-query-params',
+  'amannn/react-hooks',
   'amannn/next-client-script',
   'amannn/multi-sitemap',
-  'amannn/react-hooks',
   'amannn/atom-format-javascript-comment',
   'molindo/eslint-config-molindo'
 ];
@@ -26,6 +26,8 @@ const PR_REPO_OWNER_IGNORELIST = [
 
 // Not particularly interesting PRs.
 const PR_ID_IGNORELIST = [
+  'PR_kwDOK16UWs5hNDvg',
+  'PR_kwDOKYOJO85cSBp9',
   'MDExOlB1bGxSZXF1ZXN0NTYwMDU5MTcx',
   'MDExOlB1bGxSZXF1ZXN0NTEzMDI3MzY2',
   'MDExOlB1bGxSZXF1ZXN0NTEyMzM0MTg4',
