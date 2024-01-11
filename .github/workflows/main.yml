@@ -5,17 +5,17 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v3
         with:
           path: |
             .next/cache
             node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-node-
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
-          version: '14.x'
+          node-version: '18.x'
       - run: yarn install --pure-lockfile
       - run: yarn lint
       - run: yarn build
