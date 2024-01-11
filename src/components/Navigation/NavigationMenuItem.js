@@ -25,10 +25,6 @@ export default function NavigationMenuItem({
   const isActive = detectActive && href === router.pathname;
   const isScrollLink = href.startsWith('#');
 
-  if (isActive) {
-    color = 'primaryLight';
-  }
-
   function onLinkClick(event) {
     if (onClick) onClick();
 
