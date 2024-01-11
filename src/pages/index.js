@@ -1,5 +1,5 @@
 import {useTranslations} from 'next-intl';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import React from 'react';
 import portrait from 'assets/jan-amann.jpg';
@@ -55,7 +55,7 @@ export default function Index() {
             </div>
             <div className={styles.introText}>
               <Text variant="h3">{t('intro.description')}</Text>
-              <Link href="/services" passHref>
+              <Link href="/services" legacyBehavior passHref>
                 <CallToAction className={styles.introCta}>
                   {t('intro.services')}
                 </CallToAction>

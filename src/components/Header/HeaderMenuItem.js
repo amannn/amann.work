@@ -36,15 +36,15 @@ export default function HeaderMenuItem({
   }
 
   return (
-    <Link href={href} locale={locale}>
-      <a
-        className={cx(styles.root, className, isActive && styles.root_active)}
-        onClick={onClick}
-      >
-        <Text color={color} component="span" variant="label">
-          {children}
-        </Text>
-      </a>
+    <Link
+      className={cx(styles.root, className, isActive && styles.root_active)}
+      href={href}
+      locale={locale}
+      onClick={onClick}
+    >
+      <Text color={color} component="span" variant="label">
+        {children}
+      </Text>
     </Link>
   );
 }

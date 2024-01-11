@@ -34,7 +34,11 @@ export default function CardLink({
         return (
           <ConditionalWrap
             condition={!isExternal}
-            wrap={(content) => <Link href={href}>{content}</Link>}
+            wrap={(content) => (
+              <Link href={href} legacyBehavior>
+                {content}
+              </Link>
+            )}
           >
             <a
               {...props}

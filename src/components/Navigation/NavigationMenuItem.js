@@ -25,10 +25,6 @@ export default function NavigationMenuItem({
   const isActive = detectActive && href === router.pathname;
   const isScrollLink = href.startsWith('#');
 
-  if (isActive) {
-    color = 'primaryLight';
-  }
-
   function onLinkClick(event) {
     if (onClick) onClick();
 
@@ -54,7 +50,7 @@ export default function NavigationMenuItem({
     <ConditionalWrap
       condition={!isScrollLink}
       wrap={(content) => (
-        <Link href={href} locale={locale}>
+        <Link href={href} legacyBehavior locale={locale}>
           {content}
         </Link>
       )}

@@ -1,5 +1,5 @@
 import {useTransform, useViewportScroll} from 'framer-motion';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import {useEffect, useRef} from 'react';
 import styles from './HeroIllustration.module.scss';
 import sketchBackground from './sketch-background.svg';

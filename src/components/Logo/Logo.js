@@ -1,5 +1,5 @@
 import {useTranslations} from 'next-intl';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import React from 'react';
 import styles from './Logo.module.scss';
 import logoImage from './logo.svg';
