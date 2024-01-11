@@ -7,6 +7,7 @@ configureSitemap({
   langs: ['en', 'de'],
   excludeExtensions: ['scss', 'mp4', 'png'],
   targetDirectory: path.join(process.cwd(), 'public'),
+  exclude: ['/404'],
   pagesDirectory: path.join(process.cwd(), 'src/pages')
 })
   .generateSitemap()
