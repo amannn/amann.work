@@ -19,16 +19,16 @@
   "dependencies": {
     "@mdx-js/react": "^1.6.22",
     "@use-it/event-listener": "^0.1.6",
-    "classnames": "2.3.1",
+    "classnames": "^2.3.1",
     "conditional-wrap": "^1.0.2",
     "core-js": "^3.16.4",
     "date-fns": "^2.23.0",
-    "framer-motion": "2.9.4",
-    "next": "^11.1.0",
+    "framer-motion": "^2.9.4",
+    "next": "^13.0.0",
     "next-intl": "^2.0.0",
-    "react": "18.0.0-alpha-bc4e75112-20210815",
-    "react-dom": "18.0.0-alpha-bc4e75112-20210815",
-    "sharp": "0.29.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "sharp": "^0.29.0",
     "use-breakpoint": "^2.0.2",
     "use-constant": "^1.1.0",
     "use-isomorphic-layout-effect": "^1.1.1",
@@ -36,13 +36,13 @@
     "use-update-effect": "^1.0.0"
   },
   "devDependencies": {
-    "@mdx-js/loader": "1.6.22",
-    "@next/eslint-plugin-next": "11.1.0",
-    "@next/mdx": "11.1.0",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/eslint-plugin-next": "^13.0.0",
+    "@next/mdx": "^13.0.0",
     "@sergeymyssak/nextjs-sitemap": "^1.1.1",
     "@types/react": "^17.0.19",
-    "eslint": "7.32.0",
-    "eslint-config-molindo": "5.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-molindo": "^5.1.0",
     "next-videos": "^1.4.0",
     "puppeteer": "^10.2.0",
     "sass": "^1.38.2",
@@ -50,7 +50,7 @@
     "xml2js": "^0.4.23"
   },
   "engines": {
-    "node": "^14.x || ^16.x",
+    "node": "^18.x",
     "yarn": "^1.15.0"
   }
 }
