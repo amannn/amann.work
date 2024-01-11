@@ -36,7 +36,7 @@ export default function Services() {
             {t('consulting.description')}
           </ServicesItem>
         </ResponsiveGrid>
-        <Link href="/work" passHref>
+        <Link href="/work" legacyBehavior passHref>
           <CallToAction className={styles.work}>{t('work')}</CallToAction>
         </Link>
       </Layout>

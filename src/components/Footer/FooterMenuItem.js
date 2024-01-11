@@ -5,12 +5,10 @@ import styles from './FooterMenuItem.module.scss';
 
 export default function FooterMenuItem({children, href}) {
   return (
-    <Link href={href}>
-      <a className={styles.root}>
-        <Text color="white" component="span" variant="label">
-          {children}
-        </Text>
-      </a>
+    <Link className={styles.root} href={href}>
+      <Text color="white" component="span" variant="label">
+        {children}
+      </Text>
     </Link>
   );
 }

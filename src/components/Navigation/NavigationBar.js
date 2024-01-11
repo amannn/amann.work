@@ -10,9 +10,7 @@ export default function NavigationBar({isMenuOpen, onMenuOpenChange}) {
       <Wrapper>
         <div className={styles.navigation}>
           <Link href="/">
-            <a>
-              <Logo />
-            </a>
+            <Logo />
           </Link>
           <div className={styles.menu}>
             <NavigationMenuButton

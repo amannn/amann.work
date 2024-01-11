@@ -20,7 +20,7 @@ export default function NotFound() {
         description={t.rich('description', {
           // eslint-disable-next-line react/display-name
           home: (children) => (
-            <Link href="/" passHref>
+            <Link href="/" legacyBehavior passHref>
               <Anchor rel={null} target={null}>
                 {children}
               </Anchor>

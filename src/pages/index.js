@@ -55,7 +55,7 @@ export default function Index() {
             </div>
             <div className={styles.introText}>
               <Text variant="h3">{t('intro.description')}</Text>
-              <Link href="/services" passHref>
+              <Link href="/services" legacyBehavior passHref>
                 <CallToAction className={styles.introCta}>
                   {t('intro.services')}
                 </CallToAction>

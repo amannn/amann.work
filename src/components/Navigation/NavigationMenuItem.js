@@ -54,7 +54,7 @@ export default function NavigationMenuItem({
     <ConditionalWrap
       condition={!isScrollLink}
       wrap={(content) => (
-        <Link href={href} locale={locale}>
+        <Link href={href} legacyBehavior locale={locale}>
           {content}
         </Link>
       )}
