@@ -154,6 +154,32 @@ export default function ProjectsList({initialLimit = undefined}) {
       </ProjectParagraph>
     </Project>,
     <Project
+      key="alpine"
+      id={t('projects.alpine.id')}
+      intro={t('projects.alpine.intro')}
+      title={t('projects.alpine.title')}
+      visual={
+        <ProjectVisual>
+          <DeviceFrame type="desktop">
+            <Image
+              alt=""
+              height={305}
+              placeholder="blur"
+              src={require('../../assets/alpine-component-library.png')}
+              width={550}
+            />
+          </DeviceFrame>
+        </ProjectVisual>
+      }
+    >
+      <ProjectParagraph>
+        {t.rich('projects.alpine.description1', {
+          client: linkFor(t('projects.alpine.clientHref'))
+        })}
+      </ProjectParagraph>
+      <ProjectParagraph>{t('projects.alpine.description2')}</ProjectParagraph>
+    </Project>,
+    <Project
       key="kuechenfinder"
       cta={
         <CallToAction
@@ -197,32 +223,6 @@ export default function ProjectsList({initialLimit = undefined}) {
       <ProjectParagraph>
         {t('projects.kuechenfinder.description2')}
       </ProjectParagraph>
-    </Project>,
-    <Project
-      key="alpine"
-      id={t('projects.alpine.id')}
-      intro={t('projects.alpine.intro')}
-      title={t('projects.alpine.title')}
-      visual={
-        <ProjectVisual>
-          <DeviceFrame type="desktop">
-            <Image
-              alt=""
-              height={305}
-              placeholder="blur"
-              src={require('../../assets/alpine-component-library.png')}
-              width={550}
-            />
-          </DeviceFrame>
-        </ProjectVisual>
-      }
-    >
-      <ProjectParagraph>
-        {t.rich('projects.alpine.description1', {
-          client: linkFor(t('projects.alpine.clientHref'))
-        })}
-      </ProjectParagraph>
-      <ProjectParagraph>{t('projects.alpine.description2')}</ProjectParagraph>
     </Project>,
     <Project
       key="zemtu"

@@ -34,7 +34,11 @@ const PR_ID_IGNORELIST = [
   'MDExOlB1bGxSZXF1ZXN0MTkyNTAwNjUz',
   'MDExOlB1bGxSZXF1ZXN0MzYwOTI4MzYw',
   'MDExOlB1bGxSZXF1ZXN0NDc0Nzk1MDc3',
-  'MDExOlB1bGxSZXF1ZXN0NzEyMDk0NTI1'
+  'MDExOlB1bGxSZXF1ZXN0NzEyMDk0NTI1',
+  'PR_kwDOL-8DOs5wK28M',
+  'PR_kwDOLi83s85sVjPc',
+  'PR_kwDOLaNkh85orvy1',
+  'PR_kwDOI2-JLs5Jt0-E'
 ];
 
 const repositoryFragment = /* GraphQL */ `

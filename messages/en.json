@@ -31,7 +31,7 @@
   "Imprint": {
     "title": "Imprint",
     "name": "Jan Amann",
-    "subline": "Partner for User Interface Engineering and Design",
+    "subline": "Partner for User Interface Engineering",
     "address": "Wiesenrainstraße 15\n6890 Lustenau\nAustria",
     "uid": "UID: ATU70057369",
     "contact": "E-Mail: jan@amann.work\nTel: +43 681 / 84 39 0 333",
@@ -40,7 +40,7 @@
   },
   "Index": {
     "header": {
-      "title": "User Interface Engineering & Design",
+      "title": "User Interface Engineering",
       "tagline": "Jan Amann"
     },
     "intro": {
@@ -68,7 +68,7 @@
     "description": "Lighthouse score"
   },
   "Meta": {
-    "title": "Jan Amann – Partner for User Interface Engineering and Design",
+    "title": "Jan Amann – Partner for User Interface Engineering",
     "description": "My passion is to create web-based products where design, usability and performance matter. I’m specialised in developing with React."
   },
   "NavigationMenu": {
