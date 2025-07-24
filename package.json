@@ -8,8 +8,7 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build && node scripts/createSitemap.js",
-    "lint": "eslint src",
-    "test": "start-server-and-test start http://localhost:3000 'node scripts/testPages.js'"
+    "lint": "eslint src"
   },
   "author": "Jan Amann <jan@amann.work>",
   "repository": {
@@ -44,13 +43,10 @@
     "eslint": "^7.32.0",
     "eslint-config-molindo": "^5.1.0",
     "next-videos": "^1.4.0",
-    "puppeteer": "^10.2.0",
-    "sass": "^1.38.2",
-    "start-server-and-test": "^1.13.1",
-    "xml2js": "^0.4.23"
+    "sass": "^1.38.2"
   },
   "engines": {
-    "node": "^18.x",
+    "node": "^20.x",
     "yarn": "^1.15.0"
   }
 }

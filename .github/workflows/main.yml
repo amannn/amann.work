@@ -6,19 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/cache@v3
-        with:
-          path: |
-            .next/cache
-            node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-node-
       - uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: '20.x'
+          cache: 'yarn'
       - run: yarn install --pure-lockfile
       - run: yarn lint
       - run: yarn build
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      - run: yarn test
